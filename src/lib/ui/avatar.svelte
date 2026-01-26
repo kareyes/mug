@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Avatar, AvatarPrimitives } from "@kareyes/aether";
+    import { avatarGroupDocs, borderedColorImgDocs, borderedColorsDocs, borderedShapesDocs, colorsDocs, combinedDocs, combinedFeaturesDocs, fallbackDocs, notificationsDocs, shapesDocs, sizedDocs, statusDocs, userCardDocs, variantsDocs } from "$lib/code-blocks/avatar";
+	import { Avatar, AvatarPrimitives, Card, CodeBlock } from "@kareyes/aether";
 
 	const users = [
 		{ name: "John Doe", image: "https://i.pravatar.cc/150?img=1" },
@@ -27,7 +28,7 @@
 
 	<div class="space-y-12">
 		<!-- Sizes -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Sizes</h2>
 			<div class="flex items-end gap-4">
 				<div class="text-center">
@@ -55,10 +56,21 @@
 					<p class="text-xs mt-2">2XL</p>
 				</div>
 			</div>
-		</section>
+						
+			<br/>
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={sizedDocs}
+			></CodeBlock>
+		</Card>
 
 		<!-- Shapes -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Shapes</h2>
 			<div class="flex items-center gap-6">
 				<div class="text-center">
@@ -74,10 +86,21 @@
 					<p class="text-sm mt-2">Square</p>
 				</div>
 			</div>
-		</section>
+						
+			<br/>
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={shapesDocs}
+			></CodeBlock>
+		</Card>
 
 		<!-- Variants -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Variants</h2>
 			<div class="flex items-center gap-6">
 				<div class="text-center">
@@ -93,10 +116,21 @@
 					<p class="text-sm mt-2">Solid</p>
 				</div>
 			</div>
-		</section>
+						
+			<br/>
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={variantsDocs}
+			></CodeBlock>
+		</Card>
 
 		<!-- Colors -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Colors</h2>
 			<div class="flex flex-wrap gap-4">
 				<div class="text-center">
@@ -140,10 +174,21 @@
 					<p class="text-xs mt-2">Gradient</p>
 				</div>
 			</div>
-		</section>
+						
+			<br/>
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={colorsDocs}
+			></CodeBlock>
+		</Card>
 
 		<!-- Bordered with Colors -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Bordered with Colors</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Bordered variant combined with different color options creates a colored ring around the avatar.
@@ -190,10 +235,21 @@
 					<p class="text-xs mt-2">Gradient</p>
 				</div>
 			</div>
-		</section>
+						
+			<br/>
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={borderedColorsDocs}
+			></CodeBlock>
+		</Card>
 
 		<!-- Bordered Colors with Images -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Bordered with Images</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Bordered avatars work great with images too, showing a subtle colored ring.
@@ -220,10 +276,21 @@
 					<p class="text-xs mt-2">Purple</p>
 				</div>
 			</div>
-		</section>
+						
+			<br/>
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={borderedColorImgDocs}
+			></CodeBlock>
+		</Card>
 
 		<!-- Bordered Shapes -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Bordered Shapes with Colors</h2>
 			<div class="flex flex-wrap gap-6">
 				<div class="text-center">
@@ -267,10 +334,21 @@
 					<p class="text-sm mt-2">Square + Gradient</p>
 				</div>
 			</div>
-		</section>
+						
+			<br/>
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={borderedShapesDocs}
+			></CodeBlock>
+		</Card>
 
 		<!-- Fallback Examples -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Fallback Examples</h2>
 			<div class="flex items-center gap-6">
 				<div class="text-center">
@@ -296,10 +374,21 @@
 					<p class="text-sm mt-2">Custom Icon</p>
 				</div>
 			</div>
-		</section>
+						
+			<br/>
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={fallbackDocs}
+			></CodeBlock>
+		</Card>
 
 		<!-- Status Indicators -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Status Indicators</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Display online, offline, away, and busy status with colored indicators.
@@ -346,10 +435,21 @@
 					<p class="text-sm mt-2">Busy</p>
 				</div>
 			</div>
-		</section>
+						
+			<br/>
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={statusDocs}
+			></CodeBlock>
+		</Card>
 
 		<!-- Notifications -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Notification Badges</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Show notification badges with optional counts. Displays "99+" for counts over 99.
@@ -399,10 +499,21 @@
 					<p class="text-sm mt-2">Count: 99+</p>
 				</div>
 			</div>
-		</section>
+						
+			<br/>
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={notificationsDocs}
+			></CodeBlock>
+		</Card>
 
 		<!-- Combined Features -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Combined Features</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Combine status indicators, notifications, borders, and colors for rich user presence display.
@@ -462,10 +573,21 @@
 					<p class="text-sm mt-2">Rounded + All</p>
 				</div>
 			</div>
-		</section>
+						
+			<br/>
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={combinedFeaturesDocs}
+			></CodeBlock>
+		</Card>
 
 		<!-- Avatar Groups -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Avatar Groups</h2>
 			
 			<div class="space-y-6">
@@ -540,10 +662,21 @@
 					</AvatarPrimitives.AvatarGroup>
 				</div>
 			</div>
-		</section>
+						
+			<br/>
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={avatarGroupDocs}
+			></CodeBlock>
+		</Card>
 
 		<!-- User Cards -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">User Cards</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 				{#each team as member, i}
@@ -564,10 +697,21 @@
 					</div>
 				{/each}
 			</div>
-		</section>
+									
+			<br/>
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={userCardDocs}
+			></CodeBlock>
+		</Card>
 
 		<!-- Combined Styles -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Combined Styles</h2>
 			<div class="flex flex-wrap gap-6">
 				<div class="text-center">
@@ -610,6 +754,17 @@
 					<p class="text-sm mt-2">Square Red</p>
 				</div>
 			</div>
-		</section>
+									
+			<br/>
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={combinedDocs}
+			></CodeBlock>
+		</Card>
 	</div>
 </div>

@@ -1,20 +1,5 @@
 <script lang="ts">
-    // import { Button } from "$core/components/ui/button/index.js";
-    // import { Input } from "$core/components/ui/input/index.js";
-    // import { Textarea } from "$core/components/ui/textarea/index.js";
-    // import { Checkbox, CheckboxGroup } from "$core/components/ui/checkbox/index.js";
-    // import type { CheckboxGroupOption } from "$core/components/ui/checkbox/index.js";
-    // import { RadioGroup } from "$core/components/ui/radio/index.js";
-    // import type { RadioGroupOption } from "$core/components/ui/radio/index.js";
-    // import { Switch } from "$core/components/ui/switch/index.js";
-    // import {Select } from "$core/components/ui/select/index.js";
-    // import * as Field from "$core/components/ui/field/index.js";
-    // import {Card} from "$core/components/ui/card/index.js";
-    // import { Slider } from "$core/components/ui/slider/index.js";
-    // import  {InputOTP} from "$core/components/ui/input-otp/index.js";
-    // import { NumberSpinner } from "$core/components/ui/number-spinner/index.js";
-    // import { FileInput } from "$core/components/ui/file-input/index.js";
-    // import { DatePicker } from "$core/components/ui/date-picker/index.js";
+
     import type { DateValue } from "@internationalized/date";
     import {
         Button,
@@ -37,7 +22,6 @@
 
     type CheckboxGroupOption = CheckboxPrimitives.CheckboxGroupOption;
     type RadioGroupOption = RadioGroupPrimitives.RadioGroupOption;
-    // import Select from "$core/components/ui/select/select.svelte";
 
     // Form state
     let username = $state("");

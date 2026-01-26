@@ -1,6 +1,6 @@
 <script lang="ts">
     import { createRawSnippet } from "svelte";
-    import { DataTable, DataTablePrimitives as Prim } from "@kareyes/aether";
+    import { DataTable, DataTablePrimitives } from "@kareyes/aether";
 
     const {
         DataTableCheckbox,
@@ -8,7 +8,7 @@
         DataTableActions,
         renderComponent,
         renderSnippet,
-    } = Prim;
+    } = DataTablePrimitives;
 
     type Payment = {
         id: string;
@@ -92,10 +92,10 @@
         },
     ];
 
-    const columns: Prim.ColumnDef<Payment>[] = [
+    const columns: DataTablePrimitives.ColumnDef<Payment>[] = [
         {
             id: "select",
-            header: ({ table }: Prim.HeaderContext<Payment, unknown>) =>
+            header: ({ table }: DataTablePrimitives.HeaderContext<Payment, unknown>) =>
                 renderComponent(DataTableCheckbox, {
                     checked: table.getIsAllPageRowsSelected(),
                     indeterminate:
@@ -105,7 +105,7 @@
                         table.toggleAllPageRowsSelected(!!value),
                     "aria-label": "Select all",
                 }),
-            cell: ({ row }: Prim.CellContext<Payment, unknown>) =>
+            cell: ({ row }: DataTablePrimitives.CellContext<Payment, unknown>) =>
                 renderComponent(DataTableCheckbox, {
                     checked: row.getIsSelected(),
                     onCheckedChange: (value) => row.toggleSelected(!!value),
@@ -117,7 +117,7 @@
         {
             accessorKey: "status",
             header: "Status",
-            cell: ({ row }: Prim.CellContext<Payment, unknown>) => {
+            cell: ({ row }: DataTablePrimitives.CellContext<Payment, unknown>) => {
                 const statusSnippet = createRawSnippet<[{ status: string }]>(
                     (getStatus) => {
                         const { status } = getStatus();
@@ -134,12 +134,12 @@
         },
         {
             accessorKey: "email",
-            header: ({ column }: Prim.HeaderContext<Payment, unknown>) =>
+            header: ({ column }: DataTablePrimitives.HeaderContext<Payment, unknown>) =>
                 renderComponent(DataTableColumnHeader, {
                     title: "Email",
                     onclick: column.getToggleSortingHandler(),
                 }),
-            cell: ({ row }: Prim.CellContext<Payment, unknown>) => {
+            cell: ({ row }: DataTablePrimitives.CellContext<Payment, unknown>) => {
                 const emailSnippet = createRawSnippet<[{ email: string }]>(
                     (getEmail) => {
                         const { email } = getEmail();
@@ -164,7 +164,7 @@
                 });
                 return renderSnippet(amountHeaderSnippet);
             },
-            cell: ({ row }: Prim.CellContext<Payment, unknown>) => {
+            cell: ({ row }: DataTablePrimitives.CellContext<Payment, unknown>) => {
                 const formatter = new Intl.NumberFormat("en-US", {
                     style: "currency",
                     currency: "USD",
@@ -187,7 +187,7 @@
         {
             id: "actions",
             enableHiding: false,
-            cell: ({ row }: Prim.CellContext<Payment, unknown>) =>
+            cell: ({ row }: DataTablePrimitives.CellContext<Payment, unknown>) =>
                 renderComponent(DataTableActions, {
                     id: row.original.id,
                     copyLabel: "Copy payment ID",

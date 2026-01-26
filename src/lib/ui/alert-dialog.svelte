@@ -1,8 +1,6 @@
 <script lang="ts">
-	import {
-		AlertDialogPrimitives,
-        Button
-	} from "@kareyes/aether";
+	import { configDocs, practicalDocs, sizesDocs, variantsDocs } from "$lib/code-blocks/alert-dialog";
+	import { AlertDialogPrimitives, Button, CodeBlock , Card} from "@kareyes/aether";
 	import {
 		AlertCircle,
 		CheckCircle2,
@@ -12,8 +10,9 @@
 		Save,
 	} from "@kareyes/aether/icons";
 
-    const { AlertDialogProvider, getAlertDialogContext, } = AlertDialogPrimitives;
-    type AlertDialogContext = AlertDialogPrimitives.AlertDialogContext;
+	const { AlertDialogProvider, getAlertDialogContext } =
+		AlertDialogPrimitives;
+	type AlertDialogContext = AlertDialogPrimitives.AlertDialogContext;
 	let result = $state<string>("");
 
 	// Variant Examples
@@ -21,7 +20,8 @@
 		dialog.open({
 			variant: "default",
 			title: "Default Alert",
-			description: "This is a default alert dialog with standard styling.",
+			description:
+				"This is a default alert dialog with standard styling.",
 			onAction: () => {
 				result = "Default: Action clicked";
 			},
@@ -60,7 +60,8 @@
 		dialog.open({
 			variant: "warning",
 			title: "Warning",
-			description: "You have unsaved changes. Are you sure you want to continue?",
+			description:
+				"You have unsaved changes. Are you sure you want to continue?",
 			icon: AlertTriangle,
 			actionText: "Continue",
 			onAction: () => {
@@ -73,7 +74,8 @@
 		dialog.open({
 			variant: "info",
 			title: "Information",
-			description: "Here's some important information you should know about.",
+			description:
+				"Here's some important information you should know about.",
 			icon: Info,
 			actionText: "Got it",
 			showCancel: false,
@@ -154,7 +156,8 @@
 		dialog.open({
 			variant: "destructive",
 			title: "Delete File",
-			description: "Are you sure you want to delete this file? This action cannot be undone.",
+			description:
+				"Are you sure you want to delete this file? This action cannot be undone.",
 			icon: Trash2,
 			actionText: "Delete File",
 			cancelText: "Keep File",
@@ -201,13 +204,13 @@
 	}
 </script>
 
-<AlertDialogProvider >
+<AlertDialogProvider>
 	<div class="container mx-auto max-w-4xl space-y-8 p-8">
 		<div class="space-y-2">
 			<h1 class="text-3xl font-bold">Alert Dialog Implementation</h1>
 			<p class="text-muted-foreground">
-				Examples of programmatically triggered alert dialogs with various variants and
-				configurations.
+				Examples of programmatically triggered alert dialogs with
+				various variants and configurations.
 			</p>
 		</div>
 
@@ -216,82 +219,179 @@
 
 			<div class="space-y-6">
 				<!-- Variants Section -->
-				<div class="space-y-3">
-					<h2 class="text-xl font-semibold">Variants</h2>
+				<Card variant="outline" class="space-y-3">
+					<h2 class="text-xl font-semibold mb-4">Variants</h2>
 					<div class="flex flex-wrap gap-2">
-						<Button onclick={() => dialog && showDefaultAlert(dialog)}>Default</Button>
+						<Button
+							onclick={() => dialog && showDefaultAlert(dialog)}
+							>Default</Button
+						>
 
-						<Button variant="destructive" onclick={() => dialog && showDestructiveAlert(dialog)}>
+						<Button
+							variant="destructive"
+							onclick={() =>
+								dialog && showDestructiveAlert(dialog)}
+						>
 							Destructive
 						</Button>
 
-						<Button color="success" onclick={() => dialog && showSuccessAlert(dialog)}>
+						<Button
+							color="success"
+							onclick={() => dialog && showSuccessAlert(dialog)}
+						>
 							Success
 						</Button>
 
-						<Button color="warning" onclick={() => dialog && showWarningAlert(dialog)}>
+						<Button
+							color="warning"
+							onclick={() => dialog && showWarningAlert(dialog)}
+						>
 							Warning
 						</Button>
 
-						<Button color="info" onclick={() => dialog && showInfoAlert(dialog)}>Info</Button>
+						<Button
+							color="info"
+							onclick={() => dialog && showInfoAlert(dialog)}
+							>Info</Button
+						>
 					</div>
-				</div>
+
+					<br />
+					<CodeBlock
+						title=" Code"
+						language="Svelte"
+						showLineNumbers
+						maxHeight="250px"
+						collapsible
+						variant="default"
+						code={variantsDocs}
+					/>
+				</Card>
 
 				<!-- Sizes Section -->
-				<div class="space-y-3">
-					<h2 class="text-xl font-semibold">Sizes</h2>
+				<Card variant="outline" class="space-y-3">
+					<h2 class="text-xl font-semibold mb-4">Sizes</h2>
 					<div class="flex flex-wrap gap-2">
-						<Button variant="outline" onclick={() => dialog && showSmallDialog(dialog)}>
+						<Button
+							variant="outline"
+							onclick={() => dialog && showSmallDialog(dialog)}
+						>
 							Small
 						</Button>
 
-						<Button variant="outline" onclick={() => dialog && showDefaultSizeDialog(dialog)}>
+						<Button
+							variant="outline"
+							onclick={() =>
+								dialog && showDefaultSizeDialog(dialog)}
+						>
 							Default
 						</Button>
 
-						<Button variant="outline" onclick={() => dialog && showLargeDialog(dialog)}>
+						<Button
+							variant="outline"
+							onclick={() => dialog && showLargeDialog(dialog)}
+						>
 							Large
 						</Button>
 					</div>
-				</div>
+
+					<br />
+					<CodeBlock
+						title=" Code"
+						language="Svelte"
+						showLineNumbers
+						maxHeight="250px"
+						collapsible
+						variant="default"
+						code={sizesDocs}
+					/>
+				</Card>
 
 				<!-- Configuration Options -->
-				<div class="space-y-3">
-					<h2 class="text-xl font-semibold">Configuration Options</h2>
+				<Card variant="outline" class="space-y-3">
+					<h2 class="text-xl font-semibold mb-4">Configuration Options</h2>
 					<div class="flex flex-wrap gap-2">
-						<Button variant="outline" onclick={() => dialog && showNoCancelDialog(dialog)}>
+						<Button
+							variant="outline"
+							onclick={() => dialog && showNoCancelDialog(dialog)}
+						>
 							No Cancel
 						</Button>
 
-						<Button variant="outline" onclick={() => dialog && showNoActionDialog(dialog)}>
+						<Button
+							variant="outline"
+							onclick={() => dialog && showNoActionDialog(dialog)}
+						>
 							No Action
 						</Button>
 
-						<Button variant="outline" onclick={() => dialog && showCustomTextDialog(dialog)}>
+						<Button
+							variant="outline"
+							onclick={() =>
+								dialog && showCustomTextDialog(dialog)}
+						>
 							Custom Text
 						</Button>
 
-						<Button variant="outline" onclick={() => dialog && showCallbacksDialog(dialog)}>
+						<Button
+							variant="outline"
+							onclick={() =>
+								dialog && showCallbacksDialog(dialog)}
+						>
 							With Callbacks
 						</Button>
 					</div>
-				</div>
+
+						<br />
+					<CodeBlock
+						title=" Code"
+						language="Svelte"
+						showLineNumbers
+						maxHeight="250px"
+						collapsible
+						variant="default"
+						code={configDocs}
+					/>
+				</Card>
 
 				<!-- Practical Examples -->
-				<div class="space-y-3">
-					<h2 class="text-xl font-semibold">Practical Examples</h2>
+				<Card variant="outline" class="space-y-3">
+					<h2 class="text-xl font-semibold mb-4">Practical Examples</h2>
 					<div class="flex flex-wrap gap-2">
-						<Button onclick={() => dialog && showDeleteFileDialog(dialog)}>Delete File</Button>
+						<Button
+							onclick={() =>
+								dialog && showDeleteFileDialog(dialog)}
+							>Delete File</Button
+						>
 
-						<Button variant="outline" onclick={() => dialog && showSavePromptDialog(dialog)}>
+						<Button
+							variant="outline"
+							onclick={() =>
+								dialog && showSavePromptDialog(dialog)}
+						>
 							Save Prompt
 						</Button>
 
-						<Button color="success" onclick={() => dialog && showPaymentSuccessDialog(dialog)}>
+						<Button
+							color="success"
+							onclick={() =>
+								dialog && showPaymentSuccessDialog(dialog)}
+						>
 							Payment Success
 						</Button>
 					</div>
-				</div>
+
+						<br />
+					<CodeBlock
+						title=" Code"
+						language="Svelte"
+						showLineNumbers
+						maxHeight="250px"
+						collapsible
+						variant="default"
+						code={practicalDocs}
+					/>
+				</Card>
 
 				<!-- Result Display -->
 				{#if result}
@@ -306,4 +406,3 @@
 		{@render AlertDialogButtons()}
 	</div>
 </AlertDialogProvider>
-

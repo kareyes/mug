@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { Alert, Button, AlertPrimitives } from "@kareyes/aether";
+    import { compactLayoutDocs, complexAlertDocs, customIconDocs, dismissibleDocs, realWorldExamplesDocs, variantDocs, withActionsDocs, withNWithoutIconsDocs } from "$lib/code-blocks/alert";
+	import { Alert, Button, AlertPrimitives, Card, CodeBlock } from "@kareyes/aether";
+
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
@@ -12,7 +14,7 @@
 
 	<div class="space-y-12">
 		<!-- All Variants -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Variants</h2>
 			<div class="space-y-4">
 				<Alert variant="default" title="Default Alert" description="This is a default alert message." />
@@ -22,10 +24,21 @@
 				<Alert variant="error" title="Error" description="Something went wrong. Please try again." />
 				
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title=" Code"
+				language="Svelte"
+				showLineNumbers
+				maxHeight="250px"
+				collapsible
+				variant="default"
+				code={variantDocs}
+			/>
+		</Card>
 
 		<!-- With and Without Icons -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">With and Without Icons</h2>
 			<div class="space-y-4">
 				<Alert 
@@ -41,10 +54,21 @@
 					showIcon={false}
 				/>
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title=" Code"
+				language="Svelte"
+				showLineNumbers
+				maxHeight="250px"
+				collapsible
+				variant="default"
+				code={withNWithoutIconsDocs}
+			/>
+		</Card>
 
 		<!-- Dismissible Alerts -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Dismissible Alerts</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Click the X button to dismiss these alerts.
@@ -63,10 +87,21 @@
 					dismissible={true}
 				/>
 			</div>
-		</section>
+			
+			<br />
+			<CodeBlock
+				title=" Code"
+				language="Svelte"
+				showLineNumbers
+				maxHeight="250px"
+				collapsible
+				variant="default"
+				code={dismissibleDocs}
+			/>
+		</Card>
 
 		<!-- Alerts with Actions -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">With Action Buttons</h2>
 			<div class="space-y-4">
 				<Alert variant="warning" title="Pending Changes" description="You have unsaved changes in your document.">
@@ -90,10 +125,21 @@
 					{/snippet}
 				</Alert>
 			</div>
-		</section>
+			
+			<br />
+			<CodeBlock
+				title=" Code"
+				language="Svelte"
+				showLineNumbers
+				maxHeight="250px"
+				collapsible
+				variant="default"
+				code={withActionsDocs}
+			/>
+		</Card>
 
 		<!-- Custom Icon -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Custom Content</h2>
 			<div class="space-y-4">
 				<AlertPrimitives.Root variant="info">
@@ -120,10 +166,21 @@
 					</AlertPrimitives.Description>
 				</AlertPrimitives.Root>
 			</div>
-		</section>
+			
+			<br />
+			<CodeBlock
+				title=" Code"
+				language="Svelte"
+				showLineNumbers
+				maxHeight="250px"
+				collapsible
+				variant="default"
+				code={customIconDocs}
+			/>
+		</Card>
 
 		<!-- Complex Alerts -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Complex Examples</h2>
 			<div class="space-y-4">
 				<AlertPrimitives.Root variant="warning" dismissible={true}>
@@ -163,10 +220,21 @@
 					{/snippet}
 				</AlertPrimitives.Root>
 			</div>
-		</section>
+			
+			<br />
+			<CodeBlock
+				title=" Code"
+				language="Svelte"
+				showLineNumbers
+				maxHeight="250px"
+				collapsible
+				variant="default"
+				code={complexAlertDocs}
+			/>
+		</Card>
 
 		<!-- Compact Alerts -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Compact Layout</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Alerts with just titles or descriptions.
@@ -176,10 +244,21 @@
 				<Alert variant="success" description="File uploaded successfully" />
 				<Alert variant="warning" title="Low disk space" />
 			</div>
-		</section>
+			
+			<br />
+			<CodeBlock
+				title=" Code"
+				language="Svelte"
+				showLineNumbers
+				maxHeight="250px"
+				collapsible
+				variant="default"
+				code={compactLayoutDocs}
+			/>
+		</Card>
 
 		<!-- Real-World Examples -->
-		<section>
+		<Card variant="outline" class="space-y-3">
 			<h2 class="text-2xl font-semibold mb-4">Real-World Examples</h2>
 			<div class="space-y-4">
 				<!-- Cookie Notice -->
@@ -205,6 +284,17 @@
 					{/snippet}
 				</Alert>
 			</div>
-		</section>
+			
+			<br />
+			<CodeBlock
+				title=" Code"
+				language="Svelte"
+				showLineNumbers
+				maxHeight="250px"
+				collapsible
+				variant="default"
+				code={realWorldExamplesDocs}
+			/>
+		</Card>
 	</div>
 </div>

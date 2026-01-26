@@ -11,7 +11,7 @@
     import checkbox from "$lib/ui/checkbox.svelte";
     import combobox from "$lib/ui/combobox.svelte"
     import datatable from "$lib/ui/data-table.svelte"
-    // import datepicker from "$lib/ui/date-picker.svelte"
+    import datepicker from "$lib/ui/date-picker.svelte"
     import dialog from "$lib/ui/dialog.svelte"
     import dropdownMenu from "$lib/ui/dropdown-menu.svelte"
     import field from "$lib/ui/field.svelte"
@@ -48,7 +48,7 @@
         "checkbox": checkbox,
         "combobox": combobox,
         "data-table": datatable,
-        // "date-picker": datepicker,
+        "date-picker": datepicker,
         "dialog": dialog,
         "dropdown-menu": dropdownMenu,
         "file-input": fileInput,

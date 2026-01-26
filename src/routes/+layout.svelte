@@ -1,12 +1,30 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
-	import {Home} from "@kareyes/aether/icons";
-	// import {DarkModePrimitives} from "@kareyes/aether";
-	// import { ModeWatcher } from "mode-watcher";
-	import { DarkModePrimitives, DarkModeToggle, NavigationMenuPrimitives as NavigationMenu , Button, navigationMenuTriggerStyle, DarkModeSwitch} from '@kareyes/aether';
+	import { Coffee } from "@kareyes/aether/icons";
+	import {
+		DarkModePrimitives,
+		DarkModeSwitch,
+		DarkModeToggle,
+		Sidebar,
+		SidebarPrimitives
+	} from '@kareyes/aether';
 	import "../app.css";
-    // import { DarkModeToggle } from '@kareyes/aether';
+
 	const { ModeWatcher } = DarkModePrimitives;
+	const {
+		SidebarProvider,
+		SidebarContent,
+		SidebarGroup,
+		SidebarGroupContent,
+		SidebarGroupLabel,
+		SidebarHeader,
+		SidebarMenu,
+		SidebarMenuButton,
+		SidebarMenuItem,
+		SidebarInset,
+		SidebarTrigger,
+		SidebarRail
+	} = SidebarPrimitives;
 
 	let { children } = $props();
 
@@ -19,7 +37,30 @@
 		{ label: 'Breadcrumb', href: '/components/breadcrumb' },
 		{ label: 'Button', href: '/components/button' },
 		{ label: 'Button Group', href: '/components/button-group' },
-		{ label: 'Card', href: '/components/card' }
+		{ label: 'Card', href: '/components/card' },
+		{ label: 'Checkbox', href: '/components/checkbox' },
+		{ label: 'Combobox', href: '/components/combobox' },
+		{ label: 'Data Table', href: '/components/data-table' },
+		{ label: 'Date Picker', href: '/components/date-picker' },
+		{ label: 'Dialog', href: '/components/dialog' },
+		{ label: 'Dropdown Menu', href: '/components/dropdown-menu' },
+		{ label: 'Field', href: '/components/field' },
+		{ label: 'File Input', href: '/components/file-input' },
+		{ label: 'Input', href: '/components/input' },
+		{ label: 'Input OTP', href: '/components/input-otp' },
+		{ label: 'Number Spinner', href: '/components/number-spinner' },
+		{ label: 'Popover', href: '/components/popover' },
+		{ label: 'Radio Group', href: '/components/radio-group' },
+		{ label: 'Select', href: '/components/select' },
+		{ label: 'Sheet', href: '/components/sheet' },
+		{ label: 'Sidebar', href: '/components/sidebar' },
+		{ label: 'Skeleton', href: '/components/skeleton' },
+		{ label: 'Slider', href: '/components/slider' },
+		{ label: 'Sonner', href: '/components/sonner' },
+		{ label: 'Stepper', href: '/components/stepper' },
+		{ label: 'Switch', href: '/components/switch' },
+		{ label: 'Tabs', href: '/components/tabs' },
+		{ label: 'Textarea', href: '/components/textarea' }
 	];
 </script>
 
@@ -29,44 +70,53 @@
 
 <ModeWatcher />
 
-<div class="min-h-screen">
-	<nav class="bg-background border-b border-gray-200 shadow-sm">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="flex items-center justify-between h-16">
-				<NavigationMenu.Root class="flex items-center gap-4">
-					<NavigationMenu.List class="flex items-center gap-1">
-						<NavigationMenu.Item>
-							<NavigationMenu.Link href="/" class="">
-								<Button variant="link" text="Home" icon={Home}  />
-							</NavigationMenu.Link>
-						</NavigationMenu.Item>
-						
-						<NavigationMenu.Item>
-							<NavigationMenu.Trigger>Components</NavigationMenu.Trigger>
-							<NavigationMenu.Content>
-								<ul class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-									{#each components as component}
-										<li>
-											<NavigationMenu.Link
-												href={component.href}
-												class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-											>
-												<div class="text-sm font-medium leading-none">{component.label}</div>
-											</NavigationMenu.Link>
-										</li>
-									{/each}
-								</ul>
-							</NavigationMenu.Content>
-						</NavigationMenu.Item>
-					</NavigationMenu.List>
-				</NavigationMenu.Root>
+<SidebarProvider>
+	<Sidebar collapsible="icon">
+		<SidebarHeader>
+			<SidebarMenu>
+				<SidebarMenuItem>
+					<SidebarMenuButton size="lg" tooltipContent="Home">
+						{#snippet child({ props })}
+							<a href="/" {...props}>
+								<Coffee class="size-4" />
+								<span class="font-semibold">Mug</span>
+							</a>
+						{/snippet}
+					</SidebarMenuButton>
+				</SidebarMenuItem>
+			</SidebarMenu>
+		</SidebarHeader>
+		<SidebarContent>
+			<SidebarGroup>
+				<SidebarGroupLabel>Components</SidebarGroupLabel>
+				<SidebarGroupContent>
+					<SidebarMenu>
+						{#each components as component}
+							<SidebarMenuItem>
+								<SidebarMenuButton tooltipContent={component.label}>
+									{#snippet child({ props })}
+										<a href={component.href} {...props}>
+											<span>{component.label}</span>
+										</a>
+									{/snippet}
+								</SidebarMenuButton>
+							</SidebarMenuItem>
+						{/each}
+					</SidebarMenu>
+				</SidebarGroupContent>
+			</SidebarGroup>
+		</SidebarContent>
+		<SidebarRail />
+	</Sidebar>
+	<SidebarInset>
+		<header class="flex h-16 shrink-0 items-center gap-2 border-b px-4">
+			<SidebarTrigger />
+			<div class="flex flex-1 items-center justify-end">
+				<DarkModeToggle />
 			</div>
-
-			<DarkModeSwitch class="absolute top-4 right-4" />
-		</div>
-	</nav>
-
-	<main>
-		{@render children()}
-	</main>
-</div>
+		</header>
+		<main class="flex-1 p-6">
+			{@render children()}
+		</main>
+	</SidebarInset>
+</SidebarProvider>
