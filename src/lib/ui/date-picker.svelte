@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { DatePicker, DateRangePicker, DatePickerWithPresets , DateRangePickerWithPresets,DatePickerPrimitives} from "@kareyes/aether";
+	import { basicDatePickerDocs, dateRangePickerDocs, datePickerWithPresetsDocs, dateRangeWithPresetsDocs, errorStatesDocs, buttonVariantsDocs, disabledStateDocs, customFormatDocs } from "$lib/code-blocks/date-picker";
+	import { DatePicker, DateRangePicker, DatePickerWithPresets, DateRangePickerWithPresets, DatePickerPrimitives, Card, CodeBlock } from "@kareyes/aether";
 	import { type DateValue, CalendarDate, today, getLocalTimeZone } from "@internationalized/date";
-	// import type { DateRange } from "bits-ui";
 
-    // const {DateRangePickerWithPresets} =DatePickerPrimitives
 	let singleDate = $state<DateValue | undefined>();
 	let dateRange = $state<DatePickerPrimitives.DateRange | undefined>();
 	let presetDate = $state<DateValue | undefined>();
@@ -11,160 +10,234 @@
 	let disabledDate = $state<DateValue | undefined>();
 </script>
 
-<div class="container mx-auto py-10 space-y-8">
-	<div class="space-y-2">
-		<h1 class="text-4xl font-bold">Date Picker Components</h1>
+<div class="container mx-auto p-6 max-w-6xl">
+	<div class="mb-8">
+		<h1 class="text-3xl font-bold mb-2">Date Picker Components</h1>
 		<p class="text-muted-foreground">
 			A collection of date picker components built with Calendar, RangeCalendar, and Popover.
 		</p>
 	</div>
 
-	<!-- Basic Date Picker -->
-	<section class="space-y-4">
-		<div class="space-y-2">
-			<h2 class="text-2xl font-semibold">Date Picker</h2>
-			<p class="text-sm text-muted-foreground">
+	<div class="space-y-12">
+		<!-- Basic Date Picker -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Date Picker</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				Select a single date with a popover calendar.
 			</p>
-		</div>
-		<div class="grid gap-4 max-w-md">
-			<DatePicker bind:value={singleDate} />
-			{#if singleDate && typeof singleDate.toDate === "function"}
-				<div class="text-sm text-muted-foreground">
-					Selected: {singleDate.toDate(getLocalTimeZone()).toLocaleDateString()}
-				</div>
-			{/if}
-		</div>
-	</section>
+			<div class="grid gap-4 max-w-md">
+				<DatePicker bind:value={singleDate} />
+				{#if singleDate && typeof singleDate.toDate === "function"}
+					<div class="text-sm text-muted-foreground">
+						Selected: {singleDate.toDate(getLocalTimeZone()).toLocaleDateString()}
+					</div>
+				{/if}
+			</div>
 
-	<!-- Date Range Picker -->
-	<section class="space-y-4">
-		<div class="space-y-2">
-			<h2 class="text-2xl font-semibold">Date Range Picker</h2>
-			<p class="text-sm text-muted-foreground">
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={basicDatePickerDocs}
+			/>
+		</Card>
+
+		<!-- Date Range Picker -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Date Range Picker</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				Select a date range with two calendars side by side.
 			</p>
-		</div>
-		<div class="grid gap-4 max-w-md">
-			<DateRangePicker bind:value={dateRange} />
-			{#if dateRange?.start && dateRange?.end && typeof dateRange.start.toDate === "function" && typeof dateRange.end.toDate === "function"}
-				<div class="text-sm text-muted-foreground">
-					Selected: {dateRange.start.toDate(getLocalTimeZone()).toLocaleDateString()} - {dateRange.end.toDate(getLocalTimeZone()).toLocaleDateString()}
-				</div>
-			{/if}
-		</div>
-	</section>
+			<div class="grid gap-4 max-w-md">
+				<DateRangePicker bind:value={dateRange} />
+				{#if dateRange?.start && dateRange?.end && typeof dateRange.start.toDate === "function" && typeof dateRange.end.toDate === "function"}
+					<div class="text-sm text-muted-foreground">
+						Selected: {dateRange.start.toDate(getLocalTimeZone()).toLocaleDateString()} - {dateRange.end.toDate(getLocalTimeZone()).toLocaleDateString()}
+					</div>
+				{/if}
+			</div>
 
-	<!-- Date Picker with Presets -->
-	<section class="space-y-4">
-		<div class="space-y-2">
-			<h2 class="text-2xl font-semibold">Date Picker with Presets</h2>
-			<p class="text-sm text-muted-foreground">
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={dateRangePickerDocs}
+			/>
+		</Card>
+
+		<!-- Date Picker with Presets -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Date Picker with Presets</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				Quick date selection with preset options.
 			</p>
-		</div>
-		<div class="grid gap-4 max-w-md">
-			<DatePickerWithPresets bind:value={presetDate} />
-			{#if presetDate && typeof presetDate.toDate === "function"}
-				<div class="text-sm text-muted-foreground">
-					Selected: {presetDate.toDate(getLocalTimeZone()).toLocaleDateString()}
-				</div>
-			{/if}
-		</div>
-	</section>
+			<div class="grid gap-4 max-w-md">
+				<DatePickerWithPresets bind:value={presetDate} />
+				{#if presetDate && typeof presetDate.toDate === "function"}
+					<div class="text-sm text-muted-foreground">
+						Selected: {presetDate.toDate(getLocalTimeZone()).toLocaleDateString()}
+					</div>
+				{/if}
+			</div>
 
-	<!-- Date Range Picker with Presets -->
-	<section class="space-y-4">
-		<div class="space-y-2">
-			<h2 class="text-2xl font-semibold">Date Range Picker with Presets</h2>
-			<p class="text-sm text-muted-foreground">
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={datePickerWithPresetsDocs}
+			/>
+		</Card>
+
+		<!-- Date Range Picker with Presets -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Date Range Picker with Presets</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				Quick date range selection with common preset ranges.
 			</p>
-		</div>
-		<div class="grid gap-4 max-w-md">
-			<DateRangePickerWithPresets bind:value={presetRange} />
-			{#if presetRange?.start && presetRange?.end && typeof presetRange.start.toDate === "function" && typeof presetRange.end.toDate === "function"}
-				<div class="text-sm text-muted-foreground">
-					Selected: {presetRange.start.toDate(getLocalTimeZone()).toLocaleDateString()} - {presetRange.end.toDate(getLocalTimeZone()).toLocaleDateString()}
-				</div>
-			{/if}
-		</div>
-	</section>
+			<div class="grid gap-4 max-w-md">
+				<DateRangePickerWithPresets bind:value={presetRange} />
+				{#if presetRange?.start && presetRange?.end && typeof presetRange.start.toDate === "function" && typeof presetRange.end.toDate === "function"}
+					<div class="text-sm text-muted-foreground">
+						Selected: {presetRange.start.toDate(getLocalTimeZone()).toLocaleDateString()} - {presetRange.end.toDate(getLocalTimeZone()).toLocaleDateString()}
+					</div>
+				{/if}
+			</div>
 
-	<!-- Button Variants -->
-	<section class="space-y-4">
-		<div class="space-y-2">
-			<h2 class="text-2xl font-semibold">Error States</h2>
-			<p class="text-sm text-muted-foreground">
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={dateRangeWithPresetsDocs}
+			/>
+		</Card>
+
+		<!-- Error States -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Error States</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				Date pickers with error styling.
 			</p>
-		</div>
-		<div class="grid gap-4 max-w-md">
-			<div>
-				<DatePicker 
-					error={true}
-					onError={(err) => console.log('Error state:', err)}
-				/>
-				<p class="text-xs text-destructive mt-1">Date is required</p>
+			<div class="grid gap-4 max-w-md">
+				<div>
+					<DatePicker
+						error={true}
+						onError={(err) => console.log('Error state:', err)}
+					/>
+					<p class="text-xs text-destructive mt-1">Date is required</p>
+				</div>
+				<div>
+					<DatePickerWithPresets
+						error={true}
+					/>
+					<p class="text-xs text-destructive mt-1">Please select a valid date</p>
+				</div>
 			</div>
-			<div>
-				<DatePickerWithPresets 
-					error={true}
-				/>
-				<p class="text-xs text-destructive mt-1">Please select a valid date</p>
-			</div>
-		</div>
-	</section>
 
-	<!-- Button Variants -->
-	<section class="space-y-4">
-		<div class="space-y-2">
-			<h2 class="text-2xl font-semibold">Button Variants</h2>
-			<p class="text-sm text-muted-foreground">
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={errorStatesDocs}
+			/>
+		</Card>
+
+		<!-- Button Variants -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Button Variants</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				Different button styles for the date picker trigger.
 			</p>
-		</div>
-		<div class="grid gap-4 max-w-md">
-			<DatePicker buttonVariant="default" />
-			<DatePicker buttonVariant="outline" />
-			<DatePicker buttonVariant="ghost" />
-			<DatePicker buttonVariant="secondary" />
-		</div>
-	</section>
+			<div class="grid gap-4 max-w-md">
+				<DatePicker buttonVariant="default" />
+				<DatePicker buttonVariant="outline" />
+				<DatePicker buttonVariant="ghost" />
+				<DatePicker buttonVariant="secondary" />
+			</div>
 
-	<!-- Disabled State -->
-	<section class="space-y-4">
-		<div class="space-y-2">
-			<h2 class="text-2xl font-semibold">Disabled State</h2>
-			<p class="text-sm text-muted-foreground">
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={buttonVariantsDocs}
+			/>
+		</Card>
+
+		<!-- Disabled State -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Disabled State</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				Date picker in disabled state.
 			</p>
-		</div>
-		<div class="grid gap-4 max-w-md">
-			<DatePicker bind:value={disabledDate} disabled />
-		</div>
-	</section>
+			<div class="grid gap-4 max-w-md">
+				<DatePicker bind:value={disabledDate} disabled />
+			</div>
 
-	<!-- Custom Format -->
-	<section class="space-y-4">
-		<div class="space-y-2">
-			<h2 class="text-2xl font-semibold">Custom Format</h2>
-			<p class="text-sm text-muted-foreground">
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={disabledStateDocs}
+			/>
+		</Card>
+
+		<!-- Custom Format -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Custom Format</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				Customize the date display format.
 			</p>
-		</div>
-		<div class="grid gap-4 max-w-md">
-			<DatePicker 
-				format={(date) => {
-					if (!date) return "Select date";
-					return date.toDate(getLocalTimeZone()).toLocaleDateString("en-US", {
-						weekday: "long",
-						year: "numeric",
-						month: "long",
-						day: "numeric"
-					});
-				}}
+			<div class="grid gap-4 max-w-md">
+				<DatePicker
+					format={(date) => {
+						if (!date) return "Select date";
+						return date.toDate(getLocalTimeZone()).toLocaleDateString("en-US", {
+							weekday: "long",
+							year: "numeric",
+							month: "long",
+							day: "numeric"
+						});
+					}}
+				/>
+			</div>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={customFormatDocs}
 			/>
-		</div>
-	</section>
+		</Card>
+	</div>
 </div>

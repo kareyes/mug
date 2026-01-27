@@ -1,5 +1,15 @@
 <script lang="ts">
-  import { Select, Field, Badge } from "@kareyes/aether";
+  import {
+    basicUsageDocs,
+    multipleSelectionDocs,
+    groupedOptionsDocs,
+    errorStatesDocs,
+    variantsDocs,
+    sizesDocs,
+    statesDocs,
+    disabledOptionsDocs,
+  } from "$lib/code-blocks/select";
+  import { Select, Field, Badge, Card, CodeBlock } from "@kareyes/aether";
 
   let basicValue = $state("");
   let multiValue = $state<string[]>([]);
@@ -52,18 +62,20 @@
   <title>Unified Select Demo - Aether UI</title>
 </svelte:head>
 
-<div class="container mx-auto p-8 space-y-12">
-  <div class="space-y-4">
-    <h1 class="text-4xl font-bold">Unified Select Component</h1>
-    <p class="text-lg text-muted-foreground">
+<div class="container mx-auto p-6 max-w-6xl">
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold mb-2">Select Component</h1>
+    <p class="text-muted-foreground">
       A single, easy-to-use Select component that combines all shadcn select functionality.
     </p>
   </div>
 
-  <!-- Basic Usage -->
-  <section class="space-y-6">
-    <div>
+  <div class="space-y-12">
+    <!-- Basic Usage -->
+    <Card variant="outline" class="p-6">
       <h2 class="text-2xl font-semibold mb-4">Basic Usage</h2>
+      <p class="text-sm text-muted-foreground mb-4">Simple select with basic options.</p>
+
       <div class="space-y-4">
         <div>
           <span class="block text-sm font-medium mb-2">Choose a fruit:</span>
@@ -79,13 +91,24 @@
           {/if}
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Multiple Selection -->
-  <section class="space-y-6">
-    <div>
+      <br />
+      <CodeBlock
+        title="Code"
+        language="Svelte"
+        showLineNumbers
+        collapsible
+        maxHeight="250px"
+        variant="default"
+        code={basicUsageDocs}
+      />
+    </Card>
+
+    <!-- Multiple Selection -->
+    <Card variant="outline" class="p-6">
       <h2 class="text-2xl font-semibold mb-4">Multiple Selection</h2>
+      <p class="text-sm text-muted-foreground mb-4">Allow users to select multiple options at once.</p>
+
       <div class="space-y-4">
         <div>
           <span class="block text-sm font-medium mb-2">Choose multiple frameworks:</span>
@@ -106,13 +129,24 @@
           {/if}
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Grouped Options -->
-  <section class="space-y-6">
-    <div>
+      <br />
+      <CodeBlock
+        title="Code"
+        language="Svelte"
+        showLineNumbers
+        collapsible
+        maxHeight="250px"
+        variant="default"
+        code={multipleSelectionDocs}
+      />
+    </Card>
+
+    <!-- Grouped Options -->
+    <Card variant="outline" class="p-6">
       <h2 class="text-2xl font-semibold mb-4">Grouped Options</h2>
+      <p class="text-sm text-muted-foreground mb-4">Organize options into labeled groups.</p>
+
       <div class="space-y-4">
         <div>
           <span class="block text-sm font-medium mb-2">Choose a framework:</span>
@@ -128,34 +162,44 @@
           {/if}
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Variants -->
-  <section class="space-y-6">
-    <div>
+      <br />
+      <CodeBlock
+        title="Code"
+        language="Svelte"
+        showLineNumbers
+        collapsible
+        maxHeight="250px"
+        variant="default"
+        code={groupedOptionsDocs}
+      />
+    </Card>
+
+    <!-- Error States -->
+    <Card variant="outline" class="p-6">
       <h2 class="text-2xl font-semibold mb-4">Error States</h2>
+      <p class="text-sm text-muted-foreground mb-4">Validation error display with select components.</p>
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Field
-						label="Username"
-						description="Choose a unique username for your account."
-						required
-						error={"This field is required"}
-					>
-						 <Select
+          label="Username"
+          description="Choose a unique username for your account."
+          required
+          error={"This field is required"}
+        >
+           <Select
             options={fruits}
             placeholder="Select a fruit..."
             class="w-full"
             error={true}
           />
-					</Field>
+        </Field>
 
-        <Field 
-          label="Outline with Error" 
+        <Field
+          label="Outline with Error"
           error={"Please make a selection"}
           required
         >
-          
           <Select
             options={frameworks}
             variant="outline"
@@ -164,7 +208,6 @@
             error={true}
           />
         </Field>
-
 
         <div>
           <span class="block text-sm font-medium mb-2">Large Error Select</span>
@@ -178,13 +221,24 @@
           <p class="text-xs text-destructive mt-1">Invalid selection</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Variants -->
-  <section class="space-y-6">
-    <div>
+      <br />
+      <CodeBlock
+        title="Code"
+        language="Svelte"
+        showLineNumbers
+        collapsible
+        maxHeight="250px"
+        variant="default"
+        code={errorStatesDocs}
+      />
+    </Card>
+
+    <!-- Variants -->
+    <Card variant="outline" class="p-6">
       <h2 class="text-2xl font-semibold mb-4">Variants</h2>
+      <p class="text-sm text-muted-foreground mb-4">Available visual styles for the select component.</p>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div>
           <span class="block text-sm font-medium mb-2">Default</span>
@@ -195,7 +249,7 @@
             class="w-full"
           />
         </div>
-        
+
         <div>
           <span class="block text-sm font-medium mb-2">Outline</span>
           <Select
@@ -205,7 +259,7 @@
             class="w-full"
           />
         </div>
-        
+
         <div>
           <span class="block text-sm font-medium mb-2">Filled</span>
           <Select
@@ -215,7 +269,7 @@
             class="w-full"
           />
         </div>
-        
+
         <div>
           <span class="block text-sm font-medium mb-2">Ghost</span>
           <Select
@@ -225,7 +279,7 @@
             class="w-full"
           />
         </div>
-        
+
         <div>
           <span class="block text-sm font-medium mb-2">Underline</span>
           <Select
@@ -236,13 +290,24 @@
           />
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Sizes -->
-  <section class="space-y-6">
-    <div>
+      <br />
+      <CodeBlock
+        title="Code"
+        language="Svelte"
+        showLineNumbers
+        collapsible
+        maxHeight="250px"
+        variant="default"
+        code={variantsDocs}
+      />
+    </Card>
+
+    <!-- Sizes -->
+    <Card variant="outline" class="p-6">
       <h2 class="text-2xl font-semibold mb-4">Sizes</h2>
+      <p class="text-sm text-muted-foreground mb-4">Different size options for the select component.</p>
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div>
           <span class="block text-sm font-medium mb-2">Small</span>
@@ -253,7 +318,7 @@
             class="w-full"
           />
         </div>
-        
+
         <div>
           <span class="block text-sm font-medium mb-2">Default</span>
           <Select
@@ -263,7 +328,7 @@
             class="w-full"
           />
         </div>
-        
+
         <div>
           <span class="block text-sm font-medium mb-2">Large</span>
           <Select
@@ -274,13 +339,24 @@
           />
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- States -->
-  <section class="space-y-6">
-    <div>
+      <br />
+      <CodeBlock
+        title="Code"
+        language="Svelte"
+        showLineNumbers
+        collapsible
+        maxHeight="250px"
+        variant="default"
+        code={sizesDocs}
+      />
+    </Card>
+
+    <!-- States -->
+    <Card variant="outline" class="p-6">
       <h2 class="text-2xl font-semibold mb-4">States</h2>
+      <p class="text-sm text-muted-foreground mb-4">Normal and disabled select states.</p>
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <span class="block text-sm font-medium mb-2">Normal</span>
@@ -290,7 +366,7 @@
             class="w-full"
           />
         </div>
-        
+
         <div>
           <span class="block text-sm font-medium mb-2 text-muted-foreground">Disabled</span>
           <Select
@@ -301,13 +377,24 @@
           />
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- With Some Options Disabled -->
-  <section class="space-y-6">
-    <div>
+      <br />
+      <CodeBlock
+        title="Code"
+        language="Svelte"
+        showLineNumbers
+        collapsible
+        maxHeight="250px"
+        variant="default"
+        code={statesDocs}
+      />
+    </Card>
+
+    <!-- With Some Options Disabled -->
+    <Card variant="outline" class="p-6">
       <h2 class="text-2xl font-semibold mb-4">Disabled Options</h2>
+      <p class="text-sm text-muted-foreground mb-4">Individual options can be disabled within the select.</p>
+
       <div class="space-y-4">
         <div>
           <span class="block text-sm font-medium mb-2">Some options disabled:</span>
@@ -324,6 +411,17 @@
           />
         </div>
       </div>
-    </div>
-  </section>
+
+      <br />
+      <CodeBlock
+        title="Code"
+        language="Svelte"
+        showLineNumbers
+        collapsible
+        maxHeight="250px"
+        variant="default"
+        code={disabledOptionsDocs}
+      />
+    </Card>
+  </div>
 </div>

@@ -50,7 +50,7 @@
 		{ label: 'Input OTP', href: '/components/input-otp' },
 		{ label: 'Number Spinner', href: '/components/number-spinner' },
 		{ label: 'Popover', href: '/components/popover' },
-		{ label: 'Radio Group', href: '/components/radio-group' },
+		{ label: 'Radio Group', href: '/components/radio' },
 		{ label: 'Select', href: '/components/select' },
 		{ label: 'Sheet', href: '/components/sheet' },
 		{ label: 'Sidebar', href: '/components/sidebar' },

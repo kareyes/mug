@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { ComboBox, Button, PopoverPrimitives as Popover, Label } from "@kareyes/aether";
+	import { basicUsageDocs, triggerVariantsDocs, sizesDocs, widthOptionsDocs, formExampleDocs, customTriggerDocs, disabledItemsDocs } from "$lib/code-blocks/combobox";
+	import { ComboBox, Button, PopoverPrimitives as Popover, Label, Card, CodeBlock } from "@kareyes/aether";
 	import { Check, ChevronsUpDown } from "@kareyes/aether/icons";
-
 
 	// Sample data
 	const frameworks = [
@@ -72,8 +72,9 @@
 
 	<div class="space-y-12">
 		<!-- Basic Examples -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Basic Usage</h2>
+			<p class="text-sm text-muted-foreground mb-4">Simple combobox with searchable dropdown</p>
 			<div class="flex flex-wrap gap-4">
 				<ComboBox
 					items={frameworks}
@@ -93,11 +94,23 @@
 				<div>Selected framework: <span class="font-medium">{framework || "None"}</span></div>
 				<div>Selected language: <span class="font-medium">{language || "None"}</span></div>
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={basicUsageDocs}
+			/>
+		</Card>
 
 		<!-- Variants -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Trigger Variants</h2>
+			<p class="text-sm text-muted-foreground mb-4">Different button styles for the combobox trigger</p>
 			<div class="flex flex-wrap gap-4">
 				<ComboBox
 					items={frameworks}
@@ -120,11 +133,23 @@
 					placeholder="Ghost"
 				/>
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={triggerVariantsDocs}
+			/>
+		</Card>
 
 		<!-- Sizes -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Sizes</h2>
+			<p class="text-sm text-muted-foreground mb-4">Three size options: small, default, and large</p>
 			<div class="flex flex-wrap items-center gap-4">
 				<ComboBox
 					items={frameworks}
@@ -142,11 +167,23 @@
 					placeholder="Large"
 				/>
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={sizesDocs}
+			/>
+		</Card>
 
 		<!-- Width Options -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Width Options</h2>
+			<p class="text-sm text-muted-foreground mb-4">Customize the width of the trigger and content</p>
 			<div class="space-y-4">
 				<div>
 					<p class="text-sm text-muted-foreground mb-2">Default width (200px)</p>
@@ -176,11 +213,23 @@
 					/>
 				</div>
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={widthOptionsDocs}
+			/>
+		</Card>
 
 		<!-- Form Example -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Form Example</h2>
+			<p class="text-sm text-muted-foreground mb-4">Using combobox in a form with labels</p>
 			<div class="max-w-md space-y-4">
 				<div class="space-y-2">
 					<Label class="text-sm font-medium">Framework</Label>
@@ -236,10 +285,21 @@
 					<div>Timezone: <span class="font-medium">{timezone || "Not selected"}</span></div>
 				</div>
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={formExampleDocs}
+			/>
+		</Card>
 
 		<!-- Custom Trigger -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Custom Trigger</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Use the <code class="text-xs bg-muted px-1 py-0.5 rounded">trigger</code> snippet to provide custom trigger elements.
@@ -286,12 +346,26 @@
 					{/snippet}
 				</ComboBox>
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={customTriggerDocs}
+			/>
+		</Card>
 
 		<!-- Disabled Items -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">With Disabled Items</h2>
+			<p class="text-sm text-muted-foreground mb-4">Some options can be disabled to prevent selection</p>
+			
 			<ComboBox
+			triggerClass="mb-4"
 				items={[
 					{ value: "option1", label: "Available Option 1" },
 					{ value: "option2", label: "Disabled Option 2", disabled: true },
@@ -302,6 +376,17 @@
 				]}
 				placeholder="Select option..."
 			/>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={disabledItemsDocs}
+			/>
+		</Card>
 	</div>
 </div>

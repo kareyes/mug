@@ -12,8 +12,8 @@ importers:
         specifier: ^3.10.1
         version: 3.10.1
       '@kareyes/aether':
-        specifier: ^0.0.9
-        version: 0.0.9(@lucide/svelte@0.561.0(svelte@5.48.2))(@sveltejs/kit@2.50.1(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.48.2)(vite@7.3.1(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.48.2)(typescript@5.9.3)(vite@7.3.1(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.48.2)(tailwindcss@4.1.18)
+        specifier: ^0.0.10
+        version: 0.0.10(@lucide/svelte@0.561.0(svelte@5.48.2))(@sveltejs/kit@2.50.1(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.48.2)(vite@7.3.1(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.48.2)(typescript@5.9.3)(vite@7.3.1(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.48.2)(tailwindcss@4.1.18)
       '@lucide/svelte':
         specifier: ^0.561.0
         version: 0.561.0(svelte@5.48.2)
@@ -244,8 +244,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@kareyes/aether@0.0.9':
-    resolution: {integrity: sha512-iVPDgW3Vu/Ivu7oHofsOCcVyc/35W8F6PQcRK1oE5LXs3JZj+AJzbh0rVX3dC0nMSQ0mrM8X8RsLIvJExcLy1A==, tarball: https://npm.pkg.github.com/download/@kareyes/aether/0.0.9/1998902edf79fe4d7175626939cf2ddaa1223049}
+  '@kareyes/aether@0.0.10':
+    resolution: {integrity: sha512-Efxm7kR8teCtod3XWnR/aGsRl6QrReKBCTMKmtzLBUR6Kzfw5yU7lkoyKW+otl0+oKth1KG2H82alXXurvMrBQ==, tarball: https://npm.pkg.github.com/download/@kareyes/aether/0.0.10/df557b44ab5e3ca518e0e5977b6adbf0ba86841d}
     peerDependencies:
       '@lucide/svelte': ^0.561.0
       svelte: ^5.0.0
@@ -1113,7 +1113,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@kareyes/aether@0.0.9(@lucide/svelte@0.561.0(svelte@5.48.2))(@sveltejs/kit@2.50.1(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.48.2)(vite@7.3.1(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.48.2)(typescript@5.9.3)(vite@7.3.1(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.48.2)(tailwindcss@4.1.18)':
+  '@kareyes/aether@0.0.10(@lucide/svelte@0.561.0(svelte@5.48.2))(@sveltejs/kit@2.50.1(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.48.2)(vite@7.3.1(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.48.2)(typescript@5.9.3)(vite@7.3.1(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.48.2)(tailwindcss@4.1.18)':
     dependencies:
       '@internationalized/date': 3.10.1
       '@lucide/svelte': 0.561.0(svelte@5.48.2)

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { DropdownMenu, DropdownMenuPrimitives as DropdownMenuPrimitive} from "@kareyes/aether";
-	// import * as DropdownMenuPrimitive from "$core/components/ui/dropdown-menu/index";
+	import { basicMenusDocs, interactiveMenusDocs, groupedMenuDocs, triggerVariantsDocs, sizesDocs, alignmentDocs, submenuDocs, customTriggerDocs, complexMenuDocs } from "$lib/code-blocks/dropdown-menu";
+	import { DropdownMenu, DropdownMenuPrimitives as DropdownMenuPrimitive, Card, CodeBlock } from "@kareyes/aether";
 	import { User, Settings, ChevronDown, LogOut, Plus, Mail, UserPlus, MessageSquare, Bell, Shield, HelpCircle, Download, Upload, Trash2, Edit, Copy, Share2, FileText, Image, Video, Music, Folder, File } from "@kareyes/aether/icons";
 
 	let statusBarChecked = $state(true);
@@ -9,7 +9,6 @@
 	let theme = $state("light");
 	let selectedPlan = $state("free");
 
-	// Basic menu example
 	const basicMenuItems = [
 		{ label: "Profile", icon: User, onSelect: () => console.log("Profile clicked") },
 		{ label: "Settings", icon: Settings, onSelect: () => console.log("Settings clicked") },
@@ -17,7 +16,6 @@
 		{ label: "Logout", icon: LogOut, variant: "destructive" as const, onSelect: () => console.log("Logout clicked") },
 	];
 
-	// Menu with shortcuts
 	const fileMenuItems = [
 		{ label: "New File", icon: Plus, shortcut: "⌘N", onSelect: () => console.log("New file") },
 		{ label: "Upload", icon: Upload, shortcut: "⌘U", onSelect: () => console.log("Upload") },
@@ -26,7 +24,6 @@
 		{ label: "Delete", icon: Trash2, variant: "destructive" as const, shortcut: "⌘⌫", onSelect: () => console.log("Delete") },
 	];
 
-	// Checkbox menu (reactive)
 	const viewMenuItems = $derived([
 		{ type: "label" as const, label: "View Options" },
 		{ type: "checkbox" as const, label: "Show Status Bar", checked: statusBarChecked, onSelect: () => statusBarChecked = !statusBarChecked },
@@ -34,7 +31,6 @@
 		{ type: "checkbox" as const, label: "Show Sidebar", checked: sidebarChecked, onSelect: () => sidebarChecked = !sidebarChecked },
 	]);
 
-	// Radio group menu (reactive)
 	const themeMenuItems = $derived([
 		{
 			type: "radio" as const,
@@ -49,7 +45,6 @@
 		},
 	]);
 
-	// Grouped menu
 	const groupedMenuItems = [
 		{
 			label: "Account",
@@ -77,7 +72,6 @@
 		},
 	];
 
-	// Complex combined menu
 	const complexMenuItems = $derived([
 		{
 			label: "My Account",
@@ -115,7 +109,6 @@
 		},
 	]);
 
-	// Plan selector
 	const planMenuItems = $derived([
 		{
 			type: "radio" as const,
@@ -130,10 +123,9 @@
 		},
 	]);
 
-	// Submenu examples
 	const shareMenuItems = [
 		{ label: "Profile", icon: User, onSelect: () => console.log("Profile") },
-		{ 
+		{
 			type: "submenu" as const,
 			label: "Share",
 			icon: Share2,
@@ -151,7 +143,7 @@
 
 	const fileMenuWithSubmenu = [
 		{ label: "New File", icon: Plus, shortcut: "⌘N", onSelect: () => console.log("New file") },
-		{ 
+		{
 			type: "submenu" as const,
 			label: "New From Template",
 			icon: FileText,
@@ -171,13 +163,13 @@
 
 	const nestedSubmenuItems = [
 		{ label: "Home", onSelect: () => console.log("Home") },
-		{ 
+		{
 			type: "submenu" as const,
 			label: "File",
 			icon: Folder,
 			items: [
 				{ label: "New", icon: Plus, shortcut: "⌘N", onSelect: () => console.log("New") },
-				{ 
+				{
 					type: "submenu" as const,
 					label: "Open Recent",
 					items: [
@@ -194,7 +186,6 @@
 		{ label: "Exit", variant: "destructive" as const, onSelect: () => console.log("Exit") },
 	];
 
-	// Custom trigger examples
 	const customTriggerMenuItems = [
 		{ label: "New Item", icon: Plus, shortcut: "⌘N", onSelect: () => console.log("New Item") },
 		{ label: "Edit", icon: Edit, shortcut: "⌘E", onSelect: () => console.log("Edit") },
@@ -219,7 +210,7 @@
 
 <div class="container mx-auto p-6 max-w-6xl">
 	<div class="mb-8">
-		<h1 class="text-3xl font-bold mb-2">Simplified Dropdown Menu</h1>
+		<h1 class="text-3xl font-bold mb-2">Dropdown Menu Component</h1>
 		<p class="text-muted-foreground">
 			A simplified dropdown menu component that handles common use cases with minimal code.
 		</p>
@@ -227,8 +218,9 @@
 
 	<div class="space-y-12">
 		<!-- Basic Examples -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Basic Menus</h2>
+			<p class="text-sm text-muted-foreground mb-4">Simple dropdown menus with icons and shortcuts</p>
 			<div class="flex flex-wrap gap-4">
 				<DropdownMenu
 					triggerText="User Menu"
@@ -254,11 +246,23 @@
 					items={basicMenuItems}
 				/>
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={basicMenusDocs}
+			/>
+		</Card>
 
 		<!-- Interactive Examples -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Interactive Menus</h2>
+			<p class="text-sm text-muted-foreground mb-4">Menus with checkboxes and radio groups</p>
 			<div class="space-y-4">
 				<div class="flex flex-wrap gap-4">
 					<DropdownMenu
@@ -293,11 +297,23 @@
 					</div>
 				</div>
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={interactiveMenusDocs}
+			/>
+		</Card>
 
 		<!-- Grouped Menu -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Grouped Menu</h2>
+			<p class="text-sm text-muted-foreground mb-4">Organize menu items into labeled groups</p>
 			<div>
 				<DropdownMenu
 					triggerText="Actions"
@@ -305,11 +321,23 @@
 					items={groupedMenuItems}
 				/>
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={groupedMenuDocs}
+			/>
+		</Card>
 
 		<!-- Complex Menu -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Complex Combined Menu</h2>
+			<p class="text-sm text-muted-foreground mb-4">Combining groups, radio, checkboxes, and shortcuts</p>
 			<div class="space-y-4">
 				<DropdownMenu
 					triggerText="Account Settings"
@@ -330,11 +358,23 @@
 					</div>
 				</div>
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={complexMenuDocs}
+			/>
+		</Card>
 
 		<!-- Trigger Variants -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Trigger Variants</h2>
+			<p class="text-sm text-muted-foreground mb-4">Different button styles for the menu trigger</p>
 			<div class="flex flex-wrap gap-4">
 				<DropdownMenu triggerText="Default" triggerVariant="default" items={basicMenuItems} />
 				<DropdownMenu triggerText="Secondary" triggerVariant="secondary" items={basicMenuItems} />
@@ -342,31 +382,67 @@
 				<DropdownMenu triggerText="Ghost" triggerVariant="ghost" items={basicMenuItems} />
 				<DropdownMenu triggerText="Destructive" triggerVariant="destructive" items={basicMenuItems} />
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={triggerVariantsDocs}
+			/>
+		</Card>
 
 		<!-- Sizes -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Sizes</h2>
+			<p class="text-sm text-muted-foreground mb-4">Available trigger button sizes</p>
 			<div class="flex flex-wrap items-center gap-4">
 				<DropdownMenu triggerText="Small" triggerSize="sm" items={basicMenuItems} />
 				<DropdownMenu triggerText="Default" triggerSize="default" items={basicMenuItems} />
 				<DropdownMenu triggerText="Large" triggerSize="lg" items={basicMenuItems} />
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={sizesDocs}
+			/>
+		</Card>
 
 		<!-- Alignment -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Content Alignment</h2>
+			<p class="text-sm text-muted-foreground mb-4">Control menu content alignment</p>
 			<div class="flex flex-wrap gap-4">
 				<DropdownMenu triggerText="Align Start" align="start" items={basicMenuItems} />
 				<DropdownMenu triggerText="Align Center" align="center" items={basicMenuItems} />
 				<DropdownMenu triggerText="Align End" align="end" items={basicMenuItems} />
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={alignmentDocs}
+			/>
+		</Card>
 
 		<!-- Submenu Examples -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">With Submenu</h2>
+			<p class="text-sm text-muted-foreground mb-4">Nested menus for hierarchical navigation</p>
 			<div class="flex flex-wrap gap-4">
 				<DropdownMenu
 					triggerText="Share Menu"
@@ -385,12 +461,22 @@
 					triggerVariant="secondary"
 					items={nestedSubmenuItems}
 				/>
-
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={submenuDocs}
+			/>
+		</Card>
 
 		<!-- Custom Trigger Examples -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Custom Trigger</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Use the <code class="text-xs bg-muted px-1 py-0.5 rounded">trigger</code> snippet prop to provide custom trigger elements like labels, avatars, or any custom component.
@@ -431,6 +517,17 @@
 					{/snippet}
 				</DropdownMenu>
 			</div>
-		</section>
+
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={customTriggerDocs}
+			/>
+		</Card>
 	</div>
 </div>

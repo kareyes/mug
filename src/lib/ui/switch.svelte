@@ -1,7 +1,15 @@
 <script lang="ts">
-	import { Switch , SwitchPrimitives ,Field , FieldPrimitives, Label} from '@kareyes/aether';
-	// import type { SwitchVariant, SwitchSize } from '$core/components/ui/switch';
-	// import * as Field from '$core/components/ui/field';
+	import { Switch, SwitchPrimitives, Field, FieldPrimitives, Label, Card, CodeBlock } from '@kareyes/aether';
+	import {
+		basicUsageDocs,
+		variantsDocs,
+		sizesDocs,
+		errorStatesDocs,
+		combinationsDocs,
+		formIntegrationDocs,
+		withFieldDocs,
+		currentStateDocs,
+	} from '../code-blocks/switch';
 
 	let states = $state({
 		basicSwitch: false,
@@ -30,23 +38,17 @@
 	}
 </script>
 
-<svelte:head>
-	<title>Switch Component Demo</title>
-</svelte:head>
-
-<div class="container mx-auto p-8 max-w-4xl">
-	<div class="space-y-8">
-		<!-- Header -->
-		<div class="text-center space-y-2">
-			<h1 class="text-4xl font-bold">Switch Component</h1>
-			<p class="text-xl text-muted-foreground">
-				Interactive switches with variants and sizes
-			</p>
-		</div>
-
+<div class="container mx-auto p-6 max-w-6xl">
+	<div class="mb-8">
+		<h1 class="text-3xl font-bold mb-2">Switch Component</h1>
+		<p class="text-muted-foreground">
+			Interactive switches with variants and sizes.
+		</p>
+	</div>
+	<div class="space-y-12">
 		<!-- Basic Usage -->
-		<section class="space-y-4">
-			<h2 class="text-2xl font-semibold">Basic Usage</h2>
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Basic Usage</h2>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 				<div class="space-y-2">
 					<Label for="basic-switch" class="text-sm font-medium">
@@ -90,11 +92,21 @@
 					</div>
 				</div>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={basicUsageDocs}
+			/>
+		</Card>
 
 		<!-- Variants -->
-		<section class="space-y-4">
-			<h2 class="text-2xl font-semibold">Variants</h2>
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Variants</h2>
 			<div class="grid grid-cols-2 md:grid-cols-5 gap-6">
 				{#each variants as variant}
 					<div class="space-y-2">
@@ -112,11 +124,21 @@
 					</div>
 				{/each}
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={variantsDocs}
+			/>
+		</Card>
 
 		<!-- Sizes -->
-		<section class="space-y-4">
-			<h2 class="text-2xl font-semibold">Sizes</h2>
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Sizes</h2>
 			<div class="flex flex-wrap gap-8 items-end">
 				{#each sizes as size}
 					<div class="space-y-2">
@@ -136,11 +158,21 @@
 					</div>
 				{/each}
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={sizesDocs}
+			/>
+		</Card>
 
 		<!-- Error States -->
-		<section class="space-y-4">
-			<h2 class="text-2xl font-semibold">Error States</h2>
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Error States</h2>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 				<div class="space-y-2">
 					<Label class="text-sm font-medium">Switch with Error</Label>
@@ -176,11 +208,21 @@
 					</div>
 				</div>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={errorStatesDocs}
+			/>
+		</Card>
 
 		<!-- Variant & Size Combinations -->
-		<section class="space-y-4">
-			<h2 class="text-2xl font-semibold">Variant & Size Combinations</h2>
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Variant & Size Combinations</h2>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 				<div class="space-y-2">
 					<h3 class="font-medium">Large Success</h3>
@@ -209,14 +251,24 @@
 					/>
 				</div>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={combinationsDocs}
+			/>
+		</Card>
 
 		<!-- Form Integration -->
-		<section class="space-y-4">
-			<h2 class="text-2xl font-semibold">Form Integration</h2>
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Form Integration</h2>
 			<div class="max-w-md space-y-4 p-6 border border-border rounded-lg">
 				<h3 class="font-medium">Settings</h3>
-				
+
 				<div class="space-y-4">
 					<div class="flex items-center justify-between">
 						<div class="space-y-0.5">
@@ -270,13 +322,23 @@
 					</div>
 				</div>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={formIntegrationDocs}
+			/>
+		</Card>
 
 		<!-- With Field Component -->
-		<section class="space-y-4">
-			<h2 class="text-2xl font-semibold">With Field Component</h2>
-			<p class="text-muted-foreground">
-				Field component provides structured labels, descriptions, and error handling
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">With Field Component</h2>
+			<p class="text-sm text-muted-foreground mb-4">
+				Field component provides structured labels, descriptions, and error handling.
 			</p>
 
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -299,7 +361,7 @@
 				</Field>
 			</div>
 
-			<div class="space-y-4">
+			<div class="space-y-4 mt-6">
 				<h3 class="font-medium">With Validation</h3>
 				<Field
 					label="Accept terms and conditions"
@@ -313,14 +375,14 @@
 				</Field>
 			</div>
 
-			<div class="space-y-4">
+			<div class="space-y-4 mt-6">
 				<h3 class="font-medium">Multiple Switches in Field.Set</h3>
 				<FieldPrimitives.Set>
 					<FieldPrimitives.Legend>Notification Preferences</FieldPrimitives.Legend>
 					<FieldPrimitives.Description>Configure how you want to be notified</FieldPrimitives.Description>
-					
+
 					<FieldPrimitives.Separator />
-					
+
 					<FieldPrimitives.Group class="gap-4">
 						<Field
 							label="Email Notifications"
@@ -330,7 +392,7 @@
 						>
 							<Switch variant="success" checked={true} />
 						</Field>
-						
+
 						<Field
 							label="Push Notifications"
 							description="Get browser push notifications"
@@ -339,7 +401,7 @@
 						>
 							<Switch variant="default" checked={false} />
 						</Field>
-						
+
 						<Field
 							label="SMS Notifications"
 							description="Get text message alerts"
@@ -351,11 +413,21 @@
 					</FieldPrimitives.Group>
 				</FieldPrimitives.Set>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={withFieldDocs}
+			/>
+		</Card>
 
 		<!-- State Display -->
-		<section class="space-y-4">
-			<h2 class="text-2xl font-semibold">Current State</h2>
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Current State</h2>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 				<div class="space-y-2">
 					<h3 class="font-medium">Basic Switches</h3>
@@ -375,6 +447,16 @@
 					<pre class="text-sm bg-muted p-4 rounded-md overflow-auto">{JSON.stringify(states.sizes, null, 2)}</pre>
 				</div>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={currentStateDocs}
+			/>
+		</Card>
 	</div>
 </div>

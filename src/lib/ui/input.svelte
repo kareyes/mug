@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { basicInputDocs, iconAddonsDocs, textAddonsDocs, buttonAddonsDocs, inputMasksDocs, combinedFeaturesDocs, inputStatesDocs, customAddonsDocs, withFieldDocs, completeFormDocs } from "$lib/code-blocks/input";
     import {
         Input,
         Card,
@@ -6,7 +7,8 @@
         Field,
         FieldPrimitives,
         InputGroupPrimitives,
-        Label
+        Label,
+        CodeBlock
     } from "@kareyes/aether";
     import {
         Search,
@@ -71,25 +73,23 @@
     }
 </script>
 
-<div class="container mx-auto p-6 space-y-8">
-    <div class="text-center space-y-2">
-        <h1 class="text-4xl font-bold">Input Component</h1>
+<div class="container mx-auto p-6 max-w-6xl">
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Input Component</h1>
         <p class="text-muted-foreground">
             Enhanced input with built-in InputGroup addon support, masks, and
             variants
         </p>
     </div>
 
-    <!-- Basic Input -->
-    <section class="space-y-4">
-        <div class="space-y-1">
-            <h2 class="text-2xl font-semibold">Basic Input</h2>
-            <p class="text-sm text-muted-foreground">
+    <div class="space-y-12">
+        <!-- Basic Input -->
+        <Card variant="outline" class="p-6">
+            <h2 class="text-2xl font-semibold mb-4">Basic Input</h2>
+            <p class="text-sm text-muted-foreground mb-4">
                 Standard input without addons
             </p>
-        </div>
 
-        <Card class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
                 <div class="space-y-2">
                     <Label for="basic-text" class="text-sm font-medium"
@@ -131,19 +131,26 @@
                     />
                 </div>
             </div>
-        </Card>
-    </section>
 
-    <!-- Icon Addons -->
-    <section class="space-y-4">
-        <div class="space-y-1">
-            <h2 class="text-2xl font-semibold">Icon Addons</h2>
-            <p class="text-sm text-muted-foreground">
+            <br />
+            <CodeBlock
+                title="Code"
+                language="Svelte"
+                showLineNumbers
+                collapsible
+                maxHeight="250px"
+                variant="default"
+                code={basicInputDocs}
+            />
+        </Card>
+
+        <!-- Icon Addons -->
+        <Card variant="outline" class="p-6">
+            <h2 class="text-2xl font-semibold mb-4">Icon Addons</h2>
+            <p class="text-sm text-muted-foreground mb-4">
                 Add icons to enhance visual clarity
             </p>
-        </div>
 
-        <Card class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
                 <!-- Start Icon -->
                 <div class="space-y-2">
@@ -223,19 +230,26 @@
                     </Input>
                 </div>
             </div>
-        </Card>
-    </section>
 
-    <!-- Text Addons -->
-    <section class="space-y-4">
-        <div class="space-y-1">
-            <h2 class="text-2xl font-semibold">Text Addons</h2>
-            <p class="text-sm text-muted-foreground">
+            <br />
+            <CodeBlock
+                title="Code"
+                language="Svelte"
+                showLineNumbers
+                collapsible
+                maxHeight="250px"
+                variant="default"
+                code={iconAddonsDocs}
+            />
+        </Card>
+
+        <!-- Text Addons -->
+        <Card variant="outline" class="p-6">
+            <h2 class="text-2xl font-semibold mb-4">Text Addons</h2>
+            <p class="text-sm text-muted-foreground mb-4">
                 Display additional text context
             </p>
-        </div>
 
-        <Card class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
                 <!-- URL Prefix -->
                 <div class="space-y-2">
@@ -278,19 +292,26 @@
                     <Input type="number" placeholder="0" endText="kg" />
                 </div>
             </div>
-        </Card>
-    </section>
 
-    <!-- Button Addons -->
-    <section class="space-y-4">
-        <div class="space-y-1">
-            <h2 class="text-2xl font-semibold">Button Addons</h2>
-            <p class="text-sm text-muted-foreground">
+            <br />
+            <CodeBlock
+                title="Code"
+                language="Svelte"
+                showLineNumbers
+                collapsible
+                maxHeight="250px"
+                variant="default"
+                code={textAddonsDocs}
+            />
+        </Card>
+
+        <!-- Button Addons -->
+        <Card variant="outline" class="p-6">
+            <h2 class="text-2xl font-semibold mb-4">Button Addons</h2>
+            <p class="text-sm text-muted-foreground mb-4">
                 Add interactive buttons for actions
             </p>
-        </div>
 
-        <Card class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
                 <!-- Copy Button -->
                 <div class="space-y-2">
@@ -370,19 +391,26 @@
                     </Input>
                 </div>
             </div>
-        </Card>
-    </section>
 
-    <!-- Input Masks -->
-    <section class="space-y-4">
-        <div class="space-y-1">
-            <h2 class="text-2xl font-semibold">Input Masks</h2>
-            <p class="text-sm text-muted-foreground">
+            <br />
+            <CodeBlock
+                title="Code"
+                language="Svelte"
+                showLineNumbers
+                collapsible
+                maxHeight="250px"
+                variant="default"
+                code={buttonAddonsDocs}
+            />
+        </Card>
+
+        <!-- Input Masks -->
+        <Card variant="outline" class="p-6">
+            <h2 class="text-2xl font-semibold mb-4">Input Masks</h2>
+            <p class="text-sm text-muted-foreground mb-4">
                 Automatic formatting with input masks
             </p>
-        </div>
 
-        <Card class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
                 <!-- Phone -->
                 <div class="space-y-2">
@@ -416,19 +444,26 @@
                     <Input mask="date" placeholder="MM/DD/YYYY" />
                 </div>
             </div>
-        </Card>
-    </section>
 
-    <!-- Combined Features -->
-    <section class="space-y-4">
-        <div class="space-y-1">
-            <h2 class="text-2xl font-semibold">Combined Features</h2>
-            <p class="text-sm text-muted-foreground">
+            <br />
+            <CodeBlock
+                title="Code"
+                language="Svelte"
+                showLineNumbers
+                collapsible
+                maxHeight="250px"
+                variant="default"
+                code={inputMasksDocs}
+            />
+        </Card>
+
+        <!-- Combined Features -->
+        <Card variant="outline" class="p-6">
+            <h2 class="text-2xl font-semibold mb-4">Combined Features</h2>
+            <p class="text-sm text-muted-foreground mb-4">
                 Mix addons with masks and other features
             </p>
-        </div>
 
-        <Card class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
                 <!-- Phone with Icon and Mask -->
                 <div class="space-y-2">
@@ -460,19 +495,26 @@
                     </Input>
                 </div>
             </div>
-        </Card>
-    </section>
 
-    <!-- States -->
-    <section class="space-y-4">
-        <div class="space-y-1">
-            <h2 class="text-2xl font-semibold">Input States</h2>
-            <p class="text-sm text-muted-foreground">
+            <br />
+            <CodeBlock
+                title="Code"
+                language="Svelte"
+                showLineNumbers
+                collapsible
+                maxHeight="250px"
+                variant="default"
+                code={combinedFeaturesDocs}
+            />
+        </Card>
+
+        <!-- States -->
+        <Card variant="outline" class="p-6">
+            <h2 class="text-2xl font-semibold mb-4">Input States</h2>
+            <p class="text-sm text-muted-foreground mb-4">
                 Different input states with addons
             </p>
-        </div>
 
-        <Card class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
                 <!-- Error State -->
                 <div class="space-y-2">
@@ -511,19 +553,26 @@
                     </Input>
                 </div>
             </div>
-        </Card>
-    </section>
 
-    <!-- Custom Addons -->
-    <section class="space-y-4">
-        <div class="space-y-1">
-            <h2 class="text-2xl font-semibold">Custom Addons</h2>
-            <p class="text-sm text-muted-foreground">
+            <br />
+            <CodeBlock
+                title="Code"
+                language="Svelte"
+                showLineNumbers
+                collapsible
+                maxHeight="250px"
+                variant="default"
+                code={inputStatesDocs}
+            />
+        </Card>
+
+        <!-- Custom Addons -->
+        <Card variant="outline" class="p-6">
+            <h2 class="text-2xl font-semibold mb-4">Custom Addons</h2>
+            <p class="text-sm text-muted-foreground mb-4">
                 Use custom snippets for complete control
             </p>
-        </div>
 
-        <Card class="p-6">
             <div class="grid grid-cols-1 gap-6 max-w-2xl">
                 <div class="space-y-2">
                     <Label class="text-sm font-medium">Custom Start Addon</Label
@@ -562,22 +611,29 @@
                     </Input>
                 </div>
             </div>
-        </Card>
-    </section>
 
-    <!-- With Field Component -->
-    <section class="space-y-4">
-        <div class="space-y-1">
-            <h2 class="text-2xl font-semibold">
+            <br />
+            <CodeBlock
+                title="Code"
+                language="Svelte"
+                showLineNumbers
+                collapsible
+                maxHeight="250px"
+                variant="default"
+                code={customAddonsDocs}
+            />
+        </Card>
+
+        <!-- With Field Component -->
+        <Card variant="outline" class="p-6">
+            <h2 class="text-2xl font-semibold mb-4">
                 Using Input with Field Component
             </h2>
-            <p class="text-sm text-muted-foreground">
+            <p class="text-sm text-muted-foreground mb-4">
                 Recommended pattern for forms with labels, descriptions, and
                 error handling
             </p>
-        </div>
 
-        <Card class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
                 <Field
                     label="Email"
@@ -697,21 +753,28 @@
             <div class="mt-6">
                 <Button onclick={validateForm}>Validate Form</Button>
             </div>
-        </Card>
-    </section>
 
-    <!-- Complete Form Example -->
-    <section class="space-y-4">
-        <div class="space-y-1">
-            <h2 class="text-2xl font-semibold">
+            <br />
+            <CodeBlock
+                title="Code"
+                language="Svelte"
+                showLineNumbers
+                collapsible
+                maxHeight="250px"
+                variant="default"
+                code={withFieldDocs}
+            />
+        </Card>
+
+        <!-- Complete Form Example -->
+        <Card variant="outline" class="p-6">
+            <h2 class="text-2xl font-semibold mb-4">
                 Complete Form with Field Component
             </h2>
-            <p class="text-sm text-muted-foreground">
+            <p class="text-sm text-muted-foreground mb-4">
                 Full form using Field.Set and Field.Group for proper structure
             </p>
-        </div>
 
-        <Card class="p-6">
             <form
                 class="max-w-2xl"
                 onsubmit={(e) => {
@@ -838,6 +901,17 @@
                     </div>
                 </FieldPrimitives.Set>
             </form>
+
+            <br />
+            <CodeBlock
+                title="Code"
+                language="Svelte"
+                showLineNumbers
+                collapsible
+                maxHeight="250px"
+                variant="default"
+                code={completeFormDocs}
+            />
         </Card>
-    </section>
+    </div>
 </div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { controlledStateDocs, customConfigurationsDocs, ecommerceExamplesDocs, formExamplesDocs, navigationMenuDocs, notificationsDocs, settingsPanelDocs, sidePositionsDocs, userProfileDocs } from "$lib/code-blocks/sheet";
 import {
         Sheet,
         SheetPrimitives,
@@ -9,6 +10,7 @@ import {
         Input,
         Label,
         Textarea,
+        CodeBlock
     } from "@kareyes/aether";
 
     import {
@@ -150,6 +152,16 @@ import {
                     </SheetContent>
                 </Sheet>
             </div>
+            <br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={sidePositionsDocs}
+			/>
         </Card>
     </section>
 
@@ -334,6 +346,17 @@ import {
                     </SheetContent>
                 </Sheet>
             </div>
+
+            <br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={formExamplesDocs}
+			/>
         </Card>
     </section>
 
@@ -400,6 +423,17 @@ import {
                     </nav>
                 </SheetContent>
             </Sheet>
+            
+            <br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={navigationMenuDocs}
+			/>
         </Card>
     </section>
 
@@ -504,6 +538,17 @@ import {
                     </SheetFooter>
                 </SheetContent>
             </Sheet>
+            
+            <br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={settingsPanelDocs}
+			/>
         </Card>
     </section>
 
@@ -606,6 +651,17 @@ import {
                     </SheetContent>
                 </Sheet>
             </div>
+            
+            <br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={notificationsDocs}
+			/>
         </Card>
     </section>
 
@@ -691,6 +747,17 @@ import {
                     </SheetContent>
                 </Sheet>
             </div>
+            
+            <br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={ecommerceExamplesDocs}
+			/>
         </Card>
     </section>
 
@@ -777,6 +844,17 @@ import {
                     </div>
                 </SheetContent>
             </Sheet>
+            
+            <br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={userProfileDocs}
+			/>
         </Card>
     </section>
 
@@ -829,6 +907,17 @@ import {
                     </SheetContent>
                 </Sheet>
             </div>
+            
+            <br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={controlledStateDocs}
+			/>
         </Card>
     </section>
 
@@ -902,6 +991,17 @@ import {
                     </SheetContent>
                 </Sheet>
             </div>
+            
+            <br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={customConfigurationsDocs}
+			/>
         </Card>
     </section>
 </div>

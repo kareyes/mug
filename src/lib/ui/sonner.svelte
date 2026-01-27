@@ -1,7 +1,19 @@
 <script lang="ts">
-	// import { Toaster, toast } from "$core/components/ui/sonner";
-	import { Button, Sonner, SonnerPrimitives } from "@kareyes/aether";
-    import {Rocket, Heart, Sparkles} from "@kareyes/aether/icons";
+	import { Button, Sonner, SonnerPrimitives, Card, CodeBlock } from "@kareyes/aether";
+	import { Rocket, Heart, Sparkles } from "@kareyes/aether/icons";
+	import {
+		toastTypesDocs,
+		withDescriptionsDocs,
+		withActionsDocs,
+		promiseToastsDocs,
+		durationPersistenceDocs,
+		multipleToastsDocs,
+		customStylingDocs,
+		importantToastsDocs,
+		sequentialUpdatesDocs,
+		realWorldExamplesDocs,
+	} from "../code-blocks/sonner";
+
 	// For promise demo
 	function simulateAsyncOperation(shouldSucceed: boolean = true) {
 		return new Promise((resolve, reject) => {
@@ -14,7 +26,7 @@
 			}, 2000);
 		});
 	}
-    const { toast } = SonnerPrimitives;
+	const { toast } = SonnerPrimitives;
 
 	let toastPosition = $state<"top-left" | "top-center" | "top-right" | "bottom-left" | "bottom-center" | "bottom-right">("bottom-right");
 	let showCloseButton = $state(false);
@@ -24,7 +36,7 @@
 
 	const positions = [
 		"top-left",
-		"top-center", 
+		"top-center",
 		"top-right",
 		"bottom-left",
 		"bottom-center",
@@ -32,9 +44,9 @@
 	] as const;
 </script>
 
-<Sonner 
-	position={toastPosition} 
-	closeButton={showCloseButton} 
+<Sonner
+	position={toastPosition}
+	closeButton={showCloseButton}
 	expand={expandOnHover}
 	richColors={richColors}
 	duration={customDuration}
@@ -50,13 +62,14 @@
 
 	<div class="space-y-12">
 		<!-- Configuration -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Configuration</h2>
+			<p class="text-sm text-muted-foreground mb-4">Adjust toast settings for all demos below.</p>
 			<div class="p-6 bg-muted/30 rounded-lg border space-y-4">
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 					<div>
 						<label for="toast-position" class="block text-sm font-medium mb-2">Position</label>
-						<select 
+						<select
 							id="toast-position"
 							bind:value={toastPosition}
 							class="w-full p-2 border rounded-md bg-background"
@@ -68,9 +81,9 @@
 					</div>
 					<div>
 						<label for="toast-duration" class="block text-sm font-medium mb-2">Duration (ms)</label>
-						<input 
+						<input
 							id="toast-duration"
-							type="number" 
+							type="number"
 							bind:value={customDuration}
 							min="0"
 							step="500"
@@ -95,46 +108,46 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</Card>
 
 		<!-- Toast Types -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Toast Types</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Different toast types for various notification scenarios.
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<Button 
+				<Button
 					variant="outline"
 					onclick={() => toast("This is a default notification")}
 				>
 					Default
 				</Button>
-				<Button 
+				<Button
 					color="success"
 					onclick={() => toast.success("Operation completed successfully!")}
 				>
 					Success
 				</Button>
-				<Button 
+				<Button
 					color="danger"
 					onclick={() => toast.error("Something went wrong!")}
 				>
 					Error
 				</Button>
-				<Button 
+				<Button
 					color="warning"
 					onclick={() => toast.warning("Please review your input")}
 				>
 					Warning
 				</Button>
-				<Button 
+				<Button
 					color="info"
 					onclick={() => toast.info("Here's some useful information")}
 				>
 					Info
 				</Button>
-				<Button 
+				<Button
 					variant="outline"
 					onclick={() => {
 						const id = toast.loading("Processing...");
@@ -147,16 +160,26 @@
 					Loading
 				</Button>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={toastTypesDocs}
+			/>
+		</Card>
 
 		<!-- With Descriptions -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">With Descriptions</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Add descriptive text for more context.
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<Button 
+				<Button
 					color="success"
 					onclick={() => toast.success("File uploaded", {
 						description: "Your document has been saved to the cloud successfully."
@@ -164,7 +187,7 @@
 				>
 					Success with Description
 				</Button>
-				<Button 
+				<Button
 					color="danger"
 					onclick={() => toast.error("Upload failed", {
 						description: "The file exceeds the maximum size limit of 10MB."
@@ -172,7 +195,7 @@
 				>
 					Error with Description
 				</Button>
-				<Button 
+				<Button
 					color="warning"
 					onclick={() => toast.warning("Low storage", {
 						description: "You are using 95% of your available storage. Consider upgrading."
@@ -180,7 +203,7 @@
 				>
 					Warning with Description
 				</Button>
-				<Button 
+				<Button
 					color="info"
 					onclick={() => toast.info("New version available", {
 						description: "Version 2.0.0 introduces exciting new features and improvements."
@@ -189,16 +212,26 @@
 					Info with Description
 				</Button>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={withDescriptionsDocs}
+			/>
+		</Card>
 
 		<!-- With Actions -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">With Action Buttons</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Add action and cancel buttons for interactive toasts.
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<Button 
+				<Button
 					color="success"
 					variant="flat"
 					onclick={() => toast.success("Event created", {
@@ -211,7 +244,7 @@
 				>
 					With Action
 				</Button>
-				<Button 
+				<Button
 					color="danger"
 					variant="flat"
 					onclick={() => toast.error("Delete this item?", {
@@ -228,7 +261,7 @@
 				>
 					With Action & Cancel
 				</Button>
-				<Button 
+				<Button
 					color="warning"
 					variant="flat"
 					onclick={() => toast.warning("Unsaved changes", {
@@ -246,27 +279,37 @@
 					Save/Discard Actions
 				</Button>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={withActionsDocs}
+			/>
+		</Card>
 
 		<!-- Promise Toasts -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Promise Toasts</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Automatically handle loading, success, and error states.
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<Button 
+				<Button
 					onclick={() => {
 						toast.promise(simulateAsyncOperation(true), {
 							loading: "Uploading file...",
-							success: (data: any) => `${data.name} uploaded successfully!`,
+							success: (data) => `${data.name} uploaded successfully!`,
 							error: "Failed to upload file"
 						});
 					}}
 				>
 					Promise (Success)
 				</Button>
-				<Button 
+				<Button
 					variant="outline"
 					onclick={() => {
 						toast.promise(simulateAsyncOperation(false), {
@@ -278,7 +321,7 @@
 				>
 					Promise (Error)
 				</Button>
-				<Button 
+				<Button
 					variant="secondary"
 					onclick={() => {
 						const promise = new Promise((resolve, reject) => {
@@ -288,7 +331,7 @@
 						});
 						toast.promise(promise, {
 							loading: "Processing data...",
-							success: (data: any) => `Processed ${data.count} items`,
+							success: (data) => `Processed ${data.count} items`,
 							error: (err) => `Failed: ${(err as Error).message}`
 						});
 					}}
@@ -296,34 +339,44 @@
 					Promise (50/50 Random)
 				</Button>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={promiseToastsDocs}
+			/>
+		</Card>
 
 		<!-- Duration & Persistence -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Duration & Persistence</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Control how long toasts stay visible.
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<Button 
+				<Button
 					variant="outline"
 					onclick={() => toast.info("Quick toast", { duration: 1000 })}
 				>
 					1 Second
 				</Button>
-				<Button 
+				<Button
 					variant="outline"
 					onclick={() => toast.info("Normal toast", { duration: 4000 })}
 				>
 					4 Seconds
 				</Button>
-				<Button 
+				<Button
 					variant="outline"
 					onclick={() => toast.info("Long toast", { duration: 10000 })}
 				>
 					10 Seconds
 				</Button>
-				<Button 
+				<Button
 					color="warning"
 					onclick={() => toast.warning("Persistent notification", {
 						description: "This toast will not auto-dismiss. Close it manually.",
@@ -333,16 +386,26 @@
 					Persistent (Infinity)
 				</Button>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={durationPersistenceDocs}
+			/>
+		</Card>
 
 		<!-- Multiple Toasts -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Multiple Toasts</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Stack multiple toasts with expand on hover.
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<Button 
+				<Button
 					onclick={() => {
 						toast.success("First notification");
 						setTimeout(() => toast.info("Second notification"), 200);
@@ -352,23 +415,33 @@
 				>
 					Show 4 Toasts
 				</Button>
-				<Button 
+				<Button
 					variant="destructive"
 					onclick={() => toast.dismiss()}
 				>
 					Dismiss All
 				</Button>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={multipleToastsDocs}
+			/>
+		</Card>
 
 		<!-- Custom Styling -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Custom Styling</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Apply custom classes and styles to toasts.
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<Button 
+				<Button
 					variant="outline"
 					onclick={() => toast.success("Custom styled toast", {
 						description: "This toast has custom border styling.",
@@ -377,7 +450,7 @@
 				>
 					Custom Border
 				</Button>
-				<Button 
+				<Button
 					variant="outline"
 					onclick={() => toast("Gradient background", {
 						description: "Beautiful gradient styling.",
@@ -387,16 +460,26 @@
 					Gradient Style
 				</Button>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={customStylingDocs}
+			/>
+		</Card>
 
 		<!-- Important Toasts -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Important Toasts</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Important toasts stay on top of the stack.
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<Button 
+				<Button
 					color="danger"
 					onclick={() => {
 						toast.info("Regular notification 1");
@@ -414,25 +497,35 @@
 					Show Important Toast
 				</Button>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={importantToastsDocs}
+			/>
+		</Card>
 
 		<!-- Sequential Updates -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Sequential Updates</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Update the same toast through multiple stages.
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<Button 
+				<Button
 					onclick={async () => {
 						const id = toast.loading("Step 1: Validating data...");
-						
+
 						await new Promise(r => setTimeout(r, 1500));
 						toast.loading("Step 2: Processing...", { id });
-						
+
 						await new Promise(r => setTimeout(r, 1500));
 						toast.loading("Step 3: Saving to database...", { id });
-						
+
 						await new Promise(r => setTimeout(r, 1500));
 						toast.success("All steps completed successfully!", { id });
 					}}
@@ -440,10 +533,20 @@
 					Multi-Step Process
 				</Button>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={sequentialUpdatesDocs}
+			/>
+		</Card>
 
 		<!-- Real-world Examples -->
-		<section>
+		<Card variant="outline" class="p-6">
 			<h2 class="text-2xl font-semibold mb-4">Real-world Examples</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Common use cases for toast notifications.
@@ -451,12 +554,12 @@
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 				<div class="p-4 border rounded-lg space-y-3">
 					<h3 class="font-medium">Form Submission</h3>
-					<Button 
+					<Button
 						class="w-full"
 						onclick={() => {
 							const id = toast.loading("Submitting form...");
 							setTimeout(() => {
-								toast.success("Form submitted successfully!", { 
+								toast.success("Form submitted successfully!", {
 									id,
 									description: "We'll get back to you within 24 hours."
 								});
@@ -469,7 +572,7 @@
 
 				<div class="p-4 border rounded-lg space-y-3">
 					<h3 class="font-medium">Copy to Clipboard</h3>
-					<Button 
+					<Button
 						class="w-full"
 						variant="outline"
 						onclick={() => {
@@ -483,7 +586,7 @@
 
 				<div class="p-4 border rounded-lg space-y-3">
 					<h3 class="font-medium">Delete Confirmation</h3>
-					<Button 
+					<Button
 						class="w-full"
 						color="danger"
 						onclick={() => {
@@ -507,7 +610,7 @@
 
 				<div class="p-4 border rounded-lg space-y-3">
 					<h3 class="font-medium">Network Status</h3>
-					<Button 
+					<Button
 						class="w-full"
 						variant="secondary"
 						onclick={() => {
@@ -526,7 +629,7 @@
 
 				<div class="p-4 border rounded-lg space-y-3">
 					<h3 class="font-medium">Update Available</h3>
-					<Button 
+					<Button
 						class="w-full"
 						color="info"
 						variant="flat"
@@ -547,7 +650,7 @@
 
 				<div class="p-4 border rounded-lg space-y-3">
 					<h3 class="font-medium">Settings Saved</h3>
-					<Button 
+					<Button
 						class="w-full"
 						color="success"
 						variant="flat"
@@ -565,6 +668,16 @@
 					</Button>
 				</div>
 			</div>
-		</section>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={realWorldExamplesDocs}
+			/>
+		</Card>
 	</div>
 </div>

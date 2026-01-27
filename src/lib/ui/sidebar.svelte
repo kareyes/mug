@@ -1,6 +1,7 @@
 <script lang="ts">
 
-    import { Card, Button, Sidebar, SidebarPrimitives } from "@kareyes/aether";
+    import { Card, Button, Sidebar, SidebarPrimitives, CodeBlock } from "@kareyes/aether";
+    import { basicExampleDocs } from "../code-blocks/sidebar";
     import {
         Home,
         Inbox,
@@ -69,122 +70,128 @@
     ];
 </script>
 
-<!-- Example 1: Basic Sidebar with Icon Collapsible -->
-<div class="mb-8 space-y-8">
-    <div class="space-y-2">
-        <h1 class="text-3xl font-bold">Sidebar Component Demo</h1>
-        <p class="text-muted-foreground">
-            Interactive examples of the collapsible sidebar component with
-            various configurations.
-        </p>
+<div class="container mx-auto p-6 max-w-6xl">
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Sidebar Component Demo</h1>
+        <p class="text-muted-foreground">Interactive examples of the collapsible sidebar component with various configurations.</p>
     </div>
-</div>
+    <div class="space-y-12">
+        <!-- Basic Example -->
+        <Card variant="outline" class="p-6">
+            <h2 class="text-2xl font-semibold mb-4">Basic Example</h2>
+            <p class="text-sm text-muted-foreground mb-4">Icon collapsible sidebar with navigation menu items.</p>
 
-<div class="space-y-8 pb-8">
-    <!-- Basic Example -->
-    <section class="space-y-4">
-
-
-        <div class="h-[600px] overflow-hidden rounded-lg border">
-            <SidebarProvider>
-                <Sidebar collapsible="icon">
-                    <SidebarContent>
-                        <SidebarGroup>
-                            <SidebarGroupLabel>Platform</SidebarGroupLabel>
-                            <SidebarGroupContent>
-                                <SidebarMenu>
-                                    <SidebarMenuItem>
-                                        <SidebarMenuButton
-                                            isActive={currentPage === "home"}
-                                            tooltipContent="Home"
-                                            onclick={() =>
-                                                (currentPage = "home")}
-                                        >
-                                            <Home class="size-4" />
-                                            <span>Home</span>
-                                        </SidebarMenuButton>
-                                    </SidebarMenuItem>
-                                    <SidebarMenuItem>
-                                        <SidebarMenuButton
-                                            isActive={currentPage === "inbox"}
-                                            tooltipContent="Inbox"
-                                            onclick={() =>
-                                                (currentPage = "inbox")}
-                                        >
-                                            <Inbox class="size-4" />
-                                            <span>Inbox</span>
-                                        </SidebarMenuButton>
-                                        <SidebarMenuBadge>24</SidebarMenuBadge>
-                                    </SidebarMenuItem>
-                                    <SidebarMenuItem>
-                                        <SidebarMenuButton
-                                            isActive={currentPage ===
-                                                "calendar"}
-                                            tooltipContent="Calendar"
-                                            onclick={() =>
-                                                (currentPage = "calendar")}
-                                        >
-                                            <Calendar class="size-4" />
-                                            <span>Calendar</span>
-                                        </SidebarMenuButton>
-                                    </SidebarMenuItem>
-                                    <SidebarMenuItem>
-                                        <SidebarMenuButton
-                                            isActive={currentPage === "search"}
-                                            tooltipContent="Search"
-                                            onclick={() =>
-                                                (currentPage = "search")}
-                                        >
-                                            <Search class="size-4" />
-                                            <span>Search</span>
-                                        </SidebarMenuButton>
-                                    </SidebarMenuItem>
-                                    <SidebarMenuItem>
-                                        <SidebarMenuButton
-                                            isActive={currentPage ===
-                                                "settings"}
-                                            tooltipContent="Settings"
-                                            onclick={() =>
-                                                (currentPage = "settings")}
-                                        >
-                                            <Settings class="size-4" />
-                                            <span>Settings</span>
-                                        </SidebarMenuButton>
-                                    </SidebarMenuItem>
-                                </SidebarMenu>
-                            </SidebarGroupContent>
-                        </SidebarGroup>
-                    </SidebarContent>
-                    <SidebarRail />
-                </Sidebar>
-                <SidebarInset>
-                    <header
-                        class="flex h-16 shrink-0 items-center gap-2 border-b px-4"
-                    >
-                        <SidebarTrigger />
-                        <div class="flex flex-1 items-center justify-between">
-                            <h1 class="text-lg font-semibold capitalize">
-                                {currentPage}
-                            </h1>
-                            <span class="text-sm text-muted-foreground"
-                                >Click the menu icon to toggle</span
-                            >
-                        </div>
-                    </header>
-                    <div class="flex flex-1 flex-col gap-4 p-4">
-                        <Card
-                            class="flex min-h-[400px] flex-1 items-center justify-center rounded-xl"
+            <div class="h-[600px] overflow-hidden rounded-lg border">
+                <SidebarProvider>
+                    <Sidebar collapsible="icon">
+                        <SidebarContent>
+                            <SidebarGroup>
+                                <SidebarGroupLabel>Platform</SidebarGroupLabel>
+                                <SidebarGroupContent>
+                                    <SidebarMenu>
+                                        <SidebarMenuItem>
+                                            <SidebarMenuButton
+                                                isActive={currentPage === "home"}
+                                                tooltipContent="Home"
+                                                onclick={() =>
+                                                    (currentPage = "home")}
+                                            >
+                                                <Home class="size-4" />
+                                                <span>Home</span>
+                                            </SidebarMenuButton>
+                                        </SidebarMenuItem>
+                                        <SidebarMenuItem>
+                                            <SidebarMenuButton
+                                                isActive={currentPage === "inbox"}
+                                                tooltipContent="Inbox"
+                                                onclick={() =>
+                                                    (currentPage = "inbox")}
+                                            >
+                                                <Inbox class="size-4" />
+                                                <span>Inbox</span>
+                                            </SidebarMenuButton>
+                                            <SidebarMenuBadge>24</SidebarMenuBadge>
+                                        </SidebarMenuItem>
+                                        <SidebarMenuItem>
+                                            <SidebarMenuButton
+                                                isActive={currentPage ===
+                                                    "calendar"}
+                                                tooltipContent="Calendar"
+                                                onclick={() =>
+                                                    (currentPage = "calendar")}
+                                            >
+                                                <Calendar class="size-4" />
+                                                <span>Calendar</span>
+                                            </SidebarMenuButton>
+                                        </SidebarMenuItem>
+                                        <SidebarMenuItem>
+                                            <SidebarMenuButton
+                                                isActive={currentPage === "search"}
+                                                tooltipContent="Search"
+                                                onclick={() =>
+                                                    (currentPage = "search")}
+                                            >
+                                                <Search class="size-4" />
+                                                <span>Search</span>
+                                            </SidebarMenuButton>
+                                        </SidebarMenuItem>
+                                        <SidebarMenuItem>
+                                            <SidebarMenuButton
+                                                isActive={currentPage ===
+                                                    "settings"}
+                                                tooltipContent="Settings"
+                                                onclick={() =>
+                                                    (currentPage = "settings")}
+                                            >
+                                                <Settings class="size-4" />
+                                                <span>Settings</span>
+                                            </SidebarMenuButton>
+                                        </SidebarMenuItem>
+                                    </SidebarMenu>
+                                </SidebarGroupContent>
+                            </SidebarGroup>
+                        </SidebarContent>
+                        <SidebarRail />
+                    </Sidebar>
+                    <SidebarInset>
+                        <header
+                            class="flex h-16 shrink-0 items-center gap-2 border-b px-4"
                         >
-                            <p class="text-muted-foreground">
-                                Main content area - {currentPage}
-                            </p>
-                        </Card>
-                    </div>
-                </SidebarInset>
-            </SidebarProvider>
-        </div>
-    </section>
-<!-- 
+                            <SidebarTrigger />
+                            <div class="flex flex-1 items-center justify-between">
+                                <h1 class="text-lg font-semibold capitalize">
+                                    {currentPage}
+                                </h1>
+                                <span class="text-sm text-muted-foreground"
+                                    >Click the menu icon to toggle</span
+                                >
+                            </div>
+                        </header>
+                        <div class="flex flex-1 flex-col gap-4 p-4">
+                            <Card
+                                class="flex min-h-[400px] flex-1 items-center justify-center rounded-xl"
+                            >
+                                <p class="text-muted-foreground">
+                                    Main content area - {currentPage}
+                                </p>
+                            </Card>
+                        </div>
+                    </SidebarInset>
+                </SidebarProvider>
+            </div>
+            <br />
+            <CodeBlock
+                title="Code"
+                language="Svelte"
+                showLineNumbers
+                collapsible
+                maxHeight="250px"
+                variant="default"
+                code={basicExampleDocs}
+            />
+        </Card>
+    </div>
+<!--
     <section class="space-y-4">
         <div class="space-y-1">
             <h2 class="text-2xl font-semibold">With Header and Footer</h2>
