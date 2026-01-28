@@ -1,6 +1,6 @@
-# RadioGroup Component
+<!-- # RadioGroup Component
 
-A flexible radio group component that allows users to select one option from a set of choices. Built on top of bits-ui primitives with support for different variants, sizes, and layouts.
+A flexible radio group component that allows users to select one option from a set of choices. Built on top of bits-ui primitives with support for different variants, sizes, and layouts. -->
 
 ## Features
 

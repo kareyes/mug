@@ -1,6 +1,6 @@
-# Dropdown Menu Component
+<!-- # Dropdown Menu Component
 
-A simplified dropdown menu component that wraps all the complexity of the standard dropdown menu into a single, easy-to-use component with a declarative API.
+A simplified dropdown menu component that wraps all the complexity of the standard dropdown menu into a single, easy-to-use component with a declarative API. -->
 
 ## Features
 

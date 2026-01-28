@@ -1,6 +1,6 @@
-# Slider Component
+<!-- # Slider Component
 
-A fully-featured slider component with support for variants, sizes, step indicators, marks, and tooltips. Built on top of bits-ui primitives with comprehensive customization options.
+A fully-featured slider component with support for variants, sizes, step indicators, marks, and tooltips. Built on top of bits-ui primitives with comprehensive customization options. -->
 
 ## Features
 

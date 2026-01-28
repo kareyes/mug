@@ -71,10 +71,10 @@
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
-    <div class="mb-8">
+    <!-- <div class="mb-8">
         <h1 class="text-3xl font-bold mb-2">Sidebar Component Demo</h1>
         <p class="text-muted-foreground">Interactive examples of the collapsible sidebar component with various configurations.</p>
-    </div>
+    </div> -->
     <div class="space-y-12">
         <!-- Basic Example -->
         <Card variant="outline" class="p-6">

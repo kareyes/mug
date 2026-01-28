@@ -1,6 +1,6 @@
-# Combobox
+<!-- # Combobox
 
-A simplified combobox component that combines a text input with a searchable dropdown list. Built on top of Command and Popover components.
+A simplified combobox component that combines a text input with a searchable dropdown list. Built on top of Command and Popover components. -->
 
 ## Features
 

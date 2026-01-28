@@ -1,6 +1,6 @@
-# Number Spinner Component
+<!-- # Number Spinner Component
 
-A fully-featured number input component with increment/decrement controls, supporting various layouts, variants, and advanced features like precision control and value constraints.
+A fully-featured number input component with increment/decrement controls, supporting various layouts, variants, and advanced features like precision control and value constraints. -->
 
 ## Features
 

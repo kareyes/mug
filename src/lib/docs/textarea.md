@@ -1,6 +1,6 @@
-# Textarea Component
+<!-- # Textarea Component
 
-A versatile textarea component with multiple variants, sizes, and advanced features like auto-resize and character counting.
+A versatile textarea component with multiple variants, sizes, and advanced features like auto-resize and character counting. -->
 
 ## Features
 

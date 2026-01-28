@@ -53,12 +53,12 @@
 />
 
 <div class="container mx-auto p-6 max-w-6xl">
-	<div class="mb-8">
+	<!-- <div class="mb-8">
 		<h1 class="text-3xl font-bold mb-2">Sonner Toast Component</h1>
 		<p class="text-muted-foreground">
 			Beautiful, customizable toast notifications with variants, actions, and rich features.
 		</p>
-	</div>
+	</div> -->
 
 	<div class="space-y-12">
 		<!-- Configuration -->
@@ -302,7 +302,7 @@
 					onclick={() => {
 						toast.promise(simulateAsyncOperation(true), {
 							loading: "Uploading file...",
-							success: (data) => `${data.name} uploaded successfully!`,
+							success: (data) => `${(data as { items: number; name: string }).name} uploaded successfully!`,
 							error: "Failed to upload file"
 						});
 					}}
@@ -331,7 +331,7 @@
 						});
 						toast.promise(promise, {
 							loading: "Processing data...",
-							success: (data) => `Processed ${data.count} items`,
+							success: (data) => `Processed ${(data as { count: number }).count} items`,
 							error: (err) => `Failed: ${(err as Error).message}`
 						});
 					}}

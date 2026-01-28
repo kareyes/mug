@@ -1,6 +1,6 @@
-# Breadcrumb Component
+<!-- # Breadcrumb Component
 
-A flexible breadcrumb navigation component with multiple visual variants, sizes, and customizable separators built with Svelte 5.
+A flexible breadcrumb navigation component with multiple visual variants, sizes, and customizable separators built with Svelte 5. -->
 
 ## Features
 

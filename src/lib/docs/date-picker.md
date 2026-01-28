@@ -1,6 +1,6 @@
-# Date Picker Components
+<!-- # Date Picker Components
 
-A comprehensive set of date picker components built with Calendar, RangeCalendar, and Popover components. Fully typed with TypeScript and styled with Tailwind CSS.
+A comprehensive set of date picker components built with Calendar, RangeCalendar, and Popover components. Fully typed with TypeScript and styled with Tailwind CSS. -->
 
 ## Components
 

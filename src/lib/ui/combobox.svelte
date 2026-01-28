@@ -63,12 +63,12 @@
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
-	<div class="mb-8">
+	<!-- <div class="mb-8">
 		<h1 class="text-3xl font-bold mb-2">ComboBox Component</h1>
 		<p class="text-muted-foreground">
 			A searchable select component that combines a text input with a dropdown list.
 		</p>
-	</div>
+	</div> -->
 
 	<div class="space-y-12">
 		<!-- Basic Examples -->

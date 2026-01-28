@@ -209,12 +209,12 @@
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
-	<div class="mb-8">
+	<!-- <div class="mb-8">
 		<h1 class="text-3xl font-bold mb-2">Dropdown Menu Component</h1>
 		<p class="text-muted-foreground">
 			A simplified dropdown menu component that handles common use cases with minimal code.
 		</p>
-	</div>
+	</div> -->
 
 	<div class="space-y-12">
 		<!-- Basic Examples -->

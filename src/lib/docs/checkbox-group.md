@@ -1,6 +1,6 @@
-# Checkbox Group Component
+<!-- # Checkbox Group Component
 
-A powerful component for managing multiple related checkboxes with shared state and consistent styling.
+A powerful component for managing multiple related checkboxes with shared state and consistent styling. -->
 
 ## Features
 

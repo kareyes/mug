@@ -1,6 +1,6 @@
-# Enhanced Checkbox Component
+<!-- # Enhanced Checkbox Component
 
-A powerful checkbox component with multiple sizes, variants, labels, descriptions, and line-through functionality.
+A powerful checkbox component with multiple sizes, variants, labels, descriptions, and line-through functionality. -->
 
 ## Features
 

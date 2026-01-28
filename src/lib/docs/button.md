@@ -1,6 +1,6 @@
-# Button
+<!-- # Button
 
-An enhanced button component with support for icons, loading states, variants, and dynamic content.
+An enhanced button component with support for icons, loading states, variants, and dynamic content. -->
 
 ## Table of Contents
 

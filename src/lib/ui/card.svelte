@@ -17,12 +17,12 @@
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
-	<div class="mb-8">
+	<!-- <div class="mb-8">
 		<h1 class="text-3xl font-bold mb-2">Card Component</h1>
 		<p class="text-muted-foreground">
 			Simplified card component with variants, padding options, and interactive states.
 		</p>
-	</div>
+	</div> -->
 
 	<div class="space-y-12">
 		<!-- Basic Cards -->

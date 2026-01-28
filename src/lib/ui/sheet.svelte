@@ -44,13 +44,13 @@ import {
 </script>
 
 <div class="container mx-auto space-y-8 py-8">
-    <div class="space-y-2">
+    <!-- <div class="space-y-2">
         <h1 class="text-3xl font-bold">Sheet Component</h1>
         <p class="text-muted-foreground">
             A sliding panel component that overlays content from the edges of
             the viewport.
         </p>
-    </div>
+    </div> -->
 
     <!-- Side Positions -->
     <section class="space-y-4">

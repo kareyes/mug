@@ -39,12 +39,12 @@
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
-	<div class="mb-8">
+	<!-- <div class="mb-8">
 		<h1 class="text-3xl font-bold mb-2">Switch Component</h1>
 		<p class="text-muted-foreground">
 			Interactive switches with variants and sizes.
 		</p>
-	</div>
+	</div> -->
 	<div class="space-y-12">
 		<!-- Basic Usage -->
 		<Card variant="outline" class="p-6">

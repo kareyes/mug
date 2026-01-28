@@ -53,49 +53,53 @@
         return null;
     });
 
-    const componentMap: Record<string, any> = {
-        "button": button,
-        "avatar": avatar,
-        "alert": alert,
-        "alert-dialog": alertDialog,
-        "accordion": accordion,
-        "badge": badge,
-        "breadcrumb": breadcrumbs,
-        "button-group": buttonGroup,
-        "calendar": Calendar,
-        "card": card,
-        "checkbox": checkbox,
-        "checkbox-group": CheckboxGroup,
-        "combobox": combobox,
-        "data-table": datatable,
-        "date-picker": datepicker,
-        "dialog": dialog,
-        "dropdown-menu": dropdownMenu,
-        "file-input": fileInput,
-        "field": field,
-        "input": input,
-        "input-otp": InputOtp,
-        "number-spinner": numberSpinner,
-        "popover": popover,
-        "radio": radioGroup,
-        "select": select,
-        "sheet": Sheet,
-        "sidebar": Sidebar,
-        "skeleton": Skeleton,
-        "slider": Slider,
-        "sonner": Sonner,
-        "stepper": Stepper,
-        "switch": Switch,
-        "tabs": TabsComponent,
-        "textarea": Textarea
-
+    const componentMap: Record<string, { name: string; component: any; title: string; description: string }> = {
+        "button": { name: "button", component: button, title: "Button", description: "A clickable element that triggers an action or event" },
+        "avatar": { name: "avatar", component: avatar, title: "Avatar", description: "An enhanced avatar component for displaying user profile images with support for fallbacks, variants, colors, shapes, and grouping" },
+        "alert": { name: "alert", component: alert, title: "Alert", description: "A component to display important messages and notifications to users" },
+        "alert-dialog": { name: "alert-dialog", component: alertDialog, title: "Alert Dialog", description: "A modal dialog for displaying alerts and requiring user confirmation" },
+        "accordion": { name: "accordion", component: accordion, title: "Accordion", description: "A collapsible content container with expandable sections" },
+        "badge": { name: "badge", component: badge, title: "Badge", description: "A small label component for displaying status or categories" },
+        "breadcrumb": { name: "breadcrumb", component: breadcrumbs, title: "Breadcrumb", description: "A navigation component showing the current page location in a hierarchy" },
+        "button-group": { name: "button-group", component: buttonGroup, title: "Button Group", description: "A group of buttons displayed together with unified styling" },
+        "calendar": { name: "calendar", component: Calendar, title: "Calendar", description: "A date picker component with calendar interface" },
+        "card": { name: "card", component: card, title: "Card", description: "A container component for grouping content with unified styling" },
+        "checkbox": { name: "checkbox", component: checkbox, title: "Checkbox", description: "A binary input control for selecting true or false states" },
+        "checkbox-group": { name: "checkbox-group", component: CheckboxGroup, title: "Checkbox Group", description: "A group of checkboxes for multiple selections" },
+        "combobox": { name: "combobox", component: combobox, title: "Combobox", description: "A searchable dropdown component combining input and selection" },
+        "data-table": { name: "data-table", component: datatable, title: "Data Table", description: "A component for displaying data in a table format with sorting and pagination" },
+        "date-picker": { name: "date-picker", component: datepicker, title: "Date Picker", description: "A component for selecting dates with calendar interface" },
+        "dialog": { name: "dialog", component: dialog, title: "Dialog", description: "A modal window for displaying content and prompting user interaction" },
+        "dropdown-menu": { name: "dropdown-menu", component: dropdownMenu, title: "Dropdown Menu", description: "A menu that drops down when triggered, showing a list of options" },
+        "file-input": { name: "file-input", component: fileInput, title: "File Input", description: "An input component for selecting and uploading files" },
+        "field": { name: "field", component: field, title: "Field", description: "A wrapper component for form inputs with labels and validation states" },
+        "input": { name: "input", component: input, title: "Input", description: "A basic text input component for user data entry" },
+        "input-otp": { name: "input-otp", component: InputOtp, title: "Input OTP", description: "A specialized input component for one-time password entry" },
+        "number-spinner": { name: "number-spinner", component: numberSpinner, title: "Number Spinner", description: "A numeric input with increment and decrement controls" },
+        "popover": { name: "popover", component: popover, title: "Popover", description: "A floating content panel that appears relative to a trigger element" },
+        "radio": { name: "radio", component: radioGroup, title: "Radio Group", description: "A group of radio buttons for single selection from multiple options" },
+        "select": { name: "select", component: select, title: "Select", description: "A dropdown component for selecting from a list of options" },
+        "sheet": { name: "sheet", component: Sheet, title: "Sheet", description: "A sliding panel that appears from the side of the screen" },
+        "sidebar": { name: "sidebar", component: Sidebar, title: "Sidebar", description: "A vertical navigation panel typically displayed on the side of the page" },
+        "skeleton": { name: "skeleton", component: Skeleton, title: "Skeleton", description: "A placeholder component showing loading state while content loads" },
+        "slider": { name: "slider", component: Slider, title: "Slider", description: "A component for selecting a value from a range using a draggable handle" },
+        "sonner": { name: "sonner", component: Sonner, title: "Sonner", description: "A toast notification component for displaying temporary messages" },
+        "stepper": { name: "stepper", component: Stepper, title: "Stepper", description: "A component for displaying steps in a process or wizard" },
+        "switch": { name: "switch", component: Switch, title: "Switch", description: "A toggle control for switching between two states" },
+        "tabs": { name: "tabs", component: TabsComponent, title: "Tabs", description: "A component for organizing content into multiple tabs" },
+        "textarea": { name: "textarea", component: Textarea, title: "Textarea", description: "A multi-line text input component for longer text entries" }
     };
 </script>
 
 <div class="min-h-screen">
     {#if slug && componentMap[slug]}
+        
         <Tabs value="component" class="w-full">
-            <div class="max-w-6xl mb-6 px-4 m-auto ">
+            <div class="max-w-6xl mb-6 px-4 mx-auto w-full">
+                <div class="mb-6">
+                    <h1 class="text-3xl font-bold mb-2">{componentMap[slug].title}</h1>
+                    <p class="text-gray-600 dark:text-gray-400">{componentMap[slug].description}</p>
+                </div>
                 <TabsList variant="segmented">
                     <TabsTrigger value="component" variant="segmented">
                         Component
@@ -111,7 +115,7 @@
             <div class="max-w-6xl mx-auto">
                 <TabsContent value="component" class="p-0 m-0">
                     <div>
-                        {@render componentMap[slug]()}
+                        {@render componentMap[slug].component()}
                     </div>
                 </TabsContent>
 

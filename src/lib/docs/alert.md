@@ -1,6 +1,6 @@
-# Alert
+<!-- # Alert
 
-A versatile alert component for displaying important messages with various styles, icons, and actions.
+A versatile alert component for displaying important messages with various styles, icons, and actions. -->
 
 ## Table of Contents
 

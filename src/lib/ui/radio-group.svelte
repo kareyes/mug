@@ -92,17 +92,14 @@
   ];
 </script>
 
-<svelte:head>
-  <title>Radio Group Demo - Aether UI</title>
-</svelte:head>
 
 <div class="container mx-auto p-6 max-w-6xl">
-  <div class="mb-8">
+  <!-- <div class="mb-8">
     <h1 class="text-3xl font-bold mb-2">Radio Group Component</h1>
     <p class="text-muted-foreground">
       Demonstration of the RadioGroup component with different variants, sizes, and practical use cases.
     </p>
-  </div>
+  </div> -->
 
   <div class="space-y-12">
     <!-- Basic Usage -->

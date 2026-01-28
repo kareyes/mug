@@ -57,12 +57,12 @@
 </script>
 
 <div class="container mx-auto p-8 space-y-8">
-	<div class="text-center space-y-2">
+	<!-- <div class="text-center space-y-2">
 		<h1 class="text-4xl font-bold">Calendar Component</h1>
 		<p class="text-muted-foreground">
 			A fully-featured calendar for displaying and selecting dates
 		</p>
-	</div>
+	</div> -->
 
 	<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 		<!-- Basic Calendar -->
@@ -116,7 +116,7 @@
 		<!-- Disabled Weekends -->
 		<Card title="Disabled Weekends" description="Weekends are not selectable">
 			<div class="flex flex-col items-center gap-4">
-				<Calendar type="single" isDateDisabled={(date) => isWeekend(date, "en-US")} />
+				<Calendar type="single" isDateDisabled={(date: DateValue) => isWeekend(date, "en-US")} />
 				<p class="text-sm text-muted-foreground">
 					Saturday and Sunday disabled
 				</p>
@@ -131,7 +131,7 @@
 			<div class="flex flex-col items-center gap-4">
 				<Calendar
 					type="single"
-					isDateUnavailable={(date) =>
+					isDateUnavailable={(date:DateValue) =>
 						[5, 10, 15, 20, 25].includes(date.day)}
 				/>
 				<p class="text-sm text-muted-foreground">

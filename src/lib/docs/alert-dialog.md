@@ -1,6 +1,6 @@
-# Alert Dialog Implementation
+<!-- # Alert Dialog Implementation
 
-A comprehensive alert dialog component with multiple variants, sizes, and programmatic control.
+A comprehensive alert dialog component with multiple variants, sizes, and programmatic control. -->
 
 ## Features
 

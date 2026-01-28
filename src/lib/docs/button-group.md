@@ -1,6 +1,6 @@
-# ButtonGroup Component
+<!-- # ButtonGroup Component
 
-A flexible button group component that allows you to group related buttons together with consistent styling and spacing. Supports different variants and orientations for various UI patterns.
+A flexible button group component that allows you to group related buttons together with consistent styling and spacing. Supports different variants and orientations for various UI patterns. -->
 
 ## Features
 

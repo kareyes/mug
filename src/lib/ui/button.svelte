@@ -22,7 +22,7 @@
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
-	<div class="mb-8">
+	<!-- <div class="mb-8">
 		<div class="flex items-center gap-3 mb-2">
 			<h1 class="text-3xl font-bold">Button Component</h1>
 			<Badge variant="secondary">Interactive Demo</Badge>
@@ -30,7 +30,7 @@
 		<p class="text-muted-foreground">
 			A versatile button component with multiple variants, sizes, and states.
 		</p>
-	</div>
+	</div> -->
 
 	<div class="space-y-12">
 		<!-- Variants -->

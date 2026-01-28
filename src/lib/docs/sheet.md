@@ -1,6 +1,6 @@
-# Sheet Component
+<!-- # Sheet Component
 
-A sliding panel component (drawer/side sheet) that overlays content from the edges of the viewport, built with Svelte 5 and bits-ui.
+A sliding panel component (drawer/side sheet) that overlays content from the edges of the viewport, built with Svelte 5 and bits-ui. -->
 
 ## Features
 

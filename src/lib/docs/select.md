@@ -1,6 +1,6 @@
-# Select
+<!-- # Select
 
-A unified Select component that combines all select functionality into a single, easy-to-use component with support for single/multiple selection, grouped options, and various styles.
+A unified Select component that combines all select functionality into a single, easy-to-use component with support for single/multiple selection, grouped options, and various styles. -->
 
 ## Table of Contents
 

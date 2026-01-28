@@ -1,6 +1,6 @@
-# Sonner Toast Component
+<!-- # Sonner Toast Component
 
-A beautiful, customizable toast notification system built on top of svelte-sonner with enhanced styling, variants, and developer experience.
+A beautiful, customizable toast notification system built on top of svelte-sonner with enhanced styling, variants, and developer experience. -->
 
 ## Features
 

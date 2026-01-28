@@ -1,6 +1,6 @@
-# Avatar
+<!-- # Avatar
 
-An enhanced avatar component for displaying user profile images with support for fallbacks, variants, colors, shapes, and grouping.
+An enhanced avatar component for displaying user profile images with support for fallbacks, variants, colors, shapes, and grouping. -->
 
 ## Table of Contents
 

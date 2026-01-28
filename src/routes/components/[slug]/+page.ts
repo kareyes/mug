@@ -1,5 +1,46 @@
 import { error } from '@sveltejs/kit';
-import type { PageLoad } from './$types';
+import type { EntryGenerator, PageLoad } from './$types';
+
+export const entries: EntryGenerator = () => {
+	return [
+		{ slug: 'accordion' },
+		{ slug: 'alert' },
+		{ slug: 'alert-dialog' },
+		{ slug: 'avatar' },
+		{ slug: 'badge' },
+		{ slug: 'breadcrumb' },
+		{ slug: 'button' },
+		{ slug: 'button-group' },
+		{ slug: 'calendar' },
+		{ slug: 'card' },
+		{ slug: 'checkbox' },
+		{ slug: 'checkbox-group' },
+		{ slug: 'combobox' },
+		{ slug: 'data-table' },
+		{ slug: 'date-picker' },
+		{ slug: 'dialog' },
+		{ slug: 'dropdown-menu' },
+		{ slug: 'field' },
+		{ slug: 'file-input' },
+		{ slug: 'input' },
+		{ slug: 'input-otp' },
+		{ slug: 'number-spinner' },
+		{ slug: 'popover' },
+		{ slug: 'radio' },
+		{ slug: 'select' },
+		{ slug: 'sheet' },
+		{ slug: 'sidebar' },
+		{ slug: 'skeleton' },
+		{ slug: 'slider' },
+		{ slug: 'sonner' },
+		{ slug: 'stepper' },
+		{ slug: 'switch' },
+		{ slug: 'tabs' },
+		{ slug: 'textarea' }
+	];
+};
+
+export const prerender = true;
 
 export const load: PageLoad = async ({ params }) => {
 	try {

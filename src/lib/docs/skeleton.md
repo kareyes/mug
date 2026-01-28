@@ -1,6 +1,6 @@
-# Skeleton Component
+<!-- # Skeleton Component
 
-A versatile skeleton loading component with multiple variants, animations, shapes, and preset patterns for displaying placeholder content while data is loading.
+A versatile skeleton loading component with multiple variants, animations, shapes, and preset patterns for displaying placeholder content while data is loading. -->
 
 ## Features
 

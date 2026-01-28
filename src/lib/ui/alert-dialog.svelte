@@ -206,13 +206,13 @@
 
 <AlertDialogProvider>
 	<div class="container mx-auto max-w-4xl space-y-8 p-8">
-		<div class="space-y-2">
+		<!-- <div class="space-y-2">
 			<h1 class="text-3xl font-bold">Alert Dialog Implementation</h1>
 			<p class="text-muted-foreground">
 				Examples of programmatically triggered alert dialogs with
 				various variants and configurations.
 			</p>
-		</div>
+		</div> -->
 
 		{#snippet AlertDialogButtons()}
 			{@const dialog = getAlertDialogContext()}

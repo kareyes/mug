@@ -1,6 +1,6 @@
-# Accordion
+<!-- # Accordion
 
-A vertically stacked set of interactive headings that reveal or hide sections of content. Built on top of [bits-ui](https://bits-ui.com) Accordion primitives.
+A vertically stacked set of interactive headings that reveal or hide sections of content. Built on top of [bits-ui](https://bits-ui.com) Accordion primitives. -->
 
 ## Table of Contents
 

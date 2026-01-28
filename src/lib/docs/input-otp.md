@@ -1,6 +1,6 @@
-# Input OTP Component
+<!-- # Input OTP Component
 
-An accessible one-time password (OTP) input component with copy/paste functionality, built on top of Bits UI's PinInput.
+An accessible one-time password (OTP) input component with copy/paste functionality, built on top of Bits UI's PinInput. -->
 
 ## Features
 

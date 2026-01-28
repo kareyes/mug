@@ -1,6 +1,6 @@
-# Card
+<!-- # Card
 
-A versatile card component with multiple variants, padding options, and interactive states for displaying grouped content with headers, descriptions, and actions.
+A versatile card component with multiple variants, padding options, and interactive states for displaying grouped content with headers, descriptions, and actions. -->
 
 ## Table of Contents
 

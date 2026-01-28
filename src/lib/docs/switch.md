@@ -1,6 +1,6 @@
-# Switch Component
+<!-- # Switch Component
 
-A toggle switch component for binary on/off states. Built with accessibility in mind and supports multiple variants and sizes.
+A toggle switch component for binary on/off states. Built with accessibility in mind and supports multiple variants and sizes. -->
 
 ## Features
 

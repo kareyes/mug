@@ -15,12 +15,12 @@
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
-	<div class="mb-8">
+	<!-- <div class="mb-8">
 		<h1 class="text-3xl font-bold mb-2">Tabs Component</h1>
 		<p class="text-muted-foreground">
 			Comprehensive showcase of tabs component with various styles and variants.
 		</p>
-	</div>
+	</div> -->
 
 	<div class="space-y-12">
 		<!-- Default Variant -->

@@ -63,12 +63,12 @@
 </svelte:head>
 
 <div class="container mx-auto p-6 max-w-6xl">
-  <div class="mb-8">
+  <!-- <div class="mb-8">
     <h1 class="text-3xl font-bold mb-2">Select Component</h1>
     <p class="text-muted-foreground">
       A single, easy-to-use Select component that combines all shadcn select functionality.
     </p>
-  </div>
+  </div> -->
 
   <div class="space-y-12">
     <!-- Basic Usage -->

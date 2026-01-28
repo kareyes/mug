@@ -19,18 +19,14 @@
 	const formValid = $derived(formQuantity > 0 && formPrice > 0 && formAge !== null && formAge > 0);
 </script>
 
-<svelte:head>
-	<title>Number Spinner Demo - Aether UI</title>
-</svelte:head>
-
 <div class="container mx-auto p-6 max-w-6xl">
-	<div class="mb-8">
+	<!-- <div class="mb-8">
 		<h1 class="text-3xl font-bold mb-2">Number Spinner Component</h1>
 		<p class="text-muted-foreground">
 			A comprehensive number input component with increment/decrement controls, supporting various
 			layouts and features.
 		</p>
-	</div>
+	</div> -->
 
 	<div class="space-y-12">
 		<!-- Basic Usage -->

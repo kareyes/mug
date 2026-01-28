@@ -1,4 +1,4 @@
-# Sidebar
+<!-- # Sidebar
 
 A composable, themeable and customizable sidebar component.
 
@@ -10,7 +10,7 @@ Shad doesn't like building sidebars, so he built 30+ of them with all kinds of c
 
 We now have a solid foundation to build on top of. Composable. Themeable. Customizable.
 
-[Browse the Blocks Library](https://shadcn-svelte.com/blocks).
+[Browse the Blocks Library](https://shadcn-svelte.com/blocks). -->
 
 ## Installation
 

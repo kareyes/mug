@@ -1,6 +1,6 @@
-# Data Table Component
+<!-- # Data Table Component
 
-A powerful, flexible data table component built with TanStack Table and Svelte 5 featuring advanced customization, row selection, pagination, filtering, sorting, and expandable rows.
+A powerful, flexible data table component built with TanStack Table and Svelte 5 featuring advanced customization, row selection, pagination, filtering, sorting, and expandable rows. -->
 
 ## Features
 

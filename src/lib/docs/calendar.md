@@ -1,6 +1,6 @@
-# Calendar Component
+<!-- # Calendar Component
 
-A fully-featured calendar component for displaying and selecting dates. Built on top of `bits-ui` Calendar primitives with support for single date selection, multiple months, dropdown navigation, and custom day rendering.
+A fully-featured calendar component for displaying and selecting dates. Built on top of `bits-ui` Calendar primitives with support for single date selection, multiple months, dropdown navigation, and custom day rendering. -->
 
 ## Basic Usage
 

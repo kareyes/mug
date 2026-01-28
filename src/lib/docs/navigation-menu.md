@@ -1,6 +1,6 @@
-# Navigation Menu
+<!-- # Navigation Menu
 
-A collection of links for navigating websites, with support for dropdowns, icons, and responsive layouts. Built on top of [bits-ui](https://bits-ui.com) NavigationMenu primitives.
+A collection of links for navigating websites, with support for dropdowns, icons, and responsive layouts. Built on top of [bits-ui](https://bits-ui.com) NavigationMenu primitives. -->
 
 ## Table of Contents
 

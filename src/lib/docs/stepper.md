@@ -1,6 +1,6 @@
-# Stepper Component
+<!-- # Stepper Component
 
-A flexible stepper component for displaying multi-step processes, workflows, and progress indicators, built with Svelte 5.
+A flexible stepper component for displaying multi-step processes, workflows, and progress indicators, built with Svelte 5. -->
 
 ## Features
 

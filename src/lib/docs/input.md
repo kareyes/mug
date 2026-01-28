@@ -1,6 +1,6 @@
-# Input
+<!-- # Input
 
-A flexible input component with built-in support for addons (icons, text, buttons), input masks, and various styles.
+A flexible input component with built-in support for addons (icons, text, buttons), input masks, and various styles. -->
 
 ## Table of Contents
 

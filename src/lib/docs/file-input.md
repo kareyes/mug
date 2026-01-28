@@ -1,6 +1,6 @@
-# FileInput Component
+<!-- # FileInput Component
 
-A modern drag-and-drop file input component with validation, file type restrictions, and multiple variants.
+A modern drag-and-drop file input component with validation, file type restrictions, and multiple variants. -->
 
 ## Features
 

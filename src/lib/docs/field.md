@@ -1,6 +1,6 @@
-# Field Component
+<!-- # Field Component
 
-A comprehensive form field wrapper component that combines labels, descriptions, error messages, and form controls into a unified, accessible interface.
+A comprehensive form field wrapper component that combines labels, descriptions, error messages, and form controls into a unified, accessible interface. -->
 
 ## Features
 

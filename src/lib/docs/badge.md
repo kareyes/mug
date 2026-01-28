@@ -1,6 +1,6 @@
-# Badge
+<!-- # Badge
 
-A versatile badge component with multiple variants, colors, sizes, and interactive features including dismissable and clickable options, icon support, and loading states.
+A versatile badge component with multiple variants, colors, sizes, and interactive features including dismissable and clickable options, icon support, and loading states. -->
 
 ## Table of Contents
 

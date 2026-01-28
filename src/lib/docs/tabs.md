@@ -1,6 +1,6 @@
-# Tabs Component
+<!-- # Tabs Component
 
-A comprehensive, customizable tabs component with multiple visual variants, sizes, and animation options built with Svelte 5 and bits-ui.
+A comprehensive, customizable tabs component with multiple visual variants, sizes, and animation options built with Svelte 5 and bits-ui. -->
 
 ## Features
 

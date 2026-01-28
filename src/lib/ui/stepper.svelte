@@ -95,12 +95,12 @@
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
-	<div class="mb-8">
+	<!-- <div class="mb-8">
 		<h1 class="text-3xl font-bold mb-2">Stepper Component Demo</h1>
 		<p class="text-muted-foreground">
 			Comprehensive examples of the Stepper component with various orientations, sizes, variants, and use cases.
 		</p>
-	</div>
+	</div> -->
 	<div class="space-y-12">
 		<!-- Orientation Examples -->
 		<Card variant="outline" class="p-6">
