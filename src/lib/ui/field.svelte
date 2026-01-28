@@ -18,10 +18,35 @@
         FileInput,
         Field,
         FieldPrimitives,
+        CodeBlock,
+        DatePicker,
+        CheckboxGroup,
     } from "@kareyes/aether";
 
     type CheckboxGroupOption = CheckboxPrimitives.CheckboxGroupOption;
     type RadioGroupOption = RadioGroupPrimitives.RadioGroupOption;
+
+    import {
+        completeFormDocs,
+        inputVariantsDocs,
+        inputSizesDocs,
+        inputMasksDocs,
+        textareaVariantsDocs,
+        checkboxVariantsDocs,
+        checkboxGroupDocs,
+        radioGroupDocs,
+        switchVariantsDocs,
+        horizontalLayoutsDocs,
+        errorStatesDocs,
+        cardVariantsDocs,
+        sliderFieldDocs,
+        inputOtpFieldDocs,
+        numberSpinnerFieldDocs,
+        fileInputFieldDocs,
+        datePickerFieldDocs,
+        labelPositionDocs,
+        completeOrderFormDocs,
+    } from "$lib/code-blocks/field";
 
     // Form state
     let username = $state("");
@@ -331,26 +356,24 @@
     ];
 </script>
 
-<div class="container mx-auto max-w-4xl space-y-8 p-8">
-    <div class="space-y-2">
-        <h1 class="text-3xl font-bold">Field Component (Slot-Based)</h1>
+<div class="container mx-auto p-6 max-w-6xl">
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Field Component</h1>
         <p class="text-muted-foreground">
             Simplified field component using slots for maximum flexibility. Pass
             any form control as a child.
         </p>
     </div>
 
-    <hr class="border-border" />
+    <div class="space-y-12">
 
-    <!-- Basic Form Example -->
-    <section class="space-y-4">
-        <div>
-            <h2 class="text-2xl font-bold">Complete Form Example</h2>
-            <p class="mt-1 text-sm text-muted-foreground">
-                A full form using Field with form controls passed as
-                slots.
-            </p>
-        </div>
+    <!-- 1. Complete Form Example -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Complete Form Example</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            A full form using Field with form controls passed as
+            slots.
+        </p>
 
         <form onsubmit={handleSubmit} class="rounded-lg border bg-card p-6">
             <FieldPrimitives.Set>
@@ -502,16 +525,24 @@
                 >
             </div>
         </form>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={completeFormDocs}
+        />
+    </Card>
 
-    <!-- Input Variants Section -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">Input Variants</h2>
-            <p class="text-muted-foreground">
-                Different visual styles for input fields
-            </p>
-        </div>
+    <!-- 2. Input Variants -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Input Variants</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Different visual styles for input fields
+        </p>
 
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <Card>
@@ -564,16 +595,24 @@
                 </Field>
             </Card>
         </div>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={inputVariantsDocs}
+        />
+    </Card>
 
-    <!-- Input Sizes Section -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">Input Sizes</h2>
-            <p class="text-muted-foreground">
-                Different size options for input fields
-            </p>
-        </div>
+    <!-- 3. Input Sizes -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Input Sizes</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Different size options for input fields
+        </p>
 
         <div class="grid gap-6 md:grid-cols-3">
             <Card>
@@ -598,16 +637,24 @@
                 </Field>
             </Card>
         </div>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={inputSizesDocs}
+        />
+    </Card>
 
-    <!-- Input Masks Section -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">Input Masks</h2>
-            <p class="text-muted-foreground">
-                Formatted input fields with automatic masking
-            </p>
-        </div>
+    <!-- 4. Input Masks -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Input Masks</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Formatted input fields with automatic masking
+        </p>
 
         <div class="grid gap-6 md:grid-cols-2">
             <Card>
@@ -652,16 +699,24 @@
                 </Field>
             </Card>
         </div>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={inputMasksDocs}
+        />
+    </Card>
 
-    <!-- Textarea Variants and Features Section -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">Textarea Variants & Features</h2>
-            <p class="text-muted-foreground">
-                Different styles and features for textarea fields
-            </p>
-        </div>
+    <!-- 5. Textarea Variants & Features -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Textarea Variants & Features</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Different styles and features for textarea fields
+        </p>
 
         <div class="grid gap-6 md:grid-cols-2">
             <Card>
@@ -734,16 +789,24 @@
                 </Field>
             </Card>
         </div>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={textareaVariantsDocs}
+        />
+    </Card>
 
-    <!-- Checkbox Variants and Sizes Section -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">Checkbox Variants & Sizes</h2>
-            <p class="text-muted-foreground">
-                Different styles and sizes for checkbox fields
-            </p>
-        </div>
+    <!-- 6. Checkbox Variants & Sizes -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Checkbox Variants & Sizes</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Different styles and sizes for checkbox fields
+        </p>
 
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <Card>
@@ -774,7 +837,7 @@
             </Card>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-4">
+        <div class="grid gap-6 md:grid-cols-4 mt-6">
             <Card>
                 <Field label="Small Size" orientation="horizontal">
                     <Checkbox id="checkbox-sm" size="sm" />
@@ -799,23 +862,31 @@
                 </Field>
             </Card>
         </div>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={checkboxVariantsDocs}
+        />
+    </Card>
 
-    <!-- CheckboxGroup Examples Section -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">
-                CheckboxGroup with Field Component
-            </h2>
-            <p class="text-muted-foreground">
-                Multiple checkbox selection with Field wrapper for labels,
-                descriptions, and error handling
-            </p>
-        </div>
+    <!-- 7. CheckboxGroup with Field Component -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">
+            CheckboxGroup with Field Component
+        </h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Multiple checkbox selection with Field wrapper for labels,
+            descriptions, and error handling
+        </p>
 
         <div class="space-y-8">
             <!-- Basic CheckboxGroup -->
-            <!-- <Card>
+            <Card>
                 <Field
                     label="Select Features"
                     description="Choose the features you want to enable for your account."
@@ -832,10 +903,10 @@
                             : "None"}
                     </p>
                 </div>
-            </Card> -->
+            </Card>
 
             <!-- CheckboxGroup Orientations -->
-            <!-- <div class="grid gap-6 md:grid-cols-2">
+            <div class="grid gap-6 md:grid-cols-2">
                 <Card>
                     <Field
                         label="Vertical Layout"
@@ -861,10 +932,10 @@
                         />
                     </Field>
                 </Card>
-            </div> -->
+            </div>
 
             <!-- CheckboxGroup with Error State -->
-            <!-- <Card>
+            <Card>
                 <Field
                     label="User Permissions"
                     description="Select at least one permission to continue."
@@ -887,10 +958,10 @@
                             : "None"}
                     </p>
                 </div>
-            </Card> -->
+            </Card>
 
             <!-- CheckboxGroup in Form Context -->
-            <!-- <Card class="bg-muted/50">
+            <Card class="bg-muted/50">
                 <FieldPrimitives.Set>
                     <FieldPrimitives.Legend>Account Setup</FieldPrimitives.Legend>
                     <FieldPrimitives.Description
@@ -923,19 +994,27 @@
                         </Field>
                     </FieldPrimitives.Group>
                 </FieldPrimitives.Set>
-            </Card> -->
+            </Card>
         </div>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={checkboxGroupDocs}
+        />
+    </Card>
 
-    <!-- RadioGroup Examples Section -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">RadioGroup with Field Component</h2>
-            <p class="text-muted-foreground">
-                Single selection radio groups with Field wrapper for labels,
-                descriptions, and error handling
-            </p>
-        </div>
+    <!-- 8. RadioGroup with Field Component -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">RadioGroup with Field Component</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Single selection radio groups with Field wrapper for labels,
+            descriptions, and error handling
+        </p>
 
         <div class="space-y-8">
             <!-- Basic RadioGroup -->
@@ -1081,16 +1160,24 @@
                 </div>
             </Card>
         </div>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={radioGroupDocs}
+        />
+    </Card>
 
-    <!-- Switch Variants and Sizes Section -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">Switch Variants & Sizes</h2>
-            <p class="text-muted-foreground">
-                Different styles and sizes for switch fields
-            </p>
-        </div>
+    <!-- 9. Switch Variants & Sizes -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Switch Variants & Sizes</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Different styles and sizes for switch fields
+        </p>
 
         <div class="grid gap-6 md:grid-cols-2">
             <Card>
@@ -1114,7 +1201,7 @@
             </Card>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-3">
+        <div class="grid gap-6 md:grid-cols-3 mt-6">
             <Card>
                 <Field label="Small Size" orientation="horizontal">
                     <Switch id="switch-sm" size="sm" />
@@ -1133,16 +1220,24 @@
                 </Field>
             </Card>
         </div>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={switchVariantsDocs}
+        />
+    </Card>
 
-    <!-- Horizontal Layout Examples -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">Horizontal Layouts</h2>
-            <p class="text-muted-foreground">
-                Fields with horizontal orientation
-            </p>
-        </div>
+    <!-- 10. Horizontal Layouts -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Horizontal Layouts</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Fields with horizontal orientation
+        </p>
 
         <div class="grid gap-6">
             <Card>
@@ -1179,16 +1274,24 @@
                 </Field>
             </Card>
         </div>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={horizontalLayoutsDocs}
+        />
+    </Card>
 
-    <!-- Error States -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">Error States</h2>
-            <p class="text-muted-foreground">
-                Fields displaying validation errors
-            </p>
-        </div>
+    <!-- 11. Error States -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Error States</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Fields displaying validation errors
+        </p>
 
         <div class="grid gap-6 md:grid-cols-2">
             <Card>
@@ -1216,17 +1319,25 @@
                 </Field>
             </Card>
         </div>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={errorStatesDocs}
+        />
+    </Card>
 
-    <!-- Card Component Variants Section -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">Card Component Variants</h2>
-            <p class="text-muted-foreground">
-                Different visual styles and configurations for the Card
-                component
-            </p>
-        </div>
+    <!-- 12. Card Component Variants -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Card Component Variants</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Different visual styles and configurations for the Card
+            component
+        </p>
 
         <!-- Card with Header Actions -->
         <div>
@@ -1262,7 +1373,7 @@
         </div>
 
         <!-- Card with Footer -->
-        <div>
+        <div class="mt-8">
             <h3 class="text-xl font-semibold mb-4">Cards with Footers</h3>
             <div class="grid gap-6 md:grid-cols-2">
                 <Card
@@ -1303,7 +1414,7 @@
         </div>
 
         <!-- Complex Example -->
-        <div>
+        <div class="mt-8">
             <h3 class="text-xl font-semibold mb-4">Complex Card Example</h3>
             <Card
                 title="Team Subscription"
@@ -1351,16 +1462,24 @@
                 {/snippet}
             </Card>
         </div>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={cardVariantsDocs}
+        />
+    </Card>
 
-    <!-- Slider Field Examples -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">Slider with Field Component</h2>
-            <p class="text-muted-foreground">
-                Range slider controls with Field wrapper
-            </p>
-        </div>
+    <!-- 13. Slider with Field Component -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Slider with Field Component</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Range slider controls with Field wrapper
+        </p>
 
         <div class="grid gap-6 md:grid-cols-2">
             <Card>
@@ -1393,16 +1512,24 @@
                 </Field>
             </Card>
         </div>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={sliderFieldDocs}
+        />
+    </Card>
 
-    <!-- InputOTP Field Examples -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">Input OTP with Field Component</h2>
-            <p class="text-muted-foreground">
-                One-time password inputs with Field wrapper
-            </p>
-        </div>
+    <!-- 14. Input OTP with Field Component -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Input OTP with Field Component</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            One-time password inputs with Field wrapper
+        </p>
 
         <div class="grid gap-6 md:grid-cols-2">
             <Card>
@@ -1429,18 +1556,26 @@
                 </Field>
             </Card>
         </div>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={inputOtpFieldDocs}
+        />
+    </Card>
 
-    <!-- NumberSpinner Field Examples -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">
-                Number Spinner with Field Component
-            </h2>
-            <p class="text-muted-foreground">
-                Numeric spinners with Field wrapper
-            </p>
-        </div>
+    <!-- 15. NumberSpinner with Field Component -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">
+            Number Spinner with Field Component
+        </h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Numeric spinners with Field wrapper
+        </p>
 
         <div class="grid gap-6 md:grid-cols-3">
             <Card>
@@ -1471,16 +1606,24 @@
                 </Field>
             </Card>
         </div>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={numberSpinnerFieldDocs}
+        />
+    </Card>
 
-    <!-- FileInput Field Examples -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">File Input with Field Component</h2>
-            <p class="text-muted-foreground">
-                File upload controls with Field wrapper
-            </p>
-        </div>
+    <!-- 16. FileInput with Field Component -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">File Input with Field Component</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            File upload controls with Field wrapper
+        </p>
 
         <div class="grid gap-6 md:grid-cols-2">
             <Card>
@@ -1519,7 +1662,7 @@
             </Card>
         </div>
 
-        <Card>
+        <Card class="mt-6">
             <Field
                 label="Upload document"
                 error="File size exceeds 5MB limit"
@@ -1533,55 +1676,68 @@
                 />
             </Field>
         </Card>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={fileInputFieldDocs}
+        />
+    </Card>
 
-    <!-- DatePicker Field Examples -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">Date Picker with Field Component</h2>
-            <p class="text-muted-foreground">
-                Date selection with Field wrapper
-            </p>
-        </div>
+    <!-- 17. DatePicker with Field Component -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Date Picker with Field Component</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Date selection with Field wrapper
+        </p>
+		<div class="grid gap-6 md:grid-cols-2">
+			<Card>
+				<Field
+					label="Date of Birth"
+					description="Select your birth date"
+				>
+					<DatePicker />
+				</Field>
+			</Card>
 
-        <div class="grid gap-6 md:grid-cols-2">
-            <!-- <Card>
-                <Field
-                    label="Date of Birth"
-                    description="Select your birth date"
-                >
-                    <DatePicker />
-                </Field>
-            </Card> -->
+			<Card>
+				<Field
+					label="Delivery Date"
+					description="Choose your preferred delivery date"
+					required
+				>
+					<DatePicker bind:value={deliveryDate} />
+				</Field>
+				{#if deliveryDate}
+					<div class="mt-4 rounded-md bg-muted p-3">
+						<p class="text-sm font-medium">Selected: {deliveryDate.toDate}</p>
+					</div>
+				{/if}
+			</Card>
+		</div>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={datePickerFieldDocs}
+        />
+    </Card>
 
-            <!-- <Card>
-                <Field
-                    label="Delivery Date"
-                    description="Choose your preferred delivery date"
-                    required
-                >
-                    <DatePicker bind:value={deliveryDate} />
-                </Field>
-                {#if deliveryDate}
-                    <div class="mt-4 rounded-md bg-muted p-3">
-                        <p class="text-sm font-medium">
-                            Selected: {deliveryDate.toDate}
-                        </p>
-                    </div>
-                {/if}
-            </Card> -->
-        </div>
-    </section>
-
-    <!-- Label Position Examples Section -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">Label Position</h2>
-            <p class="text-muted-foreground">
-                Control label placement with labelPosition prop - useful for
-                Checkbox and Switch components
-            </p>
-        </div>
+    <!-- 18. Label Position -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Label Position</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Control label placement with labelPosition prop - useful for
+            Checkbox and Switch components
+        </p>
 
         <div class="grid gap-6 md:grid-cols-2">
             <!-- Checkbox with label after -->
@@ -1724,7 +1880,7 @@
         </div>
 
         <!-- Vertical orientation with label after -->
-        <Card>
+        <Card class="mt-6">
             <div class="space-y-4">
                 <div>
                     <h3 class="text-lg font-medium mb-2">
@@ -1745,16 +1901,24 @@
                 </Field>
             </div>
         </Card>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={labelPositionDocs}
+        />
+    </Card>
 
-    <!-- Complete Order Form Example -->
-    <section class="space-y-6">
-        <div>
-            <h2 class="text-2xl font-bold">Complete Order Form</h2>
-            <p class="text-muted-foreground">
-                Comprehensive form with all advanced components
-            </p>
-        </div>
+    <!-- 19. Complete Order Form -->
+    <Card variant="outline" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Complete Order Form</h2>
+        <p class="text-sm text-muted-foreground mb-4">
+            Comprehensive form with all advanced components
+        </p>
 
         <Card class="bg-muted/50">
             <FieldPrimitives.Set>
@@ -1858,5 +2022,17 @@
                 </div>
             </FieldPrimitives.Set>
         </Card>
-    </section>
+        <br />
+        <CodeBlock
+            title="Code"
+            language="Svelte"
+            showLineNumbers
+            collapsible
+            maxHeight="250px"
+            variant="default"
+            code={completeOrderFormDocs}
+        />
+    </Card>
+
+    </div>
 </div>

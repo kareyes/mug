@@ -1,28 +1,34 @@
 <script lang="ts">
-	// import { Tabs, TabsList, TabsTrigger, TabsContent } from "$core/components/ui/tabs";
-	import { Card, TabsPrimitives } from "@kareyes/aether";
+	import { Card, TabsPrimitives, CodeBlock } from "@kareyes/aether";
 	import { Home, User, Settings, Bell, Mail, Calendar } from "@kareyes/aether/icons";
+	import {
+		defaultVariantDocs,
+		underlineVariantDocs,
+		pillsVariantDocs,
+		solidVariantDocs,
+		segmentedVariantDocs,
+		sizeVariantsDocs,
+		animationVariantsDocs
+	} from "$lib/code-blocks/tabs";
 
-    const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
+	const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
 </script>
 
-<div class="container mx-auto space-y-8 py-8">
-	<div class="space-y-2">
-		<h1 class="text-3xl font-bold">Tabs Component Variants</h1>
+<div class="container mx-auto p-6 max-w-6xl">
+	<div class="mb-8">
+		<h1 class="text-3xl font-bold mb-2">Tabs Component</h1>
 		<p class="text-muted-foreground">
 			Comprehensive showcase of tabs component with various styles and variants.
 		</p>
 	</div>
 
-	<!-- Default Variant -->
-	<section class="space-y-4">
-		<div class="space-y-1">
-			<h2 class="text-2xl font-semibold">Default Variant</h2>
-			<p class="text-sm text-muted-foreground">
+	<div class="space-y-12">
+		<!-- Default Variant -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Default Variant</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				The standard tabs style with background and rounded corners.
 			</p>
-		</div>
-		<Card class="p-6">
 			<Tabs value="account">
 				<TabsList>
 					<TabsTrigger value="account">Account</TabsTrigger>
@@ -54,18 +60,24 @@
 					</div>
 				</TabsContent>
 			</Tabs>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={defaultVariantDocs}
+			/>
 		</Card>
-	</section>
 
-	<!-- Underline Variant -->
-	<section class="space-y-4">
-		<div class="space-y-1">
-			<h2 class="text-2xl font-semibold">Underline Variant</h2>
-			<p class="text-sm text-muted-foreground">
+		<!-- Underline Variant -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Underline Variant</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				Clean underline style with active indicator at the bottom.
 			</p>
-		</div>
-		<Card class="p-6">
 			<Tabs value="overview">
 				<TabsList variant="underline">
 					<TabsTrigger variant="underline" value="overview">Overview</TabsTrigger>
@@ -106,18 +118,24 @@
 					</div>
 				</TabsContent>
 			</Tabs>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={underlineVariantDocs}
+			/>
 		</Card>
-	</section>
 
-	<!-- Pills Variant -->
-	<section class="space-y-4">
-		<div class="space-y-1">
-			<h2 class="text-2xl font-semibold">Pills Variant</h2>
-			<p class="text-sm text-muted-foreground">
+		<!-- Pills Variant -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Pills Variant</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				Rounded pill-style tabs with smooth transitions.
 			</p>
-		</div>
-		<Card class="p-6">
 			<Tabs value="home">
 				<TabsList variant="pills">
 					<TabsTrigger variant="pills" value="home">
@@ -158,18 +176,24 @@
 					</div>
 				</TabsContent>
 			</Tabs>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={pillsVariantDocs}
+			/>
 		</Card>
-	</section>
 
-	<!-- Solid Variant -->
-	<section class="space-y-4">
-		<div class="space-y-1">
-			<h2 class="text-2xl font-semibold">Solid Variant</h2>
-			<p class="text-sm text-muted-foreground">
+		<!-- Solid Variant -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Solid Variant</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				Bold solid background style with primary color for active state.
 			</p>
-		</div>
-		<Card class="p-6">
 			<Tabs value="inbox">
 				<TabsList variant="solid">
 					<TabsTrigger variant="solid" value="inbox">
@@ -210,18 +234,24 @@
 					</div>
 				</TabsContent>
 			</Tabs>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={solidVariantDocs}
+			/>
 		</Card>
-	</section>
 
-	<!-- Segmented Variant -->
-	<section class="space-y-4">
-		<div class="space-y-1">
-			<h2 class="text-2xl font-semibold">Segmented Variant</h2>
-			<p class="text-sm text-muted-foreground">
+		<!-- Segmented Variant -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Segmented Variant</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				Segmented control style with continuous background.
 			</p>
-		</div>
-		<Card class="p-6">
 			<Tabs value="daily">
 				<TabsList variant="segmented">
 					<TabsTrigger variant="segmented" value="daily">Daily</TabsTrigger>
@@ -262,122 +292,148 @@
 					</div>
 				</TabsContent>
 			</Tabs>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={segmentedVariantDocs}
+			/>
 		</Card>
-	</section>
 
-	<!-- Size Variants -->
-	<section class="space-y-4">
-		<div class="space-y-1">
-			<h2 class="text-2xl font-semibold">Size Variants</h2>
-			<p class="text-sm text-muted-foreground">
+		<!-- Size Variants -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Size Variants</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				Different sizes for various use cases.
 			</p>
-		</div>
-		
-		<!-- Small Size -->
-		<Card class="p-6">
-			<h3 class="text-sm font-medium mb-4">Small Size</h3>
-			<Tabs value="tab1">
-				<TabsList size="sm">
-					<TabsTrigger size="sm" value="tab1">Small Tab 1</TabsTrigger>
-					<TabsTrigger size="sm" value="tab2">Small Tab 2</TabsTrigger>
-					<TabsTrigger size="sm" value="tab3">Small Tab 3</TabsTrigger>
-				</TabsList>
-				<TabsContent value="tab1" padding="sm">
-					<p class="text-sm text-muted-foreground">Small size content area</p>
-				</TabsContent>
-				<TabsContent value="tab2" padding="sm">
-					<p class="text-sm text-muted-foreground">Compact for dense UIs</p>
-				</TabsContent>
-				<TabsContent value="tab3" padding="sm">
-					<p class="text-sm text-muted-foreground">Minimal spacing</p>
-				</TabsContent>
-			</Tabs>
+
+			<!-- Small Size -->
+			<Card class="p-6">
+				<h3 class="text-sm font-medium mb-4">Small Size</h3>
+				<Tabs value="tab1">
+					<TabsList size="sm">
+						<TabsTrigger size="sm" value="tab1">Small Tab 1</TabsTrigger>
+						<TabsTrigger size="sm" value="tab2">Small Tab 2</TabsTrigger>
+						<TabsTrigger size="sm" value="tab3">Small Tab 3</TabsTrigger>
+					</TabsList>
+					<TabsContent value="tab1" padding="sm">
+						<p class="text-sm text-muted-foreground">Small size content area</p>
+					</TabsContent>
+					<TabsContent value="tab2" padding="sm">
+						<p class="text-sm text-muted-foreground">Compact for dense UIs</p>
+					</TabsContent>
+					<TabsContent value="tab3" padding="sm">
+						<p class="text-sm text-muted-foreground">Minimal spacing</p>
+					</TabsContent>
+				</Tabs>
+			</Card>
+
+			<!-- Large Size -->
+			<Card class="p-6 mt-6">
+				<h3 class="text-sm font-medium mb-4">Large Size</h3>
+				<Tabs value="tab1">
+					<TabsList size="lg">
+						<TabsTrigger size="lg" value="tab1">Large Tab 1</TabsTrigger>
+						<TabsTrigger size="lg" value="tab2">Large Tab 2</TabsTrigger>
+						<TabsTrigger size="lg" value="tab3">Large Tab 3</TabsTrigger>
+					</TabsList>
+					<TabsContent value="tab1" padding="lg">
+						<p class="text-sm text-muted-foreground">Large size for better touch targets</p>
+					</TabsContent>
+					<TabsContent value="tab2" padding="lg">
+						<p class="text-sm text-muted-foreground">More prominent appearance</p>
+					</TabsContent>
+					<TabsContent value="tab3" padding="lg">
+						<p class="text-sm text-muted-foreground">Enhanced spacing</p>
+					</TabsContent>
+				</Tabs>
+			</Card>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={sizeVariantsDocs}
+			/>
 		</Card>
 
-		<!-- Large Size -->
-		<Card class="p-6">
-			<h3 class="text-sm font-medium mb-4">Large Size</h3>
-			<Tabs value="tab1">
-				<TabsList size="lg">
-					<TabsTrigger size="lg" value="tab1">Large Tab 1</TabsTrigger>
-					<TabsTrigger size="lg" value="tab2">Large Tab 2</TabsTrigger>
-					<TabsTrigger size="lg" value="tab3">Large Tab 3</TabsTrigger>
-				</TabsList>
-				<TabsContent value="tab1" padding="lg">
-					<p class="text-sm text-muted-foreground">Large size for better touch targets</p>
-				</TabsContent>
-				<TabsContent value="tab2" padding="lg">
-					<p class="text-sm text-muted-foreground">More prominent appearance</p>
-				</TabsContent>
-				<TabsContent value="tab3" padding="lg">
-					<p class="text-sm text-muted-foreground">Enhanced spacing</p>
-				</TabsContent>
-			</Tabs>
-		</Card>
-	</section>
-
-	<!-- Animation Variants -->
-	<section class="space-y-4">
-		<div class="space-y-1">
-			<h2 class="text-2xl font-semibold">Animation Variants</h2>
-			<p class="text-sm text-muted-foreground">
+		<!-- Animation Variants -->
+		<Card variant="outline" class="p-6">
+			<h2 class="text-2xl font-semibold mb-4">Animation Variants</h2>
+			<p class="text-sm text-muted-foreground mb-4">
 				Different transition effects for content changes.
 			</p>
-		</div>
 
-		<!-- Slide Animation -->
-		<Card class="p-6">
-			<h3 class="text-sm font-medium mb-4">Slide Animation</h3>
-			<Tabs value="slide1">
-				<TabsList variant="pills">
-					<TabsTrigger variant="pills" value="slide1">Slide 1</TabsTrigger>
-					<TabsTrigger variant="pills" value="slide2">Slide 2</TabsTrigger>
-					<TabsTrigger variant="pills" value="slide3">Slide 3</TabsTrigger>
-				</TabsList>
-				<TabsContent value="slide1" animation="slide">
-					<div class="rounded-lg border border-border p-4">
-						<p class="text-sm">Content slides in from bottom</p>
-					</div>
-				</TabsContent>
-				<TabsContent value="slide2" animation="slide">
-					<div class="rounded-lg border border-border p-4">
-						<p class="text-sm">Smooth slide transition effect</p>
-					</div>
-				</TabsContent>
-				<TabsContent value="slide3" animation="slide">
-					<div class="rounded-lg border border-border p-4">
-						<p class="text-sm">Enhanced visual feedback</p>
-					</div>
-				</TabsContent>
-			</Tabs>
-		</Card>
+			<!-- Slide Animation -->
+			<Card class="p-6">
+				<h3 class="text-sm font-medium mb-4">Slide Animation</h3>
+				<Tabs value="slide1">
+					<TabsList variant="pills">
+						<TabsTrigger variant="pills" value="slide1">Slide 1</TabsTrigger>
+						<TabsTrigger variant="pills" value="slide2">Slide 2</TabsTrigger>
+						<TabsTrigger variant="pills" value="slide3">Slide 3</TabsTrigger>
+					</TabsList>
+					<TabsContent value="slide1" animation="slide">
+						<div class="rounded-lg border border-border p-4">
+							<p class="text-sm">Content slides in from bottom</p>
+						</div>
+					</TabsContent>
+					<TabsContent value="slide2" animation="slide">
+						<div class="rounded-lg border border-border p-4">
+							<p class="text-sm">Smooth slide transition effect</p>
+						</div>
+					</TabsContent>
+					<TabsContent value="slide3" animation="slide">
+						<div class="rounded-lg border border-border p-4">
+							<p class="text-sm">Enhanced visual feedback</p>
+						</div>
+					</TabsContent>
+				</Tabs>
+			</Card>
 
-		<!-- Scale Animation -->
-		<Card class="p-6">
-			<h3 class="text-sm font-medium mb-4">Scale Animation</h3>
-			<Tabs value="scale1">
-				<TabsList variant="solid">
-					<TabsTrigger variant="solid" value="scale1">Scale 1</TabsTrigger>
-					<TabsTrigger variant="solid" value="scale2">Scale 2</TabsTrigger>
-					<TabsTrigger variant="solid" value="scale3">Scale 3</TabsTrigger>
-				</TabsList>
-				<TabsContent value="scale1" animation="scale">
-					<div class="rounded-lg border border-border p-4">
-						<p class="text-sm">Content zooms in on appear</p>
-					</div>
-				</TabsContent>
-				<TabsContent value="scale2" animation="scale">
-					<div class="rounded-lg border border-border p-4">
-						<p class="text-sm">Zoom transition effect</p>
-					</div>
-				</TabsContent>
-				<TabsContent value="scale3" animation="scale">
-					<div class="rounded-lg border border-border p-4">
-						<p class="text-sm">Subtle scale animation</p>
-					</div>
-				</TabsContent>
-			</Tabs>
+			<!-- Scale Animation -->
+			<Card class="p-6 mt-6">
+				<h3 class="text-sm font-medium mb-4">Scale Animation</h3>
+				<Tabs value="scale1">
+					<TabsList variant="solid">
+						<TabsTrigger variant="solid" value="scale1">Scale 1</TabsTrigger>
+						<TabsTrigger variant="solid" value="scale2">Scale 2</TabsTrigger>
+						<TabsTrigger variant="solid" value="scale3">Scale 3</TabsTrigger>
+					</TabsList>
+					<TabsContent value="scale1" animation="scale">
+						<div class="rounded-lg border border-border p-4">
+							<p class="text-sm">Content zooms in on appear</p>
+						</div>
+					</TabsContent>
+					<TabsContent value="scale2" animation="scale">
+						<div class="rounded-lg border border-border p-4">
+							<p class="text-sm">Zoom transition effect</p>
+						</div>
+					</TabsContent>
+					<TabsContent value="scale3" animation="scale">
+						<div class="rounded-lg border border-border p-4">
+							<p class="text-sm">Subtle scale animation</p>
+						</div>
+					</TabsContent>
+				</Tabs>
+			</Card>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={animationVariantsDocs}
+			/>
 		</Card>
-	</section>
+	</div>
 </div>

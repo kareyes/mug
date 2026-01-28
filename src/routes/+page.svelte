@@ -15,6 +15,7 @@
 				{ name: 'Input', description: 'Text input field component', route: '/components/input' },
 				{ name: 'Textarea', description: 'Multiline text input', route: '/components/textarea' },
 				{ name: 'Checkbox', description: 'Binary selection control', route: '/components/checkbox' },
+				{ name: 'Checkbox Group', description: 'Group of checkboxes for multiple selections', route: '/components/checkbox-group' },
 				{ name: 'Switch', description: 'Toggle switch component', route: '/components/switch' },
 				{ name: 'Radio Group', description: 'Single selection from multiple options', route: '/components/radio' },
 				{ name: 'Select', description: 'Dropdown selection menu', route: '/components/select' },
