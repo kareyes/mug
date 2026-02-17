@@ -14,6 +14,7 @@
 	let autoRenew = $state(true);
 	let emailNotifications = $state(true);
 	let darkMode = $state(false);
+	import PreviewContainer from "../components/preview-container.svelte";
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
@@ -26,11 +27,12 @@
 
 	<div class="space-y-12">
 		<!-- Basic Cards -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Basic Cards</h2>
 			<p class="text-sm text-muted-foreground mb-4">Simple card examples with title and description</p>
+			<PreviewContainer>
 
-			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+			<div class="grid gap-6 @md:grid-cols-2 @lg:grid-cols-3">
 				<Card title="Simple Card" description="A basic card with title and description">
 					<p class="text-sm">This is the card content area where you can place any elements.</p>
 				</Card>
@@ -43,6 +45,7 @@
 					<p class="text-sm">This card only has a description.</p>
 				</Card>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -56,11 +59,12 @@
 		</Card>
 
 		<!-- Card Variants -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Card Variants</h2>
 			<p class="text-sm text-muted-foreground mb-4">Different visual styles for cards</p>
+			<PreviewContainer>
 
-			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+			<div class="grid gap-6 @md:grid-cols-2 @lg:grid-cols-3">
 				<Card variant="default" title="Default" description="Standard card with border and shadow">
 					<p class="text-sm">The default variant provides a subtle border and light shadow.</p>
 				</Card>
@@ -81,6 +85,7 @@
 					<p class="text-sm">The filled variant uses a background color.</p>
 				</Card>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -94,11 +99,12 @@
 		</Card>
 
 		<!-- Padding Options -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Padding Options</h2>
 			<p class="text-sm text-muted-foreground mb-4">Different padding sizes for cards</p>
+			<PreviewContainer>
 
-			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+			<div class="grid gap-6 @md:grid-cols-2 @lg:grid-cols-4">
 				<Card padding="none" title="No Padding">
 					<div class="bg-muted p-4 rounded">
 						<p class="text-sm">Content fills the entire card with no padding.</p>
@@ -117,6 +123,7 @@
 					<p class="text-sm">Spacious card with large padding (p-8).</p>
 				</Card>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -130,11 +137,12 @@
 		</Card>
 
 		<!-- Interactive States -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Interactive States</h2>
 			<p class="text-sm text-muted-foreground mb-4">Cards with hover and interactive effects</p>
+			<PreviewContainer>
 
-			<div class="grid gap-6 md:grid-cols-2">
+			<div class="grid gap-6 @md:grid-cols-2">
 				<Card hover title="Hover Effect" description="Hover over this card to see the effect">
 					<p class="text-sm">
 						This card responds to hover with enhanced shadow and border color animation.
@@ -148,7 +156,7 @@
 				</Card>
 			</div>
 
-			<div class="grid gap-6 md:grid-cols-3 mt-6">
+			<div class="grid gap-6 @md:grid-cols-3 mt-6">
 				<Card variant="outline" hover title="Outline + Hover">
 					<p class="text-sm">Combining variants with interactive states.</p>
 				</Card>
@@ -161,6 +169,7 @@
 					<p class="text-sm">Filled background with hover effect.</p>
 				</Card>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -174,11 +183,11 @@
 		</Card>
 
 		<!-- Cards with Header Actions -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Header Actions</h2>
 			<p class="text-sm text-muted-foreground mb-4">Cards with action buttons or content in the header</p>
-
-			<div class="grid gap-6 md:grid-cols-2">
+			<PreviewContainer>
+			<div class="grid gap-6 @md:grid-cols-2">
 				<Card title="Edit Profile" description="Update your personal information">
 					{#snippet headerAction()}
 						<Button variant="ghost" size="sm">Edit</Button>
@@ -228,8 +237,10 @@
 					<p class="text-sm text-muted-foreground">
 						{darkMode ? 'Dark mode is enabled' : 'Light mode is enabled'}
 					</p>
+
 				</Card>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -243,11 +254,11 @@
 		</Card>
 
 		<!-- Cards with Footers -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Footer Content</h2>
 			<p class="text-sm text-muted-foreground mb-4">Cards with footer actions and information</p>
-
-			<div class="grid gap-6 md:grid-cols-2">
+			<PreviewContainer>
+			<div class="grid gap-6 @md:grid-cols-2">
 				<Card title="Confirm Action" description="This action requires confirmation">
 					<p class="text-sm text-muted-foreground">
 						Are you sure you want to proceed? This action cannot be undone.
@@ -294,6 +305,7 @@
 				<Card title="Upload File" description="Drag and drop or click to upload">
 					<div class="border-2 border-dashed rounded-lg p-8 text-center">
 						<p class="text-sm text-muted-foreground">Drop files here or click to browse</p>
+
 					</div>
 					{#snippet footer()}
 						<div class="flex-1 text-xs text-muted-foreground">Max file size: 10MB</div>
@@ -301,6 +313,7 @@
 					{/snippet}
 				</Card>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -314,11 +327,11 @@
 		</Card>
 
 		<!-- Complex Examples -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Complex Examples</h2>
 			<p class="text-sm text-muted-foreground mb-4">Advanced card layouts with multiple features</p>
-
-			<div class="grid gap-6 md:grid-cols-2">
+			<PreviewContainer>
+			<div class="grid gap-6 @md:grid-cols-2">
 				<Card
 					title="Subscription Plan"
 					description="Manage your subscription and billing"
@@ -330,7 +343,7 @@
 					{/snippet}
 
 					<div class="space-y-4">
-						<div class="grid gap-4 md:grid-cols-2">
+						<div class="grid gap-4 @md:grid-cols-2">
 							<Field label="Current Plan">
 								<Select multiple={false} placeholder="Pro Plan" options={[{value: "free", label: "Free - $0/month"}, {value: "basic", label: "Basic - $9/month"}, {value: "pro", label: "Pro - $29/month"}, {value: "enterprise", label: "Enterprise - $99/month"}]} />
 							</Field>
@@ -429,7 +442,7 @@
 					</div>
 				{/snippet}
 
-				<div class="grid gap-6 md:grid-cols-3 mb-6">
+				<div class="grid gap-6 @md:grid-cols-3 mb-6">
 					<div class="rounded-lg bg-muted p-4">
 						<p class="text-sm text-muted-foreground">Total Users</p>
 						<p class="text-3xl font-bold mt-2">12,345</p>
@@ -449,6 +462,7 @@
 
 				<div class="h-64 bg-muted rounded-lg flex items-center justify-center">
 					<p class="text-muted-foreground">Chart visualization would go here</p>
+
 				</div>
 
 				{#snippet footer()}
@@ -458,6 +472,7 @@
 					<Button size="sm">View Full Report</Button>
 				{/snippet}
 			</Card>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -471,11 +486,12 @@
 		</Card>
 
 		<!-- Combining Variants -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Variant Combinations</h2>
 			<p class="text-sm text-muted-foreground mb-4">Combining different props for unique card styles</p>
+			<PreviewContainer>
 
-			<div class="grid gap-6 md:grid-cols-3">
+			<div class="grid gap-6 @md:grid-cols-3">
 				<Card variant="ghost" padding="sm" title="Ghost + Small">
 					<p class="text-sm">Minimal card with compact padding.</p>
 				</Card>
@@ -502,6 +518,7 @@
 					<p class="text-sm">Premium card appearance with generous spacing.</p>
 				</Card>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"

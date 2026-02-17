@@ -14,13 +14,6 @@ A versatile textarea component with multiple variants, sizes, and advanced featu
 - **Accessibility**: ARIA attributes and keyboard navigation
 - **Dark Mode**: Built-in dark mode support
 
-## Installation
-
-The Textarea component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
 
 ## Usage
 

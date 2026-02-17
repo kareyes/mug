@@ -63,6 +63,7 @@
 		if (progressInterval) clearInterval(progressInterval);
 		progressValue = 0;
 	}
+	import PreviewContainer from "../components/preview-container.svelte";
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
@@ -74,10 +75,10 @@
 	</div> -->
 	<div class="space-y-12">
 		<!-- Basic Usage -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Basic Usage</h2>
-
-			<div class="grid gap-8 md:grid-cols-2 mb-4">
+		<PreviewContainer>
+			<div class="grid gap-8 @md:grid-cols-2 mb-4">
 				<div class="space-y-4">
 					<h3 class="text-lg font-medium">Simple Slider</h3>
 					<Slider type="single" bind:value={basicValue} min={0} max={100} step={1} />
@@ -90,8 +91,10 @@
 					<h3 class="text-lg font-medium">With Tooltip</h3>
 					<Slider type="single" value={50} min={0} max={100} showTooltip={true} />
 					<p class="text-sm text-muted-foreground">Hover over the thumb to see the tooltip</p>
+	
 				</div>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -105,9 +108,9 @@
 		</Card>
 
 		<!-- Variants -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Variants</h2>
-
+		<PreviewContainer>
 			<div class="space-y-6 mb-4">
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Default</h3>
@@ -136,9 +139,11 @@
 
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Destructive</h3>
+
 					<Slider type="single" variant="destructive" value={50} />
 				</div>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -152,9 +157,9 @@
 		</Card>
 
 		<!-- Sizes -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Sizes</h2>
-
+		<PreviewContainer>
 			<div class="space-y-6 mb-4">
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Small</h3>
@@ -168,9 +173,11 @@
 
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Large</h3>
+
 					<Slider type="single" size="lg" value={50} variant="primary" />
 				</div>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -184,9 +191,9 @@
 		</Card>
 
 		<!-- Step Indicators -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Step Indicators</h2>
-
+		<PreviewContainer>
 			<div class="space-y-6 mb-4">
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Step 10</h3>
@@ -200,6 +207,7 @@
 
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Step 5 (Large)</h3>
+
 					<Slider
 						type="single"
 						value={50}
@@ -212,6 +220,7 @@
 					/>
 				</div>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -225,9 +234,9 @@
 		</Card>
 
 		<!-- Marks -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Marks</h2>
-
+		<PreviewContainer>
 			<div class="space-y-6 mb-4">
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Percentage Marks</h3>
@@ -236,6 +245,7 @@
 
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Custom Labels</h3>
+
 					<Slider
 						type="single"
 						value={50}
@@ -252,6 +262,7 @@
 					/>
 				</div>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -265,12 +276,13 @@
 		</Card>
 
 		<!-- Combined Features -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Combined Features</h2>
-
+			<PreviewContainer>
 			<div class="space-y-6 mb-4">
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Steps + Marks + Tooltip</h3>
+
 					<Slider
 						type="single"
 						value={50}
@@ -286,6 +298,7 @@
 					/>
 				</div>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -299,9 +312,9 @@
 		</Card>
 
 		<!-- Range Slider -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Range Slider</h2>
-
+			<PreviewContainer>
 			<div class="space-y-6 mb-4">
 				<div class="space-y-4">
 					<h3 class="text-lg font-medium">Price Range</h3>
@@ -339,6 +352,7 @@
 					/>
 				</div>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -352,10 +366,10 @@
 		</Card>
 
 		<!-- Practical Examples -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Practical Examples</h2>
-
-			<div class="grid gap-8 md:grid-cols-2 mb-4">
+			<PreviewContainer>
+			<div class="grid gap-8 @md:grid-cols-2 mb-4">
 				<!-- Volume Control -->
 				<div class="space-y-4">
 					<h3 class="text-lg font-medium">Volume Control</h3>
@@ -478,6 +492,7 @@
 					</p>
 				</div>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -491,9 +506,9 @@
 		</Card>
 
 		<!-- Vertical Orientation -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Vertical Orientation</h2>
-
+			<PreviewContainer>
 			<div class="flex gap-12 justify-center mb-6">
 				<div class="space-y-4">
 					<h3 class="text-sm font-medium text-center">Default</h3>
@@ -541,6 +556,7 @@
 					/>
 				</div>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -554,8 +570,9 @@
 		</Card>
 
 		<!-- With Field Component -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">With Field Component</h2>
+			<PreviewContainer>
 
 			<div class="max-w-2xl space-y-6 mb-4">
 				<Field label="Volume" description="Adjust the audio volume (0-100%)">
@@ -611,6 +628,7 @@
 					/>
 				</Field>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -624,9 +642,9 @@
 		</Card>
 
 		<!-- Disabled State -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Disabled State</h2>
-
+			<PreviewContainer>
 			<div class="space-y-6 mb-4">
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Disabled Slider</h3>
@@ -638,6 +656,7 @@
 					<Slider type="single" value={50} step={10} showSteps={true} disabled={true} variant="primary" />
 				</div>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"

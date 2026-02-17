@@ -2,25 +2,6 @@
 
 An enhanced button component with support for icons, loading states, variants, and dynamic content. -->
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Props Reference](#props-reference)
-- [Variants](#variants)
-- [Examples](#examples)
-- [Accessibility](#accessibility)
-
-## Installation
-
-The Button component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Usage
-
 ### Basic Usage
 
 ```svelte

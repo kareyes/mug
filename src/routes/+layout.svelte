@@ -1,14 +1,16 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
-	import { Coffee } from "@kareyes/aether/icons";
+	import { Coffee, GithubIcon } from "@kareyes/aether/icons";
 	import {
 		DarkModePrimitives,
 		DarkModeSwitch,
 		DarkModeToggle,
 		Sidebar,
-		SidebarPrimitives
+		SidebarPrimitives,
+		Button
 	} from '@kareyes/aether';
 	import "../app.css";
+	import { page } from '$app/stores';
 
 	const { ModeWatcher } = DarkModePrimitives;
 	const {
@@ -72,6 +74,9 @@
 
 <ModeWatcher />
 
+{#if $page.url.pathname.startsWith('/preview')}
+	{@render children()}
+{:else}
 <SidebarProvider>
 	<Sidebar collapsible="icon">
 		<SidebarHeader>
@@ -107,18 +112,44 @@
 					</SidebarMenu>
 				</SidebarGroupContent>
 			</SidebarGroup>
+			<SidebarGroup>
+				<SidebarGroupLabel>Forms</SidebarGroupLabel>
+				<SidebarGroupContent>
+					<SidebarMenu>
+						<SidebarMenuItem>
+							<SidebarMenuButton tooltipContent="Form Schema">
+								{#snippet child({ props })}
+									<a href="/forms/schema" {...props}>
+										<span>Form Schema</span>
+									</a>
+								{/snippet}
+							</SidebarMenuButton>
+			
+						</SidebarMenuItem>
+					</SidebarMenu>
+				</SidebarGroupContent>
+			</SidebarGroup>
 		</SidebarContent>
 		<SidebarRail />
 	</Sidebar>
 	<SidebarInset>
 		<header class="flex h-16 shrink-0 items-center gap-2 border-b px-4">
 			<SidebarTrigger />
-			<div class="flex flex-1 items-center justify-end">
+			<div class="flex flex-1 items-center justify-end gap-2">
 				<DarkModeToggle />
+				<Button
+					variant="outline"
+					size="icon"
+					icon={GithubIcon} 
+					onclick={() => window.open('https://github.com/kareyes/mug.git', '_blank')}
+					>
+				
+				</Button>
 			</div>
 		</header>
-		<main class="flex-1 p-6">
+		<main class="min-w-0 flex-1 overflow-x-auto p-6">
 			{@render children()}
 		</main>
 	</SidebarInset>
 </SidebarProvider>
+{/if}

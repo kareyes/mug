@@ -13,13 +13,6 @@ A comprehensive, customizable popover component with multiple visual variants, s
 - 🔄 **Reactive**: Svelte 5 runes for optimal performance
 - 📍 **Smart Positioning**: Automatic collision detection and placement
 
-## Installation
-
-The Popover component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
 
 ## Implementation Details
 

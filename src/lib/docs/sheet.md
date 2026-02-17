@@ -13,13 +13,6 @@ A sliding panel component (drawer/side sheet) that overlays content from the edg
 - 🎯 **Type-Safe**: Full TypeScript support with Svelte 5 runes
 - 🔄 **Reactive**: Built with Svelte 5's modern reactivity system
 
-## Installation
-
-The Sheet component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
 
 ## Implementation Details
 

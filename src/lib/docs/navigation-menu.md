@@ -2,25 +2,6 @@
 
 A collection of links for navigating websites, with support for dropdowns, icons, and responsive layouts. Built on top of [bits-ui](https://bits-ui.com) NavigationMenu primitives. -->
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Components](#components)
-- [Props Reference](#props-reference)
-- [Styling](#styling)
-- [Examples](#examples)
-- [Accessibility](#accessibility)
-
-## Installation
-
-The Navigation Menu component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Usage
 
 ### Basic Usage
 

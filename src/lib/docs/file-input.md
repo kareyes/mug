@@ -14,16 +14,6 @@ A modern drag-and-drop file input component with validation, file type restricti
 - **TypeScript Support**: Complete type safety and IntelliSense
 - **Accessibility**: ARIA labels and keyboard navigation
 
-## Installation
-
-The FileInput component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Usage
-
 ### Basic Usage
 
 ```svelte

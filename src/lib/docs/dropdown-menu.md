@@ -12,13 +12,6 @@ A simplified dropdown menu component that wraps all the complexity of the standa
 - **Reactive**: Works with Svelte's reactive state
 - **Flexible**: Fallback to custom trigger snippet when needed
 
-## Installation
-
-The DropdownMenu component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
 
 ## Basic Usage
 

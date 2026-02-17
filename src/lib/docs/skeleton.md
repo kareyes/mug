@@ -14,13 +14,7 @@ A versatile skeleton loading component with multiple variants, animations, shape
 - ✅ **TypeScript Support**: Complete type definitions
 - ✅ **Visibility Control**: Toggle skeleton display
 
-## Installation
 
-The Skeleton component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
 
 ```svelte
 <script>

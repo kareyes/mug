@@ -14,13 +14,6 @@ A flexible stepper component for displaying multi-step processes, workflows, and
 - ♿ **Accessible**: Semantic HTML and ARIA support
 - 🎯 **Type-Safe**: Full TypeScript support with Svelte 5 runes
 
-## Installation
-
-The Stepper component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
 
 ## Implementation Details
 

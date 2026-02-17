@@ -12,13 +12,6 @@ A toggle switch component for binary on/off states. Built with accessibility in 
 - **TypeScript**: Complete type definitions
 - **Form Integration**: Native form support with name/value attributes
 
-## Installation
-
-The Switch component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
 
 ## Basic Usage
 

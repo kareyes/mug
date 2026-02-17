@@ -293,6 +293,86 @@ export const userProfileDocs = `
 	</div>
 </div>`;
 
+export const shapesDocs = `
+<script lang="ts">
+	import { Badge } from "@kareyes/aether";
+</script>
+
+<div class="space-y-4">
+	<div>
+		<h3 class="text-sm font-medium mb-2 text-muted-foreground">Rounded (Default)</h3>
+		<div class="flex flex-wrap gap-2">
+			<Badge text="Default" shape="rounded" />
+			<Badge text="Secondary" variant="secondary" shape="rounded" />
+			<Badge text="Flat" variant="flat" color="blue" shape="rounded" />
+			<Badge text="Outline" variant="outline" color="green" shape="rounded" />
+			<Badge text="Dashed" variant="dashed" color="purple" shape="rounded" />
+		</div>
+	</div>
+
+	<div>
+		<h3 class="text-sm font-medium mb-2 text-muted-foreground">Circle (Pill)</h3>
+		<div class="flex flex-wrap gap-2">
+			<Badge text="Default" shape="circle" />
+			<Badge text="Secondary" variant="secondary" shape="circle" />
+			<Badge text="Flat" variant="flat" color="blue" shape="circle" />
+			<Badge text="Outline" variant="outline" color="green" shape="circle" />
+			<Badge text="Dashed" variant="dashed" color="purple" shape="circle" />
+		</div>
+	</div>
+
+	<div>
+		<h3 class="text-sm font-medium mb-2 text-muted-foreground">Square</h3>
+		<div class="flex flex-wrap gap-2">
+			<Badge text="Default" shape="square" />
+			<Badge text="Secondary" variant="secondary" shape="square" />
+			<Badge text="Flat" variant="flat" color="blue" shape="square" />
+			<Badge text="Outline" variant="outline" color="green" shape="square" />
+			<Badge text="Dashed" variant="dashed" color="purple" shape="square" />
+		</div>
+	</div>
+</div>`;
+
+export const shapeVariantComboDocs = `
+<script lang="ts">
+	import { Badge } from "@kareyes/aether";
+</script>
+
+<div class="space-y-4">
+	<div>
+		<h3 class="text-sm font-medium mb-2 text-muted-foreground">Rounded + Colors</h3>
+		<div class="flex flex-wrap gap-2">
+			<Badge text="Red" color="red" shape="rounded" />
+			<Badge text="Blue" color="blue" shape="rounded" />
+			<Badge text="Green" color="green" shape="rounded" />
+			<Badge text="Purple" color="purple" shape="rounded" />
+			<Badge text="Orange" color="orange" shape="rounded" />
+		</div>
+	</div>
+
+	<div>
+		<h3 class="text-sm font-medium mb-2 text-muted-foreground">Circle + Colors</h3>
+		<div class="flex flex-wrap gap-2">
+			<Badge text="Red" color="red" shape="circle" />
+			<Badge text="Blue" color="blue" shape="circle" />
+			<Badge text="Green" color="green" shape="circle" />
+			<Badge text="Purple" color="purple" shape="circle" />
+			<Badge text="Orange" color="orange" shape="circle" />
+		</div>
+	</div>
+
+	<div>
+		<h3 class="text-sm font-medium mb-2 text-muted-foreground">Square + Colors</h3>
+		<div class="flex flex-wrap gap-2">
+			<Badge text="Red" color="red" shape="square" />
+			<Badge text="Blue" color="blue" shape="square" />
+			<Badge text="Green" color="green" shape="square" />
+			<Badge text="Purple" color="purple" shape="square" />
+			<Badge text="Orange" color="orange" shape="square" />
+		</div>
+	</div>
+</div>`;
+
 export const productCardsDocs = `
 <script lang="ts">
 	import { Badge } from "@kareyes/aether";

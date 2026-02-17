@@ -71,6 +71,7 @@
             errors.password = "Password must be at least 8 characters";
         if (!formData.username) errors.username = "Username is required";
     }
+	import PreviewContainer from "../components/preview-container.svelte";
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
@@ -84,18 +85,19 @@
 
     <div class="space-y-12">
         <!-- Basic Input -->
-        <Card variant="outline" class="p-6">
+        <Card variant="ghost" class="p-6 bg-background">
             <h2 class="text-2xl font-semibold mb-4">Basic Input</h2>
             <p class="text-sm text-muted-foreground mb-4">
                 Standard input without addons
             </p>
+        	<PreviewContainer>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+            <div class="grid grid-cols-1 @md:grid-cols-2 gap-6 max-w-4xl">
                 <div class="space-y-2">
                     <Label for="basic-text" class="text-sm font-medium"
                         >Text Input</Label
                     >
-                    <Input id="basic-text" placeholder="Enter text..." />
+                    <Input  id="basic-text" placeholder="Enter text..." />
                 </div>
 
                 <div class="space-y-2">
@@ -132,6 +134,7 @@
                 </div>
             </div>
 
+        	</PreviewContainer>
             <br />
             <CodeBlock
                 title="Code"
@@ -145,13 +148,14 @@
         </Card>
 
         <!-- Icon Addons -->
-        <Card variant="outline" class="p-6">
+        <Card variant="ghost" class="p-6 bg-background">
             <h2 class="text-2xl font-semibold mb-4">Icon Addons</h2>
             <p class="text-sm text-muted-foreground mb-4">
                 Add icons to enhance visual clarity
             </p>
+        	<PreviewContainer>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+            <div class="grid grid-cols-1 @md:grid-cols-2 gap-6 max-w-4xl">
                 <!-- Start Icon -->
                 <div class="space-y-2">
                     <Label class="text-sm font-medium"
@@ -231,6 +235,7 @@
                 </div>
             </div>
 
+        	</PreviewContainer>
             <br />
             <CodeBlock
                 title="Code"
@@ -244,13 +249,14 @@
         </Card>
 
         <!-- Text Addons -->
-        <Card variant="outline" class="p-6">
+        <Card variant="ghost" class="p-6 bg-background">
             <h2 class="text-2xl font-semibold mb-4">Text Addons</h2>
             <p class="text-sm text-muted-foreground mb-4">
                 Display additional text context
             </p>
+        	<PreviewContainer>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+            <div class="grid grid-cols-1 @md:grid-cols-2 gap-6 max-w-4xl">
                 <!-- URL Prefix -->
                 <div class="space-y-2">
                     <Label class="text-sm font-medium">Website URL</Label>
@@ -293,6 +299,7 @@
                 </div>
             </div>
 
+        	</PreviewContainer>
             <br />
             <CodeBlock
                 title="Code"
@@ -306,13 +313,14 @@
         </Card>
 
         <!-- Button Addons -->
-        <Card variant="outline" class="p-6">
+        <Card variant="ghost" class="p-6 bg-background">
             <h2 class="text-2xl font-semibold mb-4">Button Addons</h2>
             <p class="text-sm text-muted-foreground mb-4">
                 Add interactive buttons for actions
             </p>
+        	<PreviewContainer>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+            <div class="grid grid-cols-1 @md:grid-cols-2 gap-6 max-w-4xl">
                 <!-- Copy Button -->
                 <div class="space-y-2">
                     <Label class="text-sm font-medium">Share URL</Label>
@@ -392,6 +400,7 @@
                 </div>
             </div>
 
+        	</PreviewContainer>
             <br />
             <CodeBlock
                 title="Code"
@@ -405,13 +414,14 @@
         </Card>
 
         <!-- Input Masks -->
-        <Card variant="outline" class="p-6">
+        <Card variant="ghost" class="p-6 bg-background">
             <h2 class="text-2xl font-semibold mb-4">Input Masks</h2>
             <p class="text-sm text-muted-foreground mb-4">
                 Automatic formatting with input masks
             </p>
+        	<PreviewContainer>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+            <div class="grid grid-cols-1 @md:grid-cols-2 gap-6 max-w-4xl">
                 <!-- Phone -->
                 <div class="space-y-2">
                     <Label class="text-sm font-medium">Phone Number</Label>
@@ -445,6 +455,7 @@
                 </div>
             </div>
 
+        	</PreviewContainer>
             <br />
             <CodeBlock
                 title="Code"
@@ -458,13 +469,14 @@
         </Card>
 
         <!-- Combined Features -->
-        <Card variant="outline" class="p-6">
+        <Card variant="ghost" class="p-6 bg-background">
             <h2 class="text-2xl font-semibold mb-4">Combined Features</h2>
             <p class="text-sm text-muted-foreground mb-4">
                 Mix addons with masks and other features
             </p>
+        	<PreviewContainer>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+            <div class="grid grid-cols-1 @md:grid-cols-2 gap-6 max-w-4xl">
                 <!-- Phone with Icon and Mask -->
                 <div class="space-y-2">
                     <Label class="text-sm font-medium">Contact Number</Label>
@@ -496,6 +508,7 @@
                 </div>
             </div>
 
+        	</PreviewContainer>
             <br />
             <CodeBlock
                 title="Code"
@@ -509,13 +522,14 @@
         </Card>
 
         <!-- States -->
-        <Card variant="outline" class="p-6">
+        <Card variant="ghost" class="p-6 bg-background">
             <h2 class="text-2xl font-semibold mb-4">Input States</h2>
             <p class="text-sm text-muted-foreground mb-4">
                 Different input states with addons
             </p>
+        	<PreviewContainer>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+            <div class="grid grid-cols-1 @md:grid-cols-2 gap-6 max-w-4xl">
                 <!-- Error State -->
                 <div class="space-y-2">
                     <Label class="text-sm font-medium">Error State</Label>
@@ -552,8 +566,17 @@
                         {/snippet}
                     </Input>
                 </div>
+
+                <!-- Loading State -->
+                <div class="space-y-2">
+                    <Label class="text-sm font-medium">Loading State</Label>
+                    <Input value="Loading..." loading>
+                    </Input>
+                    
+                </div>
             </div>
 
+        	</PreviewContainer>
             <br />
             <CodeBlock
                 title="Code"
@@ -567,11 +590,12 @@
         </Card>
 
         <!-- Custom Addons -->
-        <Card variant="outline" class="p-6">
+        <Card variant="ghost" class="p-6 bg-background">
             <h2 class="text-2xl font-semibold mb-4">Custom Addons</h2>
             <p class="text-sm text-muted-foreground mb-4">
                 Use custom snippets for complete control
             </p>
+        	<PreviewContainer>
 
             <div class="grid grid-cols-1 gap-6 max-w-2xl">
                 <div class="space-y-2">
@@ -612,6 +636,7 @@
                 </div>
             </div>
 
+        	</PreviewContainer>
             <br />
             <CodeBlock
                 title="Code"
@@ -625,7 +650,7 @@
         </Card>
 
         <!-- With Field Component -->
-        <Card variant="outline" class="p-6">
+        <Card variant="ghost" class="p-6 bg-background">
             <h2 class="text-2xl font-semibold mb-4">
                 Using Input with Field Component
             </h2>
@@ -633,8 +658,9 @@
                 Recommended pattern for forms with labels, descriptions, and
                 error handling
             </p>
+        	<PreviewContainer>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+            <div class="grid grid-cols-1 @md:grid-cols-2 gap-6 max-w-4xl">
                 <Field
                     label="Email"
                     description="We'll never share your email"
@@ -754,6 +780,7 @@
                 <Button onclick={validateForm}>Validate Form</Button>
             </div>
 
+        	</PreviewContainer>
             <br />
             <CodeBlock
                 title="Code"
@@ -767,13 +794,14 @@
         </Card>
 
         <!-- Complete Form Example -->
-        <Card variant="outline" class="p-6">
+        <Card variant="ghost" class="p-6 bg-background">
             <h2 class="text-2xl font-semibold mb-4">
                 Complete Form with Field Component
             </h2>
             <p class="text-sm text-muted-foreground mb-4">
                 Full form using Field.Set and Field.Group for proper structure
             </p>
+        	<PreviewContainer>
 
             <form
                 class="max-w-2xl"
@@ -863,7 +891,7 @@
                             </Input>
                         </Field>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="grid grid-cols-1 @md:grid-cols-2 gap-6">
                             <Field
                                 label="Phone Number"
                                 description="For account verification"
@@ -902,6 +930,7 @@
                 </FieldPrimitives.Set>
             </form>
 
+        	</PreviewContainer>
             <br />
             <CodeBlock
                 title="Code"

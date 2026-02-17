@@ -2,6 +2,7 @@
     import { compactLayoutDocs, complexAlertDocs, customIconDocs, dismissibleDocs, realWorldExamplesDocs, variantDocs, withActionsDocs, withNWithoutIconsDocs } from "$lib/code-blocks/alert";
 	import { Alert, Button, AlertPrimitives, Card, CodeBlock } from "@kareyes/aether";
 
+	import PreviewContainer from "../components/preview-container.svelte";
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
@@ -14,8 +15,9 @@
 
 	<div class="space-y-12">
 		<!-- All Variants -->
-		<Card variant="outline" class="space-y-3">
+		<Card variant="ghost" class="space-y-3 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Variants</h2>
+			<PreviewContainer>
 			<div class="space-y-4">
 				<Alert variant="default" title="Default Alert" description="This is a default alert message." />
 				<Alert variant="info" title="Information" description="This is an informational message to keep you updated." />
@@ -25,6 +27,7 @@
 				
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title=" Code"
@@ -38,8 +41,9 @@
 		</Card>
 
 		<!-- With and Without Icons -->
-		<Card variant="outline" class="space-y-3">
+		<Card variant="ghost" class="space-y-3 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">With and Without Icons</h2>
+			<PreviewContainer>
 			<div class="space-y-4">
 				<Alert 
 					variant="info" 
@@ -55,6 +59,7 @@
 				/>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title=" Code"
@@ -68,11 +73,12 @@
 		</Card>
 
 		<!-- Dismissible Alerts -->
-		<Card variant="outline" class="space-y-3">
+		<Card variant="ghost" class="space-y-3 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Dismissible Alerts</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Click the X button to dismiss these alerts.
 			</p>
+			<PreviewContainer>
 			<div class="space-y-4">
 				<Alert 
 					variant="info" 
@@ -88,6 +94,7 @@
 				/>
 			</div>
 			
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title=" Code"
@@ -101,8 +108,9 @@
 		</Card>
 
 		<!-- Alerts with Actions -->
-		<Card variant="outline" class="space-y-3">
+		<Card variant="ghost" class="space-y-3 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">With Action Buttons</h2>
+			<PreviewContainer>
 			<div class="space-y-4">
 				<Alert variant="warning" title="Pending Changes" description="You have unsaved changes in your document.">
 					{#snippet actions()}
@@ -126,6 +134,7 @@
 				</Alert>
 			</div>
 			
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title=" Code"
@@ -139,8 +148,9 @@
 		</Card>
 
 		<!-- Custom Icon -->
-		<Card variant="outline" class="space-y-3">
+		<Card variant="ghost" class="space-y-3 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Custom Content</h2>
+			<PreviewContainer>
 			<div class="space-y-4">
 				<AlertPrimitives.Root variant="info">
 					{#snippet icon()}
@@ -167,6 +177,7 @@
 				</AlertPrimitives.Root>
 			</div>
 			
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title=" Code"
@@ -180,8 +191,9 @@
 		</Card>
 
 		<!-- Complex Alerts -->
-		<Card variant="outline" class="space-y-3">
+		<Card variant="ghost" class="space-y-3 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Complex Examples</h2>
+			<PreviewContainer>
 			<div class="space-y-4">
 				<AlertPrimitives.Root variant="warning" dismissible={true}>
 					{#snippet icon()}
@@ -221,6 +233,7 @@
 				</AlertPrimitives.Root>
 			</div>
 			
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title=" Code"
@@ -234,17 +247,19 @@
 		</Card>
 
 		<!-- Compact Alerts -->
-		<Card variant="outline" class="space-y-3">
+		<Card variant="ghost" class="space-y-3 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Compact Layout</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Alerts with just titles or descriptions.
 			</p>
+			<PreviewContainer>
 			<div class="space-y-4">
 				<Alert variant="info" title="Quick update available" />
 				<Alert variant="success" description="File uploaded successfully" />
 				<Alert variant="warning" title="Low disk space" />
 			</div>
 			
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title=" Code"
@@ -258,8 +273,9 @@
 		</Card>
 
 		<!-- Real-World Examples -->
-		<Card variant="outline" class="space-y-3">
+		<Card variant="ghost" class="space-y-3 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Real-World Examples</h2>
+			<PreviewContainer>
 			<div class="space-y-4">
 				<!-- Cookie Notice -->
 				<Alert variant="default" title="Cookie Notice" dismissible={true}>
@@ -285,6 +301,7 @@
 				</Alert>
 			</div>
 			
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title=" Code"

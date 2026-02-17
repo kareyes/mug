@@ -12,13 +12,6 @@ We now have a solid foundation to build on top of. Composable. Themeable. Custom
 
 [Browse the Blocks Library](https://shadcn-svelte.com/blocks). -->
 
-## Installation
-
-The Sidebar component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
 
 Add the following colors to your CSS file
 

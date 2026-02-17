@@ -2,25 +2,7 @@
 
 An enhanced avatar component for displaying user profile images with support for fallbacks, variants, colors, shapes, and grouping. -->
 
-## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Components](#components)
-- [Props Reference](#props-reference)
-- [Variants](#variants)
-- [Examples](#examples)
-- [Accessibility](#accessibility)
-
-## Installation
-
-The Avatar component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Usage
 
 ### Basic Usage
 

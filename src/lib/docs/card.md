@@ -2,25 +2,6 @@
 
 A versatile card component with multiple variants, padding options, and interactive states for displaying grouped content with headers, descriptions, and actions. -->
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Components](#components)
-- [Props Reference](#props-reference)
-- [Variants](#variants)
-- [Examples](#examples)
-- [Accessibility](#accessibility)
-
-## Installation
-
-The Card component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Usage
 
 ### Basic Usage
 

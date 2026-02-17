@@ -12,15 +12,6 @@ A comprehensive form field wrapper component that combines labels, descriptions,
 - 🎭 **Type-Safe**: Full TypeScript support
 - 🔀 **Label Positioning**: Control label placement (before/after) for optimal UX
 
-## Installation
-
-The Field component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Basic Usage
 
 ### Simple Field (Recommended)
 

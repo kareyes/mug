@@ -92,6 +92,7 @@
 
 	// Results
 	let result = $state<string>("");
+	import PreviewContainer from "../components/preview-container.svelte";
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
@@ -103,11 +104,12 @@
 	</div> -->
 	<div class="space-y-12">
 		<!-- Orientation Examples -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Orientations</h2>
 			<p class="text-sm text-muted-foreground mb-4">Horizontal and vertical layout options.</p>
+			<PreviewContainer>
 
-			<div class="grid gap-8 lg:grid-cols-2">
+			<div class="grid gap-8 @lg:grid-cols-2">
 				<Card>
 					<CardHeader>
 						<CardTitle>Horizontal Stepper</CardTitle>
@@ -158,6 +160,7 @@
 					</CardContent>
 				</Card>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -171,9 +174,10 @@
 		</Card>
 
 		<!-- Size & Variant Examples -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Sizes & Variants</h2>
 			<p class="text-sm text-muted-foreground mb-4">Different sizes and visual styles.</p>
+			<PreviewContainer>
 
 			<div class="grid gap-6">
 				<Card>
@@ -286,6 +290,7 @@
 					</CardContent>
 				</Card>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -299,9 +304,10 @@
 		</Card>
 
 		<!-- Interactive Features -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Interactive Features</h2>
 			<p class="text-sm text-muted-foreground mb-4">Clickable steps and custom icons.</p>
+			<PreviewContainer>
 
 			<div class="grid gap-6">
 				<Card>
@@ -370,6 +376,7 @@
 					</CardContent>
 				</Card>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -383,10 +390,10 @@
 		</Card>
 
 		<!-- Practical Examples -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Practical Examples</h2>
 			<p class="text-sm text-muted-foreground mb-4">Real-world use cases and implementations.</p>
-
+			<PreviewContainer>
 			<!-- Registration Flow -->
 			<Card>
 				<CardHeader>
@@ -494,7 +501,7 @@
 					<CardDescription>E-commerce checkout flow with vertical stepper</CardDescription>
 				</CardHeader>
 				<CardContent class="space-y-6">
-					<div class="grid gap-6 lg:grid-cols-[300px_1fr]">
+					<div class="grid gap-6 @lg:grid-cols-[300px_1fr]">
 						<Stepper orientation="vertical" bind:activeStep={checkoutStep} size="sm">
 							<StepperStep step={0} label="Cart" description="Review items" completed>
 								{#snippet icon()}
@@ -642,7 +649,7 @@
 						{#if applicationStep === 0}
 							<div class="space-y-4">
 								<h3 class="text-lg font-semibold">Personal Information</h3>
-								<div class="grid gap-4 sm:grid-cols-2">
+								<div class="grid gap-4 @sm:grid-cols-2">
 									<div class="space-y-2">
 										<Label for="app-name">Full Name</Label>
 										<Input id="app-name" bind:value={applicationData.fullName} />
@@ -672,6 +679,7 @@
 						{:else}
 							<div class="space-y-4">
 								<h3 class="text-lg font-semibold">Review Application</h3>
+
 								<dl class="space-y-2">
 									<div>
 										<dt class="font-medium">Name:</dt>
@@ -708,6 +716,7 @@
 					</div>
 				</CardContent>
 			</Card>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -721,9 +730,10 @@
 		</Card>
 
 		<!-- Custom Content Examples -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Custom Label & Description</h2>
 			<p class="text-sm text-muted-foreground mb-4">Using children snippet for custom step content.</p>
+			<PreviewContainer>
 
 			<Card>
 				<CardHeader>
@@ -822,7 +832,7 @@
 				</CardContent>
 			</Card>
 
-			<div class="grid gap-6 md:grid-cols-2 mt-6">
+			<div class="grid gap-6 @md:grid-cols-2 mt-6">
 				<Card>
 					<CardHeader>
 						<CardTitle>With Status Badges</CardTitle>
@@ -901,6 +911,7 @@
 					</CardContent>
 				</Card>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"

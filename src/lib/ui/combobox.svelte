@@ -60,6 +60,7 @@
 	let language = $state("typescript");
 	let country = $state("");
 	let timezone = $state("utc");
+	import PreviewContainer from "../components/preview-container.svelte";
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
@@ -72,9 +73,10 @@
 
 	<div class="space-y-12">
 		<!-- Basic Examples -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Basic Usage</h2>
 			<p class="text-sm text-muted-foreground mb-4">Simple combobox with searchable dropdown</p>
+			<PreviewContainer>
 			<div class="flex flex-wrap gap-4">
 				<ComboBox
 					items={frameworks}
@@ -95,6 +97,7 @@
 				<div>Selected language: <span class="font-medium">{language || "None"}</span></div>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -108,9 +111,10 @@
 		</Card>
 
 		<!-- Variants -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Trigger Variants</h2>
 			<p class="text-sm text-muted-foreground mb-4">Different button styles for the combobox trigger</p>
+			<PreviewContainer>
 			<div class="flex flex-wrap gap-4">
 				<ComboBox
 					items={frameworks}
@@ -134,6 +138,7 @@
 				/>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -147,9 +152,10 @@
 		</Card>
 
 		<!-- Sizes -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Sizes</h2>
 			<p class="text-sm text-muted-foreground mb-4">Three size options: small, default, and large</p>
+			<PreviewContainer>
 			<div class="flex flex-wrap items-center gap-4">
 				<ComboBox
 					items={frameworks}
@@ -168,6 +174,7 @@
 				/>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -181,9 +188,10 @@
 		</Card>
 
 		<!-- Width Options -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Width Options</h2>
 			<p class="text-sm text-muted-foreground mb-4">Customize the width of the trigger and content</p>
+						<PreviewContainer>
 			<div class="space-y-4">
 				<div>
 					<p class="text-sm text-muted-foreground mb-2">Default width (200px)</p>
@@ -205,6 +213,7 @@
 				</div>
 				<div>
 					<p class="text-sm text-muted-foreground mb-2">Full width with auto-size content</p>
+
 					<ComboBox
 						items={frameworks}
 						triggerClass="w-full"
@@ -214,6 +223,7 @@
 				</div>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -227,9 +237,10 @@
 		</Card>
 
 		<!-- Form Example -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Form Example</h2>
 			<p class="text-sm text-muted-foreground mb-4">Using combobox in a form with labels</p>
+						<PreviewContainer>
 			<div class="max-w-md space-y-4">
 				<div class="space-y-2">
 					<Label class="text-sm font-medium">Framework</Label>
@@ -278,6 +289,7 @@
 			</div>
 			<div class="mt-6 p-4 bg-muted rounded-lg max-w-md">
 				<h3 class="font-medium mb-2">Form Values:</h3>
+
 				<div class="text-sm space-y-1">
 					<div>Framework: <span class="font-medium">{framework || "Not selected"}</span></div>
 					<div>Language: <span class="font-medium">{language || "Not selected"}</span></div>
@@ -286,6 +298,7 @@
 				</div>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -299,11 +312,12 @@
 		</Card>
 
 		<!-- Custom Trigger -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Custom Trigger</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Use the <code class="text-xs bg-muted px-1 py-0.5 rounded">trigger</code> snippet to provide custom trigger elements.
 			</p>
+			<PreviewContainer>
 			<div class="flex flex-wrap gap-4">
 				<!-- Custom styled trigger -->
 				<ComboBox items={frameworks} bind:value={framework}>
@@ -347,6 +361,7 @@
 				</ComboBox>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -360,9 +375,10 @@
 		</Card>
 
 		<!-- Disabled Items -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">With Disabled Items</h2>
 			<p class="text-sm text-muted-foreground mb-4">Some options can be disabled to prevent selection</p>
+			<PreviewContainer>
 			
 			<ComboBox
 			triggerClass="mb-4"
@@ -377,6 +393,7 @@
 				placeholder="Select option..."
 			/>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"

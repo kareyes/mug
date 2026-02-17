@@ -51,9 +51,9 @@ export const loadingStateDocs = `
 
 <div class="flex flex-wrap gap-4">
 	<Button
-		text={isLoading ? 'Loading...' : 'Click to Load'}
+		text={'Click to Load'}
 		onclick={handleAsyncClick}
-		disabled={isLoading}
+		loading={isLoading}
 	/>
 </div>`;
 

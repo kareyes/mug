@@ -2,24 +2,6 @@
 
 A versatile badge component with multiple variants, colors, sizes, and interactive features including dismissable and clickable options, icon support, and loading states. -->
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Props Reference](#props-reference)
-- [Variants](#variants)
-- [Examples](#examples)
-- [Accessibility](#accessibility)
-
-## Installation
-
-The Badge component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Usage
 
 ### Basic Usage
 

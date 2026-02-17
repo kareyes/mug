@@ -64,7 +64,7 @@
 		</p>
 	</div> -->
 
-	<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+	<div class="grid gap-8 @md:grid-cols-2 @lg:grid-cols-3">
 		<!-- Basic Calendar -->
 		<Card title="Basic Calendar" description="Simple date selection">
 			<div class="flex flex-col items-center gap-4">
@@ -196,7 +196,7 @@
 	<!-- Caption Layouts Section -->
 	<section class="space-y-4">
 		<h2 class="text-2xl font-semibold">Caption Layouts</h2>
-		<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+		<div class="grid gap-8 @md:grid-cols-2 @lg:grid-cols-4">
 			<Card title="Label" description="Default caption style">
 				<div class="flex justify-center">
 					<Calendar type="single" captionLayout="label" />
@@ -226,7 +226,7 @@
 	<!-- Button Variants Section -->
 	<section class="space-y-4">
 		<h2 class="text-2xl font-semibold">Navigation Button Variants</h2>
-		<div class="grid gap-8 md:grid-cols-3">
+		<div class="grid gap-8 @md:grid-cols-3">
 			<Card title="Ghost" description="Default navigation style">
 				<div class="flex justify-center">
 					<Calendar type="single" buttonVariant="ghost" />
@@ -250,7 +250,7 @@
 	<!-- States Section -->
 	<section class="space-y-4">
 		<h2 class="text-2xl font-semibold">States</h2>
-		<div class="grid gap-8 md:grid-cols-2">
+		<div class="grid gap-8 @md:grid-cols-2">
 			<Card title="Disabled" description="Calendar is fully disabled">
 				<div class="flex justify-center">
 					<Calendar type="single" disabled />
@@ -268,7 +268,7 @@
 	<!-- Size Variants Section -->
 	<section class="space-y-4">
 		<h2 class="text-2xl font-semibold">Size Variants</h2>
-		<div class="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+		<div class="grid gap-8 @md:grid-cols-2 @xl:grid-cols-4">
 			<Card title="Small" description="Compact calendar size">
 				<div class="flex justify-center">
 					<Calendar type="single" size="sm" />
@@ -302,7 +302,7 @@
 			Event markers display as dots on smaller sizes and badges on larger sizes.
 			Check dates 5, 10, 15, 20, and today for event markers.
 		</p>
-		<div class="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+		<div class="grid gap-8 @md:grid-cols-2 @xl:grid-cols-4">
 			<Card title="Small with Events" description="Dots display for events">
 				<div class="flex justify-center">
 					<Calendar type="single" size="sm" events={sampleEvents} />

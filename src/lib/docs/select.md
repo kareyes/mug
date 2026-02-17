@@ -2,24 +2,6 @@
 
 A unified Select component that combines all select functionality into a single, easy-to-use component with support for single/multiple selection, grouped options, and various styles. -->
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Props Reference](#props-reference)
-- [Variants](#variants)
-- [Examples](#examples)
-- [Accessibility](#accessibility)
-
-## Installation
-
-The Select component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Usage
 
 ### Basic Usage
 

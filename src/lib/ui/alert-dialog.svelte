@@ -202,6 +202,7 @@
 			},
 		});
 	}
+	import PreviewContainer from "../components/preview-container.svelte";
 </script>
 
 <AlertDialogProvider>
@@ -219,8 +220,9 @@
 
 			<div class="space-y-6">
 				<!-- Variants Section -->
-				<Card variant="outline" class="space-y-3">
+				<Card variant="ghost" class="space-y-3 bg-background">
 					<h2 class="text-xl font-semibold mb-4">Variants</h2>
+					<PreviewContainer>
 					<div class="flex flex-wrap gap-2">
 						<Button
 							onclick={() => dialog && showDefaultAlert(dialog)}
@@ -256,6 +258,7 @@
 						>
 					</div>
 
+					</PreviewContainer>
 					<br />
 					<CodeBlock
 						title=" Code"
@@ -269,8 +272,9 @@
 				</Card>
 
 				<!-- Sizes Section -->
-				<Card variant="outline" class="space-y-3">
+				<Card variant="ghost" class="space-y-3 bg-background">
 					<h2 class="text-xl font-semibold mb-4">Sizes</h2>
+					<PreviewContainer>
 					<div class="flex flex-wrap gap-2">
 						<Button
 							variant="outline"
@@ -295,6 +299,7 @@
 						</Button>
 					</div>
 
+					</PreviewContainer>
 					<br />
 					<CodeBlock
 						title=" Code"
@@ -308,8 +313,9 @@
 				</Card>
 
 				<!-- Configuration Options -->
-				<Card variant="outline" class="space-y-3">
+				<Card variant="ghost" class="space-y-3 bg-background">
 					<h2 class="text-xl font-semibold mb-4">Configuration Options</h2>
+					<PreviewContainer>
 					<div class="flex flex-wrap gap-2">
 						<Button
 							variant="outline"
@@ -342,6 +348,7 @@
 						</Button>
 					</div>
 
+					</PreviewContainer>
 						<br />
 					<CodeBlock
 						title=" Code"
@@ -355,8 +362,9 @@
 				</Card>
 
 				<!-- Practical Examples -->
-				<Card variant="outline" class="space-y-3">
+				<Card variant="ghost" class="space-y-3 bg-background">
 					<h2 class="text-xl font-semibold mb-4">Practical Examples</h2>
+					<PreviewContainer>
 					<div class="flex flex-wrap gap-2">
 						<Button
 							onclick={() =>
@@ -381,6 +389,7 @@
 						</Button>
 					</div>
 
+					</PreviewContainer>
 						<br />
 					<CodeBlock
 						title=" Code"

@@ -27,6 +27,7 @@
 		console.log("Form submitted:", formData);
 		alert(`Message submitted:\n\n${formData.message}`);
 	}
+	import PreviewContainer from "../components/preview-container.svelte";
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
@@ -39,9 +40,10 @@
 
 	<div class="space-y-12">
 		<!-- Variants Section -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Variants</h2>
-			<div class="grid gap-6 md:grid-cols-2">
+			<PreviewContainer>
+			<div class="grid gap-6 @md:grid-cols-2">
 				<div class="space-y-2">
 					<Label class="text-sm font-medium">Default</Label>
 					<Textarea
@@ -86,6 +88,7 @@
 					/>
 				</div>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -99,8 +102,9 @@
 		</Card>
 
 		<!-- Sizes Section -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Sizes</h2>
+			<PreviewContainer>
 			<div class="grid gap-6">
 				<div class="space-y-2">
 					<Label class="text-sm font-medium">Small</Label>
@@ -120,6 +124,7 @@
 					<Textarea size="lg" placeholder="Large size textarea..." />
 				</div>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -133,9 +138,10 @@
 		</Card>
 
 		<!-- Features Section -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Features</h2>
-			<div class="grid gap-6 md:grid-cols-2">
+			<PreviewContainer>
+			<div class="grid gap-6 @md:grid-cols-2">
 				<div class="space-y-2">
 					<Label class="text-sm font-medium">Auto-Resize (3-8 rows)</Label>
 					<Textarea
@@ -207,6 +213,7 @@
 					/>
 				</div>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -220,8 +227,9 @@
 		</Card>
 
 		<!-- Form Example -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Form Example</h2>
+			<PreviewContainer>
 			<form class="space-y-4" on:submit|preventDefault={handleSubmit}>
 				<div class="space-y-2">
 					<Label for="name" class="text-sm font-medium">
@@ -275,6 +283,7 @@
 
 				<Button type="submit">Submit Message</Button>
 			</form>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -288,9 +297,10 @@
 		</Card>
 
 		<!-- Combined Examples -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Combined Features</h2>
-			<div class="grid gap-6 md:grid-cols-2">
+			<PreviewContainer>
+			<div class="grid gap-6 @md:grid-cols-2">
 				<div class="space-y-2">
 					<Label class="text-sm font-medium">Small + Filled + Counter</Label>
 					<Textarea
@@ -315,6 +325,7 @@
 					/>
 				</div>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -328,13 +339,14 @@
 		</Card>
 
 		<!-- Textarea with Field Component -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Textarea Variants & Features</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Different styles and features for textarea fields
 			</p>
+			<PreviewContainer>
 
-			<div class="grid gap-6 md:grid-cols-2">
+			<div class="grid gap-6 @md:grid-cols-2">
 				<Card>
 					<Field label="Error State inside Field Textarea" error="This field has an error">
 						<Textarea
@@ -406,6 +418,7 @@
 					</Field>
 				</Card>
 			</div>
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"

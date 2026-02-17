@@ -13,13 +13,6 @@ A beautiful, customizable toast notification system built on top of svelte-sonne
 - **Dark Mode**: Full dark mode support
 - **Accessible**: Keyboard navigation and screen reader friendly
 
-## Installation
-
-The Sonner component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
 
 ## Import
 

@@ -2,26 +2,7 @@
 
 A modal dialog component for displaying content that requires user interaction or attention. Built on top of [bits-ui](https://bits-ui.com) Dialog primitives. -->
 
-## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Components](#components)
-- [Props Reference](#props-reference)
-- [Sizes](#sizes)
-- [Variants](#variants)
-- [Examples](#examples)
-- [Accessibility](#accessibility)
-
-## Installation
-
-The Dialog component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Usage
 
 ### Basic Usage
 

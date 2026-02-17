@@ -14,15 +14,6 @@ An accessible one-time password (OTP) input component with copy/paste functional
 - **Full TypeScript Support**: Complete type safety and IntelliSense
 - **Accessibility**: Built on accessible Bits UI primitives
 
-## Installation
-
-The InputOTP component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Usage
 
 ### Basic Usage
 

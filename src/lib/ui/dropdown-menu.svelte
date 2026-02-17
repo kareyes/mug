@@ -206,6 +206,7 @@
 		{ type: "separator" as const },
 		{ label: "Sign Out", icon: LogOut, variant: "destructive" as const, onSelect: () => console.log("Sign Out") },
 	];
+	import PreviewContainer from "../components/preview-container.svelte";
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
@@ -218,9 +219,10 @@
 
 	<div class="space-y-12">
 		<!-- Basic Examples -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Basic Menus</h2>
 			<p class="text-sm text-muted-foreground mb-4">Simple dropdown menus with icons and shortcuts</p>
+			<PreviewContainer>
 			<div class="flex flex-wrap gap-4">
 				<DropdownMenu
 					triggerText="User Menu"
@@ -247,6 +249,7 @@
 				/>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -260,9 +263,10 @@
 		</Card>
 
 		<!-- Interactive Examples -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Interactive Menus</h2>
 			<p class="text-sm text-muted-foreground mb-4">Menus with checkboxes and radio groups</p>
+			<PreviewContainer>
 			<div class="space-y-4">
 				<div class="flex flex-wrap gap-4">
 					<DropdownMenu
@@ -298,6 +302,7 @@
 				</div>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -311,9 +316,10 @@
 		</Card>
 
 		<!-- Grouped Menu -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Grouped Menu</h2>
 			<p class="text-sm text-muted-foreground mb-4">Organize menu items into labeled groups</p>
+			<PreviewContainer>
 			<div>
 				<DropdownMenu
 					triggerText="Actions"
@@ -322,6 +328,7 @@
 				/>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -335,9 +342,10 @@
 		</Card>
 
 		<!-- Complex Menu -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Complex Combined Menu</h2>
 			<p class="text-sm text-muted-foreground mb-4">Combining groups, radio, checkboxes, and shortcuts</p>
+			<PreviewContainer>
 			<div class="space-y-4">
 				<DropdownMenu
 					triggerText="Account Settings"
@@ -359,6 +367,7 @@
 				</div>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -372,9 +381,10 @@
 		</Card>
 
 		<!-- Trigger Variants -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Trigger Variants</h2>
 			<p class="text-sm text-muted-foreground mb-4">Different button styles for the menu trigger</p>
+			<PreviewContainer>
 			<div class="flex flex-wrap gap-4">
 				<DropdownMenu triggerText="Default" triggerVariant="default" items={basicMenuItems} />
 				<DropdownMenu triggerText="Secondary" triggerVariant="secondary" items={basicMenuItems} />
@@ -383,6 +393,7 @@
 				<DropdownMenu triggerText="Destructive" triggerVariant="destructive" items={basicMenuItems} />
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -396,15 +407,17 @@
 		</Card>
 
 		<!-- Sizes -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Sizes</h2>
 			<p class="text-sm text-muted-foreground mb-4">Available trigger button sizes</p>
+			<PreviewContainer>
 			<div class="flex flex-wrap items-center gap-4">
 				<DropdownMenu triggerText="Small" triggerSize="sm" items={basicMenuItems} />
 				<DropdownMenu triggerText="Default" triggerSize="default" items={basicMenuItems} />
 				<DropdownMenu triggerText="Large" triggerSize="lg" items={basicMenuItems} />
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -418,15 +431,17 @@
 		</Card>
 
 		<!-- Alignment -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Content Alignment</h2>
 			<p class="text-sm text-muted-foreground mb-4">Control menu content alignment</p>
+			<PreviewContainer>
 			<div class="flex flex-wrap gap-4">
 				<DropdownMenu triggerText="Align Start" align="start" items={basicMenuItems} />
 				<DropdownMenu triggerText="Align Center" align="center" items={basicMenuItems} />
 				<DropdownMenu triggerText="Align End" align="end" items={basicMenuItems} />
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -440,9 +455,10 @@
 		</Card>
 
 		<!-- Submenu Examples -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">With Submenu</h2>
 			<p class="text-sm text-muted-foreground mb-4">Nested menus for hierarchical navigation</p>
+			<PreviewContainer>
 			<div class="flex flex-wrap gap-4">
 				<DropdownMenu
 					triggerText="Share Menu"
@@ -463,6 +479,7 @@
 				/>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -476,11 +493,12 @@
 		</Card>
 
 		<!-- Custom Trigger Examples -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Custom Trigger</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Use the <code class="text-xs bg-muted px-1 py-0.5 rounded">trigger</code> snippet prop to provide custom trigger elements like labels, avatars, or any custom component.
 			</p>
+			<PreviewContainer>
 			<div class="flex flex-wrap gap-6">
 				<!-- Label as Trigger -->
 				<DropdownMenu items={labelTriggerMenuItems}>
@@ -518,6 +536,7 @@
 				</DropdownMenu>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"

@@ -843,3 +843,199 @@ export const expandableRowsDocs = `
 		</div>
 	{/snippet}
 </DataTable>`;
+
+
+export const responsiveDocs =`
+<script lang="ts">
+	import { DataTable } from "@kareyes/aether";
+	
+	const { DataTableCheckbox, DataTableColumnHeader, renderComponent } = DataTablePrimitives;
+let selectedMode: DataTablePrimitives.ResponsiveMode = $state("scroll");
+	type Payment = {
+		id: string;
+		amount: number;
+		status: "Pending" | "Processing" | "Success" | "Failed";
+		email: string;
+	};
+		const paymentData2: Payment2[] = [
+		{
+			id: "PAY-001",
+			amount: 316,
+			status: "Success",
+			email: "ken99@yahoo.com",
+			date: "2025-01-15",
+			method: "Credit Card",
+		},
+		{
+			id: "PAY-002",
+			amount: 242,
+			status: "Success",
+			email: "abe45@gmail.com",
+			date: "2025-01-14",
+			method: "PayPal",
+		},
+		{
+			id: "PAY-003",
+			amount: 837,
+			status: "Processing",
+			email: "monserrat44@gmail.com",
+			date: "2025-01-14",
+			method: "Bank Transfer",
+		}
+	];
+		const responsiveColumns: DataTablePrimitives.ColumnDef<Payment2>[] = [
+		{
+			id: "select",
+			header: ({ table }: DataTablePrimitives.HeaderContext<Payment2, unknown>) =>
+				renderComponent(DataTableCheckbox, {
+					checked: table.getIsAllPageRowsSelected(),
+					indeterminate:
+						table.getIsSomePageRowsSelected() &&
+						!table.getIsAllPageRowsSelected(),
+					onCheckedChange: (value) =>
+						table.toggleAllPageRowsSelected(!!value),
+					"aria-label": "Select all",
+				}),
+			cell: ({ row }:DataTablePrimitives.CellContext<Payment2, unknown>) =>
+				renderComponent(DataTableCheckbox, {
+					checked: row.getIsSelected(),
+					onCheckedChange: (value) => row.toggleSelected(!!value),
+					"aria-label": "Select row",
+				}),
+			enableSorting: false,
+			enableHiding: false,
+		},
+		{
+			accessorKey: "status",
+			header: "Status",
+			meta: {
+				mobileLabel: "Payment Status",
+				priority: 1,
+				alwaysVisible: true,
+			} as DataTablePrimitives.DataTableColumnMeta,
+			cell: ({ row }) => {
+				const status = row.original.status;
+				const snippet = createRawSnippet<[{ status: string }]>(
+					(getStatus) => {
+						const { status } = getStatus();
+						const colorClass =
+							status === "Success"
+								? "text-green-600"
+								: status === "Failed"
+									? "text-red-600"
+									: status === "Processing"
+										? "text-blue-600"
+										: "text-yellow-600";
+						return {
+							render: () =>
+								\`<span class="capitalize font-medium \${colorClass}">\${status}</span>\`,
+						};
+					},
+				);
+				return renderSnippet(snippet, { status });
+			},
+		},
+		{
+			accessorKey: "email",
+			header: ({ column }: DataTablePrimitives.HeaderContext<Payment2, unknown>) =>
+				renderComponent(DataTableColumnHeader, {
+					title: "Email",
+					onclick: column.getToggleSortingHandler(),
+				}),
+			meta: {
+				mobileLabel: "Customer Email",
+				priority: 2,
+			} as DataTablePrimitives.DataTableColumnMeta,
+			cell: ({ row }) => {
+				const snippet = createRawSnippet<[{ email: string }]>(
+					(getEmail) => {
+						const { email } = getEmail();
+						return {
+							render: () =>
+								\`<span class="lowercase">\${email}</span>\`,
+						};
+					},
+				);
+				return renderSnippet(snippet, { email: row.original.email });
+			},
+		},
+		{
+			accessorKey: "amount",
+			header: "Amount",
+			meta: {
+				mobileLabel: "Amount (USD)",
+				priority: 3,
+			} as DataTablePrimitives.DataTableColumnMeta,
+			cell: ({ row }) => {
+				const formatter = new Intl.NumberFormat("en-US", {
+					style: "currency",
+					currency: "USD",
+				});
+				const snippet = createRawSnippet<[{ amount: string }]>(
+					(getAmount) => {
+						const { amount } = getAmount();
+						return {
+							render: () =>
+								\`<span class="font-semibold">\${amount}</span>\`,
+						};
+					},
+				);
+				return renderSnippet(snippet, {
+					amount: formatter.format(row.original.amount),
+				});
+			},
+		},
+		{
+			accessorKey: "date",
+			header: "Date",
+			meta: {
+				mobileLabel: "Transaction Date",
+				priority: 4,
+			} as DataTablePrimitives.DataTableColumnMeta,
+		},
+		{
+			accessorKey: "method",
+			header: "Method",
+			meta: {
+				mobileLabel: "Payment Method",
+				priority: 5,
+				hiddenOnMobile: false,
+			} as DataTablePrimitives.DataTableColumnMeta,
+		},
+		{
+			id: "actions",
+			enableHiding: false,
+			cell: ({ row }) =>
+				renderComponent(DataTableActions, {
+					id: row.original.id,
+					copyLabel: "Copy payment ID",
+					actions: [
+						{
+							label: "View details",
+							onclick: () => console.log("View", row.original),
+						},
+						{
+							label: "Refund",
+							onclick: () => console.log("Refund", row.original),
+						},
+						{
+							label: "Delete",
+							onclick: () => console.log("Delete", row.original),
+						},
+					],
+				}),
+		},
+	];
+	</script>
+
+
+	<DataTable
+		data={paymentData2}
+		columns={responsiveColumns}
+		responsiveMode={selectedMode}
+		filterColumn="email"
+		filterPlaceholder="Filter by email..."
+		pageSize={5}
+		variant="default"
+		selectionMode="multi"
+	/>`

@@ -34,6 +34,7 @@
     import TabsComponent from "$lib/ui/tabs.svelte";
     import Textarea from "$lib/ui/textarea.svelte";
     import { TabsPrimitives } from "@kareyes/aether";
+    import PreviewContainer from "$lib/components/preview-container.svelte";
     import { page } from "$app/state";
     import { marked } from 'marked';
     import type { PageData } from './$types';
@@ -114,9 +115,9 @@
 
             <div class="max-w-6xl mx-auto">
                 <TabsContent value="component" class="p-0 m-0">
-                    <div>
+                    <!-- <PreviewContainer> -->
                         {@render componentMap[slug].component()}
-                    </div>
+                    <!-- </PreviewContainer> -->
                 </TabsContent>
 
                 {#if markdownContent}

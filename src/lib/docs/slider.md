@@ -15,15 +15,6 @@ A fully-featured slider component with support for variants, sizes, step indicat
 - ✅ **Accessibility**: ARIA attributes and screen reader support
 - ✅ **TypeScript**: Complete type safety
 
-## Installation
-
-The Slider component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Basic Usage
 
 ### Simple Slider
 

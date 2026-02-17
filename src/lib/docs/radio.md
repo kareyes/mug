@@ -15,16 +15,6 @@ A flexible radio group component that allows users to select one option from a s
 - **TypeScript**: Complete type safety with exported types
 - **Responsive**: Adapts to different screen sizes and contexts
 
-## Installation
-
-The RadioGroup component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Usage
-
 ### Basic Radio Group
 
 ```svelte

@@ -12,13 +12,7 @@ A comprehensive, customizable tabs component with multiple visual variants, size
 - 🎭 **Customizable**: Extensive styling options with Tailwind
 - 🔄 **Reactive**: Svelte 5 runes for optimal performance
 
-## Installation
 
-The Tabs component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
 
 ## Implementation Details
 

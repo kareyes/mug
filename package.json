@@ -26,10 +26,11 @@
 	},
 	"dependencies": {
 		"@internationalized/date": "^3.10.1",
-		"@kareyes/aether": "^0.0.10",
+		"@kareyes/aether": "^0.0.12",
 		"@lucide/svelte": "^0.561.0",
 		"@tailwindcss/vite": "^4.1.18",
 		"dompurify": "^3.3.1",
+		"effect": "^3.19.16",
 		"marked": "^17.0.1",
 		"tailwindcss": "^4.1.18"
 	}

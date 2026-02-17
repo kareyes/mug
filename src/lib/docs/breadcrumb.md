@@ -13,13 +13,6 @@ A flexible breadcrumb navigation component with multiple visual variants, sizes,
 - 🎭 **Customizable**: Extensive styling options with Tailwind
 - 🔄 **Reactive**: Svelte 5 runes for optimal performance
 
-## Installation
-
-The Breadcrumb component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
 
 ## Implementation Details
 

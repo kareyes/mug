@@ -17,6 +17,7 @@
 			console.error(`${name} error:`, error);
 		};
 	}
+	import PreviewContainer from "../components/preview-container.svelte";
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
@@ -29,11 +30,11 @@
 
 	<div class="space-y-12">
 		<!-- Unified Component with Mode Selection -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Unified Component (Mode-Based)</h2>
 			<p class="text-sm text-muted-foreground mb-4">A single component with different modes for various use cases</p>
-
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			<PreviewContainer>
+			<div class="grid grid-cols-1 @md:grid-cols-3 gap-6">
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Drag & Drop Mode</h3>
 					<FileInput
@@ -77,6 +78,7 @@
 
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Button-Only Mode</h3>
+
 					<FileInput
 						mode="button-only"
 						validation={{
@@ -99,6 +101,7 @@
 				</div>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -112,11 +115,11 @@
 		</Card>
 
 		<!-- Separate Components -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Dedicated Components</h2>
 			<p class="text-sm text-muted-foreground mb-4">Each component optimized for specific use cases with sleek UI</p>
-
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			<PreviewContainer>
+			<div class="grid grid-cols-1 @md:grid-cols-3 gap-6">
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">FileInputDragDrop</h3>
 					<p class="text-xs text-muted-foreground">Best for large file uploads with visual feedback</p>
@@ -152,6 +155,7 @@
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">FileInputButton</h3>
 					<p class="text-xs text-muted-foreground">Minimal footprint for inline forms</p>
+
 					<FileInputButton
 						validation={{
 							maxFiles: 1,
@@ -168,6 +172,7 @@
 				</div>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -181,11 +186,11 @@
 		</Card>
 
 		<!-- Regular Input Showcase -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Regular Input - Sleek UI Showcase</h2>
 			<p class="text-sm text-muted-foreground mb-4">Enhanced with input-group component for a modern, polished experience</p>
-
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<PreviewContainer>
+			<div class="grid grid-cols-1 @md:grid-cols-2 gap-6">
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Single File Upload</h3>
 					<FileInputRegular
@@ -236,6 +241,7 @@
 
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Required Field</h3>
+
 					<FileInputRegular
 						validation={{
 							maxFiles: 1,
@@ -252,6 +258,7 @@
 				</div>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -265,11 +272,11 @@
 		</Card>
 
 		<!-- Variant Showcase -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Style Variants</h2>
 			<p class="text-sm text-muted-foreground mb-4">Different button styles for the file input trigger</p>
-
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			<PreviewContainer>
+			<div class="grid grid-cols-1 @md:grid-cols-3 gap-6">
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Default Variant</h3>
 					<FileInput
@@ -296,6 +303,7 @@
 
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Ghost Variant</h3>
+
 					<FileInput
 						mode="button-only"
 						buttonProps={{
@@ -307,6 +315,7 @@
 				</div>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -320,10 +329,10 @@
 		</Card>
 
 		<!-- Size Showcase -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Size Options</h2>
 			<p class="text-sm text-muted-foreground mb-4">Available button sizes for the file input</p>
-
+			<PreviewContainer>
 			<div class="flex flex-wrap gap-4 items-end">
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Small</h3>
@@ -349,6 +358,7 @@
 
 				<div class="space-y-2">
 					<h3 class="text-sm font-medium">Large</h3>
+
 					<FileInput
 						mode="button-only"
 						buttonProps={{
@@ -359,6 +369,7 @@
 				</div>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -372,11 +383,11 @@
 		</Card>
 
 		<!-- File Status Display -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">File Status</h2>
 			<p class="text-sm text-muted-foreground mb-4">Current file selection state from the examples above</p>
 
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			<div class="grid grid-cols-1 @md:grid-cols-3 gap-6">
 				<div class="space-y-2">
 					<h3 class="font-medium">Drag & Drop Files</h3>
 					{#if dragDropFiles && dragDropFiles.length > 0}
@@ -413,6 +424,7 @@
 						</ul>
 					{:else}
 						<p class="text-sm text-muted-foreground">No files selected</p>
+
 					{/if}
 				</div>
 			</div>

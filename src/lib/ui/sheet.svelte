@@ -733,7 +733,7 @@ import {
                                 <span class="text-xl font-bold">$299.97</span>
                             </div>
                         </div>
-                        <SheetFooter class="flex-col gap-2 sm:flex-col">
+                        <SheetFooter class="flex-col gap-2 @sm:flex-col">
                             <Button class="w-full">
                                 <CreditCard class="mr-2 size-4" />
                                 Checkout
@@ -975,7 +975,7 @@ import {
                     <SheetTrigger>
                         <Button variant="outline">Wide Sheet</Button>
                     </SheetTrigger>
-                    <SheetContent class="w-[400px] sm:w-[540px]">
+                    <SheetContent class="w-[400px] @sm:w-[540px]">
                         <SheetHeader>
                             <SheetTitle>Custom Width Sheet</SheetTitle>
                             <SheetDescription>

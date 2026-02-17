@@ -16,15 +16,6 @@ A fully-featured number input component with increment/decrement controls, suppo
 - ✅ **Accessibility**: Full keyboard navigation and ARIA support
 - ✅ **TypeScript**: Complete type safety
 
-## Installation
-
-The NumberSpinner component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Basic Usage
 
 ### Simple Number Spinner
 

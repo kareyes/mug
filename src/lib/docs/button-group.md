@@ -11,15 +11,6 @@ A flexible button group component that allows you to group related buttons toget
 - **Accessibility**: Full keyboard navigation and screen reader support
 - **TypeScript**: Complete type safety with exported types
 
-## Installation
-
-The ButtonGroup component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Usage
 
 ### Basic Button Group
 

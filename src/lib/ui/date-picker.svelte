@@ -8,6 +8,7 @@
 	let presetDate = $state<DateValue | undefined>();
 	let presetRange = $state<DatePickerPrimitives.DateRange | undefined>();
 	let disabledDate = $state<DateValue | undefined>();
+	import PreviewContainer from "../components/preview-container.svelte";
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
@@ -20,11 +21,12 @@
 
 	<div class="space-y-12">
 		<!-- Basic Date Picker -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Date Picker</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Select a single date with a popover calendar.
 			</p>
+			<PreviewContainer>
 			<div class="grid gap-4 max-w-md">
 				<DatePicker bind:value={singleDate} />
 				{#if singleDate && typeof singleDate.toDate === "function"}
@@ -34,6 +36,7 @@
 				{/if}
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -47,11 +50,12 @@
 		</Card>
 
 		<!-- Date Range Picker -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Date Range Picker</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Select a date range with two calendars side by side.
 			</p>
+			<PreviewContainer>
 			<div class="grid gap-4 max-w-md">
 				<DateRangePicker bind:value={dateRange} />
 				{#if dateRange?.start && dateRange?.end && typeof dateRange.start.toDate === "function" && typeof dateRange.end.toDate === "function"}
@@ -61,6 +65,7 @@
 				{/if}
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -74,11 +79,12 @@
 		</Card>
 
 		<!-- Date Picker with Presets -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Date Picker with Presets</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Quick date selection with preset options.
 			</p>
+			<PreviewContainer>
 			<div class="grid gap-4 max-w-md">
 				<DatePickerWithPresets bind:value={presetDate} />
 				{#if presetDate && typeof presetDate.toDate === "function"}
@@ -88,6 +94,7 @@
 				{/if}
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -101,11 +108,12 @@
 		</Card>
 
 		<!-- Date Range Picker with Presets -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Date Range Picker with Presets</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Quick date range selection with common preset ranges.
 			</p>
+			<PreviewContainer>
 			<div class="grid gap-4 max-w-md">
 				<DateRangePickerWithPresets bind:value={presetRange} />
 				{#if presetRange?.start && presetRange?.end && typeof presetRange.start.toDate === "function" && typeof presetRange.end.toDate === "function"}
@@ -115,6 +123,7 @@
 				{/if}
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -128,11 +137,12 @@
 		</Card>
 
 		<!-- Error States -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Error States</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Date pickers with error styling.
 			</p>
+			<PreviewContainer>
 			<div class="grid gap-4 max-w-md">
 				<div>
 					<DatePicker
@@ -149,6 +159,7 @@
 				</div>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -162,11 +173,12 @@
 		</Card>
 
 		<!-- Button Variants -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Button Variants</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Different button styles for the date picker trigger.
 			</p>
+			<PreviewContainer>
 			<div class="grid gap-4 max-w-md">
 				<DatePicker buttonVariant="default" />
 				<DatePicker buttonVariant="outline" />
@@ -174,6 +186,7 @@
 				<DatePicker buttonVariant="secondary" />
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -187,15 +200,17 @@
 		</Card>
 
 		<!-- Disabled State -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Disabled State</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Date picker in disabled state.
 			</p>
+			<PreviewContainer>
 			<div class="grid gap-4 max-w-md">
 				<DatePicker bind:value={disabledDate} disabled />
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"
@@ -209,11 +224,12 @@
 		</Card>
 
 		<!-- Custom Format -->
-		<Card variant="outline" class="p-6">
+		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">Custom Format</h2>
 			<p class="text-sm text-muted-foreground mb-4">
 				Customize the date display format.
 			</p>
+			<PreviewContainer>
 			<div class="grid gap-4 max-w-md">
 				<DatePicker
 					format={(date) => {
@@ -228,6 +244,7 @@
 				/>
 			</div>
 
+			</PreviewContainer>
 			<br />
 			<CodeBlock
 				title="Code"

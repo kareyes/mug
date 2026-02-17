@@ -13,15 +13,6 @@ A simplified combobox component that combines a text input with a searchable dro
 - 🚫 **Disabled Items** - Support for disabled options
 - 📦 **TypeScript** - Full type safety
 
-## Installation
-
-The Combobox component is included in the `@kareyes/aether` package.
-
-```bash
-pnpm add @kareyes/aether
-```
-
-## Usage
 
 ### Basic Example
 

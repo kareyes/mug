@@ -217,6 +217,10 @@ export const inputStatesDocs = `
 	<Input value="Read-only value" readonly>
 		{#snippet endIcon()}<Eye class="size-4" />{/snippet}
 	</Input>
+
+	<!-- Loading State -->
+	<Input value="Loading..." loading />
+
 </div>`;
 
 export const customAddonsDocs = `

@@ -68,6 +68,7 @@
 	function handleValuesChange(newValues: string[], label: string) {
 		console.log(`${label} changed:`, newValues);
 	}
+	import PreviewContainer from "../components/preview-container.svelte";
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
@@ -81,12 +82,12 @@
 	<div class="space-y-12">
 
 	<!-- 1. Basic Usage -->
-	<Card variant="outline" class="p-6">
+	<Card variant="ghost" class="p-6 bg-background">
 		<h2 class="text-2xl font-semibold mb-4">Basic Usage</h2>
 		<p class="text-sm text-muted-foreground mb-4">
 			Simple checkbox group with label and description.
 		</p>
-
+		<PreviewContainer>
 		<div class="space-y-4">
 			<CheckboxGroup
 				options={basicOptions}
@@ -97,7 +98,9 @@
 			<p class="text-sm text-muted-foreground">
 				Selected values: {basicValues.length > 0 ? basicValues.join(", ") : "None"}
 			</p>
+
 		</div>
+		</PreviewContainer>
 		<br />
 		<CodeBlock
 			title="Code"
@@ -111,12 +114,12 @@
 	</Card>
 
 	<!-- 2. Horizontal Orientation -->
-	<Card variant="outline" class="p-6">
+	<Card variant="ghost" class="p-6 bg-background">
 		<h2 class="text-2xl font-semibold mb-4">Horizontal Orientation</h2>
 		<p class="text-sm text-muted-foreground mb-4">
 			Checkbox group displayed in a horizontal layout.
 		</p>
-
+		<PreviewContainer>
 		<div class="space-y-4">
 			<CheckboxGroup
 				options={preferencesOptions}
@@ -128,7 +131,9 @@
 			<p class="text-sm text-muted-foreground">
 				Selected: {preferencesValues.length > 0 ? preferencesValues.join(", ") : "None"}
 			</p>
+
 		</div>
+		</PreviewContainer>
 		<br />
 		<CodeBlock
 			title="Code"
@@ -142,12 +147,12 @@
 	</Card>
 
 	<!-- 3. With Descriptions -->
-	<Card variant="outline" class="p-6">
+	<Card variant="ghost" class="p-6 bg-background">
 		<h2 class="text-2xl font-semibold mb-4">With Descriptions</h2>
 		<p class="text-sm text-muted-foreground mb-4">
 			Checkbox options with descriptive text for each item.
 		</p>
-
+		<PreviewContainer>
 		<div class="space-y-4">
 			<CheckboxGroup
 				options={skillsOptions}
@@ -159,7 +164,9 @@
 			<p class="text-sm text-muted-foreground">
 				Skills: {skillsValues.length > 0 ? skillsValues.join(", ") : "None"}
 			</p>
+
 		</div>
+		</PreviewContainer>
 		<br />
 		<CodeBlock
 			title="Code"
@@ -173,11 +180,12 @@
 	</Card>
 
 	<!-- 4. Todo List with Line Through -->
-	<Card variant="outline" class="p-6">
+	<Card variant="ghost" class="p-6 bg-background">
 		<h2 class="text-2xl font-semibold mb-4">Todo List with Line Through</h2>
 		<p class="text-sm text-muted-foreground mb-4">
 			Checkbox group with line-through effect on checked items.
 		</p>
+		<PreviewContainer>
 
 		<div class="space-y-4">
 			<CheckboxGroup
@@ -192,6 +200,7 @@
 				Progress: {todosValues.length} / {todosOptions.length} completed
 			</div>
 		</div>
+		</PreviewContainer>
 		<br />
 		<CodeBlock
 			title="Code"
@@ -205,13 +214,13 @@
 	</Card>
 
 	<!-- 5. Different Sizes and Variants -->
-	<Card variant="outline" class="p-6">
+	<Card variant="ghost" class="p-6 bg-background">
 		<h2 class="text-2xl font-semibold mb-4">Different Sizes and Variants</h2>
 		<p class="text-sm text-muted-foreground mb-4">
 			Various checkbox sizes and color variants.
 		</p>
-
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+		<PreviewContainer>
+		<div class="grid grid-cols-1 @md:grid-cols-2 gap-8">
 			<div>
 				<h3 class="text-lg font-medium mb-4">Small Size</h3>
 				<CheckboxGroup
@@ -247,6 +256,7 @@
 
 			<div>
 				<h3 class="text-lg font-medium mb-4">Destructive Variant</h3>
+
 				<CheckboxGroup
 					options={[
 						{ id: "del1", label: "Delete account", value: "del1" },
@@ -258,6 +268,7 @@
 				/>
 			</div>
 		</div>
+		</PreviewContainer>
 		<br />
 		<CodeBlock
 			title="Code"
@@ -271,11 +282,12 @@
 	</Card>
 
 	<!-- 6. Settings Panel Example -->
-	<Card variant="outline" class="p-6">
+	<Card variant="ghost" class="p-6 bg-background">
 		<h2 class="text-2xl font-semibold mb-4">Settings Panel Example</h2>
 		<p class="text-sm text-muted-foreground mb-4">
 			A practical settings panel using checkbox groups.
 		</p>
+		<PreviewContainer>
 
 		<div class="bg-card p-6 rounded-lg border space-y-4">
 			<CheckboxGroup
@@ -302,6 +314,7 @@
 				</div>
 			</div>
 		</div>
+		</PreviewContainer>
 		<br />
 		<CodeBlock
 			title="Code"
@@ -315,11 +328,12 @@
 	</Card>
 
 	<!-- 7. Required Field -->
-	<Card variant="outline" class="p-6">
+	<Card variant="ghost" class="p-6 bg-background">
 		<h2 class="text-2xl font-semibold mb-4">Required Field</h2>
 		<p class="text-sm text-muted-foreground mb-4">
 			Checkbox group marked as required with validation styling.
 		</p>
+		<PreviewContainer>
 
 		<div class="space-y-4">
 			<CheckboxGroup
@@ -334,6 +348,7 @@
 				variant="destructive"
 			/>
 		</div>
+		</PreviewContainer>
 		<br />
 		<CodeBlock
 			title="Code"
@@ -347,13 +362,13 @@
 	</Card>
 
 	<!-- 8. Error States -->
-	<Card variant="outline" class="p-6">
+	<Card variant="ghost" class="p-6 bg-background">
 		<h2 class="text-2xl font-semibold mb-4">Error States</h2>
 		<p class="text-sm text-muted-foreground mb-4">
 			Checkbox groups with error indicators and validation feedback.
 		</p>
-
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+		<PreviewContainer>
+		<div class="grid grid-cols-1 @md:grid-cols-2 gap-8">
 			<div>
 				<h3 class="text-lg font-medium mb-4">Simple Error State</h3>
 				<CheckboxGroup
@@ -392,8 +407,10 @@
 				<p class="mt-2 text-sm text-muted-foreground">
 					{termsError ? "❌ Please select at least one option" : "✓ Valid"}
 				</p>
+
 			</div>
 		</div>
+		</PreviewContainer>
 		<br />
 		<CodeBlock
 			title="Code"
@@ -407,11 +424,12 @@
 	</Card>
 
 	<!-- 9. With Field Component -->
-	<Card variant="outline" class="p-6">
+	<Card variant="ghost" class="p-6 bg-background">
 		<h2 class="text-2xl font-semibold mb-4">With Field Component</h2>
 		<p class="text-sm text-muted-foreground mb-4">
 			Checkbox groups wrapped in Field for labels, descriptions, and error handling.
 		</p>
+		<PreviewContainer>
 
 		<div class="space-y-6">
 			<Field
@@ -439,6 +457,7 @@
 				/>
 			</Field>
 		</div>
+		</PreviewContainer>
 		<br />
 		<CodeBlock
 			title="Code"
@@ -452,11 +471,12 @@
 	</Card>
 
 	<!-- 10. Disabled State -->
-	<Card variant="outline" class="p-6">
+	<Card variant="ghost" class="p-6 bg-background">
 		<h2 class="text-2xl font-semibold mb-4">Disabled State</h2>
 		<p class="text-sm text-muted-foreground mb-4">
 			Checkbox group in a fully disabled state.
 		</p>
+		<PreviewContainer>
 
 		<div class="space-y-4">
 			<CheckboxGroup
@@ -467,6 +487,7 @@
 				disabled={true}
 			/>
 		</div>
+		</PreviewContainer>
 		<br />
 		<CodeBlock
 			title="Code"
