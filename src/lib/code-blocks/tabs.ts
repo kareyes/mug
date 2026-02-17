@@ -164,3 +164,204 @@ export const animationVariantsDocs = `
     </div>
   </TabsContent>
 </Tabs>`;
+
+export const overflowScrollDocs = `
+<script lang="ts">
+  import { TabsPrimitives } from "@kareyes/aether";
+  import { Home, BarChart3, Settings, CreditCard, Users, Puzzle, Shield } from "@kareyes/aether/icons";
+
+  const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
+</script>
+
+<Tabs value="dash">
+  <TabsList variant="underline">
+    <TabsTrigger variant="underline" value="dash">
+      <Home class="size-4" />
+      Dashboard
+    </TabsTrigger>
+    <TabsTrigger variant="underline" value="analytics">
+      <BarChart3 class="size-4" />
+      Analytics
+    </TabsTrigger>
+    <TabsTrigger variant="underline" value="reports">Reports</TabsTrigger>
+    <TabsTrigger variant="underline" value="settings">
+      <Settings class="size-4" />
+      Settings
+    </TabsTrigger>
+    <TabsTrigger variant="underline" value="billing">
+      <CreditCard class="size-4" />
+      Billing
+    </TabsTrigger>
+    <TabsTrigger variant="underline" value="team">
+      <Users class="size-4" />
+      Team
+    </TabsTrigger>
+    <TabsTrigger variant="underline" value="integrations">
+      <Puzzle class="size-4" />
+      Integrations
+    </TabsTrigger>
+    <TabsTrigger variant="underline" value="security">
+      <Shield class="size-4" />
+      Security
+    </TabsTrigger>
+  </TabsList>
+  <TabsContent value="dash">
+    <h4 class="font-medium">Dashboard</h4>
+    <p class="text-sm text-muted-foreground mt-1">
+      Resize the browser to see horizontal scroll on mobile.
+    </p>
+  </TabsContent>
+</Tabs>`;
+
+export const verticalDocs = `
+<script lang="ts">
+  import { TabsPrimitives } from "@kareyes/aether";
+  import { Home, User, Settings, Shield } from "@kareyes/aether/icons";
+
+  const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
+</script>
+
+<!-- Vertical Default -->
+<Tabs orientation="vertical" value="general">
+  <TabsList>
+    <TabsTrigger value="general">General</TabsTrigger>
+    <TabsTrigger value="appearance">Appearance</TabsTrigger>
+    <TabsTrigger value="notifications">Notifications</TabsTrigger>
+  </TabsList>
+  <TabsContent value="general">
+    <h4 class="font-medium">General Settings</h4>
+    <p class="text-sm text-muted-foreground mt-1">
+      On desktop, tabs are vertical. On mobile ≤640px, they switch to horizontal.
+    </p>
+  </TabsContent>
+</Tabs>
+
+<!-- Vertical Pills -->
+<Tabs orientation="vertical" value="v1">
+  <TabsList variant="pills">
+    <TabsTrigger variant="pills" value="v1">
+      <Home class="size-4" />
+      Dashboard
+    </TabsTrigger>
+    <TabsTrigger variant="pills" value="v2">
+      <User class="size-4" />
+      Profile
+    </TabsTrigger>
+    <TabsTrigger variant="pills" value="v3">
+      <Settings class="size-4" />
+      Settings
+    </TabsTrigger>
+    <TabsTrigger variant="pills" value="v4">
+      <Shield class="size-4" />
+      Privacy
+    </TabsTrigger>
+  </TabsList>
+  <TabsContent value="v1">
+    <h4 class="font-medium">Dashboard</h4>
+    <p class="text-sm text-muted-foreground mt-1">Vertical pills variant with icons.</p>
+  </TabsContent>
+</Tabs>`;
+
+export const dropdownMobileDocs = `
+<script lang="ts">
+  import { TabsPrimitives } from "@kareyes/aether";
+
+  const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
+
+  const settingsTabs: TabsPrimitives.TabItem[] = [
+    { value: "general", label: "General" },
+    { value: "appearance", label: "Appearance" },
+    { value: "notifications", label: "Notifications" },
+    { value: "privacy", label: "Privacy" },
+    { value: "security", label: "Security" },
+  ];
+</script>
+
+<Tabs value="general" dropdownOnMobile items={settingsTabs}>
+  <TabsList variant="underline">
+    <TabsTrigger variant="underline" value="general">General</TabsTrigger>
+    <TabsTrigger variant="underline" value="appearance">Appearance</TabsTrigger>
+    <TabsTrigger variant="underline" value="notifications">Notifications</TabsTrigger>
+    <TabsTrigger variant="underline" value="privacy">Privacy</TabsTrigger>
+    <TabsTrigger variant="underline" value="security">Security</TabsTrigger>
+  </TabsList>
+  <TabsContent value="general">
+    <h4 class="font-medium">General Settings</h4>
+    <p class="text-sm text-muted-foreground mt-1">
+      On mobile, the tab list becomes a Select dropdown.
+    </p>
+  </TabsContent>
+</Tabs>`;
+
+export const disabledDocs = `
+<script lang="ts">
+  import { TabsPrimitives } from "@kareyes/aether";
+
+  const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
+</script>
+
+<Tabs value="enabled">
+  <TabsList>
+    <TabsTrigger value="enabled">Enabled</TabsTrigger>
+    <TabsTrigger value="disabled" disabled>Disabled</TabsTrigger>
+    <TabsTrigger value="another">Another Tab</TabsTrigger>
+  </TabsList>
+  <TabsContent value="enabled">
+    <p class="text-sm text-muted-foreground">
+      This tab is active. The "Disabled" tab cannot be selected.
+    </p>
+  </TabsContent>
+</Tabs>`;
+
+export const combinationsDocs = `
+<script lang="ts">
+  import { TabsPrimitives } from "@kareyes/aether";
+  import { Home, User, Settings } from "@kareyes/aether/icons";
+
+  const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
+</script>
+
+<!-- Pills + Large + Slide -->
+<Tabs value="ch1">
+  <TabsList variant="pills" size="lg">
+    <TabsTrigger variant="pills" size="lg" value="ch1">
+      <Home class="size-4" />
+      Home
+    </TabsTrigger>
+    <TabsTrigger variant="pills" size="lg" value="ch2">
+      <User class="size-4" />
+      Profile
+    </TabsTrigger>
+    <TabsTrigger variant="pills" size="lg" value="ch3">
+      <Settings class="size-4" />
+      Settings
+    </TabsTrigger>
+  </TabsList>
+  <TabsContent value="ch1" animation="slide" padding="lg">
+    <p class="text-sm text-muted-foreground">Large pills with slide animation</p>
+  </TabsContent>
+</Tabs>
+
+<!-- Underline + Small + No Animation -->
+<Tabs value="cm1">
+  <TabsList variant="underline" size="sm">
+    <TabsTrigger variant="underline" size="sm" value="cm1">Compact 1</TabsTrigger>
+    <TabsTrigger variant="underline" size="sm" value="cm2">Compact 2</TabsTrigger>
+    <TabsTrigger variant="underline" size="sm" value="cm3">Compact 3</TabsTrigger>
+  </TabsList>
+  <TabsContent value="cm1" animation="none" padding="sm">
+    <p class="text-sm text-muted-foreground">Small underline with instant switch</p>
+  </TabsContent>
+</Tabs>
+
+<!-- Solid + Scale Animation -->
+<Tabs value="cs1">
+  <TabsList variant="solid">
+    <TabsTrigger variant="solid" value="cs1">Overview</TabsTrigger>
+    <TabsTrigger variant="solid" value="cs2">Details</TabsTrigger>
+    <TabsTrigger variant="solid" value="cs3">History</TabsTrigger>
+  </TabsList>
+  <TabsContent value="cs1" animation="scale">
+    <p class="text-sm text-muted-foreground">Solid variant with zoom-in effect</p>
+  </TabsContent>
+</Tabs>`;

@@ -34,7 +34,7 @@
 				<p class="text-sm text-muted-foreground mb-4">{example.description}</p>
 				<PreviewContainer>
 					<iframe
-						src="/preview/sidebar/{example.id}"
+						src="/preview/sidebar/{example.id}/"
 						title="{example.title} preview"
 						class="w-full border-0 rounded-lg"
 						style="height: 600px"

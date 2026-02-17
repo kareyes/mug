@@ -37,7 +37,7 @@
 				<p class="text-sm text-muted-foreground mb-4">{example.description}</p>
 				<PreviewContainer>
 					<iframe
-						src="/preview/data-table/{example.id}"
+						src="/preview/data-table/{example.id}/"
 						title="{example.title} preview"
 						class="w-full border-0 rounded-lg"
 						style="height: {example.height ?? '500px'}"
