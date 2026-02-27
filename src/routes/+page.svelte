@@ -23,7 +23,6 @@
 				{ name: 'Slider', description: 'Range selection slider', route: '/components/slider' },
 				{ name: 'Input OTP', description: 'One-time password input', route: '/components/input-otp' },
 				{ name: 'Input Group', description: 'Combined input with addons', route: '/components/input-group' },
-				{ name: 'Label', description: 'Form field label', route: '/components/label' },
 				{ name: 'Field', description: 'Complete form field wrapper', route: '/components/field' },
 				{ name: 'File Input', description: 'File upload component', route: '/components/file-input' }
 			]
@@ -37,7 +36,6 @@
 				{ name: 'Alert', description: 'Contextual feedback messages', route: '/components/alert' },
 				{ name: 'Spinner', description: 'Loading indicator', route: '/components/spinner' },
 				{ name: 'Skeleton', description: 'Placeholder loading state', route: '/components/skeleton' },
-				{ name: 'Separator', description: 'Visual content divider', route: '/components/separator' }
 			]
 		},
 		{
@@ -56,10 +54,8 @@
 				{ name: 'Dialog', description: 'Modal dialog window', route: '/components/dialog' },
 				{ name: 'Sheet', description: 'Slide-out panel', route: '/components/sheet' },
 				{ name: 'Alert Dialog', description: 'Confirmation dialog', route: '/components/alert-dialog' },
-				{ name: 'Tooltip', description: 'Hover information popup', route: '/components/tooltip' },
 				{ name: 'Popover', description: 'Floating content panel', route: '/components/popover' },
 				{ name: 'Dropdown Menu', description: 'Contextual action menu', route: '/components/dropdown-menu' },
-				{ name: 'Command', description: 'Command palette interface', route: '/components/command' }
 			]
 		},
 		{
@@ -67,15 +63,14 @@
 			items: [
 				{ name: 'Table', description: 'Structured data table', route: '/components/table' },
 				{ name: 'Data Table', description: 'Advanced data table with features', route: '/components/data-table' },
-				{ name: 'Calendar', description: 'Date calendar view', route: '/components/calendar' },
-				{ name: 'Range Calendar', description: 'Date range selection', route: '/components/range-calendar' }
 			]
 		},
 		{
 			category: 'Date & Time',
 			items: [
-				{ name: 'Date Picker', description: 'Single date selection', route: '/components/date-picker' },
-				{ name: 'Date Range Picker', description: 'Date range selection picker', route: '/components/date-range-picker' }
+				{ name: 'Date Picker', description: 'Single/Range date selection', route: '/components/date-picker' },
+				{ name: 'Calendar', description: 'Date calendar view', route: '/components/calendar' },
+				
 			]
 		},
 		{

@@ -18,6 +18,7 @@
 		importantToastsDocs,
 		sequentialUpdatesDocs,
 		realWorldExamplesDocs,
+        visualVariantsDocs,
 	} from "../code-blocks/sonner";
 
 	// For promise demo
@@ -55,6 +56,8 @@
 		"bottom-center",
 		"bottom-right",
 	] as const;
+	let activeVariant: SonnerPrimitives.ToasterStyle = $state("default");
+
 	import PreviewContainer from "../components/preview-container.svelte";
 </script>
 
@@ -64,6 +67,7 @@
 	expand={expandOnHover}
 	{richColors}
 	duration={customDuration}
+	variant={activeVariant}
 />
 
 <div class="container mx-auto p-6 max-w-6xl">
@@ -220,6 +224,104 @@
 				maxHeight="250px"
 				variant="default"
 				code={toastTypesDocs}
+			/>
+		</Card>
+
+		<!-- Visual Variants -->
+		<Card variant="ghost" class="p-6 bg-background">
+			<h2 class="text-2xl font-semibold mb-4">Visual Variants</h2>
+			<p class="text-sm text-muted-foreground mb-6">
+				Four distinct styles to match your UI
+			</p>
+
+			<PreviewContainer >
+				<!-- Default -->
+				 <div class="space-y-8">
+				<div>
+					<h3 class="text-sm font-medium text-muted-foreground mb-3">Default — tinted backgrounds with type-colored borders</h3>
+					<div class="flex flex-wrap gap-2">
+						<Button color="success" variant="flat" onclick={() => { activeVariant = "default"; toast.success("Default variant success"); }}>
+							Success
+						</Button>
+						<Button color="danger" variant="flat" onclick={() => { activeVariant = "default"; toast.error("Default variant error"); }}>
+							Error
+						</Button>
+						<Button color="warning" variant="flat" onclick={() => { activeVariant = "default"; toast.warning("Default variant warning"); }}>
+							Warning
+						</Button>
+						<Button color="info" variant="flat" onclick={() => { activeVariant = "default"; toast.info("Default variant info"); }}>
+							Info
+						</Button>
+					</div>
+				</div>
+
+				<!-- Bordered -->
+				<div>
+					<h3 class="text-sm font-medium text-muted-foreground mb-3">Bordered — clean background with colored left accent border</h3>
+					<div class="flex flex-wrap gap-2">
+						<Button color="success" variant="bordered" onclick={() => { activeVariant = "bordered"; toast.success("Bordered variant success"); }}>
+							Success
+						</Button>
+						<Button color="danger" variant="bordered" onclick={() => { activeVariant = "bordered"; toast.error("Bordered variant error"); }}>
+							Error
+						</Button>
+						<Button color="warning" variant="bordered" onclick={() => { activeVariant = "bordered"; toast.warning("Bordered variant warning"); }}>
+							Warning
+						</Button>
+						<Button color="info" variant="bordered"  onclick={() => { activeVariant = "bordered"; toast.info("Bordered variant info"); }}>
+							Info
+						</Button>
+					</div>
+				</div>
+
+				<!-- Filled -->
+				<div>
+					<h3 class="text-sm font-medium text-muted-foreground mb-3">Filled — solid colored backgrounds for high contrast</h3>
+					<div class="flex flex-wrap gap-2">
+						<Button color="success" variant="default" onclick={() => { activeVariant = "filled"; toast.success("Filled variant success"); }}>
+							Success
+						</Button>
+						<Button color="danger" variant="default" onclick={() => { activeVariant = "filled"; toast.error("Filled variant error"); }}>
+							Error
+						</Button>
+						<Button color="warning" variant="default" onclick={() => { activeVariant = "filled"; toast.warning("Filled variant warning"); }}>
+							Warning
+						</Button>
+						<Button color="info" variant="default" onclick={() => { activeVariant = "filled"; toast.info("Filled variant info"); }}>
+							Info
+						</Button>
+					</div>
+				</div>
+
+				<!-- Minimal -->
+				<div>
+					<h3 class="text-sm font-medium text-muted-foreground mb-3">Minimal — transparent background with subtle bottom border</h3>
+					<div class="flex flex-wrap gap-2">
+						<Button color="success" variant="outline" onclick={() => { activeVariant = "minimal"; toast.success("Minimal variant success"); }}>
+							Success
+						</Button>
+						<Button color="danger" variant="outline" onclick={() => { activeVariant = "minimal"; toast.error("Minimal variant error"); }}>
+							Error
+						</Button>
+						<Button color="warning" variant="outline" onclick={() => { activeVariant = "minimal"; toast.warning("Minimal variant warning"); }}>
+							Warning
+						</Button>
+						<Button color="info" variant="outline" onclick={() => { activeVariant = "minimal"; toast.info("Minimal variant info"); }}>
+							Info
+						</Button>
+					</div>
+				</div>
+				</div>
+			</PreviewContainer>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={visualVariantsDocs}
 			/>
 		</Card>
 

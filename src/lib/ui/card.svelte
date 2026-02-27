@@ -491,7 +491,7 @@
 			<p class="text-sm text-muted-foreground mb-4">Combining different props for unique card styles</p>
 			<PreviewContainer>
 
-			<div class="grid gap-6 @md:grid-cols-3">
+			<div class="grid gap-6 md:grid-cols-3">
 				<Card variant="ghost" padding="sm" title="Ghost + Small">
 					<p class="text-sm">Minimal card with compact padding.</p>
 				</Card>
