@@ -1,6 +1,6 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
-	import { Coffee, GithubIcon } from "@kareyes/aether/icons";
+	import { ChevronRight, Coffee, Folder, GithubIcon } from "@kareyes/aether/icons";
 	import {
 		DarkModePrimitives,
 		DarkModeSwitch,
@@ -25,7 +25,10 @@
 		SidebarMenuItem,
 		SidebarInset,
 		SidebarTrigger,
-		SidebarRail
+		SidebarRail,
+		SidebarMenuSub,
+		SidebarMenuSubButton,
+		SidebarMenuSubItem
 	} = SidebarPrimitives;
 
 	let { children } = $props();
@@ -66,6 +69,19 @@
 		{ label: 'Tabs', href: '/components/tabs' },
 		{ label: 'Textarea', href: '/components/textarea' }
 	];
+
+	const forms = [
+		{ label: 'Generic Examples', href: '/forms/generic' },
+		{ label: 'Validation Examples', href: '/forms/validation' },
+		{ label: 'Layout Examples', href: '/forms/layout' },
+		{ label: 'Refinement Examples', href: '/forms/refinements' },
+		{ label: 'Advanced Patterns', href: '/forms/advanced' },
+		{ label: 'Async Data Loading', href: '/forms/async' }
+
+
+	];
+
+
 </script>
 
 <svelte:head>
@@ -113,18 +129,48 @@
 				</SidebarGroupContent>
 			</SidebarGroup>
 			<SidebarGroup>
-				<SidebarGroupLabel>Forms</SidebarGroupLabel>
+				<SidebarGroupLabel>Form Schema</SidebarGroupLabel>
 				<SidebarGroupContent>
 					<SidebarMenu>
 						<SidebarMenuItem>
 							<SidebarMenuButton tooltipContent="Form Schema">
 								{#snippet child({ props })}
 									<a href="/forms/schema" {...props}>
-										<span>Form Schema</span>
+										<span>API Reference</span>
 									</a>
 								{/snippet}
 							</SidebarMenuButton>
-			
+						</SidebarMenuItem>
+					</SidebarMenu>
+					<SidebarMenu>
+						<SidebarMenuItem>
+							<SidebarMenuButton>
+								<span>Examples</span>
+								<ChevronRight class="ml-auto size-4 transition-transform group-data-[state=open]:rotate-90" />
+							</SidebarMenuButton>
+							<SidebarMenuSub>
+								{#each forms as form}
+										<SidebarMenuSubItem>
+											<SidebarMenuSubButton>
+												{#snippet child({ props })}
+													<a href={form.href} {...props}>
+														<span>{form.label}</span>
+													</a>
+												{/snippet}
+											</SidebarMenuSubButton>
+										</SidebarMenuSubItem>
+									{/each}
+
+
+
+
+								<!-- <SidebarMenuSubItem>
+									<SidebarMenuSubButton><span>Components</span></SidebarMenuSubButton>
+								</SidebarMenuSubItem>
+								<SidebarMenuSubItem>
+									<SidebarMenuSubButton><span>Typography</span></SidebarMenuSubButton>
+								</SidebarMenuSubItem> -->
+							</SidebarMenuSub>
 						</SidebarMenuItem>
 					</SidebarMenu>
 				</SidebarGroupContent>

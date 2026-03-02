@@ -2,7 +2,12 @@ import type { EntryGenerator, PageLoad } from './$types';
 
 export const entries: EntryGenerator = () => {
 	return [
-		{ slug: 'schema' }
+		{ slug: 'schema' },
+		{ slug: 'validation' },
+		{ slug: 'layout' },
+		{ slug: 'refinements' },
+		{ slug: 'advanced' },
+		{ slug: 'async' }
 	];
 };
 

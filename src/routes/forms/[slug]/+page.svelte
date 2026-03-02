@@ -1,9 +1,14 @@
 <script lang="ts">
 	import formSchema from "$lib/ui/form-schema.svelte";
+	import formValidation from "$lib/ui/form-schema-examples/validation.svelte";
+	import formLayout from "$lib/ui/form-schema-examples/layout.svelte";
+	import formRefinements from "$lib/ui/form-schema-examples/refinements.svelte";
+	import formAdvanced from "$lib/ui/form-schema-examples/advanced.svelte";
+	import formAsync from "$lib/ui/form-schema-examples/async.svelte";
 	import { TabsPrimitives } from "@kareyes/aether";
 	import { page } from "$app/state";
-	import { marked } from 'marked';
-	import type { PageData } from './$types';
+	import { marked } from "marked";
+	import type { PageData } from "./$types";
 
 	const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
 
@@ -20,62 +25,75 @@
 		return null;
 	});
 
-	const formMap: Record<string, { name: string; component: any; title: string; description: string }> = {
-		"schema": {
-			name: "schema",
+	const formMap: Record<
+		string,
+		{ name: string; component: any; title: string; description: string }
+	> = {
+		generic: {
+			name: "generic",
 			component: formSchema,
 			title: "Form Schema",
-			description: "A schema-first form system powered by @effect/schema. Define your form once with validation, types, and UI metadata - the form renders itself."
-		}
+			description:
+				"A schema-first form system powered by @effect/schema. Define your form once with validation, types, and UI metadata - the form renders itself.",
+		},
+		validation: {
+			name: "validation",
+			component: formValidation,
+			title: "Validation Examples",
+			description:
+				"Deep dive into formSchema validation: pattern matching, custom error messages, password strength rules, required checkboxes, and chained length constraints.",
+		},
+		layout: {
+			name: "layout",
+			component: formLayout,
+			title: "UI Layout Examples",
+			description:
+				"Explore layout options in formSchema: single-column, two-column, 12-column grid with colSpan, multi-section forms, and all three section variants (default, card, collapsible).",
+		},
+		refinements: {
+			name: "refinements",
+			component: formRefinements,
+			title: "Schema Refinements",
+			description:
+				"Advanced schema refinements using Schema.filter: custom predicates, multi-rule piped filters, format validation, domain-specific logic like Luhn and EAN-13 checksums.",
+		},
+		advanced: {
+			name: "advanced",
+			component: formAdvanced,
+			title: "Advanced Patterns",
+			description:
+				"Complex real-world formSchema patterns: custom footer snippets with multiple actions, a 4-step job application, settings panels with card sections, and an e-commerce checkout flow.",
+		},
+		async: {
+			name: "async",
+			component: formAsync,
+			title: "Async Data Loading",
+			description:
+				"Load form options dynamically from an API using schema factory functions, Promise.all for concurrent fetches, and cascading dependent selects — demonstrated with the PokéAPI.",
+		},
 	};
+
+
 </script>
 
 <div class="min-h-screen">
 	{#if slug && formMap[slug]}
-
-		<Tabs value="component" class="w-full">
-			<div class="max-w-6xl mb-6 px-4 mx-auto w-full">
-				<div class="mb-6">
-					<h1 class="text-3xl font-bold mb-2">{formMap[slug].title}</h1>
-					<p class="text-gray-600 dark:text-gray-400">{formMap[slug].description}</p>
-				</div>
-				<TabsList variant="segmented">
-					<TabsTrigger value="component" variant="segmented">
-						Component
-					</TabsTrigger>
-					{#if markdownContent}
-						<TabsTrigger value="documentation" variant="segmented">
-							Documentation
-						</TabsTrigger>
-					{/if}
-				</TabsList>
+		<div>
+			{@render formMap[slug].component()}
+		</div>
+	{:else}
+		<div class="github-markdown py-8 px-6">
+			<div class="markdown-body">
+				{@html markdownContent}
 			</div>
-
-			<div class="max-w-6xl mx-auto">
-				<TabsContent value="component" class="p-0 m-0">
-					<div>
-						{@render formMap[slug].component()}
-					</div>
-				</TabsContent>
-
-				{#if markdownContent}
-					<TabsContent value="documentation" class="p-0 m-0">
-						<div class="github-markdown py-8 px-6">
-							<div class="markdown-body">
-								{@html markdownContent}
-							</div>
-						</div>
-					</TabsContent>
-				{/if}
-			</div>
-		</Tabs>
+		</div>
 	{/if}
 </div>
 
 <style>
 	:global(.markdown-body) {
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial,
-			sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+			Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 		font-size: 16px;
 		line-height: 1.6;
 		color: rgb(31, 35, 40);
@@ -168,7 +186,7 @@
 		border-radius: 6px;
 		margin: 0;
 		padding: 0.2em 0.4em;
-		font-family: 'Courier New', 'Courier', monospace;
+		font-family: "Courier New", "Courier", monospace;
 		font-size: 0.9em;
 		color: rgb(31, 35, 40);
 	}

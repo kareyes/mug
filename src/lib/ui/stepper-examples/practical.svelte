@@ -100,7 +100,7 @@
       <CardDescription>E-commerce checkout flow with vertical stepper</CardDescription>
     </CardHeader>
     <CardContent class="space-y-6">
-      <div class="grid gap-6 lg:grid-cols-[300px_1fr]">
+      <div class="grid gap-6 grid-cols-[300px_1fr]">
         <Stepper
           orientation="vertical"
           bind:activeStep={checkoutStep}
