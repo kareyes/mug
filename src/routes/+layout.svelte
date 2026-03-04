@@ -11,8 +11,16 @@
 	} from '@kareyes/aether';
 	import "../app.css";
 	import { page } from '$app/stores';
+	import { setContext } from 'svelte';
 
 	const { ModeWatcher } = DarkModePrimitives;
+
+	// ── Page TOC context (populated by child pages) ───────────────────────────
+	let toc = $state<{ headings: { id: string; text: string; level: number }[]; activeId: string }>({
+		headings: [],
+		activeId: ''
+	});
+	setContext('toc', toc);
 	const {
 		SidebarProvider,
 		SidebarContent,
@@ -76,7 +84,9 @@
 		{ label: 'Layout Examples', href: '/forms/layout' },
 		{ label: 'Refinement Examples', href: '/forms/refinements' },
 		{ label: 'Advanced Patterns', href: '/forms/advanced' },
-		{ label: 'Async Data Loading', href: '/forms/async' }
+		{ label: 'Async Data Loading', href: '/forms/async' },
+		{label: "Server-side Rendering", href: '/forms/server'}
+
 
 
 	];
@@ -93,7 +103,7 @@
 {#if $page.url.pathname.startsWith('/preview')}
 	{@render children()}
 {:else}
-<SidebarProvider>
+<SidebarProvider class="h-svh overflow-hidden">
 	<Sidebar collapsible="icon">
 		<SidebarHeader>
 			<SidebarMenu>
@@ -160,16 +170,6 @@
 											</SidebarMenuSubButton>
 										</SidebarMenuSubItem>
 									{/each}
-
-
-
-
-								<!-- <SidebarMenuSubItem>
-									<SidebarMenuSubButton><span>Components</span></SidebarMenuSubButton>
-								</SidebarMenuSubItem>
-								<SidebarMenuSubItem>
-									<SidebarMenuSubButton><span>Typography</span></SidebarMenuSubButton>
-								</SidebarMenuSubItem> -->
 							</SidebarMenuSub>
 						</SidebarMenuItem>
 					</SidebarMenu>
@@ -186,16 +186,40 @@
 				<Button
 					variant="outline"
 					size="icon"
-					icon={GithubIcon} 
+					icon={GithubIcon}
 					onclick={() => window.open('https://github.com/kareyes/mug.git', '_blank')}
 					>
-				
+
 				</Button>
 			</div>
 		</header>
-		<main class="min-w-0 flex-1 overflow-x-auto p-6">
-			{@render children()}
-		</main>
+		<!-- Two-pane: scrollable content + sticky TOC sidebar -->
+		<div class="flex min-h-0 flex-1">
+			<main class="min-w-0 flex-1 overflow-y-auto p-6">
+				{@render children()}
+			</main>
+			{#if toc.headings.length > 0}
+				<aside class="hidden xl:flex w-52 shrink-0 flex-col overflow-y-auto border-l border-border/40 pt-6 px-4">
+					<p class="mb-3 shrink-0 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+						On This Page
+					</p>
+					<nav class="flex flex-col">
+						{#each toc.headings as h}
+							<a
+								href="#{h.id}"
+								class="truncate py-1 text-sm transition-colors duration-150 {h.level === 3
+									? 'pl-4'
+									: ''} {toc.activeId === h.id
+									? 'font-medium text-foreground'
+									: 'text-muted-foreground hover:text-foreground'}"
+							>
+								{h.text}
+							</a>
+						{/each}
+					</nav>
+				</aside>
+			{/if}
+		</div>
 	</SidebarInset>
 </SidebarProvider>
 {/if}

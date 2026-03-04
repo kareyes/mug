@@ -409,31 +409,72 @@ export const customFooterDocs = `
 	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
 	import { Button } from "@kareyes/aether";
 
-	const FormSchema = pipe(
-		Schema.Struct({
-			name: pipe(Schema.String, Schema.minLength(1), withField({ label: "Name" })),
-			email: pipe(Schema.String, withField({ label: "Email", inputType: "email" }))
-		}),
-		withFormLayout({ columns: 1, sections: [{ id: "main", title: "Custom Footer" }] })
-	);
+    // --- Custom Footer ---
+    const CustomFooterSchema = pipe(
+        Schema.Struct({
+            title: pipe(
+                Schema.String,
+                Schema.minLength(1),
+                withField({ label: "Title", colSpan: 6 }),
+            ),
+            slug: pipe(
+                Schema.String,
+                Schema.minLength(1),
+                withField({
+                    label: "Slug",
+                    colSpan: 6,
+                    description: "URL-friendly identifier",
+                }),
+            ),
+            body: pipe(
+                Schema.String,
+                withField({ label: "Body", inputType: "textarea" }),
+            ),
+        }),
+        withFormLayout({
+            columns: 12,
+            sections: [{ id: "main", title: "New Post" }],
+        }),
+    );
 
-	const controller = new FormController(FormSchema);
+    const customFooterController = new FormController(CustomFooterSchema, {
+        validateOnBlur: true,
+    });
 </script>
 
-<SchemaForm {controller} onSubmit={(data) => console.log(data)}>
-	{#snippet footer({ isSubmitting, isValid, handleSubmit })}
-		<div class="flex justify-between">
-			<Button variant="outline" onclick={() => controller.reset()}>
-				Reset
-			</Button>
-			<div class="flex gap-2">
-				<Button variant="outline" onclick={() => window.history.back()}>
-					Cancel
-				</Button>
-				<Button onclick={handleSubmit} disabled={isSubmitting || !isValid}>
-					{isSubmitting ? "Saving..." : "Save"}
-				</Button>
+	<SchemaForm
+		controller={customFooterController}
+		onSubmit={(data) => console.log("Post:", data)}
+	>
+		{#snippet footer({ isSubmitting, isValid, handleSubmit })}
+			<div class="flex items-center justify-between pt-4 border-t border-border">
+				<p class="text-sm text-muted-foreground">
+					{isValid ? "Ready to publish" : "Fix errors above"}
+				</p>
+				<div class="flex gap-2">
+					<Button
+						variant="outline"
+						type="button"
+						onclick={() => customFooterController.reset()}
+					>
+						Discard
+					</Button>
+					<Button
+						variant="outline"
+						type="button"
+						onclick={handleSubmit}
+						disabled={isSubmitting}
+					>
+						Save Draft
+					</Button>
+					<Button
+						type="button"
+						onclick={handleSubmit}
+						disabled={isSubmitting || !isValid}
+					>
+						{isSubmitting ? "Publishing…" : "Publish"}
+					</Button>
+				</div>
 			</div>
-		</div>
-	{/snippet}
-</SchemaForm>`;
+		{/snippet}
+	</SchemaForm>`;

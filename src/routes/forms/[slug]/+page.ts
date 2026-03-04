@@ -7,7 +7,8 @@ export const entries: EntryGenerator = () => {
 		{ slug: 'layout' },
 		{ slug: 'refinements' },
 		{ slug: 'advanced' },
-		{ slug: 'async' }
+		{ slug: 'async' },
+		{ slug: 'server' }
 	];
 };
 

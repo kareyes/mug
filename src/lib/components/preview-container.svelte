@@ -1,12 +1,15 @@
 <script lang="ts">
   
     import { Monitor, Tablet, Smartphone } from "@kareyes/aether/icons";
+    import { cn } from "@kareyes/aether/utils";
     import { untrack } from "svelte";
     import type { Snippet } from "svelte";
 
+    // let { isContainer }: { isContainer: boolean } = $props();
+
     type DeviceMode = "desktop" | "tablet" | "mobile";
 
-    let { children }: { children: Snippet } = $props();
+    let { children, enableContainer = true }: { children: Snippet; enableContainer?: boolean } = $props();
     let deviceMode: DeviceMode = $state("desktop");
     let renderKey = $state(0);
 
@@ -27,6 +30,8 @@
         { key: "tablet", icon: Tablet, label: "Tablet" },
         { key: "mobile", icon: Smartphone, label: "Mobile" },
     ];
+
+    // console.log("PreviewContainer initialized with enableContainer =", enableContainer);
 
 
 </script>
@@ -62,7 +67,8 @@
             </div>
         </div>
         <div
-            class="@container mx-auto transition-[max-width] duration-300 ease-in-out bg-background"
+            
+            class= {cn(enableContainer ?  "@container" : "", "mx-auto transition-[max-width] duration-300 ease-in-out bg-background")}
             style="max-width: {deviceWidths[deviceMode]}"
         >
             {#key renderKey}

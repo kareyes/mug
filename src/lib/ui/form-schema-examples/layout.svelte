@@ -5,7 +5,8 @@
 		twelveColumnDocs,
 		multiSectionDefaultDocs,
 		multiSectionCardDocs,
-		multiSectionCollapsibleDocs
+		multiSectionCollapsibleDocs,
+		responsiveColSpanDocs
 	} from "$lib/code-blocks/form-schema-layout";
 	import { Card, CodeBlock } from "@kareyes/aether";
 	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
@@ -304,6 +305,43 @@
 	const collapsibleController = new FormController(SettingsSchema, {
 		initialValues: { emailNotifications: true }
 	});
+
+	// --- 7. Responsive Column Spans ---
+	const ResponsiveSchema = pipe(
+		Schema.Struct({
+			firstName: pipe(
+				Schema.String,
+				withField({ label: "First Name", colSpan: "full", colSpanMd: 6, colSpanLg: 4 })
+			),
+			lastName: pipe(
+				Schema.String,
+				withField({ label: "Last Name", colSpan: "full", colSpanMd: 6, colSpanLg: 4 })
+			),
+			email: pipe(
+				Schema.String,
+				withField({ label: "Email", inputType: "email", colSpan: "full", colSpanMd: "full", colSpanLg: 8 })
+			),
+			phone: pipe(
+				Schema.String,
+				withField({ label: "Phone", inputType: "tel", mask: "phone", colSpan: "full", colSpanLg: 4 })
+			),
+			bio: pipe(
+				Schema.String,
+				withField({
+					label: "Bio",
+					inputType: "textarea",
+					placeholder: "A short bio about yourself...",
+					colSpan: "full"
+				})
+			)
+		}),
+		withFormLayout({
+			columns: 12,
+			sections: [{ id: "main", title: "Edit Profile" }]
+		})
+	);
+
+	const responsiveController = new FormController(ResponsiveSchema);
 </script>
 
 <div class="container mx-auto p-6 max-w-6xl">
@@ -467,6 +505,39 @@
 				maxHeight="250px"
 				variant="default"
 				code={multiSectionCollapsibleDocs}
+			/>
+		</Card>
+
+		<!-- Responsive Column Spans -->
+		<Card variant="ghost" class="p-6 bg-background">
+			<h2 class="text-2xl font-semibold mb-2">Responsive Column Spans</h2>
+			<p class="text-sm text-muted-foreground mb-4">
+				Combine <code>colSpan</code> (mobile-first base), <code>colSpanMd</code> (≥768 px), and
+				<code>colSpanLg</code> (≥1024 px) on any field to make the grid reflow at different
+				breakpoints. Requires <code>columns: 12</code> in <code>withFormLayout()</code>. Use
+				<code>colSpan: "full"</code> as shorthand for <code>12</code> (always full width).
+			</p>
+			<div class="mb-4 rounded-md border border-border bg-muted/40 px-4 py-3 text-xs text-muted-foreground font-mono space-y-1">
+				<div><span class="text-foreground font-semibold">colSpan: "full"</span> → full width on all screens (mobile default)</div>
+				<div><span class="text-foreground font-semibold">colSpanMd: 6</span>&nbsp;&nbsp;&nbsp;→ half width at md (≥768 px)</div>
+				<div><span class="text-foreground font-semibold">colSpanLg: 4</span>&nbsp;&nbsp;&nbsp;→ one-third width at lg (≥1024 px)</div>
+			</div>
+			<PreviewContainer enableContainer={false}>
+				<SchemaForm
+					controller={responsiveController}
+					onSubmit={(d) => console.log("Profile:", d)}
+					submitText="Save Profile"
+				/>
+			</PreviewContainer>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={responsiveColSpanDocs}
 			/>
 		</Card>
 	</div>

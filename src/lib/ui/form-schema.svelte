@@ -8,7 +8,7 @@
 		sectionVariantsDocs,
 		customFooterDocs
 	} from "$lib/code-blocks/form-schema";
-	import { Card, CodeBlock } from "@kareyes/aether";
+	import { Button, Card, CodeBlock } from "@kareyes/aether";
 	import { SchemaForm, FormController, withField, withFormLayout, RequiredCheckbox, requiredCheckbox } from "@kareyes/aether/forms";
 	import { Schema, pipe } from "effect";
 
@@ -334,6 +334,38 @@
 		})
 	);
 
+	    // --- Custom Footer ---
+    const CustomFooterSchema = pipe(
+        Schema.Struct({
+            title: pipe(
+                Schema.String,
+                Schema.minLength(1),
+                withField({ label: "Title", colSpan: 6 }),
+            ),
+            slug: pipe(
+                Schema.String,
+                Schema.minLength(1),
+                withField({
+                    label: "Slug",
+                    colSpan: 6,
+                    description: "URL-friendly identifier",
+                }),
+            ),
+            body: pipe(
+                Schema.String,
+                withField({ label: "Body", inputType: "textarea" }),
+            ),
+        }),
+        withFormLayout({
+            columns: 12,
+            sections: [{ id: "main", title: "New Post" }],
+        }),
+    );
+
+    const customFooterController = new FormController(CustomFooterSchema, {
+        validateOnBlur: true,
+    });
+
 	const sectionCardController = new FormController(SectionSchema);
 	const sectionCollapsibleController = new FormController(SectionSchema);
 	import PreviewContainer from "../components/preview-container.svelte";
@@ -508,11 +540,54 @@
 
 		<!-- Custom Footer -->
 		<Card variant="ghost" class="p-6 bg-background">
-			<h2 class="text-2xl font-semibold mb-4">Custom Footer</h2>
-			<p class="text-sm text-muted-foreground mb-4">Override the default footer with custom actions using snippets</p>
-			<!-- <PreviewContainer>
-
-			</PreviewContainer> -->
+            <h2 class="text-2xl font-semibold mb-4">Custom Footer</h2>
+            <p class="text-sm text-muted-foreground mb-4">
+                Override the default footer using the
+                <code class="text-xs font-mono">footer</code> snippet. The snippet
+                receives <code class="text-xs font-mono">isSubmitting</code>,
+                <code class="text-xs font-mono">isValid</code>,
+                <code class="text-xs font-mono">isFirstStep</code>,
+                <code class="text-xs font-mono">isLastStep</code>,
+                <code class="text-xs font-mono">handleSubmit</code>,
+                <code class="text-xs font-mono">handleNext</code>, and
+                <code class="text-xs font-mono">handlePrev</code>.
+            </p>
+            <SchemaForm
+                controller={customFooterController}
+                onSubmit={(data) => console.log("Post:", data)}
+            >
+                {#snippet footer({ isSubmitting, isValid, handleSubmit })}
+                    <div class="flex items-center justify-between pt-4 border-t border-border">
+                        <p class="text-sm text-muted-foreground">
+                            {isValid ? "Ready to publish" : "Fix errors above"}
+                        </p>
+                        <div class="flex gap-2">
+                            <Button
+                                variant="outline"
+                                type="button"
+                                onclick={() => customFooterController.reset()}
+                            >
+                                Discard
+                            </Button>
+                            <Button
+                                variant="outline"
+                                type="button"
+                                onclick={handleSubmit}
+                                disabled={isSubmitting}
+                            >
+                                Save Draft
+                            </Button>
+                            <Button
+                                type="button"
+                                onclick={handleSubmit}
+                                disabled={isSubmitting || !isValid}
+                            >
+                                {isSubmitting ? "Publishing…" : "Publish"}
+                            </Button>
+                        </div>
+                    </div>
+                {/snippet}
+            </SchemaForm>
 			<br />
 			<CodeBlock
 				title="Code"

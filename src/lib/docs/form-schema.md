@@ -2,27 +2,6 @@
 
 A schema-first form system for Svelte 5 powered by [@effect/schema](https://github.com/Effect-TS/effect). Define your form once with validation, types, and UI metadata - the form renders itself.
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Core Concepts](#core-concepts)
-- [API Reference](#api-reference)
-  - [SchemaForm Component](#schemaform-component)
-  - [FormController](#formcontroller)
-  - [Annotations](#annotations)
-- [Input Types](#input-types)
-- [Form Layouts](#form-layouts)
-- [Multi-Step Forms](#multi-step-forms)
-- [Async Data Loading](#async-data-loading)
-- [Validation](#validation)
-- [Advanced Usage](#advanced-usage)
-- [Low-Level Components](#low-level-components)
-- [Standalone Validation Utilities](#standalone-validation-utilities)
-- [Troubleshooting](#troubleshooting)
-
----
 
 ## Overview
 
@@ -64,14 +43,7 @@ type Login = Schema.Schema.Type<typeof LoginSchema>;
 
 ---
 
-## Installation
 
-```bash
-# The forms module is included in @kareyes/aether
-pnpm add @kareyes/aether effect
-```
-
----
 
 ## Quick Start
 

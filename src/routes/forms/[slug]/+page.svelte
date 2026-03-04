@@ -5,15 +5,58 @@
 	import formRefinements from "$lib/ui/form-schema-examples/refinements.svelte";
 	import formAdvanced from "$lib/ui/form-schema-examples/advanced.svelte";
 	import formAsync from "$lib/ui/form-schema-examples/async.svelte";
+	import formServer from "$lib/ui/form-schema-examples/server.svelte";
 	import { TabsPrimitives } from "@kareyes/aether";
 	import { page } from "$app/state";
 	import { marked } from "marked";
+	import { onMount, getContext } from "svelte";
 	import type { PageData } from "./$types";
 
 	const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
 
 	let { data }: { data: PageData } = $props();
 	let slug = $derived(page.params?.slug);
+
+	// ── On This Page (writes to layout context) ───────────────────────────────
+	const toc = getContext<{ headings: { id: string; text: string; level: number }[]; activeId: string }>('toc');
+	let contentEl = $state<HTMLElement | null>(null);
+	let observer: IntersectionObserver | null = null;
+
+	function slugify(text: string) {
+		return text
+			.toLowerCase()
+			.replace(/[^\w\s-]/g, "")
+			.replace(/\s+/g, "-")
+			.replace(/-+/g, "-")
+			.trim();
+	}
+
+	function refreshHeadings() {
+		if (!contentEl) return;
+		observer?.disconnect();
+		const els = Array.from(contentEl.querySelectorAll("h2"));
+		toc.headings = els.map((el) => {
+			if (!el.id) el.id = slugify(el.textContent ?? "");
+			return { id: el.id, text: el.textContent?.trim() ?? "", level: el.tagName === "H2" ? 2 : 3 };
+		});
+		els.forEach((el) => observer?.observe(el));
+	}
+
+	onMount(() => {
+		observer = new IntersectionObserver(
+			(entries) => {
+				for (const entry of entries) {
+					if (entry.isIntersecting) toc.activeId = entry.target.id;
+				}
+			},
+			{ rootMargin: "-16px 0px -65% 0px", threshold: 0 }
+		);
+		return () => {
+			observer?.disconnect();
+			toc.headings = [];
+			toc.activeId = "";
+		};
+	});
 
 	let markdownContent = $derived.by(() => {
 		if (data?.markdown) {
@@ -23,6 +66,12 @@
 			});
 		}
 		return null;
+	});
+
+	$effect(() => {
+		slug;
+		markdownContent;
+		setTimeout(refreshHeadings, 80);
 	});
 
 	const formMap: Record<
@@ -71,12 +120,19 @@
 			description:
 				"Load form options dynamically from an API using schema factory functions, Promise.all for concurrent fetches, and cascading dependent selects — demonstrated with the PokéAPI.",
 		},
+		server: {
+			name: "server",
+			component: formServer,
+			title: "Server-Side Integration",
+			description:
+				"Integrate formSchema with SvelteKit's server layer: Form Actions with use:enhance, JSON API endpoints with +server.ts, and mapping server errors back to form fields via controller.setErrors().",
+		},
 	};
 
 
 </script>
 
-<div class="min-h-screen">
+<div bind:this={contentEl}>
 	{#if slug && formMap[slug]}
 		<div>
 			{@render formMap[slug].component()}
@@ -91,6 +147,12 @@
 </div>
 
 <style>
+	/* Header is outside the scroll container, so just a small breathing room */
+	:global(h2),
+	:global(h3) {
+		scroll-margin-top: 16px;
+	}
+
 	:global(.markdown-body) {
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
 			Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";

@@ -239,3 +239,55 @@ export const multiSectionCollapsibleDocs = `
 	sectionVariant="collapsible"
 	submitText="Save Settings"
 />`;
+
+// ── Responsive Column Spans ───────────────────────────────────────────────────
+export const responsiveColSpanDocs = `
+<script lang="ts">
+	import { Schema, pipe } from "effect";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+
+	// Use columns: 12 and combine colSpan (mobile) with colSpanMd / colSpanLg
+	// for fields that should reflow at different breakpoints.
+	//
+	//   colSpan   → applied on all screen sizes (mobile-first default)
+	//   colSpanMd → overrides at the md breakpoint (≥768 px)
+	//   colSpanLg → overrides at the lg breakpoint (≥1024 px)
+	//
+	// colSpan: "full" is shorthand for colSpan: 12 (always full width).
+	const ProfileSchema = pipe(
+		Schema.Struct({
+			// Full width on mobile, half on md, one-third on lg
+			firstName: pipe(
+				Schema.String,
+				withField({ label: "First Name", colSpan: "full", colSpanMd: 6, colSpanLg: 4 })
+			),
+			lastName: pipe(
+				Schema.String,
+				withField({ label: "Last Name", colSpan: "full", colSpanMd: 6, colSpanLg: 4 })
+			),
+			// Full width on mobile & md, two-thirds on lg
+			email: pipe(
+				Schema.String,
+				withField({ label: "Email", inputType: "email", colSpan: "full", colSpanMd: "full", colSpanLg: 8 })
+			),
+			// Full width on mobile, one-third on lg
+			phone: pipe(
+				Schema.String,
+				withField({ label: "Phone", inputType: "tel", mask: "phone", colSpan: "full", colSpanLg: 4 })
+			),
+			// Always full width regardless of screen size
+			bio: pipe(
+				Schema.String,
+				withField({ label: "Bio", inputType: "textarea", colSpan: "full" })
+			)
+		}),
+		withFormLayout({
+			columns: 12,
+			sections: [{ id: "main", title: "Edit Profile" }]
+		})
+	);
+
+	const controller = new FormController(ProfileSchema);
+</script>
+
+<SchemaForm {controller} onSubmit={(d) => console.log(d)} submitText="Save Profile" />`;
