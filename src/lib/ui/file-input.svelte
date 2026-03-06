@@ -1,10 +1,12 @@
 <script lang="ts">
-	import { unifiedModeDocs, dedicatedComponentsDocs, regularInputShowcaseDocs, styleVariantsDocs, sizeOptionsDocs } from "$lib/code-blocks/file-input";
-	import { FileInput, FileInputDragDrop, FileInputRegular, FileInputButton, Card, CodeBlock } from '@kareyes/aether';
+	import { unifiedModeDocs, dedicatedComponentsDocs, regularInputShowcaseDocs, styleVariantsDocs, sizeOptionsDocs, errorStateDocs, fieldWrapperDocs } from "$lib/code-blocks/file-input";
+	import { FileInput, FileInputDragDrop, FileInputRegular, FileInputButton, Field, Card, CodeBlock } from '@kareyes/aether';
 
 	let dragDropFiles: FileList | null = $state(null);
 	let regularFiles: FileList | null = $state(null);
 	let buttonFiles: FileList | null = $state(null);
+	let regularError = $state("");
+	let resumeError = $state("");
 
 	function handleFilesChange(name: string) {
 		return (files: FileList | null) => {
@@ -379,6 +381,116 @@
 				maxHeight="250px"
 				variant="default"
 				code={sizeOptionsDocs}
+			/>
+		</Card>
+
+		<!-- Error States -->
+		<Card variant="ghost" class="p-6 bg-background">
+			<h2 class="text-2xl font-semibold mb-2">Error State</h2>
+			<p class="text-sm text-muted-foreground mb-4">
+				Pass an <code>error</code> prop to show a validation message below the input. Errors can be
+				set statically or driven reactively via <code>onError</code>.
+			</p>
+			<PreviewContainer>
+				<div class="grid grid-cols-1 @md:grid-cols-3 gap-6">
+					<!-- Regular — error triggered by onError -->
+					<div class="space-y-2">
+						<h3 class="text-sm font-medium">Regular — validation error</h3>
+						<FileInputRegular
+							validation={{ maxSize: 1, acceptedTypes: ['.pdf'] }}
+							onError={(err) => (regularError = err)}
+							onFilesChange={() => (regularError = '')}
+							placeholder="Upload a PDF..."
+							error={!!regularError}
+						/>
+					</div>
+
+					<!-- Drag & Drop — static error -->
+					<div class="space-y-2">
+						<h3 class="text-sm font-medium">Drag & Drop — static error</h3>
+						<FileInputDragDrop
+							validation={{ maxSize: 5 * 1024 * 1024, acceptedTypes: ['image/*'] }}
+							error
+							label="Drop image here"
+						/>
+					</div>
+
+					<!-- Button — static error -->
+					<div class="space-y-2">
+						<h3 class="text-sm font-medium">Button — static error</h3>
+						<FileInputButton
+							validation={{ maxFiles: 1 }}
+							error
+							buttonText="Choose File"
+						/>
+					</div>
+				</div>
+			</PreviewContainer>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={errorStateDocs}
+			/>
+		</Card>
+
+		<!-- Field Wrapper -->
+		<Card variant="ghost" class="p-6 bg-background">
+			<h2 class="text-2xl font-semibold mb-2">Wrapped in Field</h2>
+			<p class="text-sm text-muted-foreground mb-4">
+				Nest any file input inside <code>&lt;Field&gt;</code> to get a label, description, required
+				indicator, and error message for free — all properly associated with the control.
+			</p>
+			<PreviewContainer>
+				<div class="grid grid-cols-1 @md:grid-cols-2 gap-6">
+					<Field
+						label="Résumé"
+						description="PDF or Word doc, max 5 MB."
+						required
+						error={resumeError}
+					>
+						<FileInputRegular
+							validation={{ maxFiles: 1, maxSize: 5 * 1024 * 1024, acceptedTypes: ['.pdf', '.doc', '.docx'] }}
+							onError={(err) => (resumeError = err)}
+							onFilesChange={() => (resumeError = '')}
+							placeholder="Select your résumé…"
+						/>
+					</Field>
+
+					<Field label="Cover Photo" description="JPEG or PNG, max 2 MB.">
+						<FileInputDragDrop
+							validation={{ maxFiles: 1, maxSize: 2 * 1024 * 1024, acceptedTypes: ['image/jpeg', 'image/png'] }}
+							label="Drop your photo here"
+							description="JPEG or PNG only"
+						/>
+					</Field>
+
+					<Field label="Attachment" description="Any file type, max 10 MB.">
+						<FileInputButton
+							validation={{ maxFiles: 1, maxSize: 10 * 1024 * 1024 }}
+							buttonText="Attach File"
+							showFileList
+						/>
+					</Field>
+
+					<Field label="Locked Upload" description="Uploads are disabled for read-only profiles." disabled>
+						<FileInputRegular disabled placeholder="Uploads disabled" />
+					</Field>
+				</div>
+			</PreviewContainer>
+			<br />
+			<CodeBlock
+				title="Code"
+				language="Svelte"
+				showLineNumbers
+				collapsible
+				maxHeight="250px"
+				variant="default"
+				code={fieldWrapperDocs}
 			/>
 		</Card>
 

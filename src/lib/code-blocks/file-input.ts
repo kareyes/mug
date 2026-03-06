@@ -261,3 +261,88 @@ export const sizeOptionsDocs = `
 	<FileInput mode="button-only" buttonProps={{ buttonText: "Default", size: "default" }} />
 	<FileInput mode="button-only" buttonProps={{ buttonText: "Large", size: "lg" }} />
 </div>`;
+
+// ── Error State ───────────────────────────────────────────────────────────────
+export const errorStateDocs = `
+<script lang="ts">
+	import { FileInputRegular, FileInputDragDrop, FileInputButton } from "@kareyes/aether";
+
+	let regularError = $state("");
+</script>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+	<!-- Regular — error triggered by validation failure -->
+	<div class="space-y-2">
+		<h3 class="text-sm font-medium">Regular — validation error</h3>
+		<FileInputRegular
+			validation={{ maxSize: 1, acceptedTypes: [".pdf"] }}
+			onError={(err) => (regularError = err)}
+			onFilesChange={() => (regularError = "")}
+			placeholder="Upload a PDF..."
+			error={!!regularError}
+		/>
+	</div>
+
+	<!-- Drag & Drop — static error prop -->
+	<div class="space-y-2">
+		<h3 class="text-sm font-medium">Drag & Drop — static error</h3>
+		<FileInputDragDrop
+			validation={{ maxSize: 5 * 1024 * 1024, acceptedTypes: ["image/*"] }}
+			error
+			label="Drop image here"
+		/>
+	</div>
+
+	<!-- Button — static error prop -->
+	<div class="space-y-2">
+		<h3 class="text-sm font-medium">Button — static error</h3>
+		<FileInputButton
+			validation={{ maxFiles: 1 }}
+			error
+			buttonText="Choose File"
+		/>
+	</div>
+</div>`;
+
+// ── Field Wrapper ─────────────────────────────────────────────────────────────
+export const fieldWrapperDocs = `
+<script lang="ts">
+	import { FileInputRegular, FileInputDragDrop, FileInputButton, Field } from "@kareyes/aether";
+
+	let resumeError = $state("");
+</script>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+	<!-- Regular inside Field — label, description, required, and error -->
+	<Field label="Résumé" description="PDF or Word doc, max 5 MB." required error={resumeError}>
+		<FileInputRegular
+			validation={{ maxFiles: 1, maxSize: 5 * 1024 * 1024, acceptedTypes: [".pdf", ".doc", ".docx"] }}
+			onError={(err) => (resumeError = err)}
+			onFilesChange={() => (resumeError = "")}
+			placeholder="Select your résumé…"
+		/>
+	</Field>
+
+	<!-- Drag-drop inside Field -->
+	<Field label="Cover Photo" description="JPEG or PNG, max 2 MB.">
+		<FileInputDragDrop
+			validation={{ maxFiles: 1, maxSize: 2 * 1024 * 1024, acceptedTypes: ["image/jpeg", "image/png"] }}
+			label="Drop your photo here"
+			description="JPEG or PNG only"
+		/>
+	</Field>
+
+	<!-- Button inside Field -->
+	<Field label="Attachment" description="Any file type, max 10 MB.">
+		<FileInputButton
+			validation={{ maxFiles: 1, maxSize: 10 * 1024 * 1024 }}
+			buttonText="Attach File"
+			showFileList
+		/>
+	</Field>
+
+	<!-- Disabled via Field prop -->
+	<Field label="Locked Upload" description="Uploads are disabled for read-only profiles." disabled>
+		<FileInputRegular disabled placeholder="Uploads disabled" />
+	</Field>
+</div>`;

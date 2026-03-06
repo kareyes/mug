@@ -41,9 +41,8 @@ type Login = Schema.Schema.Type<typeof LoginSchema>;
 // { email: string; password: string }
 ```
 
+
 ---
-
-
 
 ## Quick Start
 
@@ -332,6 +331,11 @@ withField({
   disabled?: boolean;         // Disable field
   readonly?: boolean;         // Read-only field
 
+  // File input properties (inputType: "file" only)
+  fileMode?: 'drag-drop' | 'regular' | 'button-only'; // Display mode (default: "drag-drop")
+  multiple?: boolean;         // Allow multiple file selection
+  accept?: string;            // HTML accept attribute (e.g. "image/*", ".pdf,.docx")
+
   // Layout properties
   section?: string;           // Section ID
   step?: number;              // Step number (1-based)
@@ -389,12 +393,12 @@ SchemaForm automatically renders the appropriate input component based on the `i
 | `textarea` | Textarea | `Schema.String` |
 | `select` | Select | `Schema.String` |
 | `combobox` | Combobox | `Schema.String` |
-| `checkbox` | Checkbox | `Schema.Boolean` |
-| `switch` | Switch | `Schema.Boolean` |
+| `checkbox` | Checkbox | `RequiredCheckbox \| requiredCheckbox() \| Schema.Boolean` |
+| `switch` | Switch | `RequiredSwitch \| requiredSwitch() \| Schema.Boolean` |
 | `radio` | RadioGroup | `Schema.String` |
 | `date` | DatePicker | `Schema.String` |
 | `datetime` | DateTimePicker | `Schema.String` |
-| `file` | File Input | `Schema.String` |
+| `file` | FileInput | `RequiredFile \| requiredFile() \| Schema.Any` |
 | `hidden` | Hidden input | Any |
 
 ### Auto-Detection
@@ -493,18 +497,28 @@ withFormLayout({
 
 ### Responsive Column Spans
 
-Use `colSpanSm`, `colSpanMd`, `colSpanLg` for responsive layouts. The grid must use enough columns (`columns: 12` is common):
+Use `colSpanSm`, `colSpanMd`, `colSpanLg` for responsive layouts. The grid must use enough columns (`columns: 12` is common).
+
+These use **Tailwind CSS v4 container queries** (`@sm:`, `@md:`, `@lg:`) scoped to the grid's own width — not the viewport. The grid div automatically receives `@container` so breakpoints respond to the form's rendered width regardless of where it is placed on the page.
 
 ```typescript
 withField({
   label: "Full Name",
-  colSpan: "full",   // Full width on mobile
-  colSpanMd: 6,      // Half width on medium screens
-  colSpanLg: 4       // One-third on large screens
+  colSpan: "full",   // Full width (default / narrow container)
+  colSpanMd: 6,      // Half width when container ≥ 768px
+  colSpanLg: 4       // One-third when container ≥ 1024px
 })
 ```
 
-> **Note:** Column span classes are generated from static lookup maps, not dynamic string interpolation, so they are always included in the Tailwind CSS bundle.
+Breakpoint reference (container width, not viewport):
+
+| Annotation | Class emitted | Applies when container ≥ |
+|---|---|---|
+| `colSpanSm` | `@sm:col-span-X` | 640px |
+| `colSpanMd` | `@md:col-span-X` | 768px |
+| `colSpanLg` | `@lg:col-span-X` | 1024px |
+
+> **Note:** Column span classes are generated from static lookup maps, not dynamic string interpolation, so all classes are always included in the Tailwind CSS bundle.
 
 ---
 
@@ -720,6 +734,64 @@ dataSharing: pipe(
   requiredSwitch("You must enable data sharing to continue"),
   withField({ label: "Allow data sharing", inputType: "switch" })
 )
+```
+
+### Required File Fields
+
+File fields default to `null` when nothing is selected. `Schema.Any` accepts `null`, so it should only be used for **optional** file fields. Use `RequiredFile` or `requiredFile()` to enforce a selection:
+
+```typescript
+import { RequiredFile, requiredFile } from "@kareyes/aether/forms";
+
+// Required — default message: "Please select a file"
+avatar: pipe(
+  RequiredFile,
+  withField({
+    label: "Profile Photo",
+    inputType: "file",
+    accept: "image/png,image/jpeg",
+    // fileMode defaults to "drag-drop"
+  })
+)
+
+// Required — custom message
+resume: pipe(
+  requiredFile("Please upload your resume"),
+  withField({
+    label: "Resume",
+    inputType: "file",
+    fileMode: "regular",
+    accept: ".pdf",
+  })
+)
+
+// Optional — null (no file selected) is valid
+attachments: pipe(
+  Schema.Any,
+  withField({
+    label: "Attachments",
+    inputType: "file",
+    fileMode: "button-only",
+    multiple: true,
+    description: "Optional"
+  })
+)
+```
+
+> `RequiredFile` checks `value instanceof FileList && value.length > 0` with a `typeof FileList !== "undefined"` guard for SSR safety.
+
+File fields store a `FileList | null` as their value. Upload the files inside `onSubmit`:
+
+```svelte
+<SchemaForm
+  {controller}
+  onSubmit={async (data) => {
+    const formData = new FormData();
+    if (data.avatar) formData.append("avatar", data.avatar[0]);
+    if (data.resume) formData.append("resume", data.resume[0]);
+    await fetch("/api/upload", { method: "POST", body: formData });
+  }}
+/>
 ```
 
 ### Server-Side Errors
@@ -939,11 +1011,28 @@ notifications: Schema.Boolean
 notifications: RequiredSwitch
 ```
 
-#### 3. col-span / grid columns not applying
+#### 3. File input passes validation even when empty
 
-Dynamic Tailwind class names built with string interpolation (e.g. `` `col-span-${n}` ``) are purged at build time. This system avoids that by using static lookup maps, so all span classes (`col-span-1` through `col-span-12`, `col-span-full`, responsive variants) are always in the CSS bundle. If you extend `ColumnSpan` or add custom breakpoints, add the new literals to the corresponding lookup map in [layout.ts](./layout.ts).
+`Schema.Any` accepts `null`, so a file field using it will always pass — even when nothing is selected. Use `RequiredFile` or `requiredFile()` for required file fields:
 
-#### 4. Infinite loop on form load
+```typescript
+// ❌ Wrong - null (no file) passes validation
+avatar: pipe(Schema.Any, withField({ inputType: "file" }))
+
+// ✅ Correct - requires a file to be selected
+avatar: pipe(RequiredFile, withField({ inputType: "file" }))
+
+// ✅ Correct - custom error message
+avatar: pipe(requiredFile("Please upload a photo"), withField({ inputType: "file" }))
+```
+
+#### 4. col-span / grid columns not applying
+
+Dynamic Tailwind class names built with string interpolation (e.g. `` `col-span-${n}` ``) are purged at build time. This system avoids that by using static lookup maps, so all span classes (`col-span-1` through `col-span-12`, `col-span-full`, and container-query responsive variants `@sm:` / `@md:` / `@lg:`) are always in the CSS bundle.
+
+The grid div automatically includes `@container` so container queries are always active — no external `@container` wrapper is needed. If you extend `ColumnSpan` or add custom breakpoints, add the new literals to the corresponding lookup map in [layout.ts](./layout.ts).
+
+#### 5. Infinite loop on form load
 
 Ensure you're not tracking `formState.values` directly in effects:
 
@@ -960,7 +1049,7 @@ $effect(() => {
 });
 ```
 
-#### 5. Input mask not working
+#### 6. Input mask not working
 
 The mask is applied in the Input component. Ensure you're passing it through:
 
@@ -971,7 +1060,7 @@ withField({
 })
 ```
 
-#### 6. Select options not showing
+#### 7. Select options not showing
 
 Ensure options are provided in the annotation:
 
@@ -985,7 +1074,7 @@ withField({
 })
 ```
 
-#### 7. Validation not triggering
+#### 8. Validation not triggering
 
 Check your FormController configuration:
 
@@ -1009,6 +1098,16 @@ Add console logging to track form state:
 ```
 
 ---
+
+## Examples
+
+For complete working examples, see:
+
+- **Basic Form**: `/form-schema` - Simple login form
+- **Multi-Section**: `/form-schema` - Profile form with multiple sections (card variant)
+- **Multi-Step**: `/form-schema` - User registration wizard
+- **Input Types**: `/form-schema` - All supported input types showcase
+- **Validation**: `/form-schema` - Schema-level validation with custom messages
 
 ---
 
