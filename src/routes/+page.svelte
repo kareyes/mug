@@ -36,6 +36,8 @@
 				{ name: 'Alert', description: 'Contextual feedback messages', route: '/components/alert' },
 				{ name: 'Spinner', description: 'Loading indicator', route: '/components/spinner' },
 				{ name: 'Skeleton', description: 'Placeholder loading state', route: '/components/skeleton' },
+				{ name : 'Empty', description: 'Empty state display component', route: '/components/empty' },
+				{ name: 'Progress', description: 'Task completion progress bar', route: '/components/progress' }
 			]
 		},
 		{

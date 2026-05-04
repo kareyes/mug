@@ -2,24 +2,6 @@
 
 A flexible file upload component with three display modes, built-in file validation, and full form integration support.
 
-## Table of Contents
-
-- [Features](#features)
-- [Modes](#modes)
-- [Basic Usage](#basic-usage)
-- [Props Reference](#props-reference)
-  - [Shared Props](#shared-props)
-  - [Drag & Drop Mode Props](#drag--drop-mode-props)
-  - [Regular Mode Props](#regular-mode-props)
-  - [Button-Only Mode Props](#button-only-mode-props)
-  - [Validation Config](#validation-config)
-- [Examples](#examples)
-- [Direct Component Usage](#direct-component-usage)
-- [Validation](#validation)
-- [Event Handling](#event-handling)
-- [With Field Component](#with-field-component)
-- [SchemaForm Integration](#schemaform-integration)
-- [Utilities](#utilities)
 
 ---
 

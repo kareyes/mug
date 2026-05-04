@@ -16,6 +16,7 @@
     import datepicker from "$lib/ui/date-picker.svelte"
     import dialog from "$lib/ui/dialog.svelte"
     import dropdownMenu from "$lib/ui/dropdown-menu.svelte"
+	import Empty from "$lib/ui/empty.svelte";
     import field from "$lib/ui/field.svelte"
     import fileInput from "$lib/ui/file-input.svelte"
     import input from "$lib/ui/input.svelte"
@@ -34,6 +35,7 @@
     import TabsComponent from "$lib/ui/tabs.svelte";
     import Textarea from "$lib/ui/textarea.svelte";
     import { TabsPrimitives } from "@kareyes/aether";
+	import Progress from "$lib/ui/progress.svelte";
     import PreviewContainer from "$lib/components/preview-container.svelte";
     import { page } from "$app/state";
     import { marked } from 'marked';
@@ -72,13 +74,15 @@
         "date-picker": { name: "date-picker", component: datepicker, title: "Date Picker", description: "A component for selecting dates with calendar interface" },
         "dialog": { name: "dialog", component: dialog, title: "Dialog", description: "A modal window for displaying content and prompting user interaction" },
         "dropdown-menu": { name: "dropdown-menu", component: dropdownMenu, title: "Dropdown Menu", description: "A menu that drops down when triggered, showing a list of options" },
-        "file-input": { name: "file-input", component: fileInput, title: "File Input", description: "An input component for selecting and uploading files" },
+		"empty": { name: "empty", component: Empty, title: "Empty", description: "A component for displaying empty states with customizable content and styling" },
+		"file-input": { name: "file-input", component: fileInput, title: "File Input", description: "An input component for selecting and uploading files" },
         "field": { name: "field", component: field, title: "Field", description: "A wrapper component for form inputs with labels and validation states" },
         "input": { name: "input", component: input, title: "Input", description: "A basic text input component for user data entry" },
         "input-otp": { name: "input-otp", component: InputOtp, title: "Input OTP", description: "A specialized input component for one-time password entry" },
         "number-spinner": { name: "number-spinner", component: numberSpinner, title: "Number Spinner", description: "A numeric input with increment and decrement controls" },
         "popover": { name: "popover", component: popover, title: "Popover", description: "A floating content panel that appears relative to a trigger element" },
-        "radio": { name: "radio", component: radioGroup, title: "Radio Group", description: "A group of radio buttons for single selection from multiple options" },
+        "progress": { name: "progress", component: Progress, title: "Progress", description: "A component for displaying progress of a task with support for labels, variants, and custom styling" },
+		"radio": { name: "radio", component: radioGroup, title: "Radio Group", description: "A group of radio buttons for single selection from multiple options" },
         "select": { name: "select", component: select, title: "Select", description: "A dropdown component for selecting from a list of options" },
         "sheet": { name: "sheet", component: Sheet, title: "Sheet", description: "A sliding panel that appears from the side of the screen" },
         "sidebar": { name: "sidebar", component: Sidebar, title: "Sidebar", description: "A vertical navigation panel typically displayed on the side of the page" },

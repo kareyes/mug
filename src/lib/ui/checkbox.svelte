@@ -218,7 +218,6 @@
 							label={todo.text}
 							lineThrough={true}
 							size="default"
-							class="w-full"
 						/>
 					{/each}
 				</div>

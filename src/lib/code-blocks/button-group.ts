@@ -1,14 +1,15 @@
 export const basicGroupsDocs = `
 <script lang="ts">
 	import { Button, ButtonGroupPrimitives } from "@kareyes/aether";
+	import { Scissors, Copy, Clipboard } from "@kareyes/aether/icons";
 
 	const { ButtonGroup } = ButtonGroupPrimitives;
 </script>
 
 <div class="space-y-4">
-	<!-- Background Variant -->
+	<!-- bg variant: adds a shared background container -->
 	<div>
-		<h3 class="text-lg font-medium mb-2">Default (Background Variant)</h3>
+		<p class="text-sm font-medium mb-2">Background</p>
 		<ButtonGroup variant="bg">
 			<Button variant="outline">First</Button>
 			<Button variant="outline">Second</Button>
@@ -16,13 +17,19 @@ export const basicGroupsDocs = `
 		</ButtonGroup>
 	</div>
 
-	<!-- Ghost Variant -->
+	<!-- ghost variant: borderless grouped buttons -->
 	<div>
-		<h3 class="text-lg font-medium mb-2">Ghost Variant</h3>
+		<p class="text-sm font-medium mb-2">Ghost</p>
 		<ButtonGroup variant="ghost">
-			<Button variant="ghost">Copy</Button>
-			<Button variant="ghost">Paste</Button>
-			<Button variant="ghost">Cut</Button>
+			<Button variant="ghost" size="sm">
+				<Scissors class="mr-1.5 size-3.5" /> Cut
+			</Button>
+			<Button variant="ghost" size="sm">
+				<Copy class="mr-1.5 size-3.5" /> Copy
+			</Button>
+			<Button variant="ghost" size="sm">
+				<Clipboard class="mr-1.5 size-3.5" /> Paste
+			</Button>
 		</ButtonGroup>
 	</div>
 </div>`;
@@ -35,27 +42,27 @@ export const withTextLabelsDocs = `
 </script>
 
 <div class="space-y-4">
-	<!-- Toolbar with Label (Background) -->
+	<!-- Badge label (bg variant) -->
 	<div>
-		<h3 class="text-lg font-medium mb-2">Toolbar with Label (Background)</h3>
+		<p class="text-sm font-medium mb-2">Badge label</p>
 		<ButtonGroup variant="bg">
 			<ButtonGroupText variant="bg">
-				<Badge variant="secondary" size="sm">Tools</Badge>
+				<Badge variant="secondary" size="sm">Filter</Badge>
 			</ButtonGroupText>
-			<Button variant="outline" size="sm">Settings</Button>
-			<Button variant="outline" size="sm">Analytics</Button>
-			<Button variant="outline" size="sm">Search</Button>
+			<Button variant="outline" size="sm">All</Button>
+			<Button variant="outline" size="sm">Active</Button>
+			<Button variant="outline" size="sm">Archived</Button>
 		</ButtonGroup>
 	</div>
 
-	<!-- Actions with Label (Ghost) -->
+	<!-- Plain text label (ghost variant) -->
 	<div>
-		<h3 class="text-lg font-medium mb-2">Actions with Label (Ghost)</h3>
+		<p class="text-sm font-medium mb-2">Text label</p>
 		<ButtonGroup variant="ghost">
-			<ButtonGroupText variant="ghost">Actions</ButtonGroupText>
-			<Button variant="ghost" size="sm">Save</Button>
-			<Button variant="ghost" size="sm">Export</Button>
-			<Button variant="ghost" size="sm">Share</Button>
+			<ButtonGroupText variant="ghost">Sort by</ButtonGroupText>
+			<Button variant="ghost" size="sm">Name</Button>
+			<Button variant="ghost" size="sm">Date</Button>
+			<Button variant="ghost" size="sm">Size</Button>
 		</ButtonGroup>
 	</div>
 </div>`;
@@ -63,14 +70,15 @@ export const withTextLabelsDocs = `
 export const withSeparatorsDocs = `
 <script lang="ts">
 	import { Button, ButtonGroupPrimitives } from "@kareyes/aether";
+	import { Bold, Italic, Underline, AlignLeft, AlignCenter, AlignRight } from "@kareyes/aether/icons";
 
 	const { ButtonGroup, ButtonGroupText, ButtonGroupSeparator } = ButtonGroupPrimitives;
 </script>
 
 <div class="space-y-4">
-	<!-- File Menu Style -->
+	<!-- File operations -->
 	<div>
-		<h3 class="text-lg font-medium mb-2">File Menu Style</h3>
+		<p class="text-sm font-medium mb-2">File operations</p>
 		<ButtonGroup variant="bg">
 			<Button variant="outline">New</Button>
 			<Button variant="outline">Open</Button>
@@ -82,18 +90,18 @@ export const withSeparatorsDocs = `
 		</ButtonGroup>
 	</div>
 
-	<!-- Text Formatting Toolbar -->
+	<!-- Formatting toolbar -->
 	<div>
-		<h3 class="text-lg font-medium mb-2">Text Formatting Toolbar</h3>
+		<p class="text-sm font-medium mb-2">Formatting toolbar</p>
 		<ButtonGroup variant="bg">
 			<ButtonGroupText variant="bg">Format</ButtonGroupText>
-			<Button variant="outline" size="sm"><strong>B</strong></Button>
-			<Button variant="outline" size="sm"><em>I</em></Button>
-			<Button variant="outline" size="sm"><u>U</u></Button>
+			<Button variant="outline" size="icon"><Bold class="size-3.5" /></Button>
+			<Button variant="outline" size="icon"><Italic class="size-3.5" /></Button>
+			<Button variant="outline" size="icon"><Underline class="size-3.5" /></Button>
 			<ButtonGroupSeparator />
-			<Button variant="outline" size="sm">Left</Button>
-			<Button variant="outline" size="sm">Center</Button>
-			<Button variant="outline" size="sm">Right</Button>
+			<Button variant="outline" size="icon"><AlignLeft class="size-3.5" /></Button>
+			<Button variant="outline" size="icon"><AlignCenter class="size-3.5" /></Button>
+			<Button variant="outline" size="icon"><AlignRight class="size-3.5" /></Button>
 		</ButtonGroup>
 	</div>
 </div>`;
@@ -106,9 +114,9 @@ export const verticalOrientationDocs = `
 </script>
 
 <div class="flex gap-8">
-	<!-- Navigation Menu (Background) -->
+	<!-- Navigation menu (bg) -->
 	<div>
-		<h3 class="text-lg font-medium mb-2">Navigation Menu (Background)</h3>
+		<p class="text-sm font-medium mb-2">Navigation</p>
 		<ButtonGroup orientation="vertical" variant="bg">
 			<Button variant="outline">Dashboard</Button>
 			<Button variant="outline">Projects</Button>
@@ -117,9 +125,9 @@ export const verticalOrientationDocs = `
 		</ButtonGroup>
 	</div>
 
-	<!-- Sidebar Actions (Ghost) -->
+	<!-- Sidebar actions (ghost) -->
 	<div>
-		<h3 class="text-lg font-medium mb-2">Sidebar Actions (Ghost)</h3>
+		<p class="text-sm font-medium mb-2">Sidebar actions</p>
 		<ButtonGroup orientation="vertical" variant="ghost">
 			<ButtonGroupText variant="ghost">Quick Actions</ButtonGroupText>
 			<Button variant="ghost">New Note</Button>
@@ -131,45 +139,56 @@ export const verticalOrientationDocs = `
 
 export const complexExamplesDocs = `
 <script lang="ts">
-	import { Button, Badge, ButtonGroupPrimitives } from "@kareyes/aether";
+	import { Button, ButtonGroupPrimitives } from "@kareyes/aether";
+	import {
+		Bold, Italic, Underline, Strikethrough,
+		AlignLeft, AlignCenter, AlignRight,
+		SkipBack, Play, SkipForward, Shuffle, Repeat,
+		FilePlus, FolderOpen, Save, Undo2, Redo2
+	} from "@kareyes/aether/icons";
 
-	const { ButtonGroup, ButtonGroupText, ButtonGroupSeparator } = ButtonGroupPrimitives;
+	const { ButtonGroup, ButtonGroupSeparator } = ButtonGroupPrimitives;
 </script>
 
 <div class="space-y-4">
-	<!-- Editor Toolbar -->
+	<!-- Text formatting -->
 	<div>
-		<h3 class="text-lg font-medium mb-2">Editor Toolbar</h3>
-		<div class="flex flex-wrap gap-4">
-			<ButtonGroup variant="bg">
-				<ButtonGroupText variant="bg">File</ButtonGroupText>
-				<Button variant="outline" size="sm">New</Button>
-				<Button variant="outline" size="sm">Open</Button>
-				<Button variant="outline" size="sm">Save</Button>
-			</ButtonGroup>
-
-			<ButtonGroup variant="bg">
-				<ButtonGroupText variant="bg">Edit</ButtonGroupText>
-				<Button variant="outline" size="sm">Undo</Button>
-				<Button variant="outline" size="sm">Redo</Button>
-				<ButtonGroupSeparator />
-				<Button variant="outline" size="sm">Cut</Button>
-				<Button variant="outline" size="sm">Copy</Button>
-				<Button variant="outline" size="sm">Paste</Button>
-			</ButtonGroup>
-		</div>
+		<p class="text-sm font-medium mb-2">Text formatting</p>
+		<ButtonGroup variant="bg">
+			<Button variant="outline" size="icon" icon={Bold} />
+			<Button variant="outline" size="icon" icon={Italic} />
+			<Button variant="outline" size="icon" icon={Underline} />
+			<Button variant="outline" size="icon" icon={Strikethrough} />
+			<ButtonGroupSeparator />
+			<Button variant="outline" size="icon" icon={AlignLeft} />
+			<Button variant="outline" size="icon" icon={AlignCenter} />
+			<Button variant="outline" size="icon" icon={AlignRight} />
+		</ButtonGroup>
 	</div>
 
-	<!-- Status Actions -->
+	<!-- Media player -->
 	<div>
-		<h3 class="text-lg font-medium mb-2">Status Actions</h3>
+		<p class="text-sm font-medium mb-2">Media player</p>
+		<ButtonGroup variant="ghost">
+			<Button variant="ghost" size="icon" icon={SkipBack} />
+			<Button variant="ghost" size="icon" icon={Play} />
+			<Button variant="ghost" size="icon" icon={SkipForward} />
+			<ButtonGroupSeparator />
+			<Button variant="ghost" size="icon" icon={Shuffle} />
+			<Button variant="ghost" size="icon" icon={Repeat} />
+		</ButtonGroup>
+	</div>
+
+	<!-- File toolbar -->
+	<div>
+		<p class="text-sm font-medium mb-2">File toolbar</p>
 		<ButtonGroup variant="bg">
-			<ButtonGroupText variant="bg">
-				<Badge variant="flat" color="green">Online</Badge>
-			</ButtonGroupText>
-			<Button variant="outline" size="sm">View Profile</Button>
-			<Button variant="outline" size="sm">Edit Status</Button>
-			<Button variant="outline" size="sm">Settings</Button>
+			<Button variant="outline" size="icon" icon={FilePlus} />
+			<Button variant="outline" size="icon" icon={FolderOpen} />
+			<Button variant="outline" size="icon" icon={Save} />
+			<ButtonGroupSeparator />
+			<Button variant="outline" size="icon" icon={Undo2} />
+			<Button variant="outline" size="icon" icon={Redo2} />
 		</ButtonGroup>
 	</div>
 </div>`;
@@ -178,28 +197,37 @@ export const mixedVariantsDocs = `
 <script lang="ts">
 	import { Button, ButtonGroupPrimitives } from "@kareyes/aether";
 
-	const { ButtonGroup, ButtonGroupText } = ButtonGroupPrimitives;
+	const { ButtonGroup } = ButtonGroupPrimitives;
 </script>
 
 <div class="space-y-4">
-	<!-- Call-to-Action Group -->
+	<!-- Small -->
 	<div>
-		<h3 class="text-lg font-medium mb-2">Call-to-Action Group</h3>
+		<p class="text-sm font-medium mb-2">Small</p>
 		<ButtonGroup variant="bg">
-			<Button variant="default">Get Started</Button>
-			<Button variant="outline">Learn More</Button>
-			<Button variant="ghost">Skip</Button>
+			<Button variant="outline" size="sm">First</Button>
+			<Button variant="outline" size="sm">Second</Button>
+			<Button variant="outline" size="sm">Third</Button>
 		</ButtonGroup>
 	</div>
 
-	<!-- Form Actions -->
+	<!-- Default -->
 	<div>
-		<h3 class="text-lg font-medium mb-2">Form Actions</h3>
+		<p class="text-sm font-medium mb-2">Default</p>
 		<ButtonGroup variant="bg">
-			<ButtonGroupText variant="bg">Actions</ButtonGroupText>
-			<Button variant="default">Submit</Button>
-			<Button variant="outline">Save Draft</Button>
-			<Button variant="ghost">Cancel</Button>
+			<Button variant="outline">First</Button>
+			<Button variant="outline">Second</Button>
+			<Button variant="outline">Third</Button>
+		</ButtonGroup>
+	</div>
+
+	<!-- Large -->
+	<div>
+		<p class="text-sm font-medium mb-2">Large</p>
+		<ButtonGroup variant="bg">
+			<Button variant="outline" size="lg">First</Button>
+			<Button variant="outline" size="lg">Second</Button>
+			<Button variant="outline" size="lg">Third</Button>
 		</ButtonGroup>
 	</div>
 </div>`;

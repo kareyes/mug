@@ -1,404 +1,328 @@
-export const defaultVariantDocs = `
+export const basicUsageDocs = `
 <script lang="ts">
-	import { PopoverPrimitives } from "@kareyes/aether";
-	const { Popover, PopoverTrigger, PopoverContent } = PopoverPrimitives;
+  import { Popover } from "@kareyes/aether";
+  import { Settings, Info } from "@kareyes/aether/icons";
 </script>
 
-<Popover>
-	<PopoverTrigger variant="button">Open Popover</PopoverTrigger>
-	<PopoverContent>
-		<div class="space-y-2">
-			<h4 class="font-medium leading-none">Default Style</h4>
-			<p class="text-sm text-muted-foreground">
-				This is the standard popover appearance with balanced shadow and border.
-			</p>
-		</div>
-	</PopoverContent>
-</Popover>`;
+<div class="flex flex-wrap gap-4 items-start">
+  <Popover triggerText="Open Popover">
+    <div class="space-y-2">
+      <h4 class="font-medium leading-none">Dimensions</h4>
+      <p class="text-sm text-muted-foreground">Set the dimensions for the layer.</p>
+    </div>
+  </Popover>
 
-export const borderedVariantDocs = `
-<script lang="ts">
-	import { PopoverPrimitives } from "@kareyes/aether";
-	const { Popover, PopoverTrigger, PopoverContent } = PopoverPrimitives;
-</script>
+  <Popover triggerVariant="outline">
+    {#snippet trigger()}
+      <Settings class="size-4 mr-2" /> Settings
+    {/snippet}
+    <div class="space-y-2">
+      <h4 class="font-medium leading-none">Preferences</h4>
+      <p class="text-sm text-muted-foreground">Adjust your settings.</p>
+    </div>
+  </Popover>
 
-<Popover>
-	<PopoverTrigger variant="outline">Bordered Popover</PopoverTrigger>
-	<PopoverContent variant="bordered">
-		<div class="space-y-2">
-			<h4 class="font-medium leading-none">Bordered Style</h4>
-			<p class="text-sm text-muted-foreground">
-				Features a prominent border with lighter shadow for clear definition.
-			</p>
-		</div>
-	</PopoverContent>
-</Popover>`;
-
-export const elevatedVariantDocs = `
-<script lang="ts">
-	import { PopoverPrimitives } from "@kareyes/aether";
-	const { Popover, PopoverTrigger, PopoverContent } = PopoverPrimitives;
-</script>
-<Popover>
-	<PopoverTrigger variant="button">Elevated Popover</PopoverTrigger>
-	<PopoverContent variant="elevated">
-		<div class="space-y-2">
-			<h4 class="font-medium leading-none">Elevated Style</h4>
-			<p class="text-sm text-muted-foreground">
-				Creates a floating effect with enhanced shadow and no border.
-			</p>
-		</div>
-	</PopoverContent>
-</Popover>`;
-
-export const minimalVariantDocs = `
-<script lang="ts">
-	import { PopoverPrimitives } from "@kareyes/aether";
-	const { Popover, PopoverTrigger, PopoverContent } = PopoverPrimitives;
-</script>
-
-<Popover>
-	<PopoverTrigger variant="ghost">Minimal Popover</PopoverTrigger>
-	<PopoverContent variant="minimal">
-		<div class="space-y-2">
-			<h4 class="font-medium leading-none">Minimal Style</h4>
-			<p class="text-sm text-muted-foreground">
-				Understated design with subtle border and shadow.
-			</p>
-		</div>
-	</PopoverContent>
-</Popover>`;
-
-export const ghostVariantDocs = `
-<script lang="ts">
-	import { PopoverPrimitives } from "@kareyes/aether";
-	const { Popover, PopoverTrigger, PopoverContent } = PopoverPrimitives;
-</script>
-
-<Popover>
-	<PopoverTrigger variant="button">Custom Styled</PopoverTrigger>
-	<PopoverContent
-		variant="ghost"
-		class="bg-gradient-to-r from-purple-500 to-pink-500 text-white"
-	>
-		<div class="space-y-2">
-			<h4 class="font-medium leading-none">Custom Style</h4>
-			<p class="text-sm">
-				Ghost variant allows complete custom styling with gradients and colors.
-			</p>
-		</div>
-	</PopoverContent>
-</Popover>`;
-
-export const sizeVariantsDocs = `
-<script lang="ts">
-	import { PopoverPrimitives } from "@kareyes/aether";
-	const { Popover, PopoverTrigger, PopoverContent } = PopoverPrimitives;
-</script> 
-
-<div class="flex flex-wrap gap-4">
-	<Popover>
-		<PopoverTrigger variant="button" size="sm">Small</PopoverTrigger>
-		<PopoverContent size="sm">
-			<p class="text-sm">Compact popover for brief content.</p>
-		</PopoverContent>
-	</Popover>
-
-	<Popover>
-		<PopoverTrigger variant="button">Default</PopoverTrigger>
-		<PopoverContent>
-			<div class="space-y-2">
-				<h4 class="font-medium">Default Size</h4>
-				<p class="text-sm text-muted-foreground">Standard size for most use cases.</p>
-			</div>
-		</PopoverContent>
-	</Popover>
-
-	<Popover>
-		<PopoverTrigger variant="button" size="lg">Large</PopoverTrigger>
-		<PopoverContent size="lg">
-			<div class="space-y-3">
-				<h3 class="text-lg font-semibold">Large Popover</h3>
-				<p class="text-sm text-muted-foreground">
-					Spacious layout for detailed content and complex interactions.
-				</p>
-				<div class="flex gap-2 pt-2">
-					<Button size="sm">Confirm</Button>
-					<Button variant="outline" size="sm">Cancel</Button>
-				</div>
-			</div>
-		</PopoverContent>
-	</Popover>
-
-	<Popover>
-		<PopoverTrigger variant="outline">Auto Width</PopoverTrigger>
-		<PopoverContent size="auto" class="w-auto">
-			<p>Content determines width</p>
-		</PopoverContent>
-	</Popover>
+  <Popover triggerVariant="ghost" triggerSize="sm" contentSize="sm" contentVariant="minimal">
+    {#snippet trigger()}<Info class="size-4" />{/snippet}
+    <p class="text-sm">Additional information about this feature.</p>
+  </Popover>
 </div>`;
 
-export const animationVariantsDocs = `
+export const contentVariantsDocs = `
 <script lang="ts">
-	import { PopoverPrimitives } from "@kareyes/aether";
-	const { Popover, PopoverTrigger, PopoverContent } = PopoverPrimitives;
-</script> 
+  import { Popover } from "@kareyes/aether";
+</script>
 
-<div class="flex flex-wrap gap-4">
-	<Popover>
-		<PopoverTrigger variant="button">Default (Combined)</PopoverTrigger>
-		<PopoverContent animation="default">
-			<p class="text-sm">Fade, zoom, and slide combined</p>
-		</PopoverContent>
-	</Popover>
+<div class="flex flex-wrap gap-4 items-start">
+  <Popover triggerText="Default" contentVariant="default">
+    <p class="text-sm text-muted-foreground">Standard shadow with border.</p>
+  </Popover>
 
-	<Popover>
-		<PopoverTrigger variant="button">Fade</PopoverTrigger>
-		<PopoverContent animation="fade">
-			<p class="text-sm">Simple fade in/out effect</p>
-		</PopoverContent>
-	</Popover>
+  <Popover triggerText="Bordered" triggerVariant="outline" contentVariant="bordered">
+    <p class="text-sm text-muted-foreground">Emphasized border, lighter shadow.</p>
+  </Popover>
 
-	<Popover>
-		<PopoverTrigger variant="button">Scale</PopoverTrigger>
-		<PopoverContent animation="scale">
-			<p class="text-sm">Zoom in/out effect</p>
-		</PopoverContent>
-	</Popover>
+  <Popover triggerText="Elevated" contentVariant="elevated">
+    <p class="text-sm text-muted-foreground">Larger shadow, no border.</p>
+  </Popover>
 
-	<Popover>
-		<PopoverTrigger variant="button">Slide</PopoverTrigger>
-		<PopoverContent animation="slide">
-			<p class="text-sm">Slide from placement direction</p>
-		</PopoverContent>
-	</Popover>
+  <Popover triggerText="Minimal" triggerVariant="ghost" contentVariant="minimal">
+    <p class="text-sm text-muted-foreground">Subtle, light border.</p>
+  </Popover>
 
-	<Popover>
-		<PopoverTrigger variant="button">None</PopoverTrigger>
-		<PopoverContent animation="none">
-			<p class="text-sm">Instant show/hide</p>
-		</PopoverContent>
-	</Popover>
+  <Popover
+    triggerText="Ghost"
+    contentVariant="ghost"
+    contentClass="bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white"
+  >
+    <p class="text-sm">Transparent base for full custom styling.</p>
+  </Popover>
 </div>`;
 
-export const placementDocs = `
+export const contentSizesDocs = `
 <script lang="ts">
-	import { PopoverPrimitives } from "@kareyes/aether";
-	const { Popover, PopoverTrigger, PopoverContent } = PopoverPrimitives;
-</script> 
+  import { Popover } from "@kareyes/aether";
+</script>
 
-<div class="flex flex-wrap gap-4 items-center justify-center min-h-[200px]">
-	<Popover>
-		<PopoverTrigger variant="outline">Top</PopoverTrigger>
-		<PopoverContent side="top">
-			<p class="text-sm">Positioned above trigger</p>
-		</PopoverContent>
-	</Popover>
+<div class="flex flex-wrap gap-4 items-start">
+  <Popover triggerText="Small" triggerSize="sm" contentSize="sm">
+    <p class="text-sm text-muted-foreground">Compact content — w-56.</p>
+  </Popover>
 
-	<Popover>
-		<PopoverTrigger variant="outline">Right</PopoverTrigger>
-		<PopoverContent side="right">
-			<p class="text-sm">Positioned to the right</p>
-		</PopoverContent>
-	</Popover>
+  <Popover triggerText="Default" contentSize="default">
+    <p class="text-sm text-muted-foreground">Standard content — w-72.</p>
+  </Popover>
 
-	<Popover>
-		<PopoverTrigger variant="outline">Bottom</PopoverTrigger>
-		<PopoverContent side="bottom">
-			<p class="text-sm">Positioned below trigger</p>
-		</PopoverContent>
-	</Popover>
+  <Popover triggerText="Large" triggerSize="lg" contentSize="lg">
+    <p class="text-sm text-muted-foreground">Spacious content — w-96.</p>
+  </Popover>
 
-	<Popover>
-		<PopoverTrigger variant="outline">Left</PopoverTrigger>
-		<PopoverContent side="left">
-			<p class="text-sm">Positioned to the left</p>
-		</PopoverContent>
-	</Popover>
-</div>`;
-
-export const alignmentDocs = `
-<script lang="ts">
-	import { PopoverPrimitives } from "@kareyes/aether";
-	const { Popover, PopoverTrigger, PopoverContent } = PopoverPrimitives;
-</script> 
-
-<div class="flex flex-wrap gap-4">
-	<Popover>
-		<PopoverTrigger variant="outline">Align Start</PopoverTrigger>
-		<PopoverContent align="start">
-			<p class="text-sm">Aligned to start of trigger</p>
-		</PopoverContent>
-	</Popover>
-
-	<Popover>
-		<PopoverTrigger variant="outline">Align Center</PopoverTrigger>
-		<PopoverContent align="center">
-			<p class="text-sm">Aligned to center (default)</p>
-		</PopoverContent>
-	</Popover>
-
-	<Popover>
-		<PopoverTrigger variant="outline">Align End</PopoverTrigger>
-		<PopoverContent align="end">
-			<p class="text-sm">Aligned to end of trigger</p>
-		</PopoverContent>
-	</Popover>
+  <Popover triggerText="Auto" triggerVariant="outline" contentSize="auto" contentClass="w-auto">
+    <p class="text-sm text-muted-foreground whitespace-nowrap">Width follows content.</p>
+  </Popover>
 </div>`;
 
 export const triggerVariantsDocs = `
 <script lang="ts">
-	import { PopoverPrimitives } from "@kareyes/aether";
-	const { Popover, PopoverTrigger, PopoverContent } = PopoverPrimitives;
+  import { Popover } from "@kareyes/aether";
+  import { EllipsisVertical } from "@kareyes/aether/icons";
 </script>
 
-<div class="flex flex-wrap gap-4">
-	<Popover>
-		<PopoverTrigger variant="button">Button Style</PopoverTrigger>
-		<PopoverContent>
-			<p class="text-sm">Primary button trigger</p>
-		</PopoverContent>
-	</Popover>
+<div class="flex flex-wrap gap-4 items-start">
+  <Popover triggerText="Button" triggerVariant="button">
+    <p class="text-sm text-muted-foreground">Primary button trigger.</p>
+  </Popover>
 
-	<Popover>
-		<PopoverTrigger variant="outline">Outline Style</PopoverTrigger>
-		<PopoverContent>
-			<p class="text-sm">Outlined button trigger</p>
-		</PopoverContent>
-	</Popover>
+  <Popover triggerText="Outline" triggerVariant="outline">
+    <p class="text-sm text-muted-foreground">Outlined button trigger.</p>
+  </Popover>
 
-	<Popover>
-		<PopoverTrigger variant="ghost">Ghost Style</PopoverTrigger>
-		<PopoverContent>
-			<p class="text-sm">Ghost button trigger</p>
-		</PopoverContent>
-	</Popover>
+  <Popover triggerText="Ghost" triggerVariant="ghost">
+    <p class="text-sm text-muted-foreground">Ghost button trigger.</p>
+  </Popover>
 
-	<Popover>
-		<PopoverTrigger variant="link">Link Style</PopoverTrigger>
-		<PopoverContent>
-			<p class="text-sm">Link-style trigger</p>
-		</PopoverContent>
-	</Popover>
+  <Popover triggerText="Link" triggerVariant="link">
+    <p class="text-sm text-muted-foreground">Link-style trigger.</p>
+  </Popover>
 
-	<Popover>
-		<PopoverTrigger variant="default" class="rounded-full p-2 hover:bg-accent">
-			<Info class="h-4 w-4" />
-		</PopoverTrigger>
-		<PopoverContent size="sm">
-			<p class="text-sm">Custom icon trigger</p>
-		</PopoverContent>
-	</Popover>
+  <Popover triggerVariant="default" triggerClass="rounded-full p-2 hover:bg-accent">
+    {#snippet trigger()}<EllipsisVertical class="size-4" />{/snippet}
+    <p class="text-sm text-muted-foreground">Custom icon trigger.</p>
+  </Popover>
 </div>`;
 
-export const withArrowDocs = `
-
+export const animationsDocs = `
 <script lang="ts">
-	import { PopoverPrimitives } from "@kareyes/aether";
-	const { Popover, PopoverTrigger, PopoverContent, PopoverArrow } = PopoverPrimitives;
+  import { Popover } from "@kareyes/aether";
 </script>
 
-<div class="flex flex-wrap gap-4">
-	<Popover>
-		<PopoverTrigger variant="button">With Arrow</PopoverTrigger>
-		<PopoverContent>
-			<PopoverArrow class="fill-popover" />
-			<div class="space-y-2">
-				<h4 class="font-medium leading-none">Arrow Indicator</h4>
-				<p class="text-sm text-muted-foreground">
-					The arrow clearly points to the trigger element.
-				</p>
-			</div>
-		</PopoverContent>
-	</Popover>
+<div class="flex flex-wrap gap-4 items-start">
+  <Popover triggerText="Default" animation="default">
+    <p class="text-sm text-muted-foreground">Fade + zoom + slide combined.</p>
+  </Popover>
 
-	<Popover>
-		<PopoverTrigger variant="outline">Arrow Top</PopoverTrigger>
-		<PopoverContent side="top">
-			<PopoverArrow class="fill-popover" />
-			<p class="text-sm">Arrow on the bottom when placed on top</p>
-		</PopoverContent>
-	</Popover>
+  <Popover triggerText="Fade" animation="fade" triggerVariant="outline">
+    <p class="text-sm text-muted-foreground">Simple fade in/out.</p>
+  </Popover>
+
+  <Popover triggerText="Scale" animation="scale" triggerVariant="outline">
+    <p class="text-sm text-muted-foreground">Zoom in/out effect.</p>
+  </Popover>
+
+  <Popover triggerText="Slide" animation="slide" triggerVariant="outline">
+    <p class="text-sm text-muted-foreground">Slides from placement direction.</p>
+  </Popover>
+
+  <Popover triggerText="None" animation="none" triggerVariant="outline">
+    <p class="text-sm text-muted-foreground">Instant show/hide.</p>
+  </Popover>
 </div>`;
 
-export const advancedExamplesDocs = `
+export const positioningDocs = `
 <script lang="ts">
-	import { Card, Button, Input, Label, PopoverPrimitives } from "@kareyes/aether";
-	import { Settings, User, MoreVertical, HelpCircle, Calendar, Bell, Share2 } from "@kareyes/aether/icons";
-	const { Popover, PopoverTrigger, PopoverContent, PopoverClose } = PopoverPrimitives;
+  import { Popover } from "@kareyes/aether";
 </script>
 
-<!-- Form in Popover -->
-<Popover>
-	<PopoverTrigger variant="button">
-		<Settings class="mr-2 h-4 w-4" />
-		Dimensions
-	</PopoverTrigger>
-	<PopoverContent class="w-80">
-		<div class="grid gap-4">
-			<div class="space-y-2">
-				<h4 class="font-medium leading-none">Dimensions</h4>
-				<p class="text-sm text-muted-foreground">Set the dimensions for the layer.</p>
-			</div>
-			<div class="grid gap-2">
-				<div class="grid grid-cols-3 items-center gap-4">
-					<Label for="width">Width</Label>
-					<Input id="width" value="100%" class="col-span-2 h-8" />
-				</div>
-				<div class="grid grid-cols-3 items-center gap-4">
-					<Label for="height">Height</Label>
-					<Input id="height" value="25px" class="col-span-2 h-8" />
-				</div>
-			</div>
-		</div>
-	</PopoverContent>
-</Popover>
+<div class="grid place-items-center">
+  <div class="grid grid-cols-3 gap-3 w-fit">
+    <div></div>
+    <Popover triggerText="Top" triggerVariant="outline" triggerSize="sm" side="top">
+      <p class="text-sm">Appears above trigger.</p>
+    </Popover>
+    <div></div>
 
-<!-- User Profile Popover -->
-<Popover>
-	<PopoverTrigger variant="default" class="rounded-full">
-		<div class="flex items-center gap-2 px-3 py-2 rounded-full hover:bg-accent">
-			<User class="h-5 w-5" />
-			<span class="text-sm font-medium">John Doe</span>
-		</div>
-	</PopoverTrigger>
-	<PopoverContent variant="elevated" size="sm" align="start">
-		<div class="flex flex-col gap-3">
-			<div class="flex items-center gap-3">
-				<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
-					<User class="h-5 w-5" />
-				</div>
-				<div>
-					<p class="font-medium">John Doe</p>
-					<p class="text-sm text-muted-foreground">john@example.com</p>
-				</div>
-			</div>
-			<div class="flex flex-col gap-1">
-				<Button variant="ghost" size="sm" class="justify-start">Profile</Button>
-				<Button variant="ghost" size="sm" class="justify-start">Settings</Button>
-				<Button variant="ghost" size="sm" class="justify-start">Sign out</Button>
-			</div>
-		</div>
-	</PopoverContent>
-</Popover>
+    <Popover triggerText="Left" triggerVariant="outline" triggerSize="sm" side="left">
+      <p class="text-sm">Appears to the left.</p>
+    </Popover>
+    <div class="size-10 rounded bg-muted"></div>
+    <Popover triggerText="Right" triggerVariant="outline" triggerSize="sm" side="right">
+      <p class="text-sm">Appears to the right.</p>
+    </Popover>
 
-<!-- With Close Button -->
-<Popover>
-	<PopoverTrigger variant="button">Open</PopoverTrigger>
-	<PopoverContent>
-		<div class="space-y-4">
-			<div class="space-y-2">
-				<h4 class="font-medium leading-none">Confirmation</h4>
-				<p class="text-sm text-muted-foreground">Are you sure you want to proceed?</p>
-			</div>
-			<div class="flex gap-2">
-				<PopoverClose class="flex-1">
-					<Button variant="outline" size="sm" class="w-full">Cancel</Button>
-				</PopoverClose>
-				<PopoverClose class="flex-1">
-					<Button size="sm" class="w-full">Confirm</Button>
-				</PopoverClose>
-			</div>
-		</div>
-	</PopoverContent>
-</Popover>`;
+    <div></div>
+    <Popover triggerText="Bottom" triggerVariant="outline" triggerSize="sm" side="bottom">
+      <p class="text-sm">Appears below trigger.</p>
+    </Popover>
+    <div></div>
+  </div>
+</div>`;
+
+export const controlledStateDocs = `
+<script lang="ts">
+  import { Popover, Field, Switch, Button } from "@kareyes/aether";
+
+  let controlled = \$state(false);
+</script>
+
+<div class="flex items-center gap-6">
+  <Field label="External toggle" orientation="horizontal">
+    <Switch bind:checked={controlled} />
+  </Field>
+
+  <Popover
+    open={controlled}
+    onOpenChange={(v) => (controlled = v)}
+    triggerText="Controlled Popover"
+    triggerVariant="outline"
+  >
+    <div class="space-y-3">
+      <p class="text-sm text-muted-foreground">
+        This popover is {controlled ? "open" : "closed"} — toggle the switch to control it externally.
+      </p>
+      <Button size="sm" variant="outline" onclick={() => (controlled = false)}>Close</Button>
+    </div>
+  </Popover>
+</div>`;
+
+export const realisticExamplesDocs = `
+<script lang="ts">
+  import { Popover, Button, Input, Label } from "@kareyes/aether";
+  import { Settings, User, EllipsisVertical, Bell } from "@kareyes/aether/icons";
+
+  let width = \$state("100%");
+  let maxWidth = \$state("300px");
+</script>
+
+<div class="flex flex-wrap gap-6 items-start">
+  <!-- Dimensions form -->
+  <Popover contentClass="w-80" contentVariant="default">
+    {#snippet trigger()}
+      <Settings class="size-4 mr-2" /> Dimensions
+    {/snippet}
+    <div class="grid gap-4">
+      <div class="space-y-1">
+        <h4 class="font-medium leading-none">Dimensions</h4>
+        <p class="text-sm text-muted-foreground">Set the layer dimensions.</p>
+      </div>
+      <div class="grid gap-2">
+        <div class="grid grid-cols-3 items-center gap-4">
+          <Label for="width">Width</Label>
+          <Input id="width" bind:value={width} class="col-span-2 h-8" />
+        </div>
+        <div class="grid grid-cols-3 items-center gap-4">
+          <Label for="max-width">Max. width</Label>
+          <Input id="max-width" bind:value={maxWidth} class="col-span-2 h-8" />
+        </div>
+      </div>
+    </div>
+  </Popover>
+
+  <!-- User profile -->
+  <Popover triggerVariant="default" triggerClass="rounded-full"
+    contentVariant="elevated" contentSize="sm" align="end"
+  >
+    {#snippet trigger()}
+      <div class="flex items-center gap-2 px-3 py-2 rounded-full hover:bg-accent">
+        <div class="size-6 rounded-full bg-primary/20 flex items-center justify-center">
+          <User class="size-4" />
+        </div>
+        <span class="text-sm font-medium">John Doe</span>
+      </div>
+    {/snippet}
+    <div class="flex flex-col gap-3">
+      <div class="flex items-center gap-3">
+        <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center">
+          <User class="size-5" />
+        </div>
+        <div>
+          <p class="font-medium text-sm">John Doe</p>
+          <p class="text-xs text-muted-foreground">john@example.com</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-1">
+        <Button variant="ghost" size="sm" class="justify-start">Profile</Button>
+        <Button variant="ghost" size="sm" class="justify-start">Settings</Button>
+        <Button variant="ghost" size="sm" class="justify-start text-destructive hover:text-destructive">Sign out</Button>
+      </div>
+    </div>
+  </Popover>
+
+  <!-- Action menu -->
+  <Popover triggerVariant="ghost" triggerSize="sm"
+    contentVariant="minimal" contentSize="auto" contentClass="p-1 w-40"
+  >
+    {#snippet trigger()}<EllipsisVertical class="size-4" />{/snippet}
+    <div class="flex flex-col">
+      <button class="px-3 py-2 text-sm hover:bg-accent rounded text-left">Edit</button>
+      <button class="px-3 py-2 text-sm hover:bg-accent rounded text-left">Duplicate</button>
+      <button class="px-3 py-2 text-sm hover:bg-accent rounded text-left">Archive</button>
+      <div class="h-px bg-border my-1"></div>
+      <button class="px-3 py-2 text-sm hover:bg-accent rounded text-left text-destructive">Delete</button>
+    </div>
+  </Popover>
+
+  <!-- Notification bell -->
+  <Popover triggerVariant="ghost" triggerSize="sm" triggerClass="relative"
+    contentVariant="default" align="end"
+  >
+    {#snippet trigger()}
+      <Bell class="size-4" />
+      <span class="absolute -top-0.5 -right-0.5 size-2 rounded-full bg-destructive"></span>
+    {/snippet}
+    <div class="space-y-3">
+      <h4 class="font-medium text-sm">Notifications</h4>
+      <div class="space-y-2">
+        {#each ["New comment on your post", "Deployment completed", "Invite accepted"] as note}
+          <div class="flex items-start gap-2 text-sm">
+            <div class="size-2 rounded-full bg-primary mt-1.5 shrink-0"></div>
+            <p class="text-muted-foreground">{note}</p>
+          </div>
+        {/each}
+      </div>
+      <Button variant="outline" size="sm" class="w-full">View all</Button>
+    </div>
+  </Popover>
+</div>`;
+
+export const compositionalDocs = `
+<script lang="ts">
+  import { PopoverPrimitives, Button } from "@kareyes/aether";
+</script>
+
+<div class="flex flex-wrap gap-4 items-start">
+  <PopoverPrimitives.Root>
+    <PopoverPrimitives.Trigger variant="button">With Arrow</PopoverPrimitives.Trigger>
+    <PopoverPrimitives.Content>
+      <PopoverPrimitives.Arrow class="fill-popover stroke-border" />
+      <div class="space-y-2">
+        <h4 class="font-medium leading-none">Arrow Indicator</h4>
+        <p class="text-sm text-muted-foreground">Points to the trigger.</p>
+      </div>
+    </PopoverPrimitives.Content>
+  </PopoverPrimitives.Root>
+
+  <PopoverPrimitives.Root>
+    <PopoverPrimitives.Trigger variant="outline">With Close</PopoverPrimitives.Trigger>
+    <PopoverPrimitives.Content>
+      <div class="space-y-4">
+        <div class="space-y-1">
+          <h4 class="font-medium leading-none">Information</h4>
+          <p class="text-sm text-muted-foreground">This popover has a close button.</p>
+        </div>
+        <PopoverPrimitives.Close>
+          <Button variant="outline" size="sm" class="w-full">Dismiss</Button>
+        </PopoverPrimitives.Close>
+      </div>
+    </PopoverPrimitives.Content>
+  </PopoverPrimitives.Root>
+</div>`;

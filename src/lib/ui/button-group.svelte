@@ -14,6 +14,28 @@
 		CodeBlock,
 		ButtonGroupPrimitives,
 	} from "@kareyes/aether";
+	import {
+		Scissors,
+		Copy,
+		Clipboard,
+		Bold,
+		Italic,
+		Underline,
+		AlignLeft,
+		AlignCenter,
+		AlignRight,
+		Strikethrough,
+		SkipBack,
+		Play,
+		SkipForward,
+		Shuffle,
+		Repeat,
+		FilePlus,
+		FolderOpen,
+		Save,
+		Undo2,
+		Redo2,
+	} from "@kareyes/aether/icons";
 
 	const { ButtonGroup, ButtonGroupText, ButtonGroupSeparator } =
 		ButtonGroupPrimitives;
@@ -25,13 +47,6 @@
 </svelte:head>
 
 <div class="container mx-auto p-6 max-w-6xl">
-	<!-- <div class="mb-8">
-		<h1 class="text-3xl font-bold mb-2">Button Group Component</h1>
-		<p class="text-muted-foreground">
-			Demonstration of the ButtonGroup component with variants, orientations, and different combinations.
-		</p>
-	</div> -->
-
 	<div class="space-y-12">
 		<!-- Basic Examples -->
 		<Card variant="ghost" class="p-6 bg-background">
@@ -42,9 +57,7 @@
 			<PreviewContainer>
 				<div class="space-y-4">
 					<div>
-						<h3 class="text-lg font-medium mb-2">
-							Default (Background Variant)
-						</h3>
+						<p class="text-sm font-medium mb-2">Background</p>
 						<ButtonGroup variant="bg">
 							<Button variant="outline">First</Button>
 							<Button variant="outline">Second</Button>
@@ -53,12 +66,17 @@
 					</div>
 
 					<div>
-						<h3 class="text-lg font-medium mb-2">Ghost Variant</h3>
-
+						<p class="text-sm font-medium mb-2">Ghost</p>
 						<ButtonGroup variant="ghost">
-							<Button variant="ghost">Copy</Button>
-							<Button variant="ghost">Paste</Button>
-							<Button variant="ghost">Cut</Button>
+							<Button variant="ghost" size="sm">
+								<Scissors class="mr-1.5 size-3.5" /> Cut
+							</Button>
+							<Button variant="ghost" size="sm">
+								<Copy class="mr-1.5 size-3.5" /> Copy
+							</Button>
+							<Button variant="ghost" size="sm">
+								<Clipboard class="mr-1.5 size-3.5" /> Paste
+							</Button>
 						</ButtonGroup>
 					</div>
 				</div>
@@ -79,41 +97,29 @@
 		<Card variant="ghost" class="p-6 bg-background">
 			<h2 class="text-2xl font-semibold mb-4">With Text Labels</h2>
 			<p class="text-sm text-muted-foreground mb-4">
-				Button groups can include text labels for context
+				Button groups can include text labels or badge labels for context
 			</p>
 			<PreviewContainer>
 				<div class="space-y-4">
 					<div>
-						<h3 class="text-lg font-medium mb-2">
-							Toolbar with Label (Background)
-						</h3>
+						<p class="text-sm font-medium mb-2">Badge label</p>
 						<ButtonGroup variant="bg">
 							<ButtonGroupText variant="bg">
-								<Badge variant="secondary" size="sm"
-									>Tools</Badge
-								>
+								<Badge variant="secondary" size="sm">Filter</Badge>
 							</ButtonGroupText>
-							<Button variant="outline" size="sm">Settings</Button
-							>
-							<Button variant="outline" size="sm"
-								>Analytics</Button
-							>
-							<Button variant="outline" size="sm">Search</Button>
+							<Button variant="outline" size="sm">All</Button>
+							<Button variant="outline" size="sm">Active</Button>
+							<Button variant="outline" size="sm">Archived</Button>
 						</ButtonGroup>
 					</div>
 
 					<div>
-						<h3 class="text-lg font-medium mb-2">
-							Actions with Label (Ghost)
-						</h3>
-
+						<p class="text-sm font-medium mb-2">Text label</p>
 						<ButtonGroup variant="ghost">
-							<ButtonGroupText variant="ghost">
-								Actions
-							</ButtonGroupText>
-							<Button variant="ghost" size="sm">Save</Button>
-							<Button variant="ghost" size="sm">Export</Button>
-							<Button variant="ghost" size="sm">Share</Button>
+							<ButtonGroupText variant="ghost">Sort by</ButtonGroupText>
+							<Button variant="ghost" size="sm">Name</Button>
+							<Button variant="ghost" size="sm">Date</Button>
+							<Button variant="ghost" size="sm">Size</Button>
 						</ButtonGroup>
 					</div>
 				</div>
@@ -139,9 +145,7 @@
 			<PreviewContainer>
 				<div class="space-y-4">
 					<div>
-						<h3 class="text-lg font-medium mb-2">
-							File Menu Style
-						</h3>
+						<p class="text-sm font-medium mb-2">File operations</p>
 						<ButtonGroup variant="bg">
 							<Button variant="outline">New</Button>
 							<Button variant="outline">Open</Button>
@@ -154,25 +158,16 @@
 					</div>
 
 					<div>
-						<h3 class="text-lg font-medium mb-2">
-							Text Formatting Toolbar
-						</h3>
+						<p class="text-sm font-medium mb-2">Formatting toolbar</p>
 						<ButtonGroup variant="bg">
-							<ButtonGroupText variant="bg"
-								>Format</ButtonGroupText
-							>
-							<Button variant="outline" size="sm"
-								><strong>B</strong></Button
-							>
-							<Button variant="outline" size="sm"
-								><em>I</em></Button
-							>
-							<Button variant="outline" size="sm"><u>U</u></Button
-							>
+							<ButtonGroupText variant="bg">Format</ButtonGroupText>
+							<Button variant="outline" size="icon"><Bold class="size-3.5" /></Button>
+							<Button variant="outline" size="icon"><Italic class="size-3.5" /></Button>
+							<Button variant="outline" size="icon"><Underline class="size-3.5" /></Button>
 							<ButtonGroupSeparator />
-							<Button variant="outline" size="sm">Left</Button>
-							<Button variant="outline" size="sm">Center</Button>
-							<Button variant="outline" size="sm">Right</Button>
+							<Button variant="outline" size="icon"><AlignLeft class="size-3.5" /></Button>
+							<Button variant="outline" size="icon"><AlignCenter class="size-3.5" /></Button>
+							<Button variant="outline" size="icon"><AlignRight class="size-3.5" /></Button>
 						</ButtonGroup>
 					</div>
 				</div>
@@ -198,9 +193,7 @@
 			<PreviewContainer>
 				<div class="flex gap-8">
 					<div>
-						<h3 class="text-lg font-medium mb-2">
-							Navigation Menu (Background)
-						</h3>
+						<p class="text-sm font-medium mb-2">Navigation</p>
 						<ButtonGroup orientation="vertical" variant="bg">
 							<Button variant="outline">Dashboard</Button>
 							<Button variant="outline">Projects</Button>
@@ -210,13 +203,9 @@
 					</div>
 
 					<div>
-						<h3 class="text-lg font-medium mb-2">
-							Sidebar Actions (Ghost)
-						</h3>
+						<p class="text-sm font-medium mb-2">Sidebar actions</p>
 						<ButtonGroup orientation="vertical" variant="ghost">
-							<ButtonGroupText variant="ghost"
-								>Quick Actions</ButtonGroupText
-							>
+							<ButtonGroupText variant="ghost">Quick Actions</ButtonGroupText>
 							<Button variant="ghost">New Note</Button>
 							<Button variant="ghost">New Folder</Button>
 							<Button variant="ghost">Add Link</Button>
@@ -236,82 +225,49 @@
 			/>
 		</Card>
 
-		<!-- Complex Examples -->
+		<!-- Icon Buttons -->
 		<Card variant="ghost" class="p-6 bg-background">
-			<h2 class="text-2xl font-semibold mb-4">Complex Examples</h2>
+			<h2 class="text-2xl font-semibold mb-4">Icon Buttons</h2>
 			<p class="text-sm text-muted-foreground mb-4">
-				Advanced button group configurations
+				Icon-only buttons using the <code>icon</code> prop with <code>size="icon"</code>
 			</p>
 			<PreviewContainer>
 				<div class="space-y-4">
 					<div>
-						<h3 class="text-lg font-medium mb-2">Editor Toolbar</h3>
-						<div class="flex flex-wrap gap-4">
-							<ButtonGroup variant="bg">
-								<ButtonGroupText variant="bg"
-									>File</ButtonGroupText
-								>
-								<Button variant="outline" size="sm">New</Button>
-								<Button variant="outline" size="sm">Open</Button
-								>
-								<Button variant="outline" size="sm">Save</Button
-								>
-							</ButtonGroup>
-
-							<ButtonGroup variant="bg">
-								<ButtonGroupText variant="bg"
-									>Edit</ButtonGroupText
-								>
-								<Button variant="outline" size="sm">Undo</Button
-								>
-								<Button variant="outline" size="sm">Redo</Button
-								>
-								<ButtonGroupSeparator />
-								<Button variant="outline" size="sm">Cut</Button>
-								<Button variant="outline" size="sm">Copy</Button
-								>
-								<Button variant="outline" size="sm"
-									>Paste</Button
-								>
-							</ButtonGroup>
-						</div>
-					</div>
-
-					<div>
-						<h3 class="text-lg font-medium mb-2">
-							Media Player Controls
-						</h3>
-						<ButtonGroup variant="ghost">
-							<Button variant="ghost">⏮️</Button>
-							<Button variant="ghost">⏯️</Button>
-							<Button variant="ghost">⏭️</Button>
+						<p class="text-sm font-medium mb-2">Text formatting</p>
+						<ButtonGroup variant="bg">
+							<Button variant="outline" size="icon" icon={Bold} />
+							<Button variant="outline" size="icon" icon={Italic} />
+							<Button variant="outline" size="icon" icon={Underline} />
+							<Button variant="outline" size="icon" icon={Strikethrough} />
 							<ButtonGroupSeparator />
-							<Button variant="ghost">🔀</Button>
-							<Button variant="ghost">🔁</Button>
-							<ButtonGroupSeparator />
-							<ButtonGroupText variant="ghost"
-								>Volume</ButtonGroupText
-							>
-							<Button variant="ghost" size="sm">🔊</Button>
+							<Button variant="outline" size="icon" icon={AlignLeft} />
+							<Button variant="outline" size="icon" icon={AlignCenter} />
+							<Button variant="outline" size="icon" icon={AlignRight} />
 						</ButtonGroup>
 					</div>
 
 					<div>
-						<h3 class="text-lg font-medium mb-2">Status Actions</h3>
+						<p class="text-sm font-medium mb-2">Media player</p>
+						<ButtonGroup variant="ghost">
+							<Button variant="ghost" size="icon" icon={SkipBack} />
+							<Button variant="ghost" size="icon" icon={Play} />
+							<Button variant="ghost" size="icon" icon={SkipForward} />
+							<ButtonGroupSeparator />
+							<Button variant="ghost" size="icon" icon={Shuffle} />
+							<Button variant="ghost" size="icon" icon={Repeat} />
+						</ButtonGroup>
+					</div>
+
+					<div>
+						<p class="text-sm font-medium mb-2">File toolbar</p>
 						<ButtonGroup variant="bg">
-							<ButtonGroupText variant="bg">
-								<Badge variant="flat" color="green"
-									>Online</Badge
-								>
-							</ButtonGroupText>
-							<Button variant="outline" size="sm"
-								>View Profile</Button
-							>
-							<Button variant="outline" size="sm"
-								>Edit Status</Button
-							>
-							<Button variant="outline" size="sm">Settings</Button
-							>
+							<Button variant="outline" size="icon" icon={FilePlus} />
+							<Button variant="outline" size="icon" icon={FolderOpen} />
+							<Button variant="outline" size="icon" icon={Save} />
+							<ButtonGroupSeparator />
+							<Button variant="outline" size="icon" icon={Undo2} />
+							<Button variant="outline" size="icon" icon={Redo2} />
 						</ButtonGroup>
 					</div>
 				</div>
@@ -328,34 +284,38 @@
 			/>
 		</Card>
 
-		<!-- Mixed Button Variants -->
+		<!-- Sizes -->
 		<Card variant="ghost" class="p-6 bg-background">
-			<h2 class="text-2xl font-semibold mb-4">Mixed Button Variants</h2>
+			<h2 class="text-2xl font-semibold mb-4">Sizes</h2>
 			<p class="text-sm text-muted-foreground mb-4">
-				Combine different button styles within a group
+				Button groups inherit the size of their child buttons
 			</p>
 			<PreviewContainer>
 				<div class="space-y-4">
 					<div>
-						<h3 class="text-lg font-medium mb-2">
-							Call-to-Action Group
-						</h3>
+						<p class="text-sm font-medium mb-2">Small</p>
 						<ButtonGroup variant="bg">
-							<Button variant="default">Get Started</Button>
-							<Button variant="outline">Learn More</Button>
-							<Button variant="ghost">Skip</Button>
+							<Button variant="outline" size="sm">First</Button>
+							<Button variant="outline" size="sm">Second</Button>
+							<Button variant="outline" size="sm">Third</Button>
 						</ButtonGroup>
 					</div>
 
 					<div>
-						<h3 class="text-lg font-medium mb-2">Form Actions</h3>
+						<p class="text-sm font-medium mb-2">Default</p>
 						<ButtonGroup variant="bg">
-							<ButtonGroupText variant="bg"
-								>Actions</ButtonGroupText
-							>
-							<Button variant="default">Submit</Button>
-							<Button variant="outline">Save Draft</Button>
-							<Button variant="ghost">Cancel</Button>
+							<Button variant="outline">First</Button>
+							<Button variant="outline">Second</Button>
+							<Button variant="outline">Third</Button>
+						</ButtonGroup>
+					</div>
+
+					<div>
+						<p class="text-sm font-medium mb-2">Large</p>
+						<ButtonGroup variant="bg">
+							<Button variant="outline" size="lg">First</Button>
+							<Button variant="outline" size="lg">Second</Button>
+							<Button variant="outline" size="lg">Third</Button>
 						</ButtonGroup>
 					</div>
 				</div>
