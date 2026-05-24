@@ -15,7 +15,7 @@
 		DialogPrimitives,
 		Card,
 		CodeBlock,
-	} from "@kareyes/aether";
+	} from "@kareyes/aether-ui";
 	import {
 		Save,
 		Trash2,
@@ -28,7 +28,7 @@
 		FileText,
 		User,
 		Bell,
-	} from "@kareyes/aether/icons";
+	} from "@kareyes/aether-ui/icons";
 
 	let result = $state<string>("");
 	let name = $state("John Doe");

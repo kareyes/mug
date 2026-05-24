@@ -11,7 +11,7 @@ import {
         Label,
         Textarea,
         CodeBlock
-    } from "@kareyes/aether";
+    } from "@kareyes/aether-ui";
 
     import {
         Menu,
@@ -25,7 +25,7 @@ import {
         FileText,
         HelpCircle,
         CreditCard,
-    } from "@kareyes/aether/icons";
+    } from "@kareyes/aether-ui/icons";
 
     const {
         SheetTrigger,

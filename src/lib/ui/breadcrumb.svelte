@@ -11,7 +11,7 @@
 		dynamicBreadcrumbsDocs,
 		advancedComboDocs,
 	} from "$lib/code-blocks/breadcrumb";
-	import { Card, CodeBlock, BreadcrumbPrimitives } from "@kareyes/aether";
+	import { Card, CodeBlock, BreadcrumbPrimitives } from "@kareyes/aether-ui";
 	import {
 		Home,
 		Folder,
@@ -19,7 +19,7 @@
 		Package,
 		Settings,
 		User,
-	} from "@kareyes/aether/icons";
+	} from "@kareyes/aether-ui/icons";
 
 	const {
 		Breadcrumb,

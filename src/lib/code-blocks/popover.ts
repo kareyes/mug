@@ -1,7 +1,7 @@
 export const basicUsageDocs = `
 <script lang="ts">
-  import { Popover } from "@kareyes/aether";
-  import { Settings, Info } from "@kareyes/aether/icons";
+  import { Popover } from "@kareyes/aether-ui";
+  import { Settings, Info } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="flex flex-wrap gap-4 items-start">
@@ -30,7 +30,7 @@ export const basicUsageDocs = `
 
 export const contentVariantsDocs = `
 <script lang="ts">
-  import { Popover } from "@kareyes/aether";
+  import { Popover } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex flex-wrap gap-4 items-start">
@@ -61,7 +61,7 @@ export const contentVariantsDocs = `
 
 export const contentSizesDocs = `
 <script lang="ts">
-  import { Popover } from "@kareyes/aether";
+  import { Popover } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex flex-wrap gap-4 items-start">
@@ -84,8 +84,8 @@ export const contentSizesDocs = `
 
 export const triggerVariantsDocs = `
 <script lang="ts">
-  import { Popover } from "@kareyes/aether";
-  import { EllipsisVertical } from "@kareyes/aether/icons";
+  import { Popover } from "@kareyes/aether-ui";
+  import { EllipsisVertical } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="flex flex-wrap gap-4 items-start">
@@ -113,7 +113,7 @@ export const triggerVariantsDocs = `
 
 export const animationsDocs = `
 <script lang="ts">
-  import { Popover } from "@kareyes/aether";
+  import { Popover } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex flex-wrap gap-4 items-start">
@@ -140,7 +140,7 @@ export const animationsDocs = `
 
 export const positioningDocs = `
 <script lang="ts">
-  import { Popover } from "@kareyes/aether";
+  import { Popover } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid place-items-center">
@@ -169,7 +169,7 @@ export const positioningDocs = `
 
 export const controlledStateDocs = `
 <script lang="ts">
-  import { Popover, Field, Switch, Button } from "@kareyes/aether";
+  import { Popover, Field, Switch, Button } from "@kareyes/aether-ui";
 
   let controlled = \$state(false);
 </script>
@@ -196,8 +196,8 @@ export const controlledStateDocs = `
 
 export const realisticExamplesDocs = `
 <script lang="ts">
-  import { Popover, Button, Input, Label } from "@kareyes/aether";
-  import { Settings, User, EllipsisVertical, Bell } from "@kareyes/aether/icons";
+  import { Popover, Button, Input, Label } from "@kareyes/aether-ui";
+  import { Settings, User, EllipsisVertical, Bell } from "@kareyes/aether-ui/icons";
 
   let width = \$state("100%");
   let maxWidth = \$state("300px");
@@ -296,7 +296,7 @@ export const realisticExamplesDocs = `
 
 export const compositionalDocs = `
 <script lang="ts">
-  import { PopoverPrimitives, Button } from "@kareyes/aether";
+  import { PopoverPrimitives, Button } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex flex-wrap gap-4 items-start">

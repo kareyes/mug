@@ -1,7 +1,7 @@
 export const basicFormDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	const LoginSchema = pipe(
 		Schema.Struct({
@@ -51,7 +51,7 @@ export const basicFormDocs = `
 export const multiSectionDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	const ProfileSchema = pipe(
 		Schema.Struct({
@@ -130,7 +130,7 @@ export const multiSectionDocs = `
 export const multiStepDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	const RegistrationSchema = pipe(
 		Schema.Struct({
@@ -206,7 +206,7 @@ export const multiStepDocs = `
 export const inputTypesDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	const InputShowcaseSchema = pipe(
 		Schema.Struct({
@@ -295,7 +295,7 @@ export const validationDocs = `
 	import {
 		SchemaForm, FormController, withField, withFormLayout,
 		RequiredCheckbox, requiredCheckbox
-	} from "@kareyes/aether/forms";
+	} from "@kareyes/aether-ui/forms";
 
 	const ValidationSchema = pipe(
 		Schema.Struct({
@@ -360,7 +360,7 @@ export const validationDocs = `
 export const sectionVariantsDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	const SectionSchema = pipe(
 		Schema.Struct({
@@ -406,8 +406,8 @@ export const sectionVariantsDocs = `
 export const customFooterDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
-	import { Button } from "@kareyes/aether";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
+	import { Button } from "@kareyes/aether-ui";
 
     // --- Custom Footer ---
     const CustomFooterSchema = pipe(

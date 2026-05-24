@@ -5,7 +5,7 @@
 		FieldPrimitives,
 		Card,
 		CodeBlock,
-	} from "@kareyes/aether";
+	} from "@kareyes/aether-ui";
 	import {
 		basicUsageDocs,
 		sizesDocs,

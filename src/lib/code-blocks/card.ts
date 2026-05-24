@@ -1,6 +1,6 @@
 export const basicCardsDocs = `
 <script lang="ts">
-  import { Card } from "@kareyes/aether";
+  import { Card } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -19,7 +19,7 @@ export const basicCardsDocs = `
 
 export const cardVariantsDocs = `
 <script lang="ts">
-  import { Card } from "@kareyes/aether";
+  import { Card } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -46,7 +46,7 @@ export const cardVariantsDocs = `
 
 export const paddingOptionsDocs = `
 <script lang="ts">
-  import { Card } from "@kareyes/aether";
+  import { Card } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -71,7 +71,7 @@ export const paddingOptionsDocs = `
 
 export const interactiveStatesDocs = `
 <script lang="ts">
-  import { Card } from "@kareyes/aether";
+  import { Card } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-6 md:grid-cols-2">
@@ -104,7 +104,7 @@ export const interactiveStatesDocs = `
 
 export const headerActionsDocs = `
 <script lang="ts">
-  import { Card, Button, Field, Input, Badge, Switch } from "@kareyes/aether";
+  import { Card, Button, Field, Input, Badge, Switch } from "@kareyes/aether-ui";
 
   let emailNotifications = \$state(true);
   let darkMode = \$state(false);
@@ -146,7 +146,7 @@ export const headerActionsDocs = `
 
 export const footerContentDocs = `
 <script lang="ts">
-  import { Card, Button, Field, Input } from "@kareyes/aether";
+  import { Card, Button, Field, Input } from "@kareyes/aether-ui";
 </script>
 
 <Card title="Confirm Action" description="This action requires confirmation">
@@ -187,7 +187,7 @@ export const footerContentDocs = `
 
 export const complexExamplesDocs = `
 <script lang="ts">
-  import { Card, Button, Field, Select, Switch, Badge } from "@kareyes/aether";
+  import { Card, Button, Field, Select, Switch, Badge } from "@kareyes/aether-ui";
 
   let autoRenew = \$state(true);
 </script>
@@ -256,7 +256,7 @@ export const complexExamplesDocs = `
 
 export const variantCombinationsDocs = `
 <script lang="ts">
-  import { Card } from "@kareyes/aether";
+  import { Card } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-6 md:grid-cols-3">

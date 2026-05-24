@@ -21,7 +21,7 @@ A versatile textarea component with multiple variants, sizes, and advanced featu
 
 ```svelte
 <script lang="ts">
-  import { Textarea } from "@kareyes/aether";
+  import { Textarea } from "@kareyes/aether-ui";
 
   let value = $state("");
 </script>
@@ -102,7 +102,7 @@ A versatile textarea component with multiple variants, sizes, and advanced featu
 
 ```svelte
 <script>
-  import { Textarea } from "@kareyes/aether";
+  import { Textarea } from "@kareyes/aether-ui";
   
   let message = $state("");
 </script>
@@ -171,7 +171,7 @@ import type {
   TextareaVariant, 
   TextareaSize, 
   TextareaResize 
-} from "@kareyes/aether";
+} from "@kareyes/aether-ui";
 ```
 
 ## Styling
@@ -206,8 +206,8 @@ The Field component provides labels, descriptions, and error handling. This is t
 
 ```svelte
 <script lang="ts">
-  import { Field } from "@kareyes/aether";
-  import { Textarea } from "@kareyes/aether";
+  import { Field } from "@kareyes/aether-ui";
+  import { Textarea } from "@kareyes/aether-ui";
 
   let bio = $state('');
 </script>
@@ -224,8 +224,8 @@ The Field component provides labels, descriptions, and error handling. This is t
 
 ```svelte
 <script lang="ts">
-  import { Field } from "@kareyes/aether";
-  import { Textarea } from "@kareyes/aether";
+  import { Field } from "@kareyes/aether-ui";
+  import { Textarea } from "@kareyes/aether-ui";
 
   let description = $state('');
 </script>
@@ -247,8 +247,8 @@ The Field component provides labels, descriptions, and error handling. This is t
 
 ```svelte
 <script lang="ts">
-  import { Field } from "@kareyes/aether";
-  import { Textarea } from "@kareyes/aether";
+  import { Field } from "@kareyes/aether-ui";
+  import { Textarea } from "@kareyes/aether-ui";
 
   let notes = $state('');
 </script>
@@ -271,8 +271,8 @@ The Field component provides labels, descriptions, and error handling. This is t
 
 ```svelte
 <script lang="ts">
-  import { Field } from "@kareyes/aether";
-  import { Textarea } from "@kareyes/aether";
+  import { Field } from "@kareyes/aether-ui";
+  import { Textarea } from "@kareyes/aether-ui";
 
   let message = $state('');
   let errors = $state<Record<string, string>>({});
@@ -308,8 +308,8 @@ The Field component provides labels, descriptions, and error handling. This is t
 
 ```svelte
 <script lang="ts">
-  import { Field } from "@kareyes/aether";
-  import { Textarea } from "@kareyes/aether";
+  import { Field } from "@kareyes/aether-ui";
+  import { Textarea } from "@kareyes/aether-ui";
 
   let formData = $state({
     bio: '',
@@ -367,9 +367,9 @@ The Field component provides labels, descriptions, and error handling. This is t
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives,Field } from "@kareyes/aether";
-  import { Textarea } from "@kareyes/aether";
-  import { Button } from "@kareyes/aether";
+  import { FieldPrimitives,Field } from "@kareyes/aether-ui";
+  import { Textarea } from "@kareyes/aether-ui";
+  import { Button } from "@kareyes/aether-ui";
 
   let formData = $state({
     title: '',

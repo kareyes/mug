@@ -7,7 +7,7 @@ A versatile badge component with multiple variants, colors, sizes, and interacti
 
 ```svelte
 <script lang="ts">
-  import { Badge } from "@kareyes/aether";
+  import { Badge } from "@kareyes/aether-ui";
 </script>
 
 <Badge text="Default Badge" />
@@ -17,7 +17,7 @@ A versatile badge component with multiple variants, colors, sizes, and interacti
 
 ```svelte
 <script lang="ts">
-  import { BadgePrimitives } from "@kareyes/aether";
+  import { BadgePrimitives } from "@kareyes/aether-ui";
 </script>
 
 <BadgePrimitives.Root variant="success">Success</BadgePrimitives.Root>
@@ -113,7 +113,7 @@ A versatile badge component with multiple variants, colors, sizes, and interacti
 
 ```svelte
 <script lang="ts">
-  import { Badge } from "@kareyes/aether";
+  import { Badge } from "@kareyes/aether-ui";
   import CheckIcon from "@lucide/svelte/icons/check";
   import StarIcon from "@lucide/svelte/icons/star";
 </script>
@@ -135,7 +135,7 @@ A versatile badge component with multiple variants, colors, sizes, and interacti
 
 ```svelte
 <script lang="ts">
-  import { Badge } from "@kareyes/aether";
+  import { Badge } from "@kareyes/aether-ui";
 
   let isProcessing = $state(true);
 </script>
@@ -155,7 +155,7 @@ A versatile badge component with multiple variants, colors, sizes, and interacti
 
 ```svelte
 <script lang="ts">
-  import { Badge } from "@kareyes/aether";
+  import { Badge } from "@kareyes/aether-ui";
 
   function handleClick() {
     alert('Badge clicked!');
@@ -173,7 +173,7 @@ A versatile badge component with multiple variants, colors, sizes, and interacti
 
 ```svelte
 <script lang="ts">
-  import { Badge } from "@kareyes/aether";
+  import { Badge } from "@kareyes/aether-ui";
 
   let tags = $state(['Design', 'Development', 'Marketing']);
 
@@ -207,7 +207,7 @@ A versatile badge component with multiple variants, colors, sizes, and interacti
 
 ```svelte
 <script lang="ts">
-  import { Badge } from "@kareyes/aether";
+  import { Badge } from "@kareyes/aether-ui";
   import CheckIcon from "@lucide/svelte/icons/check";
   import AlertCircleIcon from "@lucide/svelte/icons/alert-circle";
 </script>
@@ -237,7 +237,7 @@ A versatile badge component with multiple variants, colors, sizes, and interacti
 
 ```svelte
 <script lang="ts">
-  import { Badge } from "@kareyes/aether";
+  import { Badge } from "@kareyes/aether-ui";
 
   let availableTags = ['React', 'Vue', 'Svelte', 'Angular'];
   let selectedTags = $state(['React', 'Svelte']);
@@ -284,7 +284,7 @@ A versatile badge component with multiple variants, colors, sizes, and interacti
 
 ```svelte
 <script lang="ts">
-  import { Badge } from "@kareyes/aether";
+  import { Badge } from "@kareyes/aether-ui";
 </script>
 
 <div class="border rounded-lg p-4">
@@ -307,7 +307,7 @@ A versatile badge component with multiple variants, colors, sizes, and interacti
 
 ```svelte
 <script lang="ts">
-  import { Badge } from "@kareyes/aether";
+  import { Badge } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex items-start gap-4">

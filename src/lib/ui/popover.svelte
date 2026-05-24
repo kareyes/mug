@@ -20,14 +20,14 @@
 		Label,
 		Field,
 		Switch,
-	} from "@kareyes/aether";
+	} from "@kareyes/aether-ui";
 	import {
 		Settings,
 		User,
 		Info,
 		EllipsisVertical,
 		Bell,
-	} from "@kareyes/aether/icons";
+	} from "@kareyes/aether-ui/icons";
 	import PreviewContainer from "../components/preview-container.svelte";
 
 	let controlled = $state(false);

@@ -1,6 +1,6 @@
 export const basicUsageDocs = `
 <script lang="ts">
-  import { Checkbox } from "@kareyes/aether";
+  import { Checkbox } from "@kareyes/aether-ui";
 
   let basicChecked = \$state(false);
   let withLabelChecked = \$state(false);
@@ -22,7 +22,7 @@ export const basicUsageDocs = `
 
 export const sizesDocs = `
 <script lang="ts">
-  import { Checkbox } from "@kareyes/aether";
+  import { Checkbox } from "@kareyes/aether-ui";
 
   let smallChecked = \$state(false);
   let defaultChecked = \$state(false);
@@ -39,7 +39,7 @@ export const sizesDocs = `
 
 export const variantsDocs = `
 <script lang="ts">
-  import { Checkbox } from "@kareyes/aether";
+  import { Checkbox } from "@kareyes/aether-ui";
 
   let destructiveChecked = \$state(false);
   let successChecked = \$state(false);
@@ -69,7 +69,7 @@ export const variantsDocs = `
 
 export const lineThroughDocs = `
 <script lang="ts">
-  import { Checkbox } from "@kareyes/aether";
+  import { Checkbox } from "@kareyes/aether-ui";
 
   let lineThroughChecked = \$state(true);
 </script>
@@ -83,7 +83,7 @@ export const lineThroughDocs = `
 
 export const indeterminateDocs = `
 <script lang="ts">
-  import { Checkbox } from "@kareyes/aether";
+  import { Checkbox } from "@kareyes/aether-ui";
 
   let indeterminateState = \$state(false);
 </script>
@@ -96,7 +96,7 @@ export const indeterminateDocs = `
 
 export const todoListDocs = `
 <script lang="ts">
-  import { Checkbox } from "@kareyes/aether";
+  import { Checkbox } from "@kareyes/aether-ui";
 
   let todos = \$state([
     { id: 1, text: "Complete project setup", completed: true },
@@ -124,7 +124,7 @@ export const todoListDocs = `
 
 export const errorStatesDocs = `
 <script lang="ts">
-  import { Checkbox } from "@kareyes/aether";
+  import { Checkbox } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -150,7 +150,7 @@ export const errorStatesDocs = `
 
 export const withFieldDocs = `
 <script lang="ts">
-  import { Checkbox, Field, FieldPrimitives } from "@kareyes/aether";
+  import { Checkbox, Field, FieldPrimitives } from "@kareyes/aether-ui";
 
   let withLabelChecked = \$state(false);
   let basicChecked = \$state(false);
@@ -198,7 +198,7 @@ export const withFieldDocs = `
 
 export const disabledStatesDocs = `
 <script lang="ts">
-  import { Checkbox } from "@kareyes/aether";
+  import { Checkbox } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">

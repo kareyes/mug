@@ -1,10 +1,10 @@
-# @kareyes/aether Implementation Guide
+# @kareyes/aether-ui Implementation Guide
 
-Complete guide for implementing the @kareyes/aether component library in a SvelteKit project.
+Complete guide for implementing the @kareyes/aether-ui component library in a SvelteKit project.
 
 ## Overview
 
-@kareyes/aether is a Svelte component library that provides pre-built UI components with Tailwind CSS v4 styling. This document outlines all necessary changes to properly integrate it into your SvelteKit project.
+@kareyes/aether-ui is a Svelte component library that provides pre-built UI components with Tailwind CSS v4 styling. This document outlines all necessary changes to properly integrate it into your SvelteKit project.
 
 ---
 
@@ -30,7 +30,7 @@ Add the following dependencies:
 ```json
 {
   "dependencies": {
-    "@kareyes/aether": "^0.0.4",
+    "@kareyes/aether-ui": "^0.0.4",
     "@tailwindcss/vite": "^4.1.18",
     "tailwindcss": "^4.1.18"
   }
@@ -83,14 +83,14 @@ export default defineConfig({
 ```css
 @import "tailwindcss";
 
-@import "@kareyes/aether/styles";
+@import "@kareyes/aether-ui/styles";
 
-@source "../node_modules/@kareyes/aether/dist/**/*.{svelte,js}";
+@source "../node_modules/@kareyes/aether-ui/dist/**/*.{svelte,js}";
 ```
 
 **Explanation:**
 - `@import "tailwindcss"` - Import Tailwind CSS v4 base styles
-- `@import "@kareyes/aether/styles"` - Import aether component styles and theme variables
+- `@import "@kareyes/aether-ui/styles"` - Import aether component styles and theme variables
 - `@source` directive - Tell Tailwind CSS v4 to scan aether components for utility classes
 
 ### 3.2 Import `app.css` in Layout
@@ -116,11 +116,11 @@ export default defineConfig({
 
 ### 4.1 Import Components
 
-Components from @kareyes/aether can be imported in your Svelte files:
+Components from @kareyes/aether-ui can be imported in your Svelte files:
 
 ```svelte
 <script>
-  import { Card, Button, Input } from '@kareyes/aether';
+  import { Card, Button, Input } from '@kareyes/aether-ui';
 </script>
 ```
 
@@ -138,7 +138,7 @@ Based on the current implementation, the following components are available:
 
 ```svelte
 <script>
-  import { Card, Button, Input } from '@kareyes/aether';
+  import { Card, Button, Input } from '@kareyes/aether-ui';
 </script>
 
 <section class="space-y-6">
@@ -183,7 +183,7 @@ If the library provides utility functions like `cn` (classname merger):
 
 ```svelte
 <script>
-  import { cn } from '@kareyes/aether/utils';
+  import { cn } from '@kareyes/aether-ui/utils';
 </script>
 ```
 
@@ -345,10 +345,10 @@ pnpm preview
 
 ### 10.3 Import Errors
 
-**Error:** `Cannot find module '@kareyes/aether'`
+**Error:** `Cannot find module '@kareyes/aether-ui'`
 
 **Solution:**
-1. Verify package is installed: `pnpm list @kareyes/aether`
+1. Verify package is installed: `pnpm list @kareyes/aether-ui`
 2. Check `.npmrc` registry configuration
 3. Reinstall: `rm -rf node_modules pnpm-lock.yaml && pnpm install`
 
@@ -370,7 +370,7 @@ pnpm preview
 ```svelte
 <script>
   // External libraries
-  import { Card, Button, Input } from '@kareyes/aether';
+  import { Card, Button, Input } from '@kareyes/aether-ui';
   
   // SvelteKit imports
   import { page } from '$app/stores';
@@ -412,7 +412,7 @@ Use this checklist to ensure proper implementation:
 
 - [ ] `.npmrc` file created with GitHub registry configuration
 - [ ] GitHub Personal Access Token added to `.npmrc`
-- [ ] `@kareyes/aether` added to `package.json` dependencies
+- [ ] `@kareyes/aether-ui` added to `package.json` dependencies
 - [ ] `@tailwindcss/vite` and `tailwindcss` v4 installed
 - [ ] Packages installed with `pnpm install`
 - [ ] `vite.config.ts` updated with Tailwind CSS Vite plugin
@@ -421,7 +421,7 @@ Use this checklist to ensure proper implementation:
 - [ ] `tsconfig.json` properly configured
 - [ ] `svelte.config.js` includes `vitePreprocess()`
 - [ ] Development server runs without errors: `pnpm dev`
-- [ ] Components import successfully: `import { Card } from '@kareyes/aether'`
+- [ ] Components import successfully: `import { Card } from '@kareyes/aether-ui'`
 - [ ] Components render with proper styling
 - [ ] Type checking passes: `pnpm check`
 - [ ] Production build succeeds: `pnpm build`
@@ -439,7 +439,7 @@ Use this checklist to ensure proper implementation:
 
 ### 13.2 Package Information
 
-- **Package Name:** `@kareyes/aether`
+- **Package Name:** `@kareyes/aether-ui`
 - **Current Version:** `^0.0.4`
 - **Registry:** GitHub Packages (https://npm.pkg.github.com)
 - **Scope:** `@kareyes`
@@ -456,7 +456,7 @@ Use this checklist to ensure proper implementation:
 
 ## Summary
 
-To properly implement @kareyes/aether in your SvelteKit project:
+To properly implement @kareyes/aether-ui in your SvelteKit project:
 
 1. **Configure GitHub Packages authentication** via `.npmrc`
 2. **Install the package** along with Tailwind CSS v4

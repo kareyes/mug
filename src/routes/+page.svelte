@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card, Separator, Badge , TablePrimitives } from '@kareyes/aether';
+	import { Card, Separator, Badge , TablePrimitives } from '@kareyes/aether-ui';
 
 	const components = [
 		{
@@ -89,7 +89,7 @@
 	<!-- Hero Section -->
 	<section class="text-center space-y-6 py-16">
 		<h1 class="text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-			@kareyes/aether
+			@kareyes/aether-ui
 		</h1>
 		<p class="text-2xl text-muted-foreground max-w-2xl mx-auto">
 			A comprehensive Svelte component library built with Tailwind CSS v4
@@ -141,7 +141,7 @@
 	<section class="text-center py-16 space-y-4">
 		<Separator class="mb-8" />
 		<p class="text-muted-foreground text-sm">
-			Built with @kareyes/aether v0.0.4
+			Built with @kareyes/aether-ui v0.0.4
 		</p>
 		<p class="text-muted-foreground text-xs">
 			Components are built on top of Svelte 5 and Tailwind CSS v4

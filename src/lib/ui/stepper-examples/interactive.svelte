@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { CardPrimitives, Stepper } from "@kareyes/aether";
+  import { CardPrimitives, Stepper } from "@kareyes/aether-ui";
   import { User, CreditCard, CircleCheck } from "@lucide/svelte";
 
   const { Card, CardHeader, CardTitle, CardDescription, CardContent } = CardPrimitives;

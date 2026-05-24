@@ -15,7 +15,7 @@
 		userProfileDocs,
 		productCardsDocs,
 	} from "$lib/code-blocks/badge";
-	import { Avatar, Badge, Card, CodeBlock } from "@kareyes/aether";
+	import { Avatar, Badge, Card, CodeBlock } from "@kareyes/aether-ui";
 	import {
 		Check,
 		Star,
@@ -25,7 +25,7 @@
 		AlertCircle,
 		Bell,
 		User,
-	} from "@kareyes/aether/icons";
+	} from "@kareyes/aether-ui/icons";
 
 	type TagType = {
 		id: number;

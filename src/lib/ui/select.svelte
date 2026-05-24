@@ -9,7 +9,7 @@
     statesDocs,
     disabledOptionsDocs,
   } from "$lib/code-blocks/select";
-  import { Select, Field, Badge, Card, CodeBlock } from "@kareyes/aether";
+  import { Select, Field, Badge, Card, CodeBlock } from "@kareyes/aether-ui";
 
   let basicValue = $state("");
   let multiValue = $state<string[]>([]);

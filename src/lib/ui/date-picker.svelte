@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { basicDatePickerDocs, dateRangePickerDocs, datePickerWithPresetsDocs, dateRangeWithPresetsDocs, errorStatesDocs, buttonVariantsDocs, disabledStateDocs, customFormatDocs } from "$lib/code-blocks/date-picker";
-	import { DatePicker, DateRangePicker, DatePickerWithPresets, DateRangePickerWithPresets, DatePickerPrimitives, Card, CodeBlock } from "@kareyes/aether";
+	import { DatePicker, DateRangePicker, DatePickerWithPresets, DateRangePickerWithPresets, DatePickerPrimitives, Card, CodeBlock } from "@kareyes/aether-ui";
 	import { type DateValue, CalendarDate, today, getLocalTimeZone } from "@internationalized/date";
 
 	let singleDate = $state<DateValue | undefined>();

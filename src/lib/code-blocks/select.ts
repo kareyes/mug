@@ -1,6 +1,6 @@
 export const basicUsageDocs = `
 <script lang="ts">
-	import { Select, Badge } from "@kareyes/aether";
+	import { Select, Badge } from "@kareyes/aether-ui";
 
 	let basicValue = $state("");
 
@@ -28,7 +28,7 @@ export const basicUsageDocs = `
 
 export const multipleSelectionDocs = `
 <script lang="ts">
-	import { Select, Badge } from "@kareyes/aether";
+	import { Select, Badge } from "@kareyes/aether-ui";
 
 	let multiValue = $state<string[]>([]);
 
@@ -58,7 +58,7 @@ export const multipleSelectionDocs = `
 
 export const groupedOptionsDocs = `
 <script lang="ts">
-	import { Select, Badge } from "@kareyes/aether";
+	import { Select, Badge } from "@kareyes/aether-ui";
 
 	let groupedValue = $state("");
 
@@ -98,7 +98,7 @@ export const groupedOptionsDocs = `
 
 export const errorStatesDocs = `
 <script lang="ts">
-	import { Select, Field } from "@kareyes/aether";
+	import { Select, Field } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

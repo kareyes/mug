@@ -1,6 +1,6 @@
 export const basicSkeletonsDocs = `
 <script lang="ts">
-	import { SkeletonPrimitives } from "@kareyes/aether";
+	import { SkeletonPrimitives } from "@kareyes/aether-ui";
 
 	const { Skeleton } = SkeletonPrimitives;
 
@@ -60,7 +60,7 @@ export const basicSkeletonsDocs = `
 
 export const variantsDocs = `
 <script lang="ts">
-	import { SkeletonPrimitives } from "@kareyes/aether";
+	import { SkeletonPrimitives } from "@kareyes/aether-ui";
 
 	const { Skeleton } = SkeletonPrimitives;
 
@@ -89,7 +89,7 @@ export const variantsDocs = `
 
 export const widthShortcutsDocs = `
 <script lang="ts">
-	import { SkeletonPrimitives } from "@kareyes/aether";
+	import { SkeletonPrimitives } from "@kareyes/aether-ui";
 
 	const { Skeleton } = SkeletonPrimitives;
 
@@ -122,7 +122,7 @@ export const widthShortcutsDocs = `
 
 export const multipleSkeletonsDocs = `
 <script lang="ts">
-	import { SkeletonPrimitives } from "@kareyes/aether";
+	import { SkeletonPrimitives } from "@kareyes/aether-ui";
 
 	const { Skeleton } = SkeletonPrimitives;
 
@@ -156,7 +156,7 @@ export const multipleSkeletonsDocs = `
 
 export const skeletonTextDocs = `
 <script lang="ts">
-	import { SkeletonPrimitives } from "@kareyes/aether";
+	import { SkeletonPrimitives } from "@kareyes/aether-ui";
 
 	const { SkeletonText } = SkeletonPrimitives;
 
@@ -189,7 +189,7 @@ export const skeletonTextDocs = `
 
 export const skeletonAvatarDocs = `
 <script lang="ts">
-	import { SkeletonPrimitives } from "@kareyes/aether";
+	import { SkeletonPrimitives } from "@kareyes/aether-ui";
 
 	const { SkeletonAvatar } = SkeletonPrimitives;
 
@@ -239,7 +239,7 @@ export const skeletonAvatarDocs = `
 
 export const skeletonCardDocs = `
 <script lang="ts">
-	import { SkeletonPrimitives } from "@kareyes/aether";
+	import { SkeletonPrimitives } from "@kareyes/aether-ui";
 
 	const { SkeletonCard } = SkeletonPrimitives;
 
@@ -290,7 +290,7 @@ export const skeletonCardDocs = `
 
 export const skeletonTableDocs = `
 <script lang="ts">
-	import { SkeletonPrimitives } from "@kareyes/aether";
+	import { SkeletonPrimitives } from "@kareyes/aether-ui";
 
 	const { SkeletonTable } = SkeletonPrimitives;
 
@@ -342,7 +342,7 @@ export const skeletonTableDocs = `
 
 export const realWorldExamplesDocs = `
 <script lang="ts">
-	import { SkeletonPrimitives } from "@kareyes/aether";
+	import { SkeletonPrimitives } from "@kareyes/aether-ui";
 
 	const { Skeleton, SkeletonText, SkeletonAvatar } = SkeletonPrimitives;
 

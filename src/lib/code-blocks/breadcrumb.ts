@@ -1,6 +1,6 @@
 export const listVariantsDocs = `
 <script lang="ts">
-	import { BreadcrumbPrimitives } from "@kareyes/aether";
+	import { BreadcrumbPrimitives } from "@kareyes/aether-ui";
 
 	const {
 		Breadcrumb,
@@ -68,7 +68,7 @@ export const listVariantsDocs = `
 
 export const linkVariantsDocs = `
 <script lang="ts">
-	import { BreadcrumbPrimitives } from "@kareyes/aether";
+	import { BreadcrumbPrimitives } from "@kareyes/aether-ui";
 
 	const {
 		Breadcrumb,
@@ -136,7 +136,7 @@ export const linkVariantsDocs = `
 
 export const separatorVariantsDocs = `
 <script lang="ts">
-	import { BreadcrumbPrimitives } from "@kareyes/aether";
+	import { BreadcrumbPrimitives } from "@kareyes/aether-ui";
 
 	const {
 		Breadcrumb,
@@ -204,7 +204,7 @@ export const separatorVariantsDocs = `
 
 export const pageVariantsDocs = `
 <script lang="ts">
-	import { BreadcrumbPrimitives } from "@kareyes/aether";
+	import { BreadcrumbPrimitives } from "@kareyes/aether-ui";
 
 	const {
 		Breadcrumb,
@@ -272,7 +272,7 @@ export const pageVariantsDocs = `
 
 export const sizesDocs = `
 <script lang="ts">
-	import { BreadcrumbPrimitives } from "@kareyes/aether";
+	import { BreadcrumbPrimitives } from "@kareyes/aether-ui";
 
 	const {
 		Breadcrumb,
@@ -327,7 +327,7 @@ export const sizesDocs = `
 
 export const spacingDocs = `
 <script lang="ts">
-	import { BreadcrumbPrimitives } from "@kareyes/aether";
+	import { BreadcrumbPrimitives } from "@kareyes/aether-ui";
 
 	const {
 		Breadcrumb,
@@ -382,8 +382,8 @@ export const spacingDocs = `
 
 export const withIconsDocs = `
 <script lang="ts">
-	import { BreadcrumbPrimitives } from "@kareyes/aether";
-	import { Home, Folder, File } from "@kareyes/aether/icons";
+	import { BreadcrumbPrimitives } from "@kareyes/aether-ui";
+	import { Home, Folder, File } from "@kareyes/aether-ui/icons";
 
 	const {
 		Breadcrumb,
@@ -422,7 +422,7 @@ export const withIconsDocs = `
 
 export const withEllipsisDocs = `
 <script lang="ts">
-	import { BreadcrumbPrimitives } from "@kareyes/aether";
+	import { BreadcrumbPrimitives } from "@kareyes/aether-ui";
 
 	const {
 		Breadcrumb,
@@ -457,7 +457,7 @@ export const withEllipsisDocs = `
 
 export const dynamicBreadcrumbsDocs = `
 <script lang="ts">
-	import { BreadcrumbPrimitives } from "@kareyes/aether";
+	import { BreadcrumbPrimitives } from "@kareyes/aether-ui";
 
 	const {
 		Breadcrumb,
@@ -500,8 +500,8 @@ export const dynamicBreadcrumbsDocs = `
 
 export const advancedComboDocs = `
 <script lang="ts">
-	import { BreadcrumbPrimitives } from "@kareyes/aether";
-	import { Home, User } from "@kareyes/aether/icons";
+	import { BreadcrumbPrimitives } from "@kareyes/aether-ui";
+	import { Home, User } from "@kareyes/aether-ui/icons";
 
 	const {
 		Breadcrumb,

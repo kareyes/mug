@@ -17,7 +17,7 @@ A simplified dropdown menu component that wraps all the complexity of the standa
 
 ```svelte
 <script lang="ts">
-  import { DropdownMenu } from "@kareyes/aether";
+  import { DropdownMenu } from "@kareyes/aether-ui";
   import User from "@lucide/svelte/icons/user";
   import Settings from "@lucide/svelte/icons/settings";
   import LogOut from "@lucide/svelte/icons/log-out";

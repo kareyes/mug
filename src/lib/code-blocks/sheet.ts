@@ -1,7 +1,7 @@
 export const sidePositionsDocs = `
 <script lang="ts">
-	import { Sheet, SheetPrimitives, Button } from "@kareyes/aether";
-	import { Menu } from "@kareyes/aether/icons";
+	import { Sheet, SheetPrimitives, Button } from "@kareyes/aether-ui";
+	import { Menu } from "@kareyes/aether-ui/icons";
 
 	const {
 		SheetTrigger,
@@ -99,8 +99,8 @@ export const sidePositionsDocs = `
 
 export const formExamplesDocs = `
 <script lang="ts">
-	import { Sheet, SheetPrimitives, Button, Input, Label, Textarea } from "@kareyes/aether";
-	import { Mail } from "@kareyes/aether/icons";
+	import { Sheet, SheetPrimitives, Button, Input, Label, Textarea } from "@kareyes/aether-ui";
+	import { Mail } from "@kareyes/aether-ui/icons";
 
 	const {
 		SheetTrigger,
@@ -224,8 +224,8 @@ export const formExamplesDocs = `
 
 export const navigationMenuDocs = `
 <script lang="ts">
-	import { Sheet, SheetPrimitives, Button } from "@kareyes/aether";
-	import { Menu, Home, FileText, Settings, Mail, HelpCircle } from "@kareyes/aether/icons";
+	import { Sheet, SheetPrimitives, Button } from "@kareyes/aether-ui";
+	import { Menu, Home, FileText, Settings, Mail, HelpCircle } from "@kareyes/aether-ui/icons";
 
 	const {
 		SheetTrigger,
@@ -277,8 +277,8 @@ export const navigationMenuDocs = `
 
 export const settingsPanelDocs = `
 <script lang="ts">
-	import { Sheet, SheetPrimitives, Tabs, TabsPrimitives, Button, Input, Label } from "@kareyes/aether";
-	import { Settings } from "@kareyes/aether/icons";
+	import { Sheet, SheetPrimitives, Tabs, TabsPrimitives, Button, Input, Label } from "@kareyes/aether-ui";
+	import { Settings } from "@kareyes/aether-ui/icons";
 
 	const {
 		SheetTrigger,
@@ -348,8 +348,8 @@ export const settingsPanelDocs = `
 
 export const notificationsDocs = `
 <script lang="ts">
-	import { Sheet, SheetPrimitives, Button } from "@kareyes/aether";
-	import { Bell } from "@kareyes/aether/icons";
+	import { Sheet, SheetPrimitives, Button } from "@kareyes/aether-ui";
+	import { Bell } from "@kareyes/aether-ui/icons";
 
 	const {
 		SheetTrigger,
@@ -432,8 +432,8 @@ export const notificationsDocs = `
 
 export const ecommerceExamplesDocs = `
 <script lang="ts">
-	import { Sheet, SheetPrimitives, Button } from "@kareyes/aether";
-	import { ShoppingCart, CreditCard } from "@kareyes/aether/icons";
+	import { Sheet, SheetPrimitives, Button } from "@kareyes/aether-ui";
+	import { ShoppingCart, CreditCard } from "@kareyes/aether-ui/icons";
 
 	const {
 		SheetTrigger,
@@ -499,8 +499,8 @@ export const ecommerceExamplesDocs = `
 
 export const userProfileDocs = `
 <script lang="ts">
-	import { Sheet, SheetPrimitives, Button } from "@kareyes/aether";
-	import { User, Lock, Settings } from "@kareyes/aether/icons";
+	import { Sheet, SheetPrimitives, Button } from "@kareyes/aether-ui";
+	import { User, Lock, Settings } from "@kareyes/aether-ui/icons";
 
 	const {
 		SheetTrigger,
@@ -561,7 +561,7 @@ export const userProfileDocs = `
 
 export const controlledStateDocs = `
 <script lang="ts">
-	import { Sheet, SheetPrimitives, Button } from "@kareyes/aether";
+	import { Sheet, SheetPrimitives, Button } from "@kareyes/aether-ui";
 
 	const {
 		SheetContent,
@@ -613,7 +613,7 @@ export const controlledStateDocs = `
 
 export const customConfigurationsDocs = `
 <script lang="ts">
-	import { Sheet, SheetPrimitives, Button } from "@kareyes/aether";
+	import { Sheet, SheetPrimitives, Button } from "@kareyes/aether-ui";
 
 	const {
 		SheetTrigger,

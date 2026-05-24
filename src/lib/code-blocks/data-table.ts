@@ -1,6 +1,6 @@
 export const multiSelectDocs = `
 <script lang="ts">
-	import { DataTable, DataTablePrimitives } from "@kareyes/aether";
+	import { DataTable, DataTablePrimitives } from "@kareyes/aether-ui";
 
 	const { DataTableCheckbox, DataTableColumnHeader, renderComponent } = DataTablePrimitives;
 
@@ -119,7 +119,7 @@ export const multiSelectDocs = `
 
 export const singleSelectDocs = `
 <script lang="ts">
-	import { DataTable } from "@kareyes/aether";
+	import { DataTable } from "@kareyes/aether-ui";
 	
 	const { DataTableCheckbox, DataTableColumnHeader, renderComponent } = DataTablePrimitives;
 
@@ -237,7 +237,7 @@ export const singleSelectDocs = `
 
 export const noSelectionDocs = `
 <script lang="ts">
-	import { DataTable } from "@kareyes/aether";
+	import { DataTable } from "@kareyes/aether-ui";
 	
 	const { DataTableCheckbox, DataTableColumnHeader, renderComponent } = DataTablePrimitives;
 
@@ -336,7 +336,7 @@ export const noSelectionDocs = `
 
 export const stripedVariantDocs = `
 <script lang="ts">
-	import { DataTable } from "@kareyes/aether";
+	import { DataTable } from "@kareyes/aether-ui";
 	
 	const { DataTableCheckbox, DataTableColumnHeader, renderComponent } = DataTablePrimitives;
 
@@ -453,7 +453,7 @@ export const stripedVariantDocs = `
 
 export const borderedVariantDocs = `
 <script lang="ts">
-	import { DataTable } from "@kareyes/aether";
+	import { DataTable } from "@kareyes/aether-ui";
 	
 	const { DataTableCheckbox, DataTableColumnHeader, renderComponent } = DataTablePrimitives;
 
@@ -570,7 +570,7 @@ export const borderedVariantDocs = `
 
 export const compactVariantDocs = `
 <script lang="ts">
-	import { DataTable } from "@kareyes/aether";
+	import { DataTable } from "@kareyes/aether-ui";
 </script>
 
 <DataTable
@@ -584,7 +584,7 @@ export const compactVariantDocs = `
 
 export const minimalConfigDocs = `
 <script lang="ts">
-	import { DataTable } from "@kareyes/aether";
+	import { DataTable } from "@kareyes/aether-ui";
 	
 	const { DataTableCheckbox, DataTableColumnHeader, renderComponent } = DataTablePrimitives;
 
@@ -700,7 +700,7 @@ export const minimalConfigDocs = `
 
 export const noPaginationDocs = `
 <script lang="ts">
-	import { DataTable } from "@kareyes/aether";
+	import { DataTable } from "@kareyes/aether-ui";
 </script>
 
 <DataTable
@@ -712,7 +712,7 @@ export const noPaginationDocs = `
 
 export const expandableRowsDocs = `
 <script lang="ts">
-	import { DataTable } from "@kareyes/aether";
+	import { DataTable } from "@kareyes/aether-ui";
 	
 	const { DataTableCheckbox, DataTableColumnHeader, renderComponent } = DataTablePrimitives;
 
@@ -847,7 +847,7 @@ export const expandableRowsDocs = `
 
 export const responsiveDocs =`
 <script lang="ts">
-	import { DataTable } from "@kareyes/aether";
+	import { DataTable } from "@kareyes/aether-ui";
 	
 	const { DataTableCheckbox, DataTableColumnHeader, renderComponent } = DataTablePrimitives;
 let selectedMode: DataTablePrimitives.ResponsiveMode = $state("scroll");

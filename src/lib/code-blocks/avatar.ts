@@ -1,6 +1,6 @@
 export const sizedDocs =`
 <script lang="ts">
-	import { Avatar} from "@kareyes/aether";
+	import { Avatar} from "@kareyes/aether-ui";
 
 	const users = [
 		{ name: "John Doe", image: "https://i.pravatar.cc/150?img=1" },
@@ -42,7 +42,7 @@ export const sizedDocs =`
 
 export const shapesDocs=`
 <script lang="ts">
-    import { Avatar } from "@kareyes/aether";
+    import { Avatar } from "@kareyes/aether-ui";
 
     const users = [
         { name: "John Doe", image: "https://i.pravatar.cc/150?img=1" },
@@ -68,7 +68,7 @@ export const shapesDocs=`
 
 export const variantsDocs =`
 <script lang="ts">
-    import { Avatar } from "@kareyes/aether";
+    import { Avatar } from "@kareyes/aether-ui";
 
     const users = [
         { name: "John Doe", image: "https://i.pravatar.cc/150?img=1" },
@@ -95,7 +95,7 @@ export const variantsDocs =`
 
 export const colorsDocs=`
 <script lang="ts">
-    import { Avatar } from "@kareyes/aether";
+    import { Avatar } from "@kareyes/aether-ui";
 
     const users = [
         { name: "John Doe", image: "https://i.pravatar.cc/150?img=1" },
@@ -149,7 +149,7 @@ export const colorsDocs=`
 
 export const borderedColorsDocs=`
 <script lang="ts">
-    import { Avatar } from "@kareyes/aether";
+    import { Avatar } from "@kareyes/aether-ui";
 
     const users = [
         { name: "John Doe", image: "https://i.pravatar.cc/150?img=1" },
@@ -202,7 +202,7 @@ export const borderedColorsDocs=`
 
 export const borderedColorImgDocs=`
 <script lang="ts">
-    import { Avatar } from "@kareyes/aether";
+    import { Avatar } from "@kareyes/aether-ui";
 
 	const users = [
 		{ name: "John Doe", image: "https://i.pravatar.cc/150?img=1" },
@@ -238,7 +238,7 @@ export const borderedColorImgDocs=`
 
     export const borderedShapesDocs=`
 <script lang="ts">
-    import { Avatar } from "@kareyes/aether";
+    import { Avatar } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex flex-wrap gap-6">
@@ -286,7 +286,7 @@ export const borderedColorImgDocs=`
 
 export const fallbackDocs =`
 <script lang="ts">
-    import { Avatar } from "@kareyes/aether";
+    import { Avatar } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex items-center gap-6">
@@ -316,7 +316,7 @@ export const fallbackDocs =`
 
 export const statusDocs =`
 <script lang="ts">
-    import { Avatar } from "@kareyes/aether";
+    import { Avatar } from "@kareyes/aether-ui";
 
 	const users = [
 		{ name: "John Doe", image: "https://i.pravatar.cc/150?img=1" },
@@ -372,7 +372,7 @@ export const statusDocs =`
 
 export const notificationsDocs =`
 <script lang="ts">
-    import { Avatar } from "@kareyes/aether";
+    import { Avatar } from "@kareyes/aether-ui";
 
     const users = [
 		{ name: "John Doe", image: "https://i.pravatar.cc/150?img=1" },
@@ -431,7 +431,7 @@ export const notificationsDocs =`
 
 export const combinedDocs =`
 <script lang="ts">
-    import { Avatar } from "@kareyes/aether";
+    import { Avatar } from "@kareyes/aether-ui";
 
     const users = [
 		{ name: "John Doe", image: "https://i.pravatar.cc/150?img=1" },
@@ -500,7 +500,7 @@ export const combinedDocs =`
 
 export const avatarGroupDocs =`
 <script lang="ts">
-	import { Avatar, AvatarPrimitives, Card } from "@kareyes/aether";
+	import { Avatar, AvatarPrimitives, Card } from "@kareyes/aether-ui";
 
 	const users = [
 		{ name: "John Doe", image: "https://i.pravatar.cc/150?img=1" },
@@ -593,7 +593,7 @@ export const avatarGroupDocs =`
 
     export const userCardDocs =`
 <script lang="ts">
-    import { Avatar, Card } from "@kareyes/aether";
+    import { Avatar, Card } from "@kareyes/aether-ui";
 
     const team = [
         { name: "Sarah Connor", role: "Designer", color: "primary" as const },
@@ -627,7 +627,7 @@ export const avatarGroupDocs =`
 
     export const combinedFeaturesDocs =`
 <script lang="ts">
-    import { Avatar } from "@kareyes/aether";
+    import { Avatar } from "@kareyes/aether-ui";
 
     const users = [
         { name: "John Doe", image: "https://i.pravatar.cc/150?img=1" },

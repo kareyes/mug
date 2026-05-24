@@ -1,7 +1,7 @@
 export const basicFilterDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	// Schema.filter(predicate, { message: () => "..." }) adds custom validation logic
 	// beyond built-in string/number constraints.
@@ -45,7 +45,7 @@ export const basicFilterDocs = `
 export const multiRuleFilterDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	// Chain multiple Schema.filter calls in a pipe.
 	// Each rule has its own specific error message.
@@ -108,7 +108,7 @@ export const multiRuleFilterDocs = `
 export const formatValidationDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	// Schema.filter is ideal for structured format validation.
 	// Internal normalization (stripping spaces, handling optional prefixes)
@@ -170,7 +170,7 @@ export const formatValidationDocs = `
 export const domainSpecificDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	// Embed real business logic directly in the schema.
 	// The schema becomes the single source of truth for data correctness.
@@ -226,7 +226,7 @@ export const domainSpecificDocs = `
 export const optionalFieldsDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	// Fields with no validation constraints are effectively optional —
 	// they accept any value and never block form submission.

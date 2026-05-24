@@ -21,7 +21,7 @@ A fully-featured number input component with increment/decrement controls, suppo
 
 ```svelte
 <script>
-  import { NumberSpinner } from "@kareyes/aether";
+  import { NumberSpinner } from "@kareyes/aether-ui";
   
   let quantity = $state(1);
 </script>
@@ -192,7 +192,7 @@ Control the number of decimal places:
 
 ```svelte
 <script>
-  import { Field } from "@kareyes/aether";
+  import { Field } from "@kareyes/aether-ui";
   
   let quantity = $state(1);
 </script>
@@ -308,7 +308,7 @@ Control the number of decimal places:
 
 ```svelte
 <script>
-  import { Field } from "@kareyes/aether";
+  import { Field } from "@kareyes/aether-ui";
   
   let age = $state(null);
   let quantity = $state(1);
@@ -415,8 +415,8 @@ The Field component provides a consistent way to add labels, descriptions, and e
 
 ```svelte
 <script>
-  import { NumberSpinner } from "@kareyes/aether";
-  import { Field } from "@kareyes/aether";
+  import { NumberSpinner } from "@kareyes/aether-ui";
+  import { Field } from "@kareyes/aether-ui";
   
   let quantity = $state(1);
 </script>
@@ -437,8 +437,8 @@ The Field component provides a consistent way to add labels, descriptions, and e
 
 ```svelte
 <script>
-  import { NumberSpinner } from "@kareyes/aether";
-  import { Field } from "@kareyes/aether";
+  import { NumberSpinner } from "@kareyes/aether-ui";
+  import { Field } from "@kareyes/aether-ui";
   
   let age = $state(null);
   let error = $derived(age === null || age < 18);
@@ -464,8 +464,8 @@ The Field component provides a consistent way to add labels, descriptions, and e
 
 ```svelte
 <script>
-  import { NumberSpinner } from "@kareyes/aether";
-  import { Field } from "@kareyes/aether";
+  import { NumberSpinner } from "@kareyes/aether-ui";
+  import { Field } from "@kareyes/aether-ui";
   
   let price = $state(9.99);
 </script>
@@ -540,7 +540,7 @@ The Field component provides a consistent way to add labels, descriptions, and e
 
 ```svelte
 <script>
-  import { NumberSpinner, Button, FieldPrimitives , Field} from "@kareyes/aether";
+  import { NumberSpinner, Button, FieldPrimitives , Field} from "@kareyes/aether-ui";
   
   let formData = $state({
     price: 29.99,

@@ -20,7 +20,7 @@
         CodeBlock,
         DatePicker,
         CheckboxGroup,
-    } from "@kareyes/aether";
+    } from "@kareyes/aether-ui";
 
     type CheckboxGroupOption = CheckboxPrimitives.CheckboxGroupOption;
     type RadioGroupOption = RadioGroupPrimitives.RadioGroupOption;

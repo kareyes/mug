@@ -5,8 +5,8 @@
 		SonnerPrimitives,
 		Card,
 		CodeBlock,
-	} from "@kareyes/aether";
-	import { Rocket, Heart, Sparkles } from "@kareyes/aether/icons";
+	} from "@kareyes/aether-ui";
+	import { Rocket, Heart, Sparkles } from "@kareyes/aether-ui/icons";
 	import {
 		toastTypesDocs,
 		withDescriptionsDocs,

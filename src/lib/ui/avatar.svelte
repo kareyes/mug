@@ -15,7 +15,7 @@
 		userCardDocs,
 		variantsDocs,
 	} from "$lib/code-blocks/avatar";
-	import { Avatar, AvatarPrimitives, Card, CodeBlock } from "@kareyes/aether";
+	import { Avatar, AvatarPrimitives, Card, CodeBlock } from "@kareyes/aether-ui";
 
 	const users = [
 		{ name: "John Doe", image: "https://i.pravatar.cc/150?img=1" },

@@ -51,7 +51,7 @@ The Breadcrumb component is built using **tailwind-variants** (tv) for a robust 
 
 ```svelte
 <script lang="ts">
-  import { BreadcrumbPrimitives } from "@kareyes/aether";
+  import { BreadcrumbPrimitives } from "@kareyes/aether-ui";
   const {
     Breadcrumb,
     BreadcrumbList,
@@ -319,13 +319,13 @@ Show collapsed items with a dropdown.
 
 ```svelte
 <script>
-  import { BreadcrumbEllipsis } from "@kareyes/aether";
+  import { BreadcrumbEllipsis } from "@kareyes/aether-ui";
   import {
     DropdownMenu,
     DropdownMenuTrigger,
     DropdownMenuContent,
     DropdownMenuItem
-  } from "@kareyes/aether";
+  } from "@kareyes/aether-ui";
 </script>
 
 <BreadcrumbList>

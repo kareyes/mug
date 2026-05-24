@@ -1,6 +1,6 @@
 export const basicUsageDocs = `
 <script lang="ts">
-  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether";
+  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether-ui";
 
   type CheckboxGroupOption = CheckboxPrimitives.CheckboxGroupOption;
 
@@ -25,7 +25,7 @@ export const basicUsageDocs = `
 
 export const horizontalOrientationDocs = `
 <script lang="ts">
-  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether";
+  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether-ui";
 
   type CheckboxGroupOption = CheckboxPrimitives.CheckboxGroupOption;
 
@@ -51,7 +51,7 @@ export const horizontalOrientationDocs = `
 
 export const withDescriptionsDocs = `
 <script lang="ts">
-  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether";
+  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether-ui";
 
   type CheckboxGroupOption = CheckboxPrimitives.CheckboxGroupOption;
 
@@ -78,7 +78,7 @@ export const withDescriptionsDocs = `
 
 export const todoListDocs = `
 <script lang="ts">
-  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether";
+  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether-ui";
 
   type CheckboxGroupOption = CheckboxPrimitives.CheckboxGroupOption;
 
@@ -106,7 +106,7 @@ export const todoListDocs = `
 
 export const sizesAndVariantsDocs = `
 <script lang="ts">
-  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether";
+  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether-ui";
 
   type CheckboxGroupOption = CheckboxPrimitives.CheckboxGroupOption;
 
@@ -156,7 +156,7 @@ export const sizesAndVariantsDocs = `
 
 export const settingsPanelDocs = `
 <script lang="ts">
-  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether";
+  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether-ui";
 
   type CheckboxGroupOption = CheckboxPrimitives.CheckboxGroupOption;
 
@@ -198,7 +198,7 @@ export const settingsPanelDocs = `
 
 export const requiredFieldDocs = `
 <script lang="ts">
-  import { CheckboxGroup } from "@kareyes/aether";
+  import { CheckboxGroup } from "@kareyes/aether-ui";
 </script>
 
 <CheckboxGroup
@@ -215,7 +215,7 @@ export const requiredFieldDocs = `
 
 export const errorStatesDocs = `
 <script lang="ts">
-  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether";
+  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether-ui";
 
   type CheckboxGroupOption = CheckboxPrimitives.CheckboxGroupOption;
 
@@ -266,7 +266,7 @@ export const errorStatesDocs = `
 
 export const withFieldDocs = `
 <script lang="ts">
-  import { CheckboxGroup, CheckboxPrimitives, Field } from "@kareyes/aether";
+  import { CheckboxGroup, CheckboxPrimitives, Field } from "@kareyes/aether-ui";
 
   type CheckboxGroupOption = CheckboxPrimitives.CheckboxGroupOption;
 
@@ -307,7 +307,7 @@ export const withFieldDocs = `
 
 export const disabledStateDocs = `
 <script lang="ts">
-  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether";
+  import { CheckboxGroup, CheckboxPrimitives } from "@kareyes/aether-ui";
 
   type CheckboxGroupOption = CheckboxPrimitives.CheckboxGroupOption;
 

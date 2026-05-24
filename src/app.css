@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-@import "@kareyes/aether/styles";
+@import "@kareyes/aether-ui/styles";
 
-@source "../node_modules/@kareyes/aether/dist/**/*.{svelte,js}";
+@source "../node_modules/@kareyes/aether-ui/dist/**/*.{svelte,js}";
 
 
 

@@ -41,7 +41,7 @@
 
 ```svelte
 <script lang="ts">
-  import { Tabs, TabsList, TabsTrigger, TabsContent } from "@kareyes/aether";
+  import { Tabs, TabsList, TabsTrigger, TabsContent } from "@kareyes/aether-ui";
 </script>
 
 <Tabs value="account">
@@ -324,7 +324,7 @@ For screens where even scrolling tabs feel cluttered, you can convert tabs to a 
 
 ```svelte
 <script lang="ts">
-  import type { TabItem } from "@kareyes/aether";
+  import type { TabItem } from "@kareyes/aether-ui";
 
   const tabs: TabItem[] = [
     { value: "general", label: "General" },

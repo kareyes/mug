@@ -1,7 +1,7 @@
 export const basicUsageDocs = `
 <script lang="ts">
-  import { Empty, Button } from "@kareyes/aether";
-  import { Inbox, Search } from "@kareyes/aether/icons";
+  import { Empty, Button } from "@kareyes/aether-ui";
+  import { Inbox, Search } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="grid gap-6 md:grid-cols-2">
@@ -33,8 +33,8 @@ export const basicUsageDocs = `
 
 export const variantsDocs = `
 <script lang="ts">
-  import { Empty } from "@kareyes/aether";
-  import { Folder } from "@kareyes/aether/icons";
+  import { Empty } from "@kareyes/aether-ui";
+  import { Folder } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -54,8 +54,8 @@ export const variantsDocs = `
 
 export const sizesDocs = `
 <script lang="ts">
-  import { Empty, Button } from "@kareyes/aether";
-  import { Bell } from "@kareyes/aether/icons";
+  import { Empty, Button } from "@kareyes/aether-ui";
+  import { Bell } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="grid gap-6 md:grid-cols-3">
@@ -83,8 +83,8 @@ export const sizesDocs = `
 
 export const iconVariantsDocs = `
 <script lang="ts">
-  import { Empty, Button } from "@kareyes/aether";
-  import { Database } from "@kareyes/aether/icons";
+  import { Empty, Button } from "@kareyes/aether-ui";
+  import { Database } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="grid gap-6 md:grid-cols-2">
@@ -107,8 +107,8 @@ export const iconVariantsDocs = `
 
 export const useCasesDocs = `
 <script lang="ts">
-  import { Empty, Button } from "@kareyes/aether";
-  import { Users, Bell, CloudUpload, ShoppingCart, WifiOff, Lock } from "@kareyes/aether/icons";
+  import { Empty, Button } from "@kareyes/aether-ui";
+  import { Users, Bell, CloudUpload, ShoppingCart, WifiOff, Lock } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -162,8 +162,8 @@ export const useCasesDocs = `
 
 export const fullPageDocs = `
 <script lang="ts">
-  import { Empty, Button } from "@kareyes/aether";
-  import { Folder } from "@kareyes/aether/icons";
+  import { Empty, Button } from "@kareyes/aether-ui";
+  import { Folder } from "@kareyes/aether-ui/icons";
 </script>
 
 <Empty
@@ -188,8 +188,8 @@ export const fullPageDocs = `
 
 export const customStylingDocs = `
 <script lang="ts">
-  import { Empty, Badge } from "@kareyes/aether";
-  import { Bell, Search, Inbox } from "@kareyes/aether/icons";
+  import { Empty, Badge } from "@kareyes/aether-ui";
+  import { Bell, Search, Inbox } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="grid gap-6 md:grid-cols-3">
@@ -217,8 +217,8 @@ export const customStylingDocs = `
 
 export const compositionalDocs = `
 <script lang="ts">
-  import { EmptyPrimitives, Button } from "@kareyes/aether";
-  import { Users } from "@kareyes/aether/icons";
+  import { EmptyPrimitives, Button } from "@kareyes/aether-ui";
+  import { Users } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="grid gap-6 md:grid-cols-2">

@@ -8,8 +8,8 @@
 		multiSectionCollapsibleDocs,
 		responsiveColSpanDocs
 	} from "$lib/code-blocks/form-schema-layout";
-	import { Card, CodeBlock } from "@kareyes/aether";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { Card, CodeBlock } from "@kareyes/aether-ui";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 	import { Schema, pipe } from "effect";
 	import PreviewContainer from "../../components/preview-container.svelte";
 

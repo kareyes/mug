@@ -50,7 +50,7 @@ type Login = Schema.Schema.Type<typeof LoginSchema>;
 
 ```typescript
 import { Schema, pipe } from "effect";
-import { withField, withFormLayout } from "@kareyes/aether/forms";
+import { withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 const ContactSchema = pipe(
   Schema.Struct({
@@ -94,7 +94,7 @@ const ContactSchema = pipe(
 ### 2. Create a Controller
 
 ```typescript
-import { FormController } from "@kareyes/aether/forms";
+import { FormController } from "@kareyes/aether-ui/forms";
 
 const controller = new FormController(ContactSchema, {
   validateOnBlur: true,
@@ -111,7 +111,7 @@ const controller = new FormController(ContactSchema, {
 
 ```svelte
 <script lang="ts">
-  import { SchemaForm } from "@kareyes/aether/forms";
+  import { SchemaForm } from "@kareyes/aether-ui/forms";
 
   async function handleSubmit(data) {
     console.log("Form submitted:", data);
@@ -630,7 +630,7 @@ const controller = new FormController(schema);
 ```svelte
 <script lang="ts">
   import { onMount } from "svelte";
-  import { FormController, SchemaForm } from "@kareyes/aether/forms";
+  import { FormController, SchemaForm } from "@kareyes/aether-ui/forms";
 
   let controller = $state(null);
   let loading = $state(true);
@@ -701,7 +701,7 @@ const age = pipe(
 For checkboxes that must be checked (e.g., "I agree to terms"):
 
 ```typescript
-import { RequiredCheckbox, requiredCheckbox } from "@kareyes/aether/forms";
+import { RequiredCheckbox, requiredCheckbox } from "@kareyes/aether-ui/forms";
 
 // Default message: "This field must be checked"
 acceptTerms: pipe(
@@ -721,7 +721,7 @@ acceptPrivacy: pipe(
 For switches that must be enabled:
 
 ```typescript
-import { RequiredSwitch, requiredSwitch } from "@kareyes/aether/forms";
+import { RequiredSwitch, requiredSwitch } from "@kareyes/aether-ui/forms";
 
 // Default message: "This field must be enabled"
 notifications: pipe(
@@ -741,7 +741,7 @@ dataSharing: pipe(
 File fields default to `null` when nothing is selected. `Schema.Any` accepts `null`, so it should only be used for **optional** file fields. Use `RequiredFile` or `requiredFile()` to enforce a selection:
 
 ```typescript
-import { RequiredFile, requiredFile } from "@kareyes/aether/forms";
+import { RequiredFile, requiredFile } from "@kareyes/aether-ui/forms";
 
 // Required — default message: "Please select a file"
 avatar: pipe(
@@ -923,7 +923,7 @@ import {
   SchemaField,    // Renders a single field based on FieldRenderContext
   SchemaSection,  // Renders a section (grid of fields) based on SectionRenderContext
   SchemaStep      // Renders a step (collection of sections) based on StepRenderContext
-} from "@kareyes/aether/forms";
+} from "@kareyes/aether-ui/forms";
 ```
 
 You can also build render contexts manually to drive custom layouts:
@@ -933,7 +933,7 @@ import {
   createFieldContext,
   createSectionContext,
   createStepContext
-} from "@kareyes/aether/forms";
+} from "@kareyes/aether-ui/forms";
 
 const sectionCtx = createSectionContext(controller, section);
 const fieldCtx   = createFieldContext(controller, field);
@@ -955,7 +955,7 @@ import {
   validateAsync,      // Async wrapper (for future async validators)
   hasErrors,          // Check if a FieldErrors object has any errors
   getFirstError       // Get the first error message from FieldErrors
-} from "@kareyes/aether/forms";
+} from "@kareyes/aether-ui/forms";
 
 // Standalone sync validation
 const result = validateSync(UserSchema, formData);

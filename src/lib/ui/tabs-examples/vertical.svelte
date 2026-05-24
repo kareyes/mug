@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { TabsPrimitives } from "@kareyes/aether";
-	import { Home, User, Settings, Shield } from "@kareyes/aether/icons";
+	import { TabsPrimitives } from "@kareyes/aether-ui";
+	import { Home, User, Settings, Shield } from "@kareyes/aether-ui/icons";
 	const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
 </script>
 

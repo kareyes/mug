@@ -1,6 +1,6 @@
 export const basicUsageDocs = `
 <script lang="ts">
-	import { Slider, Badge } from "@kareyes/aether";
+	import { Slider, Badge } from "@kareyes/aether-ui";
 
 	let basicValue = $state(50);
 </script>
@@ -23,7 +23,7 @@ export const basicUsageDocs = `
 
 export const variantsDocs = `
 <script lang="ts">
-	import { Slider } from "@kareyes/aether";
+	import { Slider } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-6">
@@ -60,7 +60,7 @@ export const variantsDocs = `
 
 export const sizesDocs = `
 <script lang="ts">
-	import { Slider } from "@kareyes/aether";
+	import { Slider } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-6">
@@ -82,7 +82,7 @@ export const sizesDocs = `
 
 export const stepIndicatorsDocs = `
 <script lang="ts">
-	import { Slider } from "@kareyes/aether";
+	import { Slider } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-6">
@@ -113,7 +113,7 @@ export const stepIndicatorsDocs = `
 
 export const marksDocs = `
 <script lang="ts">
-	import { Slider, SliderPrimitives } from "@kareyes/aether";
+	import { Slider, SliderPrimitives } from "@kareyes/aether-ui";
 
 	const percentageMarks: SliderPrimitives.SliderMark[] = [
 		{ value: 0, label: "0%" },
@@ -151,7 +151,7 @@ export const marksDocs = `
 
 export const combinedFeaturesDocs = `
 <script lang="ts">
-	import { Slider, SliderPrimitives } from "@kareyes/aether";
+	import { Slider, SliderPrimitives } from "@kareyes/aether-ui";
 
 	const percentageMarks: SliderPrimitives.SliderMark[] = [
 		{ value: 0, label: "0%" },
@@ -183,7 +183,7 @@ export const combinedFeaturesDocs = `
 
 export const rangeSliderDocs = `
 <script lang="ts">
-	import { Slider, Badge } from "@kareyes/aether";
+	import { Slider, Badge } from "@kareyes/aether-ui";
 
 	let priceRange = $state([100, 500]);
 </script>
@@ -228,7 +228,7 @@ export const rangeSliderDocs = `
 
 export const practicalExamplesDocs = `
 <script lang="ts">
-	import { Slider, Badge, SliderPrimitives } from "@kareyes/aether";
+	import { Slider, Badge, SliderPrimitives } from "@kareyes/aether-ui";
 
 	let volumeValue = $state(70);
 	let tempValue = $state(22);
@@ -389,7 +389,7 @@ export const practicalExamplesDocs = `
 
 export const verticalOrientationDocs = `
 <script lang="ts">
-	import { Slider } from "@kareyes/aether";
+	import { Slider } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex gap-12">
@@ -442,7 +442,7 @@ export const verticalOrientationDocs = `
 
 export const withFieldDocs = `
 <script lang="ts">
-	import { Slider, Field, SliderPrimitives } from "@kareyes/aether";
+	import { Slider, Field, SliderPrimitives } from "@kareyes/aether-ui";
 
 	const ratingMarks: SliderPrimitives.SliderMark[] = [
 		{ value: 1, label: "Poor" },
@@ -510,7 +510,7 @@ export const withFieldDocs = `
 
 export const disabledStateDocs = `
 <script lang="ts">
-	import { Slider } from "@kareyes/aether";
+	import { Slider } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-6">

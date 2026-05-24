@@ -1,6 +1,6 @@
 export const unifiedModeDocs = `
 <script lang="ts">
-	import { FileInput } from "@kareyes/aether";
+	import { FileInput } from "@kareyes/aether-ui";
 
 	let dragDropFiles: FileList | null = $state(null);
 	let regularFiles: FileList | null = $state(null);
@@ -88,7 +88,7 @@ export const unifiedModeDocs = `
 
 export const dedicatedComponentsDocs = `
 <script lang="ts">
-	import { FileInputDragDrop, FileInputRegular, FileInputButton } from "@kareyes/aether";
+	import { FileInputDragDrop, FileInputRegular, FileInputButton } from "@kareyes/aether-ui";
 
 	function handleFilesChange(name: string) {
 		return (files: FileList | null) => {
@@ -157,7 +157,7 @@ export const dedicatedComponentsDocs = `
 
 export const regularInputShowcaseDocs = `
 <script lang="ts">
-	import { FileInputRegular } from "@kareyes/aether";
+	import { FileInputRegular } from "@kareyes/aether-ui";
 
 
 	function handleFilesChange(name: string) {
@@ -242,7 +242,7 @@ export const regularInputShowcaseDocs = `
 
 export const styleVariantsDocs = `
 <script lang="ts">
-	import { FileInput } from "@kareyes/aether";
+	import { FileInput } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -253,7 +253,7 @@ export const styleVariantsDocs = `
 
 export const sizeOptionsDocs = `
 <script lang="ts">
-	import { FileInput } from "@kareyes/aether";
+	import { FileInput } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex flex-wrap gap-4 items-end">
@@ -265,7 +265,7 @@ export const sizeOptionsDocs = `
 // ── Error State ───────────────────────────────────────────────────────────────
 export const errorStateDocs = `
 <script lang="ts">
-	import { FileInputRegular, FileInputDragDrop, FileInputButton } from "@kareyes/aether";
+	import { FileInputRegular, FileInputDragDrop, FileInputButton } from "@kareyes/aether-ui";
 
 	let regularError = $state("");
 </script>
@@ -307,7 +307,7 @@ export const errorStateDocs = `
 // ── Field Wrapper ─────────────────────────────────────────────────────────────
 export const fieldWrapperDocs = `
 <script lang="ts">
-	import { FileInputRegular, FileInputDragDrop, FileInputButton, Field } from "@kareyes/aether";
+	import { FileInputRegular, FileInputDragDrop, FileInputButton, Field } from "@kareyes/aether-ui";
 
 	let resumeError = $state("");
 </script>

@@ -1,7 +1,7 @@
 export const singleColumnDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	// columns: 1 stacks every field full-width, top to bottom
 	const ContactSchema = pipe(
@@ -31,7 +31,7 @@ export const singleColumnDocs = `
 export const twoColumnDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	// columns: 2 places every field in a two-column grid automatically.
 	// All fields without an explicit colSpan take equal half-width.
@@ -56,7 +56,7 @@ export const twoColumnDocs = `
 export const twelveColumnDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	// columns: 12 with per-field colSpan for precise layout control:
 	//   colSpan: 4  = one-third width
@@ -89,7 +89,7 @@ export const twelveColumnDocs = `
 export const multiSectionDefaultDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	// Assign fields to sections via section: "id".
 	// Sections render as labeled dividers in the default variant.
@@ -130,7 +130,7 @@ export const multiSectionDefaultDocs = `
 export const multiSectionCardDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	const PaymentSchema = pipe(
 		Schema.Struct({
@@ -182,7 +182,7 @@ export const multiSectionCardDocs = `
 export const multiSectionCollapsibleDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	const SettingsSchema = pipe(
 		Schema.Struct({
@@ -244,7 +244,7 @@ export const multiSectionCollapsibleDocs = `
 export const responsiveColSpanDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	// Use columns: 12 and combine colSpan (mobile) with colSpanMd / colSpanLg
 	// for fields that should reflow at different breakpoints.

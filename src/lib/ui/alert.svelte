@@ -1,6 +1,6 @@
 <script lang="ts">
     import { compactLayoutDocs, complexAlertDocs, customIconDocs, dismissibleDocs, realWorldExamplesDocs, variantDocs, withActionsDocs, withNWithoutIconsDocs } from "$lib/code-blocks/alert";
-	import { Alert, Button, AlertPrimitives, Card, CodeBlock } from "@kareyes/aether";
+	import { Alert, Button, AlertPrimitives, Card, CodeBlock } from "@kareyes/aether-ui";
 
 	import PreviewContainer from "../components/preview-container.svelte";
 </script>

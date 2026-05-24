@@ -18,7 +18,7 @@ A simplified combobox component that combines a text input with a searchable dro
 
 ```svelte
 <script lang="ts">
-  import { Combobox } from "@kareyes/aether";
+  import { Combobox } from "@kareyes/aether-ui";
 
 	const frameworks = [
 		{ value: "sveltekit", label: "SvelteKit" },
@@ -197,7 +197,7 @@ A simplified combobox component that combines a text input with a searchable dro
 
 ```svelte
 <script lang="ts">
-  import { Combobox, PopoverPrimitives, Button } from "@kareyes/aether";
+  import { Combobox, PopoverPrimitives, Button } from "@kareyes/aether-ui";
   import ChevronsUpDown from "@lucide/svelte/icons/chevrons-up-down";
 
 	let selectedFramework = $state("");

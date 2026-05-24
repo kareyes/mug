@@ -11,7 +11,7 @@
 		expandableRowsDocs,
 		responsiveDocs,
 	} from "$lib/code-blocks/data-table";
-	import { Card, CodeBlock } from "@kareyes/aether";
+	import { Card, CodeBlock } from "@kareyes/aether-ui";
 	import PreviewContainer from "../components/preview-container.svelte";
 
 	const examples: { id: string; title: string; description: string; code?: string; height?: string }[] = [

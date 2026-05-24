@@ -21,7 +21,7 @@
     Button,
     Card,
     CodeBlock,
-  } from "@kareyes/aether";
+  } from "@kareyes/aether-ui";
 
   type RadioGroupOption = RadioGroupPrimitives.RadioGroupOption;
   let selectedPlan = $state("pro");

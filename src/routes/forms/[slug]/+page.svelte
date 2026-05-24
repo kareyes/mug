@@ -6,7 +6,7 @@
 	import formAdvanced from "$lib/ui/form-schema-examples/advanced.svelte";
 	import formAsync from "$lib/ui/form-schema-examples/async.svelte";
 	import formServer from "$lib/ui/form-schema-examples/server.svelte";
-	import { TabsPrimitives } from "@kareyes/aether";
+	import { TabsPrimitives } from "@kareyes/aether-ui";
 	import { page } from "$app/state";
 	import { marked } from "marked";
 	import { onMount, getContext } from "svelte";

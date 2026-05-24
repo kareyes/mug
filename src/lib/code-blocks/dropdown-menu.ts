@@ -1,7 +1,7 @@
 export const basicMenusDocs = `
 <script lang="ts">
-	import { DropdownMenu } from "@kareyes/aether";
-	import { User, Settings, LogOut, Plus } from "@kareyes/aether/icons";
+	import { DropdownMenu } from "@kareyes/aether-ui";
+	import { User, Settings, LogOut, Plus } from "@kareyes/aether-ui/icons";
 
 	const basicMenuItems = [
 		{ label: "Profile", icon: User, onSelect: () => console.log("Profile clicked") },
@@ -39,7 +39,7 @@ export const basicMenusDocs = `
 
 export const interactiveMenusDocs = `
 <script lang="ts">
-	import { DropdownMenu } from "@kareyes/aether";
+	import { DropdownMenu } from "@kareyes/aether-ui";
 
 	let statusBarChecked = $state(true);
 	let toolbarChecked = $state(true);
@@ -105,8 +105,8 @@ export const interactiveMenusDocs = `
 
 export const groupedMenuDocs = `
 <script lang="ts">
-	import { DropdownMenu } from "@kareyes/aether";
-	import { User, Settings, Bell, Edit, Copy, Trash2, HelpCircle, LogOut } from "@kareyes/aether/icons";
+	import { DropdownMenu } from "@kareyes/aether-ui";
+	import { User, Settings, Bell, Edit, Copy, Trash2, HelpCircle, LogOut } from "@kareyes/aether-ui/icons";
 
 	const groupedMenuItems = [
 		{
@@ -140,8 +140,8 @@ export const groupedMenuDocs = `
 
 export const complexMenuDocs = `
 <script lang="ts">
-	import { DropdownMenu } from "@kareyes/aether";
-	import { FileText, Edit2, Share2, Trash2, Copy, Download, Mail, MessageSquare, Settings } from "@kareyes/aether/icons";
+	import { DropdownMenu } from "@kareyes/aether-ui";
+	import { FileText, Edit2, Share2, Trash2, Copy, Download, Mail, MessageSquare, Settings } from "@kareyes/aether-ui/icons";
 
 
 	const complexMenuItems = $derived([
@@ -205,8 +205,8 @@ export const complexMenuDocs = `
 
 export const triggerVariantsDocs = `
 <script lang="ts">
-	import { DropdownMenu } from "@kareyes/aether";
-	import { User, Settings, LogOut } from "@kareyes/aether/icons";
+	import { DropdownMenu } from "@kareyes/aether-ui";
+	import { User, Settings, LogOut } from "@kareyes/aether-ui/icons";
 
 	const items = [
 		{ label: "Profile", icon: User, onSelect: () => {} },
@@ -226,7 +226,7 @@ export const triggerVariantsDocs = `
 
 export const sizesDocs = `
 <script lang="ts">
-	import { DropdownMenu } from "@kareyes/aether";
+	import { DropdownMenu } from "@kareyes/aether-ui";
 
 	const items = [
 		{ label: "Profile", onSelect: () => {} },
@@ -242,7 +242,7 @@ export const sizesDocs = `
 
 export const alignmentDocs = `
 <script lang="ts">
-	import { DropdownMenu } from "@kareyes/aether";
+	import { DropdownMenu } from "@kareyes/aether-ui";
 
 	const items = [
 		{ label: "Profile", onSelect: () => {} },
@@ -258,8 +258,8 @@ export const alignmentDocs = `
 
 export const submenuDocs = `
 <script lang="ts">
-	import { DropdownMenu } from "@kareyes/aether";
-	import { User, Share2, Copy, Download, Mail, MessageSquare, Settings } from "@kareyes/aether/icons";
+	import { DropdownMenu } from "@kareyes/aether-ui";
+	import { User, Share2, Copy, Download, Mail, MessageSquare, Settings } from "@kareyes/aether-ui/icons";
 
 	const shareMenuItems = [
 		{ label: "Profile", icon: User, onSelect: () => console.log("Profile") },
@@ -346,8 +346,8 @@ export const submenuDocs = `
 
 export const customTriggerDocs = `
 <script lang="ts">
-	import { DropdownMenu, DropdownMenuPrimitives } from "@kareyes/aether";
-	import { User, LogOut,  Plus, Edit, Copy, Share2, Trash2, Bell, Shield, HelpCircle } from "@kareyes/aether/icons";
+	import { DropdownMenu, DropdownMenuPrimitives } from "@kareyes/aether-ui";
+	import { User, LogOut,  Plus, Edit, Copy, Share2, Trash2, Bell, Shield, HelpCircle } from "@kareyes/aether-ui/icons";
 
 	const customTriggerMenuItems = [
 		{ label: "New Item", icon: Plus, shortcut: "⌘N", onSelect: () => console.log("New Item") },

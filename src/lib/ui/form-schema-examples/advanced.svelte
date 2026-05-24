@@ -5,7 +5,7 @@
 		appSettingsDocs,
 		checkoutFlowDocs
 	} from "$lib/code-blocks/form-schema-advanced";
-	import { Card, Button, CodeBlock } from "@kareyes/aether";
+	import { Card, Button, CodeBlock } from "@kareyes/aether-ui";
 	import {
 		SchemaForm,
 		FormController,
@@ -13,7 +13,7 @@
 		withFormLayout,
 		RequiredCheckbox,
 		requiredCheckbox
-	} from "@kareyes/aether/forms";
+	} from "@kareyes/aether-ui/forms";
 	import { Schema, pipe } from "effect";
 	import PreviewContainer from "../../components/preview-container.svelte";
 

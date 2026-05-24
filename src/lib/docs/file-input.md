@@ -33,7 +33,7 @@ A flexible file upload component with three display modes, built-in file validat
 
 ```svelte
 <script lang="ts">
-  import { FileInput } from "@kareyes/aether";
+  import { FileInput } from "@kareyes/aether-ui";
 
   let files = $state<FileList | null>(null);
 </script>
@@ -212,7 +212,7 @@ When you know the display mode upfront, import the sub-components directly inste
     FileInputDragDrop,
     FileInputRegular,
     FileInputButton,
-  } from "@kareyes/aether";
+  } from "@kareyes/aether-ui";
 </script>
 ```
 
@@ -329,7 +329,7 @@ acceptedTypes: ["image/*", ".pdf", ".txt"]
 
 ```svelte
 <script>
-  import { commonFileTypes, commonSizeLimits } from "@kareyes/aether";
+  import { commonFileTypes, commonSizeLimits } from "@kareyes/aether-ui";
 </script>
 
 <FileInput
@@ -399,7 +399,7 @@ Wrap with `Field` to get consistent labels, descriptions, and error display:
 
 ```svelte
 <script lang="ts">
-  import { FileInput, Field } from "@kareyes/aether";
+  import { FileInput, Field } from "@kareyes/aether-ui";
 
   let files = $state<FileList | null>(null);
   let error = $state("");
@@ -426,7 +426,7 @@ Wrap with `Field` to get consistent labels, descriptions, and error display:
 
 ```svelte
 <script lang="ts">
-  import { FileInput, Field, Button } from "@kareyes/aether";
+  import { FileInput, Field, Button } from "@kareyes/aether-ui";
 
   let resume      = $state<FileList | null>(null);
   let coverLetter = $state<FileList | null>(null);
@@ -490,7 +490,7 @@ import {
   withField, withFormLayout,
   RequiredFile, requiredFile,
   FormController
-} from "@kareyes/aether/forms";
+} from "@kareyes/aether-ui/forms";
 import { Schema, pipe } from "effect";
 
 const UploadSchema = pipe(

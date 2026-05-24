@@ -8,7 +8,7 @@ A modal dialog component for displaying content that requires user interaction o
 
 ```svelte
 <script lang="ts">
-  import { DialogPrimitives, Button } from "@kareyes/aether";
+  import { DialogPrimitives, Button } from "@kareyes/aether-ui";
 </script>
 
 <DialogPrimitives.Root>
@@ -39,7 +39,7 @@ A modal dialog component for displaying content that requires user interaction o
 
 ```svelte
 <script lang="ts">
-  import * as Dialog from "@kareyes/aether";
+  import * as Dialog from "@kareyes/aether-ui";
 </script>
 
 <Dialog.Root>
@@ -178,7 +178,7 @@ Centered layout for all screen sizes:
 
 ```svelte
 <script lang="ts">
-  import { DialogPrimitives, Button } from "@kareyes/aether";
+  import { DialogPrimitives, Button } from "@kareyes/aether-ui";
 
   let open = $state(false);
 
@@ -208,7 +208,7 @@ Centered layout for all screen sizes:
 
 ```svelte
 <script lang="ts">
-  import { DialogPrimitives, Button, Input, Label } from "@kareyes/aether";
+  import { DialogPrimitives, Button, Input, Label } from "@kareyes/aether-ui";
 
   let name = $state("");
   let email = $state("");
@@ -253,7 +253,7 @@ Centered layout for all screen sizes:
 
 ```svelte
 <script lang="ts">
-  import { DialogPrimitives, Button } from "@kareyes/aether";
+  import { DialogPrimitives, Button } from "@kareyes/aether-ui";
   import Trash2Icon from "@lucide/svelte/icons/trash-2";
 
   function handleDelete() {

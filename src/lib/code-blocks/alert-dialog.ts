@@ -1,7 +1,7 @@
 
 export const variantsDocs = `
     <script lang="ts">
-        import { AlertDialogPrimitives, Button } from "@kareyes/aether";
+        import { AlertDialogPrimitives, Button } from "@kareyes/aether-ui";
 
         const { AlertDialogProvider, getAlertDialogContext } = AlertDialogPrimitives;
         type AlertDialogContext = AlertDialogPrimitives.AlertDialogContext;
@@ -132,7 +132,7 @@ export const variantsDocs = `
 
 	export const sizesDocs = `
         <script lang="ts">	
-            import { AlertDialogPrimitives, Button } from "@kareyes/aether";
+            import { AlertDialogPrimitives, Button } from "@kareyes/aether-ui";
 
             const { AlertDialogProvider, getAlertDialogContext } = AlertDialogPrimitives;
             type AlertDialogContext = AlertDialogPrimitives.AlertDialogContext;
@@ -215,7 +215,7 @@ export const variantsDocs = `
 
 	export const configDocs = `
     <script lang="ts">
-        import { AlertDialogPrimitives, Button } from "@kareyes/aether";
+        import { AlertDialogPrimitives, Button } from "@kareyes/aether-ui";
 
         const { AlertDialogProvider, getAlertDialogContext } = AlertDialogPrimitives;
         type AlertDialogContext = AlertDialogPrimitives.AlertDialogContext;
@@ -319,7 +319,7 @@ export const variantsDocs = `
 
 	export const practicalDocs = `
     <script lang="ts">
-        import { AlertDialogPrimitives, Button } from "@kareyes/aether";
+        import { AlertDialogPrimitives, Button } from "@kareyes/aether-ui";
 
         const { AlertDialogProvider, getAlertDialogContext } = AlertDialogPrimitives;
         type AlertDialogContext = AlertDialogPrimitives.AlertDialogContext;

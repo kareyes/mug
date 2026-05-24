@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Button, Input, Label, Textarea, CardPrimitives, Stepper } from "@kareyes/aether";
+  import { Button, Input, Label, Textarea, CardPrimitives, Stepper } from "@kareyes/aether-ui";
   import { User, CreditCard, CircleCheck, ShoppingCart, Package, Mail, Briefcase, FileText } from "@lucide/svelte";
 
   const { Card, CardHeader, CardTitle, CardDescription, CardContent } = CardPrimitives;

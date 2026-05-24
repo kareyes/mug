@@ -1,7 +1,7 @@
 export const patternMatchingDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	const PatternSchema = pipe(
 		Schema.Struct({
@@ -57,7 +57,7 @@ export const patternMatchingDocs = `
 export const passwordStrengthDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	const PasswordSchema = pipe(
 		Schema.Struct({
@@ -105,7 +105,7 @@ export const requiredCheckboxDocs = `
 	import {
 		SchemaForm, FormController, withField, withFormLayout,
 		RequiredCheckbox, requiredCheckbox
-	} from "@kareyes/aether/forms";
+	} from "@kareyes/aether-ui/forms";
 
 	const CheckboxSchema = pipe(
 		Schema.Struct({
@@ -147,7 +147,7 @@ export const requiredCheckboxDocs = `
 export const lengthConstraintsDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	const LengthSchema = pipe(
 		Schema.Struct({
@@ -197,7 +197,7 @@ export const lengthConstraintsDocs = `
 export const chainedConstraintsDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	// All validators pipe together — all must pass before the field is valid.
 	// Schema.annotations at the end sets one unified error that covers all rules.

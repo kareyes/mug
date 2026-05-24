@@ -7,8 +7,8 @@
 		fetchSubmitDocs,
 		serverErrorMappingDocs
 	} from "$lib/code-blocks/form-schema-server";
-	import { Card, CodeBlock, Badge } from "@kareyes/aether";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { Card, CodeBlock, Badge } from "@kareyes/aether-ui";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 	import { Schema, pipe } from "effect";
 	import PreviewContainer from "../../components/preview-container.svelte";
 

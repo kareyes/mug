@@ -34,7 +34,7 @@
     import Switch from "$lib/ui/switch.svelte";
     import TabsComponent from "$lib/ui/tabs.svelte";
     import Textarea from "$lib/ui/textarea.svelte";
-    import { TabsPrimitives } from "@kareyes/aether";
+    import { TabsPrimitives } from "@kareyes/aether-ui";
 	import Progress from "$lib/ui/progress.svelte";
     import PreviewContainer from "$lib/components/preview-container.svelte";
     import { page } from "$app/state";

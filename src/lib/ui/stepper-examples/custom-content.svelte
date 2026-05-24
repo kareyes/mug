@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { CardPrimitives, StepperPrimitives } from "@kareyes/aether";
+  import { CardPrimitives, StepperPrimitives } from "@kareyes/aether-ui";
   import { User, Settings, CircleCheck, Package, ShoppingCart, MapPin, FileText, Briefcase, GraduationCap } from "@lucide/svelte";
 
   const { StepperRoot, StepperStep, StepperSeparator } = StepperPrimitives;

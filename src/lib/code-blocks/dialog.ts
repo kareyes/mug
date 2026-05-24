@@ -1,6 +1,6 @@
 export const sizesDocs = `
 <script lang="ts">
-	import { Button, Input, Label, DialogPrimitives } from "@kareyes/aether";
+	import { Button, Input, Label, DialogPrimitives } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex flex-wrap gap-3">
@@ -76,7 +76,7 @@ export const sizesDocs = `
 
 export const variantsDocs = `
 <script lang="ts">
-	import { Button, DialogPrimitives } from "@kareyes/aether";
+	import { Button, DialogPrimitives } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex flex-wrap gap-3">
@@ -118,8 +118,8 @@ export const variantsDocs = `
 
 export const practicalExamplesDocs = `
 <script lang="ts">
-	import { Button, Input, Label, Textarea, DialogPrimitives } from "@kareyes/aether";
-	import { Save, Trash2, Edit, Plus, FileText } from "@kareyes/aether/icons";
+	import { Button, Input, Label, Textarea, DialogPrimitives } from "@kareyes/aether-ui";
+	import { Save, Trash2, Edit, Plus, FileText } from "@kareyes/aether-ui/icons";
 
 	let profileDialogOpen = $state(false);
 	let name = $state("John Doe");
@@ -194,8 +194,8 @@ export const practicalExamplesDocs = `
 
 export const alertStyleDocs = `
 <script lang="ts">
-	import { Button, DialogPrimitives } from "@kareyes/aether";
-	import { CheckCircle2, AlertTriangle, Info } from "@kareyes/aether/icons";
+	import { Button, DialogPrimitives } from "@kareyes/aether-ui";
+	import { CheckCircle2, AlertTriangle, Info } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="flex flex-wrap gap-3">
@@ -257,7 +257,7 @@ export const alertStyleDocs = `
 
 export const specialFeaturesDocs = `
 <script lang="ts">
-	import { Button, DialogPrimitives } from "@kareyes/aether";
+	import { Button, DialogPrimitives } from "@kareyes/aether-ui";
 </script>
 
 	<div class="flex flex-wrap gap-3">

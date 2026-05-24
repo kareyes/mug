@@ -1,6 +1,6 @@
 export const toastTypesDocs = `
 <script lang="ts">
-	import { Button, Sonner, SonnerPrimitives } from "@kareyes/aether";
+	import { Button, Sonner, SonnerPrimitives } from "@kareyes/aether-ui";
 
 	const { toast } = SonnerPrimitives;
 </script>
@@ -54,7 +54,7 @@ export const toastTypesDocs = `
 
 export const withDescriptionsDocs = `
 <script lang="ts">
-	import { Button, SonnerPrimitives } from "@kareyes/aether";
+	import { Button, SonnerPrimitives } from "@kareyes/aether-ui";
 
 	const { toast } = SonnerPrimitives;
 </script>
@@ -90,7 +90,7 @@ export const withDescriptionsDocs = `
 
 export const withActionsDocs = `
 <script lang="ts">
-	import { Button, SonnerPrimitives } from "@kareyes/aether";
+	import { Button, SonnerPrimitives } from "@kareyes/aether-ui";
 
 	const { toast } = SonnerPrimitives;
 </script>
@@ -132,7 +132,7 @@ export const withActionsDocs = `
 
 export const promiseToastsDocs = `
 <script lang="ts">
-	import { Button, SonnerPrimitives } from "@kareyes/aether";
+	import { Button, SonnerPrimitives } from "@kareyes/aether-ui";
 
 	const { toast } = SonnerPrimitives;
 
@@ -179,7 +179,7 @@ export const promiseToastsDocs = `
 
 export const durationPersistenceDocs = `
 <script lang="ts">
-	import { Button, SonnerPrimitives } from "@kareyes/aether";
+	import { Button, SonnerPrimitives } from "@kareyes/aether-ui";
 
 	const { toast } = SonnerPrimitives;
 </script>
@@ -218,7 +218,7 @@ export const durationPersistenceDocs = `
 
 export const multipleToastsDocs = `
 <script lang="ts">
-	import { Button, SonnerPrimitives } from "@kareyes/aether";
+	import { Button, SonnerPrimitives } from "@kareyes/aether-ui";
 
 	const { toast } = SonnerPrimitives;
 </script>
@@ -246,7 +246,7 @@ export const multipleToastsDocs = `
 
 export const customStylingDocs = `
 <script lang="ts">
-	import { Button, SonnerPrimitives } from "@kareyes/aether";
+	import { Button, SonnerPrimitives } from "@kareyes/aether-ui";
 
 	const { toast } = SonnerPrimitives;
 </script>
@@ -276,7 +276,7 @@ export const customStylingDocs = `
 
 export const importantToastsDocs = `
 <script lang="ts">
-	import { Button, SonnerPrimitives } from "@kareyes/aether";
+	import { Button, SonnerPrimitives } from "@kareyes/aether-ui";
 
 	const { toast } = SonnerPrimitives;
 </script>
@@ -303,7 +303,7 @@ export const importantToastsDocs = `
 
 export const sequentialUpdatesDocs = `
 <script lang="ts">
-	import { Button, SonnerPrimitives } from "@kareyes/aether";
+	import { Button, SonnerPrimitives } from "@kareyes/aether-ui";
 
 	const { toast } = SonnerPrimitives;
 </script>
@@ -329,7 +329,7 @@ export const sequentialUpdatesDocs = `
 
 export const realWorldExamplesDocs = `
 <script lang="ts">
-	import { Button, SonnerPrimitives } from "@kareyes/aether";
+	import { Button, SonnerPrimitives } from "@kareyes/aether-ui";
 
 	const { toast } = SonnerPrimitives;
 </script>
@@ -460,7 +460,7 @@ export const realWorldExamplesDocs = `
 
 export const visualVariantsDocs = `
 <script lang="ts">
-	import { Button, SonnerPrimitives } from "@kareyes/aether";
+	import { Button, SonnerPrimitives } from "@kareyes/aether-ui";
 
 	let activeVariant: SonnerPrimitives.ToasterStyle = $state("default");
 

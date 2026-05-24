@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Card, Sidebar, SidebarPrimitives } from "@kareyes/aether";
-	import { Folder, ChevronRight } from "@kareyes/aether/icons";
+	import { Card, Sidebar, SidebarPrimitives } from "@kareyes/aether-ui";
+	import { Folder, ChevronRight } from "@kareyes/aether-ui/icons";
 
 	const {
 		SidebarProvider, SidebarContent, SidebarGroup, SidebarGroupContent,

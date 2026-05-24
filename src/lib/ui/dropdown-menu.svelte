@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { basicMenusDocs, interactiveMenusDocs, groupedMenuDocs, triggerVariantsDocs, sizesDocs, alignmentDocs, submenuDocs, customTriggerDocs, complexMenuDocs } from "$lib/code-blocks/dropdown-menu";
-	import { DropdownMenu, DropdownMenuPrimitives as DropdownMenuPrimitive, Card, CodeBlock } from "@kareyes/aether";
-	import { User, Settings, ChevronDown, LogOut, Plus, Mail, UserPlus, MessageSquare, Bell, Shield, HelpCircle, Download, Upload, Trash2, Edit, Copy, Share2, FileText, Image, Video, Music, Folder, File } from "@kareyes/aether/icons";
+	import { DropdownMenu, DropdownMenuPrimitives as DropdownMenuPrimitive, Card, CodeBlock } from "@kareyes/aether-ui";
+	import { User, Settings, ChevronDown, LogOut, Plus, Mail, UserPlus, MessageSquare, Bell, Shield, HelpCircle, Download, Upload, Trash2, Edit, Copy, Share2, FileText, Image, Video, Music, Folder, File } from "@kareyes/aether-ui/icons";
 
 	let statusBarChecked = $state(true);
 	let toolbarChecked = $state(true);

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { configDocs, practicalDocs, sizesDocs, variantsDocs } from "$lib/code-blocks/alert-dialog";
-	import { AlertDialogPrimitives, Button, CodeBlock , Card} from "@kareyes/aether";
+	import { AlertDialogPrimitives, Button, CodeBlock , Card} from "@kareyes/aether-ui";
 	import {
 		AlertCircle,
 		CheckCircle2,
@@ -8,7 +8,7 @@
 		AlertTriangle,
 		Trash2,
 		Save,
-	} from "@kareyes/aether/icons";
+	} from "@kareyes/aether-ui/icons";
 
 	const { AlertDialogProvider, getAlertDialogContext } =
 		AlertDialogPrimitives;

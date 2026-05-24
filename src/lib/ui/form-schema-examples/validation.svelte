@@ -6,7 +6,7 @@
 		lengthConstraintsDocs,
 		chainedConstraintsDocs
 	} from "$lib/code-blocks/form-schema-validation";
-	import { Card, CodeBlock } from "@kareyes/aether";
+	import { Card, CodeBlock } from "@kareyes/aether-ui";
 	import {
 		SchemaForm,
 		FormController,
@@ -14,7 +14,7 @@
 		withFormLayout,
 		RequiredCheckbox,
 		requiredCheckbox
-	} from "@kareyes/aether/forms";
+	} from "@kareyes/aether-ui/forms";
 	import { Schema, pipe } from "effect";
 	import PreviewContainer from "../../components/preview-container.svelte";
 

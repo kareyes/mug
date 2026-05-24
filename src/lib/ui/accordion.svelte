@@ -14,7 +14,7 @@
 		AccordionPrimitives as Accordion,
 		CodeBlock,
 		Card,
-	} from "@kareyes/aether";
+	} from "@kareyes/aether-ui";
 	import { marked } from "marked";
 	import PreviewContainer from "../components/preview-container.svelte";
 </script>

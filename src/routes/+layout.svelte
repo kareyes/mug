@@ -1,6 +1,6 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
-	import { ChevronRight, Coffee, Folder, GithubIcon } from "@kareyes/aether/icons";
+	import { ChevronRight, Coffee, Folder, GithubIcon } from "@kareyes/aether-ui/icons";
 	import {
 		DarkModePrimitives,
 		DarkModeSwitch,
@@ -8,7 +8,7 @@
 		Sidebar,
 		SidebarPrimitives,
 		Button
-	} from '@kareyes/aether';
+	} from '@kareyes/aether-ui';
 	import "../app.css";
 	import { page } from '$app/stores';
 	import { setContext } from 'svelte';

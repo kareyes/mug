@@ -1,7 +1,7 @@
 <script lang="ts">
   
-    import { Monitor, Tablet, Smartphone } from "@kareyes/aether/icons";
-    import { cn } from "@kareyes/aether/utils";
+    import { Monitor, Tablet, Smartphone } from "@kareyes/aether-ui/icons";
+    import { cn } from "@kareyes/aether-ui/utils";
     import { untrack } from "svelte";
     import type { Snippet } from "svelte";
 

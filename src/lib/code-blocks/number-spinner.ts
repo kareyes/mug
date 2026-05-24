@@ -1,6 +1,6 @@
 export const basicUsageDocs = `
 <script lang="ts">
-	import { NumberSpinner, Badge } from "@kareyes/aether";
+	import { NumberSpinner, Badge } from "@kareyes/aether-ui";
 
 	let basicValue = $state(0);
 	let quantityValue = $state(1);
@@ -25,7 +25,7 @@ export const basicUsageDocs = `
 
 export const variantsDocs = `
 <script lang="ts">
-	import { NumberSpinner } from "@kareyes/aether";
+	import { NumberSpinner } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -37,7 +37,7 @@ export const variantsDocs = `
 
 export const sizesDocs = `
 <script lang="ts">
-	import { NumberSpinner } from "@kareyes/aether";
+	import { NumberSpinner } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-8 md:grid-cols-3">
@@ -48,7 +48,7 @@ export const sizesDocs = `
 
 export const orientationsDocs = `
 <script lang="ts">
-	import { NumberSpinner } from "@kareyes/aether";
+	import { NumberSpinner } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-8 md:grid-cols-2">
@@ -64,7 +64,7 @@ export const orientationsDocs = `
 
 export const advancedFeaturesDocs = `
 <script lang="ts">
-	import { NumberSpinner, Badge } from "@kareyes/aether";
+	import { NumberSpinner, Badge } from "@kareyes/aether-ui";
 
 	let priceValue = $state(9.99);
 	let temperatureValue = $state(20.5);
@@ -96,7 +96,7 @@ export const advancedFeaturesDocs = `
 
 export const practicalExamplesDocs = `
 <script lang="ts">
-	import { NumberSpinner, Badge } from "@kareyes/aether";
+	import { NumberSpinner, Badge } from "@kareyes/aether-ui";
 
 	let cartQuantity1 = $state(1);
 	let cartQuantity2 = $state(2);
@@ -126,7 +126,7 @@ export const practicalExamplesDocs = `
 
 export const errorStatesDocs = `
 <script lang="ts">
-	import { NumberSpinner } from "@kareyes/aether";
+	import { NumberSpinner } from "@kareyes/aether-ui";
 
 	let ageValue = $state(null);
 </script>
@@ -146,7 +146,7 @@ export const errorStatesDocs = `
 
 export const withFieldDocs = `
 <script lang="ts">
-	import { NumberSpinner, Field } from "@kareyes/aether";
+	import { NumberSpinner, Field } from "@kareyes/aether-ui";
 
 	let ageValue = $state(null);
 </script>
@@ -171,7 +171,7 @@ export const withFieldDocs = `
 
 export const formIntegrationDocs = `
 <script lang="ts">
-	import { NumberSpinner, Field, Badge } from "@kareyes/aether";
+	import { NumberSpinner, Field, Badge } from "@kareyes/aether-ui";
 
 	let formQuantity = $state(1);
 	let formPrice = $state(0);
@@ -204,7 +204,7 @@ export const formIntegrationDocs = `
 
 export const disabledStateDocs = `
 <script lang="ts">
-	import { NumberSpinner } from "@kareyes/aether";
+	import { NumberSpinner } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-8 md:grid-cols-2">
@@ -214,7 +214,7 @@ export const disabledStateDocs = `
 
 export const allVariantsSizesDocs = `
 <script lang="ts">
-	import { NumberSpinner } from "@kareyes/aether";
+	import { NumberSpinner } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-8 lg:grid-cols-2">

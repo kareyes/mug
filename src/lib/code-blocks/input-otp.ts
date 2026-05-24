@@ -1,6 +1,6 @@
 export const basicUsageDocs = `
 <script lang="ts">
-	import { InputOTP } from "@kareyes/aether";
+	import { InputOTP } from "@kareyes/aether-ui";
 
 	let basicValue = $state("");
 </script>
@@ -12,7 +12,7 @@ export const basicUsageDocs = `
 
 export const variantsDocs = `
 <script lang="ts">
-	import { InputOTP } from "@kareyes/aether";
+	import { InputOTP } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-6">
@@ -32,7 +32,7 @@ export const variantsDocs = `
 
 export const sizesDocs = `
 <script lang="ts">
-	import { InputOTP } from "@kareyes/aether";
+	import { InputOTP } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-6">
@@ -52,7 +52,7 @@ export const sizesDocs = `
 
 export const groupsConfigDocs = `
 <script lang="ts">
-	import { InputOTP } from "@kareyes/aether";
+	import { InputOTP } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-6">
@@ -71,7 +71,7 @@ export const groupsConfigDocs = `
 
 export const errorStateDocs = `
 <script lang="ts">
-	import { InputOTP, Field } from "@kareyes/aether";
+	import { InputOTP, Field } from "@kareyes/aether-ui";
 
 	let errorValue = $state("");
 	let showError = $state(false);
@@ -95,7 +95,7 @@ export const errorStateDocs = `
 
 export const onErrorCallbackDocs = `
 <script lang="ts">
-	import { InputOTP } from "@kareyes/aether";
+	import { InputOTP } from "@kareyes/aether-ui";
 
 	let errorCallbackValue = $state("");
 	let errorCallbackTriggered = $state(false);
@@ -121,14 +121,14 @@ export const onErrorCallbackDocs = `
 
 export const disabledStateDocs = `
 <script lang="ts">
-	import { InputOTP } from "@kareyes/aether";
+	import { InputOTP } from "@kareyes/aether-ui";
 </script>
 
 <InputOTP maxlength={6} groups={2} disabled />`;
 
 export const completeHandlerDocs = `
 <script lang="ts">
-	import { InputOTP } from "@kareyes/aether";
+	import { InputOTP } from "@kareyes/aether-ui";
 
 	let completedValue = $state("");
 	let isComplete = $state(false);
@@ -151,7 +151,7 @@ export const completeHandlerDocs = `
 
 export const variantSizeComboDocs = `
 <script lang="ts">
-	import { InputOTP } from "@kareyes/aether";
+	import { InputOTP } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

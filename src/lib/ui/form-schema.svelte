@@ -8,8 +8,8 @@
 		sectionVariantsDocs,
 		customFooterDocs
 	} from "$lib/code-blocks/form-schema";
-	import { Button, Card, CodeBlock } from "@kareyes/aether";
-	import { SchemaForm, FormController, withField, withFormLayout, RequiredCheckbox, requiredCheckbox } from "@kareyes/aether/forms";
+	import { Button, Card, CodeBlock } from "@kareyes/aether-ui";
+	import { SchemaForm, FormController, withField, withFormLayout, RequiredCheckbox, requiredCheckbox } from "@kareyes/aether-ui/forms";
 	import { Schema, pipe } from "effect";
 
 	// --- Basic Login Form ---

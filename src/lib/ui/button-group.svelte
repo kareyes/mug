@@ -13,7 +13,7 @@
 		Card,
 		CodeBlock,
 		ButtonGroupPrimitives,
-	} from "@kareyes/aether";
+	} from "@kareyes/aether-ui";
 	import {
 		Scissors,
 		Copy,
@@ -35,7 +35,7 @@
 		Save,
 		Undo2,
 		Redo2,
-	} from "@kareyes/aether/icons";
+	} from "@kareyes/aether-ui/icons";
 
 	const { ButtonGroup, ButtonGroupText, ButtonGroupSeparator } =
 		ButtonGroupPrimitives;

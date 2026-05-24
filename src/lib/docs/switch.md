@@ -19,7 +19,7 @@ A toggle switch component for binary on/off states. Built with accessibility in 
 
 ```svelte
 <script>
-  import { Switch } from "@kareyes/aether";
+  import { Switch } from "@kareyes/aether-ui";
   
   let enabled = $state(false);
 </script>
@@ -31,8 +31,8 @@ A toggle switch component for binary on/off states. Built with accessibility in 
 
 ```svelte
 <script>
-  import { Switch } from "@kareyes/aether";
-  import { Field } from "@kareyes/aether";
+  import { Switch } from "@kareyes/aether-ui";
+  import { Field } from "@kareyes/aether-ui";
   
   let notifications = $state(true);
 </script>
@@ -152,8 +152,8 @@ The Field component provides a consistent way to add labels, descriptions, and e
 
 ```svelte
 <script>
-  import { Switch } from "@kareyes/aether";
-  import { Field } from "@kareyes/aether";
+  import { Switch } from "@kareyes/aether-ui";
+  import { Field } from "@kareyes/aether-ui";
   
   let autoSave = $state(true);
 </script>
@@ -175,8 +175,8 @@ The Field component provides a consistent way to add labels, descriptions, and e
 
 ```svelte
 <script>
-  import { Switch } from "@kareyes/aether";
-  import { Field } from "@kareyes/aether";
+  import { Switch } from "@kareyes/aether-ui";
+  import { Field } from "@kareyes/aether-ui";
   
   let termsAccepted = $state(false);
   let error = $derived(!termsAccepted);
@@ -201,8 +201,8 @@ The Field component provides a consistent way to add labels, descriptions, and e
 
 ```svelte
 <script>
-  import { Switch } from "@kareyes/aether";
-  import { FieldPrimitives , Field} from "@kareyes/aether";
+  import { Switch } from "@kareyes/aether-ui";
+  import { FieldPrimitives , Field} from "@kareyes/aether-ui";
   
   let settings = $state({
     email: true,

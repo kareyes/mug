@@ -1,13 +1,13 @@
 export const basicExampleDocs = `
 <script lang="ts">
-	import { Card, Sidebar, SidebarPrimitives } from "@kareyes/aether";
+	import { Card, Sidebar, SidebarPrimitives } from "@kareyes/aether-ui";
 	import {
 		Home,
 		Inbox,
 		Calendar,
 		Search,
 		Settings,
-	} from "@kareyes/aether/icons";
+	} from "@kareyes/aether-ui/icons";
 
 	const {
 		SidebarProvider,
@@ -117,11 +117,11 @@ export const basicExampleDocs = `
 
 export const headerFooterDocs = `
 <script lang="ts">
-	import { Card, Sidebar, SidebarPrimitives } from "@kareyes/aether";
+	import { Card, Sidebar, SidebarPrimitives } from "@kareyes/aether-ui";
 	import {
 		Home, TrendingUp, Users, FileText, Settings,
 		User, MoreHorizontal, LogOut,
-	} from "@kareyes/aether/icons";
+	} from "@kareyes/aether-ui/icons";
 
 	const {
 		SidebarProvider, SidebarContent, SidebarFooter,
@@ -182,8 +182,8 @@ export const headerFooterDocs = `
 
 export const nestedSubmenusDocs = `
 <script lang="ts">
-	import { Sidebar, SidebarPrimitives } from "@kareyes/aether";
-	import { Folder, ChevronRight } from "@kareyes/aether/icons";
+	import { Sidebar, SidebarPrimitives } from "@kareyes/aether-ui";
+	import { Folder, ChevronRight } from "@kareyes/aether-ui/icons";
 
 	const {
 		SidebarProvider, SidebarContent, SidebarGroup,
@@ -228,8 +228,8 @@ export const nestedSubmenusDocs = `
 
 export const actionsBadgesDocs = `
 <script lang="ts">
-	import { Sidebar, SidebarPrimitives } from "@kareyes/aether";
-	import { Mail, Bell, MessageSquare, Star, Plus, Settings, MoreHorizontal } from "@kareyes/aether/icons";
+	import { Sidebar, SidebarPrimitives } from "@kareyes/aether-ui";
+	import { Mail, Bell, MessageSquare, Star, Plus, Settings, MoreHorizontal } from "@kareyes/aether-ui/icons";
 
 	const {
 		SidebarProvider, SidebarContent, SidebarGroup,
@@ -281,8 +281,8 @@ export const actionsBadgesDocs = `
 
 export const searchGroupsDocs = `
 <script lang="ts">
-	import { Sidebar, SidebarPrimitives } from "@kareyes/aether";
-	import { Home, TrendingUp, FileText, Folder, Plus, BookOpen, HelpCircle } from "@kareyes/aether/icons";
+	import { Sidebar, SidebarPrimitives } from "@kareyes/aether-ui";
+	import { Home, TrendingUp, FileText, Folder, Plus, BookOpen, HelpCircle } from "@kareyes/aether-ui/icons";
 
 	const {
 		SidebarProvider, SidebarContent, SidebarGroup,
@@ -335,8 +335,8 @@ export const searchGroupsDocs = `
 
 export const floatingDocs = `
 <script lang="ts">
-	import { Sidebar, SidebarPrimitives } from "@kareyes/aether";
-	import { Home, Code, Database, Cloud, Shield } from "@kareyes/aether/icons";
+	import { Sidebar, SidebarPrimitives } from "@kareyes/aether-ui";
+	import { Home, Code, Database, Cloud, Shield } from "@kareyes/aether-ui/icons";
 
 	const {
 		SidebarProvider, SidebarContent, SidebarGroup,
@@ -372,7 +372,7 @@ export const floatingDocs = `
 
 export const loadingDocs = `
 <script lang="ts">
-	import { Sidebar, SidebarPrimitives } from "@kareyes/aether";
+	import { Sidebar, SidebarPrimitives } from "@kareyes/aether-ui";
 
 	const {
 		SidebarProvider, SidebarContent, SidebarGroup,
@@ -404,8 +404,8 @@ export const loadingDocs = `
 
 export const sizeVariantsDocs = `
 <script lang="ts">
-	import { Sidebar, SidebarPrimitives } from "@kareyes/aether";
-	import { Home, Settings, Inbox, Calendar, User, Zap } from "@kareyes/aether/icons";
+	import { Sidebar, SidebarPrimitives } from "@kareyes/aether-ui";
+	import { Home, Settings, Inbox, Calendar, User, Zap } from "@kareyes/aether-ui/icons";
 
 	const {
 		SidebarProvider, SidebarContent, SidebarGroup,
@@ -457,8 +457,8 @@ export const sizeVariantsDocs = `
 
 export const linkNavigationDocs = `
 <script lang="ts">
-	import { Sidebar, SidebarPrimitives } from "@kareyes/aether";
-	import { BookOpen, Code, FileText, Database, HelpCircle } from "@kareyes/aether/icons";
+	import { Sidebar, SidebarPrimitives } from "@kareyes/aether-ui";
+	import { BookOpen, Code, FileText, Database, HelpCircle } from "@kareyes/aether-ui/icons";
 
 	const {
 		SidebarProvider, SidebarContent, SidebarGroup,

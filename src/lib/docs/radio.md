@@ -19,8 +19,8 @@ A flexible radio group component that allows users to select one option from a s
 
 ```svelte
 <script>
-  import { RadioGroup } from "@kareyes/aether";
-  import type { RadioGroupOption } from "@kareyes/aether";
+  import { RadioGroup } from "@kareyes/aether-ui";
+  import type { RadioGroupOption } from "@kareyes/aether-ui";
   
   let selectedValue = $state("option1");
   
@@ -42,7 +42,7 @@ A flexible radio group component that allows users to select one option from a s
 
 ```svelte
 <script>
-  import { RadioGroup } from "@kareyes/aether";
+  import { RadioGroup } from "@kareyes/aether-ui";
   
   let selectedPlan = $state("pro");
   
@@ -75,7 +75,7 @@ A flexible radio group component that allows users to select one option from a s
 
 ```svelte
 <script>
-  import { RadioGroup } from "@kareyes/aether";
+  import { RadioGroup } from "@kareyes/aether-ui";
   
   let theme = $state("auto");
   
@@ -279,7 +279,7 @@ interface RadioGroupOption {
 
 ```svelte
 <script>
-  import { Field } from "@kareyes/aether";
+  import { Field } from "@kareyes/aether-ui";
   
   let cluster = $state("");
 </script>
@@ -455,7 +455,7 @@ import type {
   RadioGroupSize,
   RadioGroupItemVariant,
   RadioGroupItemSize
-} from "@kareyes/aether";
+} from "@kareyes/aether-ui";
 
 // Group variant and size types
 type GroupVariant = RadioGroupVariant; // "default" | "card" | "inline"
@@ -479,7 +479,7 @@ type ItemSize = RadioGroupItemSize; // "sm" | "default" | "lg"
 
 ```svelte
 <script>
-  import { RadioGroup, RadioGroupItem } from "@kareyes/aether";
+  import { RadioGroup, RadioGroupItem } from "@kareyes/aether-ui";
   
   let formData = $state({
     plan: "free",
@@ -535,9 +535,9 @@ The Field component provides a consistent way to add labels, descriptions, and e
 
 ```svelte
 <script>
-  import { RadioGroup } from "@kareyes/aether";
-  import type { RadioGroupOption } from "@kareyes/aether";
-  import { Field } from "@kareyes/aether";
+  import { RadioGroup } from "@kareyes/aether-ui";
+  import type { RadioGroupOption } from "@kareyes/aether-ui";
+  import { Field } from "@kareyes/aether-ui";
   
   let selectedPlan = $state("pro");
   
@@ -564,8 +564,8 @@ The Field component provides a consistent way to add labels, descriptions, and e
 
 ```svelte
 <script>
-  import { RadioGroup } from "@kareyes/aether";
-  import { FieldPrimitives } from "@kareyes/aether";
+  import { RadioGroup } from "@kareyes/aether-ui";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
   
   let paymentMethod = $state("");
   let error = $derived(paymentMethod === "");
@@ -595,8 +595,8 @@ The Field component provides a consistent way to add labels, descriptions, and e
 
 ```svelte
 <script>
-  import { RadioGroup } from "@kareyes/aether";
-  import { FieldPrimitives } from "@kareyes/aether";
+  import { RadioGroup } from "@kareyes/aether-ui";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
   
   let selectedPlan = $state("pro");
   
@@ -658,9 +658,9 @@ The Field component provides a consistent way to add labels, descriptions, and e
 
 ```svelte
 <script>
-  import { RadioGroup } from "@kareyes/aether";
-  import { FieldPrimitives,Field } from "@kareyes/aether";
-  import { Button } from "@kareyes/aether";
+  import { RadioGroup } from "@kareyes/aether-ui";
+  import { FieldPrimitives,Field } from "@kareyes/aether-ui";
+  import { Button } from "@kareyes/aether-ui";
   
   let formData = $state({
     plan: "pro",

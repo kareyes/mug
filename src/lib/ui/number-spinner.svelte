@@ -18,7 +18,7 @@
 		Badge,
 		Card,
 		CodeBlock,
-	} from "@kareyes/aether";
+	} from "@kareyes/aether-ui";
 
 	let basicValue = $state(0);
 	let quantityValue = $state(1);

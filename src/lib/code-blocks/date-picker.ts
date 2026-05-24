@@ -1,6 +1,6 @@
 export const basicDatePickerDocs = `
 <script lang="ts">
-	import { DatePicker } from "@kareyes/aether";
+	import { DatePicker } from "@kareyes/aether-ui";
 	import type { DateValue } from "@internationalized/date";
 
 	let singleDate = $state<DateValue | undefined>();
@@ -10,7 +10,7 @@ export const basicDatePickerDocs = `
 
 export const dateRangePickerDocs = `
 <script lang="ts">
-	import { DateRangePicker, DatePickerPrimitives } from "@kareyes/aether";
+	import { DateRangePicker, DatePickerPrimitives } from "@kareyes/aether-ui";
 
 	let dateRange = $state<DatePickerPrimitives.DateRange | undefined>();
 </script>
@@ -19,7 +19,7 @@ export const dateRangePickerDocs = `
 
 export const datePickerWithPresetsDocs = `
 <script lang="ts">
-	import { DatePickerWithPresets } from "@kareyes/aether";
+	import { DatePickerWithPresets } from "@kareyes/aether-ui";
 	import type { DateValue } from "@internationalized/date";
 
 	let presetDate = $state<DateValue | undefined>();
@@ -29,7 +29,7 @@ export const datePickerWithPresetsDocs = `
 
 export const dateRangeWithPresetsDocs = `
 <script lang="ts">
-	import { DateRangePickerWithPresets, DatePickerPrimitives } from "@kareyes/aether";
+	import { DateRangePickerWithPresets, DatePickerPrimitives } from "@kareyes/aether-ui";
 
 	let presetRange = $state<DatePickerPrimitives.DateRange | undefined>();
 </script>
@@ -38,7 +38,7 @@ export const dateRangeWithPresetsDocs = `
 
 export const errorStatesDocs = `
 <script lang="ts">
-	import { DatePicker, DatePickerWithPresets } from "@kareyes/aether";
+	import { DatePicker, DatePickerWithPresets } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-4 max-w-md">
@@ -57,7 +57,7 @@ export const errorStatesDocs = `
 
 export const buttonVariantsDocs = `
 <script lang="ts">
-	import { DatePicker } from "@kareyes/aether";
+	import { DatePicker } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-4 max-w-md">
@@ -69,7 +69,7 @@ export const buttonVariantsDocs = `
 
 export const disabledStateDocs = `
 <script lang="ts">
-	import { DatePicker } from "@kareyes/aether";
+	import { DatePicker } from "@kareyes/aether-ui";
 	import type { DateValue } from "@internationalized/date";
 
 	let disabledDate = $state<DateValue | undefined>();
@@ -79,7 +79,7 @@ export const disabledStateDocs = `
 
 export const customFormatDocs = `
 <script lang="ts">
-	import { DatePicker } from "@kareyes/aether";
+	import { DatePicker } from "@kareyes/aether-ui";
 	import { getLocalTimeZone } from "@internationalized/date";
 </script>
 

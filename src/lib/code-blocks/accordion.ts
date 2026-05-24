@@ -1,6 +1,6 @@
 export const defaultDocs =`
 <script lang="ts">
-    import { AccordionPrimitives as Accordion} from "@kareyes/aether";
+    import { AccordionPrimitives as Accordion} from "@kareyes/aether-ui";
 </script>
 
 <Accordion.Root type="single" class="w-full">
@@ -27,7 +27,7 @@ export const defaultDocs =`
 
 export const borderedDocs =`
 <script lang="ts">
-    import { AccordionPrimitives as Accordion} from "@kareyes/aether";
+    import { AccordionPrimitives as Accordion} from "@kareyes/aether-ui";
 </script>
 
 <Accordion.Root type="single" variant="bordered" class="w-full">
@@ -64,7 +64,7 @@ export const borderedDocs =`
 
 export const splittedDocs =`
 <script lang="ts">
-    import { AccordionPrimitives as Accordion} from "@kareyes/aether";
+    import { AccordionPrimitives as Accordion} from "@kareyes/aether-ui";
 </script>
 
 <Accordion.Root type="single" variant="splitted" class="w-full">
@@ -103,7 +103,7 @@ export const splittedDocs =`
 
 export const shadowDocs =`
 <script lang="ts">
-    import { AccordionPrimitives as Accordion} from "@kareyes/aether";
+    import { AccordionPrimitives as Accordion} from "@kareyes/aether-ui";
 </script>
 
 <Accordion.Root type="single" variant="shadow" class="w-full">
@@ -140,7 +140,7 @@ export const shadowDocs =`
 
 export const multipleDocs =`
 <script lang="ts">
-    import { AccordionPrimitives as Accordion} from "@kareyes/aether";
+    import { AccordionPrimitives as Accordion} from "@kareyes/aether-ui";
 </script>
 
 <Accordion.Root type="multiple" variant="bordered" class="w-full">
@@ -182,7 +182,7 @@ export const multipleDocs =`
 
 export const disabledDocs =`
 <script lang="ts">
-    import { AccordionPrimitives as Accordion} from "@kareyes/aether";
+    import { AccordionPrimitives as Accordion} from "@kareyes/aether-ui";
 </script>
 
 <Accordion.Root type="single" variant="splitted" class="w-full">
@@ -213,7 +213,7 @@ export const disabledDocs =`
 
 export const defaultExpandedDocs =`
 <script lang="ts">
-    import { AccordionPrimitives as Accordion} from "@kareyes/aether";
+    import { AccordionPrimitives as Accordion} from "@kareyes/aether-ui";
 </script>
 
 <Accordion.Root type="single" value="item-2" variant="bordered" class="w-full">
@@ -243,7 +243,7 @@ export const defaultExpandedDocs =`
 
 export const allVariantsDocs =`
 <script lang="ts">
-    import { AccordionPrimitives as Accordion} from "@kareyes/aether";
+    import { AccordionPrimitives as Accordion} from "@kareyes/aether-ui";
 </script>
 
 <div class="grid md:grid-cols-2 gap-6">
@@ -320,7 +320,7 @@ export const allVariantsDocs =`
 `
 export const FAQDocs =`
 <script lang="ts">
-    import { AccordionPrimitives as Accordion} from "@kareyes/aether";
+    import { AccordionPrimitives as Accordion} from "@kareyes/aether-ui";
 </script>
 
 <div class="max-w-2xl">

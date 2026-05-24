@@ -3,7 +3,7 @@ export const sharedSchemaDocs = `
 // src/lib/schemas/contact.ts
 // Define the schema once — import it on both client and server.
 import { Schema, pipe } from "effect";
-import { withField, withFormLayout } from "@kareyes/aether/forms";
+import { withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 export const ContactSchema = pipe(
 	Schema.Struct({
@@ -85,7 +85,7 @@ export const formActionClientDocs = `
 <!-- src/routes/contact/+page.svelte -->
 <script lang="ts">
 	import { enhance } from "$app/forms";
-	import { SchemaForm, FormController } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController } from "@kareyes/aether-ui/forms";
 	import { ContactSchema } from "$lib/schemas/contact";
 	import type { ActionData } from "./$types";
 
@@ -172,7 +172,7 @@ export const POST: RequestHandler = async ({ request }) => {
 export const fetchSubmitDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	const RegistrationSchema = pipe(
 		Schema.Struct({
@@ -220,7 +220,7 @@ export const fetchSubmitDocs = `
 // ── Server error mapping ──────────────────────────────────────────────────────
 export const serverErrorMappingDocs = `
 <script lang="ts">
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 	import { Schema, pipe } from "effect";
 
 	const schema = pipe(

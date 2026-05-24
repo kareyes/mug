@@ -9,8 +9,8 @@
 		buttonGroupsDocs,
 		useCasesDocs,
 	} from "$lib/code-blocks/button";
-	import { Button, Badge, Separator, Card, CodeBlock } from "@kareyes/aether";
-	import { PlusIcon, SaveIcon, DownloadIcon } from "@kareyes/aether/icons";
+	import { Button, Badge, Separator, Card, CodeBlock } from "@kareyes/aether-ui";
+	import { PlusIcon, SaveIcon, DownloadIcon } from "@kareyes/aether-ui/icons";
 
 	let loading = $state(false);
 	let isLoading = $state(false);

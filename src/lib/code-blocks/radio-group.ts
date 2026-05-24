@@ -1,6 +1,6 @@
 export const basicUsageDocs = `
 <script lang="ts">
-	import { RadioGroup, RadioGroupPrimitives } from "@kareyes/aether";
+	import { RadioGroup, RadioGroupPrimitives } from "@kareyes/aether-ui";
 
 	type RadioGroupOption = RadioGroupPrimitives.RadioGroupOption;
 	let themeSelection = $state("auto");
@@ -37,7 +37,7 @@ export const basicUsageDocs = `
 
 export const withDescriptionsDocs = `
 <script lang="ts">
-	import { RadioGroup, RadioGroupPrimitives } from "@kareyes/aether";
+	import { RadioGroup, RadioGroupPrimitives } from "@kareyes/aether-ui";
 	type RadioGroupOption = RadioGroupPrimitives.RadioGroupOption;
 
 	let selectedPlan = $state("pro");
@@ -123,7 +123,7 @@ export const variantsDocs = `
 
 export const errorStatesDocs = `
 <script lang="ts">
-	import { RadioGroup, RadioGroupPrimitives } from "@kareyes/aether";
+	import { RadioGroup, RadioGroupPrimitives } from "@kareyes/aether-ui";
 	type RadioGroupOption = RadioGroupPrimitives.RadioGroupOption;
 
 	let errorSelection = $state("");
@@ -151,7 +151,7 @@ export const errorStatesDocs = `
 
 export const withFieldDocs = `
 <script lang="ts">
-	import { RadioGroup, Field, Badge } from "@kareyes/aether";
+	import { RadioGroup, Field, Badge } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-8 md:grid-cols-2">
@@ -187,7 +187,7 @@ export const withFieldDocs = `
 
 export const interactiveExamplesDocs = `
 <script lang="ts">
-	import { RadioGroup, Badge } from "@kareyes/aether";
+	import { RadioGroup, Badge } from "@kareyes/aether-ui";
 	let themeSelection = $state("auto");
 </script>
 
@@ -214,7 +214,7 @@ export const disabledStateDocs = `
 
 export const cardStyleDocs = `
 <script lang="ts">
-	import { RadioGroup, Badge, RadioGroupPrimitives } from "@kareyes/aether";
+	import { RadioGroup, Badge, RadioGroupPrimitives } from "@kareyes/aether-ui";
 	type RadioGroupOption = RadioGroupPrimitives.RadioGroupOption;
 
 	let clusterType = $state("kubernetes");

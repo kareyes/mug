@@ -7,7 +7,7 @@ A flexible input component with built-in support for addons (icons, text, button
 
 ```svelte
 <script lang="ts">
-  import { Input } from "@kareyes/aether";
+  import { Input } from "@kareyes/aether-ui";
 
   let value = $state("");
 </script>
@@ -19,7 +19,7 @@ A flexible input component with built-in support for addons (icons, text, button
 
 ```svelte
 <script lang="ts">
-  import { InputPrimitives } from "@kareyes/aether";
+  import { InputPrimitives } from "@kareyes/aether-ui";
 </script>
 
 <InputPrimitives.Root>
@@ -74,7 +74,7 @@ A flexible input component with built-in support for addons (icons, text, button
 
 ```svelte
 <script lang="ts">
-  import { Input } from "@kareyes/aether";
+  import { Input } from "@kareyes/aether-ui";
   import SearchIcon from "@lucide/svelte/icons/search";
   import MailIcon from "@lucide/svelte/icons/mail";
 </script>
@@ -133,7 +133,7 @@ A flexible input component with built-in support for addons (icons, text, button
 
 ```svelte
 <script lang="ts">
-  import { Input, InputGroupPrimitives } from "@kareyes/aether";
+  import { Input, InputGroupPrimitives } from "@kareyes/aether-ui";
   import CopyIcon from "@lucide/svelte/icons/copy";
   import EyeIcon from "@lucide/svelte/icons/eye";
   import EyeOffIcon from "@lucide/svelte/icons/eye-off";
@@ -175,7 +175,7 @@ A flexible input component with built-in support for addons (icons, text, button
 
 ```svelte
 <script lang="ts">
-  import { Input } from "@kareyes/aether";
+  import { Input } from "@kareyes/aether-ui";
   import PhoneIcon from "@lucide/svelte/icons/phone";
   import CreditCardIcon from "@lucide/svelte/icons/credit-card";
 </script>
@@ -237,7 +237,7 @@ A flexible input component with built-in support for addons (icons, text, button
 
 ```svelte
 <script lang="ts">
-  import { Field, Input } from "@kareyes/aether";
+  import { Field, Input } from "@kareyes/aether-ui";
   import MailIcon from "@lucide/svelte/icons/mail";
   import LockIcon from "@lucide/svelte/icons/lock";
 
@@ -276,7 +276,7 @@ A flexible input component with built-in support for addons (icons, text, button
 
 ```svelte
 <script lang="ts">
-  import { Field, Input } from "@kareyes/aether";
+  import { Field, Input } from "@kareyes/aether-ui";
 
   let email = $state('');
   let errors = $state<Record<string, string>>({});
@@ -311,7 +311,7 @@ A flexible input component with built-in support for addons (icons, text, button
 
 ```svelte
 <script lang="ts">
-  import { Field, Input, Button } from "@kareyes/aether";
+  import { Field, Input, Button } from "@kareyes/aether-ui";
   import MailIcon from "@lucide/svelte/icons/mail";
   import LockIcon from "@lucide/svelte/icons/lock";
   import UserIcon from "@lucide/svelte/icons/user";

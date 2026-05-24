@@ -20,7 +20,7 @@ A fully-featured slider component with support for variants, sizes, step indicat
 
 ```svelte
 <script lang="ts">
-  import { Slider } from "@kareyes/aether";
+  import { Slider } from "@kareyes/aether-ui";
 
   let value = $state([50]);
 </script>
@@ -32,7 +32,7 @@ A fully-featured slider component with support for variants, sizes, step indicat
 
 ```svelte
 <script lang="ts">
-  import { SliderPrimitives } from "@kareyes/aether";
+  import { SliderPrimitives } from "@kareyes/aether-ui";
 </script>
 
 <SliderPrimitives.Root value={[50]} min={0} max={100} step={1}>

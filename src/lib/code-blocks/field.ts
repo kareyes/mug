@@ -1,6 +1,6 @@
 export const completeFormDocs = `
 <script lang="ts">
-  import { Button, Input, Textarea, Checkbox, Switch, Select, Field, FieldPrimitives } from "@kareyes/aether";
+  import { Button, Input, Textarea, Checkbox, Switch, Select, Field, FieldPrimitives } from "@kareyes/aether-ui";
 
   let username = \$state("");
   let email = \$state("");
@@ -80,7 +80,7 @@ export const completeFormDocs = `
 
 export const inputVariantsDocs = `
 <script lang="ts">
-  import { Input, Card, Field } from "@kareyes/aether";
+  import { Input, Card, Field } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -117,7 +117,7 @@ export const inputVariantsDocs = `
 
 export const inputSizesDocs = `
 <script lang="ts">
-  import { Input, Card, Field } from "@kareyes/aether";
+  import { Input, Card, Field } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-6 md:grid-cols-3">
@@ -142,7 +142,7 @@ export const inputSizesDocs = `
 
 export const inputMasksDocs = `
 <script lang="ts">
-  import { Input, Card, Field } from "@kareyes/aether";
+  import { Input, Card, Field } from "@kareyes/aether-ui";
 
   let phone = \$state("");
   let ssn = \$state("");
@@ -176,7 +176,7 @@ export const inputMasksDocs = `
 
 export const textareaVariantsDocs = `
 <script lang="ts">
-  import { Textarea, Card, Field } from "@kareyes/aether";
+  import { Textarea, Card, Field } from "@kareyes/aether-ui";
 
   let description = \$state("");
 </script>
@@ -209,7 +209,7 @@ export const textareaVariantsDocs = `
 
 export const checkboxVariantsDocs = `
 <script lang="ts">
-  import { Checkbox, Card, Field } from "@kareyes/aether";
+  import { Checkbox, Card, Field } from "@kareyes/aether-ui";
 </script>
 
 <!-- Variants -->
@@ -268,8 +268,8 @@ export const checkboxVariantsDocs = `
 
 export const checkboxGroupDocs = `
 <script lang="ts">
-  import { CheckboxGroup, Card, Field, FieldPrimitives } from "@kareyes/aether";
-  import type { CheckboxPrimitives } from "@kareyes/aether";
+  import { CheckboxGroup, Card, Field, FieldPrimitives } from "@kareyes/aether-ui";
+  import type { CheckboxPrimitives } from "@kareyes/aether-ui";
 
   type CheckboxGroupOption = CheckboxPrimitives.CheckboxGroupOption;
 
@@ -397,8 +397,8 @@ export const checkboxGroupDocs = `
 
 export const radioGroupDocs = `
 <script lang="ts">
-  import { RadioGroup, Card, Field, FieldPrimitives } from "@kareyes/aether";
-  import type { RadioGroupPrimitives } from "@kareyes/aether";
+  import { RadioGroup, Card, Field, FieldPrimitives } from "@kareyes/aether-ui";
+  import type { RadioGroupPrimitives } from "@kareyes/aether-ui";
 
   type RadioGroupOption = RadioGroupPrimitives.RadioGroupOption;
 
@@ -456,7 +456,7 @@ export const radioGroupDocs = `
 
 export const switchVariantsDocs = `
 <script lang="ts">
-  import { Switch, Card, Field } from "@kareyes/aether";
+  import { Switch, Card, Field } from "@kareyes/aether-ui";
 </script>
 
 <!-- Variants -->
@@ -497,7 +497,7 @@ export const switchVariantsDocs = `
 
 export const horizontalLayoutsDocs = `
 <script lang="ts">
-  import { Checkbox, Switch, Card, Field } from "@kareyes/aether";
+  import { Checkbox, Switch, Card, Field } from "@kareyes/aether-ui";
 
   let agreeToTerms = \$state(false);
   let darkMode = \$state(false);
@@ -525,7 +525,7 @@ export const horizontalLayoutsDocs = `
 
 export const errorStatesDocs = `
 <script lang="ts">
-  import { Input, Card, Field } from "@kareyes/aether";
+  import { Input, Card, Field } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-6 md:grid-cols-2">
@@ -549,7 +549,7 @@ export const errorStatesDocs = `
 
 export const cardVariantsDocs = `
 <script lang="ts">
-  import { Button, Input, Switch, Select, Card, Field, FieldPrimitives } from "@kareyes/aether";
+  import { Button, Input, Switch, Select, Card, Field, FieldPrimitives } from "@kareyes/aether-ui";
 
   let plan = \$state("");
   const plans = [
@@ -602,7 +602,7 @@ export const cardVariantsDocs = `
 
 export const sliderFieldDocs = `
 <script lang="ts">
-  import { Slider, Card, Field } from "@kareyes/aether";
+  import { Slider, Card, Field } from "@kareyes/aether-ui";
 
   let volume = \$state(50);
   let priceRange = \$state([100, 500]);
@@ -624,7 +624,7 @@ export const sliderFieldDocs = `
 
 export const inputOtpFieldDocs = `
 <script lang="ts">
-  import { InputOTP, Card, Field } from "@kareyes/aether";
+  import { InputOTP, Card, Field } from "@kareyes/aether-ui";
 
   let otpCode = \$state("");
 </script>
@@ -650,7 +650,7 @@ export const inputOtpFieldDocs = `
 
 export const numberSpinnerFieldDocs = `
 <script lang="ts">
-  import { NumberSpinner, Card, Field } from "@kareyes/aether";
+  import { NumberSpinner, Card, Field } from "@kareyes/aether-ui";
 
   let quantity = \$state(1);
 </script>
@@ -680,7 +680,7 @@ export const numberSpinnerFieldDocs = `
 
 export const fileInputFieldDocs = `
 <script lang="ts">
-  import { FileInput, Card, Field } from "@kareyes/aether";
+  import { FileInput, Card, Field } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-6 md:grid-cols-2">
@@ -716,7 +716,7 @@ export const fileInputFieldDocs = `
 export const datePickerFieldDocs = `
 <script lang="ts">
   import type { DateValue } from "@internationalized/date";
-  import { DatePicker, Card, Field } from "@kareyes/aether";
+  import { DatePicker, Card, Field } from "@kareyes/aether-ui";
 
   let deliveryDate = \$state<DateValue | undefined>(undefined);
 </script>
@@ -737,7 +737,7 @@ export const datePickerFieldDocs = `
 
 export const labelPositionDocs = `
 <script lang="ts">
-  import { Checkbox, Switch, Card, Field } from "@kareyes/aether";
+  import { Checkbox, Switch, Card, Field } from "@kareyes/aether-ui";
 
   let acceptTerms = \$state(false);
   let enableNotifications = \$state(false);
@@ -789,7 +789,7 @@ export const labelPositionDocs = `
 
 export const completeOrderFormDocs = `
 <script lang="ts">
-  import { Button, Slider, InputOTP, NumberSpinner, FileInput, Switch, Field, FieldPrimitives, Card } from "@kareyes/aether";
+  import { Button, Slider, InputOTP, NumberSpinner, FileInput, Switch, Field, FieldPrimitives, Card } from "@kareyes/aether-ui";
 
   let quantity = \$state(1);
   let volume = \$state(50);

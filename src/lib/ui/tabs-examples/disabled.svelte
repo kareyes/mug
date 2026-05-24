@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { TabsPrimitives } from "@kareyes/aether";
+	import { TabsPrimitives } from "@kareyes/aether-ui";
 	const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
 </script>
 

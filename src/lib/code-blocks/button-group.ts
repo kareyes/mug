@@ -1,7 +1,7 @@
 export const basicGroupsDocs = `
 <script lang="ts">
-	import { Button, ButtonGroupPrimitives } from "@kareyes/aether";
-	import { Scissors, Copy, Clipboard } from "@kareyes/aether/icons";
+	import { Button, ButtonGroupPrimitives } from "@kareyes/aether-ui";
+	import { Scissors, Copy, Clipboard } from "@kareyes/aether-ui/icons";
 
 	const { ButtonGroup } = ButtonGroupPrimitives;
 </script>
@@ -36,7 +36,7 @@ export const basicGroupsDocs = `
 
 export const withTextLabelsDocs = `
 <script lang="ts">
-	import { Button, Badge, ButtonGroupPrimitives } from "@kareyes/aether";
+	import { Button, Badge, ButtonGroupPrimitives } from "@kareyes/aether-ui";
 
 	const { ButtonGroup, ButtonGroupText } = ButtonGroupPrimitives;
 </script>
@@ -69,8 +69,8 @@ export const withTextLabelsDocs = `
 
 export const withSeparatorsDocs = `
 <script lang="ts">
-	import { Button, ButtonGroupPrimitives } from "@kareyes/aether";
-	import { Bold, Italic, Underline, AlignLeft, AlignCenter, AlignRight } from "@kareyes/aether/icons";
+	import { Button, ButtonGroupPrimitives } from "@kareyes/aether-ui";
+	import { Bold, Italic, Underline, AlignLeft, AlignCenter, AlignRight } from "@kareyes/aether-ui/icons";
 
 	const { ButtonGroup, ButtonGroupText, ButtonGroupSeparator } = ButtonGroupPrimitives;
 </script>
@@ -108,7 +108,7 @@ export const withSeparatorsDocs = `
 
 export const verticalOrientationDocs = `
 <script lang="ts">
-	import { Button, ButtonGroupPrimitives } from "@kareyes/aether";
+	import { Button, ButtonGroupPrimitives } from "@kareyes/aether-ui";
 
 	const { ButtonGroup, ButtonGroupText } = ButtonGroupPrimitives;
 </script>
@@ -139,13 +139,13 @@ export const verticalOrientationDocs = `
 
 export const complexExamplesDocs = `
 <script lang="ts">
-	import { Button, ButtonGroupPrimitives } from "@kareyes/aether";
+	import { Button, ButtonGroupPrimitives } from "@kareyes/aether-ui";
 	import {
 		Bold, Italic, Underline, Strikethrough,
 		AlignLeft, AlignCenter, AlignRight,
 		SkipBack, Play, SkipForward, Shuffle, Repeat,
 		FilePlus, FolderOpen, Save, Undo2, Redo2
-	} from "@kareyes/aether/icons";
+	} from "@kareyes/aether-ui/icons";
 
 	const { ButtonGroup, ButtonGroupSeparator } = ButtonGroupPrimitives;
 </script>
@@ -195,7 +195,7 @@ export const complexExamplesDocs = `
 
 export const mixedVariantsDocs = `
 <script lang="ts">
-	import { Button, ButtonGroupPrimitives } from "@kareyes/aether";
+	import { Button, ButtonGroupPrimitives } from "@kareyes/aether-ui";
 
 	const { ButtonGroup } = ButtonGroupPrimitives;
 </script>

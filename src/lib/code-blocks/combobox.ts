@@ -1,6 +1,6 @@
 export const basicUsageDocs = `
 <script lang="ts">
-	import { ComboBox } from "@kareyes/aether";
+	import { ComboBox } from "@kareyes/aether-ui";
 
 	const frameworks = [
 		{ value: "sveltekit", label: "SvelteKit" },
@@ -51,7 +51,7 @@ export const basicUsageDocs = `
 
 export const triggerVariantsDocs = `
 <script lang="ts">
-	import { ComboBox } from "@kareyes/aether";
+	import { ComboBox } from "@kareyes/aether-ui";
 
 	const frameworks = [
 		{ value: "sveltekit", label: "SvelteKit" },
@@ -75,7 +75,7 @@ export const triggerVariantsDocs = `
 
 export const sizesDocs = `
 <script lang="ts">
-	import { ComboBox } from "@kareyes/aether";
+	import { ComboBox } from "@kareyes/aether-ui";
 
 	const frameworks = [
 		{ value: "sveltekit", label: "SvelteKit" },
@@ -91,7 +91,7 @@ export const sizesDocs = `
 
 export const widthOptionsDocs = `
 <script lang="ts">
-	import { ComboBox } from "@kareyes/aether";
+	import { ComboBox } from "@kareyes/aether-ui";
 
 	const languages = [
 		{ value: "javascript", label: "JavaScript" },
@@ -170,7 +170,7 @@ export const widthOptionsDocs = `
 
 export const formExampleDocs = `
 <script lang="ts">
-	import { ComboBox, Label } from "@kareyes/aether";
+	import { ComboBox, Label } from "@kareyes/aether-ui";
 
 	const frameworks = [
 		{ value: "sveltekit", label: "SvelteKit" },
@@ -288,8 +288,8 @@ export const formExampleDocs = `
 
 export const customTriggerDocs = `
 <script lang="ts">
-	import { ComboBox, Button, PopoverPrimitives as Popover } from "@kareyes/aether";
-	import { ChevronsUpDown } from "@kareyes/aether/icons";
+	import { ComboBox, Button, PopoverPrimitives as Popover } from "@kareyes/aether-ui";
+	import { ChevronsUpDown } from "@kareyes/aether-ui/icons";
 
 	const frameworks = [
 		{ value: "sveltekit", label: "SvelteKit" },
@@ -366,7 +366,7 @@ export const customTriggerDocs = `
 `;
 export const disabledItemsDocs = `
 <script lang="ts">
-	import { ComboBox } from "@kareyes/aether";
+	import { ComboBox } from "@kareyes/aether-ui";
 </script>
 
 <ComboBox

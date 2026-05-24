@@ -1,6 +1,6 @@
 export const defaultVariantDocs = `
 <script lang="ts">
-  import { TabsPrimitives } from "@kareyes/aether";
+  import { TabsPrimitives } from "@kareyes/aether-ui";
 
   const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
 </script>
@@ -41,8 +41,8 @@ export const underlineVariantDocs = `
 
 export const pillsVariantDocs = `
 <script lang="ts">
-  import { TabsPrimitives } from "@kareyes/aether";
-  import { Home, User, Settings } from "@kareyes/aether/icons";
+  import { TabsPrimitives } from "@kareyes/aether-ui";
+  import { Home, User, Settings } from "@kareyes/aether-ui/icons";
 
   const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
 </script>
@@ -70,8 +70,8 @@ export const pillsVariantDocs = `
 
 export const solidVariantDocs = `
 <script lang="ts">
-  import { TabsPrimitives } from "@kareyes/aether";
-  import { Mail, Calendar, Bell } from "@kareyes/aether/icons";
+  import { TabsPrimitives } from "@kareyes/aether-ui";
+  import { Mail, Calendar, Bell } from "@kareyes/aether-ui/icons";
 
   const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
 </script>
@@ -167,8 +167,8 @@ export const animationVariantsDocs = `
 
 export const overflowScrollDocs = `
 <script lang="ts">
-  import { TabsPrimitives } from "@kareyes/aether";
-  import { Home, BarChart3, Settings, CreditCard, Users, Puzzle, Shield } from "@kareyes/aether/icons";
+  import { TabsPrimitives } from "@kareyes/aether-ui";
+  import { Home, BarChart3, Settings, CreditCard, Users, Puzzle, Shield } from "@kareyes/aether-ui/icons";
 
   const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
 </script>
@@ -215,8 +215,8 @@ export const overflowScrollDocs = `
 
 export const verticalDocs = `
 <script lang="ts">
-  import { TabsPrimitives } from "@kareyes/aether";
-  import { Home, User, Settings, Shield } from "@kareyes/aether/icons";
+  import { TabsPrimitives } from "@kareyes/aether-ui";
+  import { Home, User, Settings, Shield } from "@kareyes/aether-ui/icons";
 
   const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
 </script>
@@ -264,7 +264,7 @@ export const verticalDocs = `
 
 export const dropdownMobileDocs = `
 <script lang="ts">
-  import { TabsPrimitives } from "@kareyes/aether";
+  import { TabsPrimitives } from "@kareyes/aether-ui";
 
   const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
 
@@ -295,7 +295,7 @@ export const dropdownMobileDocs = `
 
 export const disabledDocs = `
 <script lang="ts">
-  import { TabsPrimitives } from "@kareyes/aether";
+  import { TabsPrimitives } from "@kareyes/aether-ui";
 
   const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
 </script>
@@ -315,8 +315,8 @@ export const disabledDocs = `
 
 export const combinationsDocs = `
 <script lang="ts">
-  import { TabsPrimitives } from "@kareyes/aether";
-  import { Home, User, Settings } from "@kareyes/aether/icons";
+  import { TabsPrimitives } from "@kareyes/aether-ui";
+  import { Home, User, Settings } from "@kareyes/aether-ui/icons";
 
   const { Tabs, TabsList, TabsTrigger, TabsContent } = TabsPrimitives;
 </script>

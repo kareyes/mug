@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Calendar, Card, CalendarPrimitives, CodeBlock } from "@kareyes/aether";
+	import { Calendar, Card, CalendarPrimitives, CodeBlock } from "@kareyes/aether-ui";
 	import {
 		today,
 		getLocalTimeZone,

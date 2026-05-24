@@ -7,7 +7,7 @@ A collection of links for navigating websites, with support for dropdowns, icons
 
 ```svelte
 <script lang="ts">
-  import * as NavigationMenu from "@kareyes/aether";
+  import * as NavigationMenu from "@kareyes/aether-ui";
 </script>
 
 <NavigationMenu.Root>
@@ -33,7 +33,7 @@ A collection of links for navigating websites, with support for dropdowns, icons
 
 ```svelte
 <script lang="ts">
-  import { NavigationMenuPrimitives } from "@kareyes/aether";
+  import { NavigationMenuPrimitives } from "@kareyes/aether-ui";
 </script>
 
 <NavigationMenuPrimitives.Root>
@@ -145,8 +145,8 @@ For consistent styling when using plain links (without dropdowns), import and us
 
 ```svelte
 <script lang="ts">
-  import * as NavigationMenu from "@kareyes/aether";
-  import { navigationMenuTriggerStyle } from "@kareyes/aether/components/ui/navigation-menu";
+  import * as NavigationMenu from "@kareyes/aether-ui";
+  import { navigationMenuTriggerStyle } from "@kareyes/aether-ui/components/ui/navigation-menu";
 </script>
 
 <NavigationMenu.Root>

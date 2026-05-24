@@ -1,6 +1,6 @@
 export const variantDocs =`
 <script lang="ts">
-	import { Alert } from "@kareyes/aether";
+	import { Alert } from "@kareyes/aether-ui";
 
 </script>
 
@@ -16,7 +16,7 @@ export const variantDocs =`
 
 export const withNWithoutIconsDocs =`
 <script lang="ts">
-    import { Alert } from "@kareyes/aether";
+    import { Alert } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -37,7 +37,7 @@ export const withNWithoutIconsDocs =`
 
 export const dismissibleDocs =`
 <script lang="ts">
-    import { Alert } from "@kareyes/aether";
+    import { Alert } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -57,7 +57,7 @@ export const dismissibleDocs =`
 
 export const withActionsDocs =`
 <script lang="ts">
-    import { Alert, Button } from "@kareyes/aether";
+    import { Alert, Button } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -86,7 +86,7 @@ export const withActionsDocs =`
 
 export const customIconDocs =`
 <script lang="ts">
-   	import { AlertPrimitives } from "@kareyes/aether";
+   	import { AlertPrimitives } from "@kareyes/aether-ui";
    
 </script>
 
@@ -119,7 +119,7 @@ export const customIconDocs =`
 
 export const complexAlertDocs=`
 <script lang="ts">
-    import { AlertPrimitives, Button } from "@kareyes/aether";
+    import { AlertPrimitives, Button } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -163,7 +163,7 @@ export const complexAlertDocs=`
 
 export const compactLayoutDocs =`
 <script lang="ts">
-    import { Alert } from "@kareyes/aether";
+    import { Alert } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -174,7 +174,7 @@ export const compactLayoutDocs =`
 
 export const realWorldExamplesDocs =`
 <script lang="ts">
-    import { Alert, Button } from "@kareyes/aether";
+    import { Alert, Button } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">

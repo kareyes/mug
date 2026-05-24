@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card, Button, Sidebar, SidebarPrimitives } from "@kareyes/aether";
+	import { Card, Button, Sidebar, SidebarPrimitives } from "@kareyes/aether-ui";
 
 	const {
 		SidebarProvider, SidebarContent, SidebarGroup, SidebarGroupContent,

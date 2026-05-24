@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Card, Sidebar, SidebarPrimitives } from "@kareyes/aether";
-	import { Home, TrendingUp, Users, FileText, Settings, User, MoreHorizontal, LogOut } from "@kareyes/aether/icons";
+	import { Card, Sidebar, SidebarPrimitives } from "@kareyes/aether-ui";
+	import { Home, TrendingUp, Users, FileText, Settings, User, MoreHorizontal, LogOut } from "@kareyes/aether-ui/icons";
 
 	const {
 		SidebarProvider, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent,

@@ -1,6 +1,6 @@
 export const basicUsageDocs = `
 <script lang="ts">
-  import { Progress } from "@kareyes/aether";
+  import { Progress } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -12,7 +12,7 @@ export const basicUsageDocs = `
 
 export const labelValueDocs = `
 <script lang="ts">
-  import { Progress } from "@kareyes/aether";
+  import { Progress } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-6">
@@ -30,7 +30,7 @@ export const labelValueDocs = `
 
 export const labelInsideBarDocs = `
 <script lang="ts">
-  import { Progress } from "@kareyes/aether";
+  import { Progress } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -53,7 +53,7 @@ export const labelInsideBarDocs = `
 
 export const variantsDocs = `
 <script lang="ts">
-  import { Progress } from "@kareyes/aether";
+  import { Progress } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -67,7 +67,7 @@ export const variantsDocs = `
 
 export const sizesDocs = `
 <script lang="ts">
-  import { Progress } from "@kareyes/aether";
+  import { Progress } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-5">
@@ -81,7 +81,7 @@ export const sizesDocs = `
 
 export const radiusDocs = `
 <script lang="ts">
-  import { Progress } from "@kareyes/aether";
+  import { Progress } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -95,7 +95,7 @@ export const radiusDocs = `
 
 export const indeterminateDocs = `
 <script lang="ts">
-  import { Progress } from "@kareyes/aether";
+  import { Progress } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -106,7 +106,7 @@ export const indeterminateDocs = `
 
 export const animationsDocs = `
 <script lang="ts">
-  import { Progress } from "@kareyes/aether";
+  import { Progress } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -120,7 +120,7 @@ export const animationsDocs = `
 
 export const interactiveDocs = `
 <script lang="ts">
-  import { Progress } from "@kareyes/aether";
+  import { Progress } from "@kareyes/aether-ui";
 
   let liveValue = \$state(65);
 </script>
@@ -135,7 +135,7 @@ export const interactiveDocs = `
 
 export const useCasesDocs = `
 <script lang="ts">
-  import { Progress } from "@kareyes/aether";
+  import { Progress } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-8">
@@ -163,7 +163,7 @@ export const useCasesDocs = `
 
 export const compositionalDocs = `
 <script lang="ts">
-  import { ProgressPrimitives } from "@kareyes/aether";
+  import { ProgressPrimitives } from "@kareyes/aether-ui";
   const { ProgressRoot: Root } = ProgressPrimitives;
 </script>
 

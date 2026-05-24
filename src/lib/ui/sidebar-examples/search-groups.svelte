@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Card, Sidebar, SidebarPrimitives } from "@kareyes/aether";
-	import { Home, TrendingUp, FileText, Folder, Plus, BookOpen, HelpCircle } from "@kareyes/aether/icons";
+	import { Card, Sidebar, SidebarPrimitives } from "@kareyes/aether-ui";
+	import { Home, TrendingUp, FileText, Folder, Plus, BookOpen, HelpCircle } from "@kareyes/aether-ui/icons";
 
 	const {
 		SidebarProvider, SidebarContent, SidebarGroup, SidebarGroupAction,

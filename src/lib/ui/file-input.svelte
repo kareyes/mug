@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { unifiedModeDocs, dedicatedComponentsDocs, regularInputShowcaseDocs, styleVariantsDocs, sizeOptionsDocs, errorStateDocs, fieldWrapperDocs } from "$lib/code-blocks/file-input";
-	import { FileInput, FileInputDragDrop, FileInputRegular, FileInputButton, Field, Card, CodeBlock } from '@kareyes/aether';
+	import { FileInput, FileInputDragDrop, FileInputRegular, FileInputButton, Field, Card, CodeBlock } from '@kareyes/aether-ui';
 
 	let dragDropFiles: FileList | null = $state(null);
 	let regularFiles: FileList | null = $state(null);

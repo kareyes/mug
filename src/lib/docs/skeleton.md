@@ -24,7 +24,7 @@ A versatile skeleton loading component with multiple variants, animations, shape
     SkeletonAvatar,
     SkeletonCard,
     SkeletonTable
-  } from "@kareyes/aether";
+  } from "@kareyes/aether-ui";
 </script>
 ```
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { basicUsageDocs, triggerVariantsDocs, sizesDocs, widthOptionsDocs, formExampleDocs, customTriggerDocs, disabledItemsDocs } from "$lib/code-blocks/combobox";
-	import { ComboBox, Button, PopoverPrimitives as Popover, Label, Card, CodeBlock } from "@kareyes/aether";
-	import { Check, ChevronsUpDown } from "@kareyes/aether/icons";
+	import { ComboBox, Button, PopoverPrimitives as Popover, Label, Card, CodeBlock } from "@kareyes/aether-ui";
+	import { Check, ChevronsUpDown } from "@kareyes/aether-ui/icons";
 
 	// Sample data
 	const frameworks = [

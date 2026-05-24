@@ -1,6 +1,6 @@
 export const basicVariantsDocs = `
 <script lang="ts">
-	import { Badge } from "@kareyes/aether";
+	import { Badge } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex flex-wrap gap-4">
@@ -13,7 +13,7 @@ export const basicVariantsDocs = `
 
 export const colorVariantsDocs = `
 <script lang="ts">
-	import { Badge } from "@kareyes/aether";
+	import { Badge } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex flex-wrap gap-4">
@@ -29,7 +29,7 @@ export const colorVariantsDocs = `
 
 export const variantColorComboDocs = `
 <script lang="ts">
-	import { Badge } from "@kareyes/aether";
+	import { Badge } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -76,7 +76,7 @@ export const variantColorComboDocs = `
 
 export const sizesDocs = `
 <script lang="ts">
-	import { Badge } from "@kareyes/aether";
+	import { Badge } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex items-center gap-4">
@@ -87,8 +87,8 @@ export const sizesDocs = `
 
 export const withIconsDocs = `
 <script lang="ts">
-	import { Badge } from "@kareyes/aether";
-	import { Check, Star, Zap, Heart } from "@kareyes/aether/icons";
+	import { Badge } from "@kareyes/aether-ui";
+	import { Check, Star, Zap, Heart } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="flex flex-wrap gap-4">
@@ -116,7 +116,7 @@ export const withIconsDocs = `
 
 export const loadingStateDocs = `
 <script lang="ts">
-	import { Badge } from "@kareyes/aether";
+	import { Badge } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex flex-wrap gap-4">
@@ -129,7 +129,7 @@ export const loadingStateDocs = `
 
 export const clickableBadgesDocs = `
 <script lang="ts">
-	import { Badge } from "@kareyes/aether";
+	import { Badge } from "@kareyes/aether-ui";
 
 	function handleBadgeClick(text: string) {
 		alert(\`Clicked: \${text}\`);
@@ -169,7 +169,7 @@ export const clickableBadgesDocs = `
 
 export const dismissableBadgesDocs = `
 <script lang="ts">
-	import { Badge } from "@kareyes/aether";
+	import { Badge } from "@kareyes/aether-ui";
 
 	type TagType = {
 		id: number;
@@ -203,7 +203,7 @@ export const dismissableBadgesDocs = `
 
 export const notificationBadgesDocs = `
 <script lang="ts">
-	import { Badge } from "@kareyes/aether";
+	import { Badge } from "@kareyes/aether-ui";
 
 	let notifications = $state([
 		{ id: 1, text: "New message", color: "blue" as const },
@@ -232,8 +232,8 @@ export const notificationBadgesDocs = `
 
 export const statusIndicatorsDocs = `
 <script lang="ts">
-	import { Badge } from "@kareyes/aether";
-	import { Check, AlertCircle } from "@kareyes/aether/icons";
+	import { Badge } from "@kareyes/aether-ui";
+	import { Check, AlertCircle } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -273,7 +273,7 @@ export const statusIndicatorsDocs = `
 
 export const userProfileDocs = `
 <script lang="ts">
-	import { Avatar, Badge } from "@kareyes/aether";
+	import { Avatar, Badge } from "@kareyes/aether-ui";
 </script>
 
 <div class="bg-card p-6 rounded-lg border">
@@ -295,7 +295,7 @@ export const userProfileDocs = `
 
 export const shapesDocs = `
 <script lang="ts">
-	import { Badge } from "@kareyes/aether";
+	import { Badge } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -335,7 +335,7 @@ export const shapesDocs = `
 
 export const shapeVariantComboDocs = `
 <script lang="ts">
-	import { Badge } from "@kareyes/aether";
+	import { Badge } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-4">
@@ -375,7 +375,7 @@ export const shapeVariantComboDocs = `
 
 export const productCardsDocs = `
 <script lang="ts">
-	import { Badge } from "@kareyes/aether";
+	import { Badge } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">

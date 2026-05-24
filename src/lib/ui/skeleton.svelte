@@ -5,7 +5,7 @@
 		SkeletonPrimitives,
 		Card,
 		CodeBlock,
-	} from "@kareyes/aether";
+	} from "@kareyes/aether-ui";
 	import {
 		basicSkeletonsDocs,
 		variantsDocs,

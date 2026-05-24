@@ -1,6 +1,6 @@
 export const orientationsDocs = `
 <script lang="ts">
-  import { Button, CardPrimitives, Stepper } from "@kareyes/aether";
+  import { Button, CardPrimitives, Stepper } from "@kareyes/aether-ui";
 
   const { Card, CardHeader, CardTitle, CardDescription, CardContent } = CardPrimitives;
 
@@ -63,7 +63,7 @@ export const orientationsDocs = `
 
 export const sizesVariantsDocs = `
 <script lang="ts">
-  import { CardPrimitives, Stepper } from "@kareyes/aether";
+  import { CardPrimitives, Stepper } from "@kareyes/aether-ui";
 
   const { Card, CardHeader, CardTitle, CardDescription, CardContent } = CardPrimitives;
 </script>
@@ -154,7 +154,7 @@ export const sizesVariantsDocs = `
 
 export const interactiveFeaturesDocs = `
 <script lang="ts">
-  import { CardPrimitives, Stepper } from "@kareyes/aether";
+  import { CardPrimitives, Stepper } from "@kareyes/aether-ui";
   import { User, CreditCard, CircleCheck } from "@lucide/svelte";
 
   const { Card, CardHeader, CardTitle, CardDescription, CardContent } = CardPrimitives;
@@ -213,7 +213,7 @@ export const interactiveFeaturesDocs = `
 
 export const practicalExamplesDocs = `
 <script lang="ts">
-  import { Button, Input, Label, Textarea, CardPrimitives, Stepper } from "@kareyes/aether";
+  import { Button, Input, Label, Textarea, CardPrimitives, Stepper } from "@kareyes/aether-ui";
   import { User, CreditCard, CircleCheck, ShoppingCart, Package, Mail, Briefcase, FileText } from "@lucide/svelte";
 
   const { Card, CardHeader, CardTitle, CardDescription, CardContent } = CardPrimitives;
@@ -483,7 +483,7 @@ export const practicalExamplesDocs = `
 
 export const stepStatesDocs = `
 <script lang="ts">
-  import { CardPrimitives, Stepper } from "@kareyes/aether";
+  import { CardPrimitives, Stepper } from "@kareyes/aether-ui";
   import { ShoppingCart, CreditCard, CircleCheck } from "@lucide/svelte";
 
   const { Card, CardHeader, CardTitle, CardDescription, CardContent } = CardPrimitives;
@@ -583,7 +583,7 @@ export const stepStatesDocs = `
 
 export const circularDocs = `
 <script lang="ts">
-  import { CardPrimitives, Stepper } from "@kareyes/aether";
+  import { CardPrimitives, Stepper } from "@kareyes/aether-ui";
   import { ShoppingCart, CreditCard, CircleCheck } from "@lucide/svelte";
 
   const { Card, CardHeader, CardTitle, CardDescription, CardContent } = CardPrimitives;
@@ -680,8 +680,8 @@ export const circularDocs = `
 
 export const customContentDocs = `
 <script lang="ts">
-  import { CardPrimitives, StepperPrimitives } from "@kareyes/aether";
-   import { User, Settings, CircleCheck, Package, ShoppingCart, MapPin, FileText, Briefcase, GraduationCap } from "@kareyes/aether/icons";
+  import { CardPrimitives, StepperPrimitives } from "@kareyes/aether-ui";
+   import { User, Settings, CircleCheck, Package, ShoppingCart, MapPin, FileText, Briefcase, GraduationCap } from "@kareyes/aether-ui/icons";
 
   const { StepperRoot, StepperStep, StepperSeparator } = StepperPrimitives;
   const { Card, CardHeader, CardTitle, CardDescription, CardContent } = CardPrimitives;

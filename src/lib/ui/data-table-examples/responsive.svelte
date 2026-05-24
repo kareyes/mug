@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DataTable, DataTablePrimitives, Button } from "@kareyes/aether";
+	import { DataTable, DataTablePrimitives, Button } from "@kareyes/aether-ui";
 	import { paymentData2, getResponsiveColumns } from "./shared";
 
 	const responsiveColumns = getResponsiveColumns();

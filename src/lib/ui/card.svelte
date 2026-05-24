@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card, Button, Field, Input, Select, Switch, Badge, CodeBlock } from "@kareyes/aether";
+	import { Card, Button, Field, Input, Select, Switch, Badge, CodeBlock } from "@kareyes/aether-ui";
 	import {
 		basicCardsDocs,
 		cardVariantsDocs,

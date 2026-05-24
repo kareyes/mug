@@ -1,6 +1,6 @@
 export const variantsDocs = `
 <script lang="ts">
-  import { Textarea, Label } from "@kareyes/aether";
+  import { Textarea, Label } from "@kareyes/aether-ui";
 
   let defaultValue = \$state("");
   let outlineValue = \$state("");
@@ -38,7 +38,7 @@ export const variantsDocs = `
 
 export const sizesDocs = `
 <script lang="ts">
-  import { Textarea, Label } from "@kareyes/aether";
+  import { Textarea, Label } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-6">
@@ -60,7 +60,7 @@ export const sizesDocs = `
 
 export const featuresDocs = `
 <script lang="ts">
-  import { Textarea, Label } from "@kareyes/aether";
+  import { Textarea, Label } from "@kareyes/aether-ui";
 
   let autoResizeValue = \$state("");
   let withCountValue = \$state("");
@@ -112,7 +112,7 @@ export const featuresDocs = `
 
 export const formExampleDocs = `
 <script lang="ts">
-  import { Textarea, Button, Label } from "@kareyes/aether";
+  import { Textarea, Button, Label } from "@kareyes/aether-ui";
 
   let formData = \$state({
     name: "",
@@ -160,7 +160,7 @@ export const formExampleDocs = `
 
 export const combinedFeaturesDocs = `
 <script lang="ts">
-  import { Textarea, Label } from "@kareyes/aether";
+  import { Textarea, Label } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-6 md:grid-cols-2">
@@ -191,7 +191,7 @@ export const combinedFeaturesDocs = `
 
 export const textareaFieldDocs = `
 <script lang="ts">
-  import { Textarea, Card, Field } from "@kareyes/aether";
+  import { Textarea, Card, Field } from "@kareyes/aether-ui";
 
   let description = \$state("");
 </script>

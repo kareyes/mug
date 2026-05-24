@@ -17,8 +17,8 @@ A comprehensive form field wrapper component that combines labels, descriptions,
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { Input } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { Input } from "@kareyes/aether-ui";
 
   let email = $state('');
 </script>
@@ -32,8 +32,8 @@ A comprehensive form field wrapper component that combines labels, descriptions,
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { Input } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { Input } from "@kareyes/aether-ui";
 
   let email = $state('');
 </script>
@@ -70,7 +70,7 @@ Simplified component that wraps all field functionality:
 The Field component provides both a simplified API and composable parts:
 
 ```typescript
-import { FieldPrimitives } from "@kareyes/aether";
+import { FieldPrimitives } from "@kareyes/aether-ui";
 
 // Simplified wrapper component
 Field
@@ -96,8 +96,8 @@ FieldPrimitives.Error       // Error message display
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { Input } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { Input } from "@kareyes/aether-ui";
 
   let username = $state('');
   let errors = $state<Record<string, string>>({});
@@ -140,8 +140,8 @@ FieldPrimitives.Error       // Error message display
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { Textarea } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { Textarea } from "@kareyes/aether-ui";
 
   let bio = $state('');
 </script>
@@ -193,8 +193,8 @@ FieldPrimitives.Error       // Error message display
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { Select } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { Select } from "@kareyes/aether-ui";
 
   let country = $state('');
   
@@ -238,9 +238,9 @@ FieldPrimitives.Error       // Error message display
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { CheckboxGroup } from "@kareyes/aether";
-  import type { CheckboxGroupOption } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { CheckboxGroup } from "@kareyes/aether-ui";
+  import type { CheckboxGroupOption } from "@kareyes/aether-ui";
 
   let selectedFeatures = $state<string[]>([]);
   
@@ -309,9 +309,9 @@ FieldPrimitives.Error       // Error message display
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { RadioGroup } from "@kareyes/aether";
-  import type { RadioGroupOption } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { RadioGroup } from "@kareyes/aether-ui";
+  import type { RadioGroupOption } from "@kareyes/aether-ui";
 
   let selectedPlan = $state('basic');
   
@@ -394,8 +394,8 @@ FieldPrimitives.Error       // Error message display
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { Checkbox } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { Checkbox } from "@kareyes/aether-ui";
 
   let acceptTerms = $state(false);
 </script>
@@ -433,8 +433,8 @@ FieldPrimitives.Error       // Error message display
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { Switch } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { Switch } from "@kareyes/aether-ui";
 
   let notifications = $state(true);
 </script>
@@ -477,8 +477,8 @@ FieldPrimitives.Error       // Error message display
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { InputOTP } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { InputOTP } from "@kareyes/aether-ui";
 
   let otpCode = $state('');
 </script>
@@ -505,8 +505,8 @@ FieldPrimitives.Error       // Error message display
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { NumberSpinner } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { NumberSpinner } from "@kareyes/aether-ui";
 
   let quantity = $state(1);
 </script>
@@ -541,8 +541,8 @@ FieldPrimitives.Error       // Error message display
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { Slider } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { Slider } from "@kareyes/aether-ui";
 
   let volume = $state(50);
   let priceRange = $state([100, 500]);
@@ -571,8 +571,8 @@ FieldPrimitives.Error       // Error message display
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { FileInput } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { FileInput } from "@kareyes/aether-ui";
 
   let uploadedFiles = $state<File[]>([]);
 </script>
@@ -629,8 +629,8 @@ FieldPrimitives.Error       // Error message display
 
 ```svelte
 <script lang="ts">
-  import { Field } from "@kareyes/aether";
-  import { DatePicker } from "@kareyes/aether";
+  import { Field } from "@kareyes/aether-ui";
+  import { DatePicker } from "@kareyes/aether-ui";
   import type { DateValue } from '@internationalized/date';
 
   let deliveryDate = $state<DateValue | undefined>(undefined);
@@ -727,9 +727,9 @@ Position the label after the form control. Best practice for Checkbox, Switch, a
 
 ```svelte
 <script lang="ts">
-  import { Field } from "@kareyes/aether";
-  import { Checkbox } from "@kareyes/aether";
-  import { Switch } from "@kareyes/aether";
+  import { Field } from "@kareyes/aether-ui";
+  import { Checkbox } from "@kareyes/aether-ui";
+  import { Switch } from "@kareyes/aether-ui";
 
   let acceptTerms = $state(false);
   let enableNotifications = $state(false);
@@ -777,9 +777,9 @@ Position the label after the form control. Best practice for Checkbox, Switch, a
 
 ```svelte
 <script lang="ts">
-  import { Field } from "@kareyes/aether";
-  import { Checkbox } from "@kareyes/aether";
-  import { Switch } from "@kareyes/aether";
+  import { Field } from "@kareyes/aether-ui";
+  import { Checkbox } from "@kareyes/aether-ui";
+  import { Switch } from "@kareyes/aether-ui";
 
   let newsletter = $state(false);
   let marketing = $state(false);
@@ -826,10 +826,10 @@ Use `FieldPrimitives.Set` and `FieldPrimitives.Group` to create well-organized, 
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives ,Field} from "@kareyes/aether";
-  import { Input } from "@kareyes/aether";
-  import { Checkbox } from "@kareyes/aether";
-  import { Select } from "@kareyes/aether";
+  import { FieldPrimitives ,Field} from "@kareyes/aether-ui";
+  import { Input } from "@kareyes/aether-ui";
+  import { Checkbox } from "@kareyes/aether-ui";
+  import { Select } from "@kareyes/aether-ui";
 
   let formData = $state({
     username: '',
@@ -905,13 +905,13 @@ Use `FieldPrimitives.Set` and `FieldPrimitives.Group` to create well-organized, 
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives,Field } from "@kareyes/aether";
-  import { Input } from "@kareyes/aether";
-  import { Textarea } from "@kareyes/aether";
-  import { Select } from "@kareyes/aether";
-  import { Checkbox } from "@kareyes/aether";
-  import { Switch } from "@kareyes/aether";
-  import { Button } from "@kareyes/aether";
+  import { FieldPrimitives,Field } from "@kareyes/aether-ui";
+  import { Input } from "@kareyes/aether-ui";
+  import { Textarea } from "@kareyes/aether-ui";
+  import { Select } from "@kareyes/aether-ui";
+  import { Checkbox } from "@kareyes/aether-ui";
+  import { Switch } from "@kareyes/aether-ui";
+  import { Button } from "@kareyes/aether-ui";
 
   let formData = $state({
     username: '',
@@ -1079,14 +1079,14 @@ Use `FieldPrimitives.Set` and `FieldPrimitives.Group` to create well-organized, 
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives, Field } from "@kareyes/aether";
-  import { NumberSpinner } from "@kareyes/aether";
-  import { DatePicker } from "@kareyes/aether";
-  import { Slider } from "@kareyes/aether";
-  import { InputOTP } from "@kareyes/aether";
-  import { FileInput } from "@kareyes/aether";
-  import { Switch } from "@kareyes/aether";
-  import { Button } from "@kareyes/aether";
+  import { FieldPrimitives, Field } from "@kareyes/aether-ui";
+  import { NumberSpinner } from "@kareyes/aether-ui";
+  import { DatePicker } from "@kareyes/aether-ui";
+  import { Slider } from "@kareyes/aether-ui";
+  import { InputOTP } from "@kareyes/aether-ui";
+  import { FileInput } from "@kareyes/aether-ui";
+  import { Switch } from "@kareyes/aether-ui";
+  import { Button } from "@kareyes/aether-ui";
   import type { DateValue } from '@internationalized/date';
 
   let orderData = $state({
@@ -1195,8 +1195,8 @@ Use `FieldPrimitives.Set` and `FieldPrimitives.Group` to create well-organized, 
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { Input } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { Input } from "@kareyes/aether-ui";
 
   let email = $state('');
   
@@ -1226,9 +1226,9 @@ Use `FieldPrimitives.Set` and `FieldPrimitives.Group` to create well-organized, 
 
 ```svelte
 <script lang="ts">
-  import { Field } from "@kareyes/aether";
-  import { Input } from "@kareyes/aether";
-  import { Button } from "@kareyes/aether";
+  import { Field } from "@kareyes/aether-ui";
+  import { Input } from "@kareyes/aether-ui";
+  import { Button } from "@kareyes/aether-ui";
 
   let formData = $state({ 
     email: '', 
@@ -1300,9 +1300,9 @@ For cases requiring custom layouts, use the composable parts:
 
 ```svelte
 <script lang="ts">
-  import { FieldPrimitives } from "@kareyes/aether";
-  import { Input } from "@kareyes/aether";
-  import { Badge } from "@kareyes/aether";
+  import { FieldPrimitives } from "@kareyes/aether-ui";
+  import { Input } from "@kareyes/aether-ui";
+  import { Badge } from "@kareyes/aether-ui";
 </script>
 
 <!-- Custom field with badge -->

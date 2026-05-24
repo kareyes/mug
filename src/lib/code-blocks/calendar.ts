@@ -1,6 +1,6 @@
 export const basicSelectionDocs = `
 <script lang="ts">
-  import { Calendar } from "@kareyes/aether";
+  import { Calendar } from "@kareyes/aether-ui";
   import { today, getLocalTimeZone, isWeekend, type DateValue } from "@internationalized/date";
 
   let selected = $state<DateValue | undefined>();
@@ -46,7 +46,7 @@ export const basicSelectionDocs = `
 
 export const multipleMonthsDocs = `
 <script lang="ts">
-  import { Calendar } from "@kareyes/aether";
+  import { Calendar } from "@kareyes/aether-ui";
   import type { DateValue } from "@internationalized/date";
 
   let selected = $state<DateValue | undefined>();
@@ -56,7 +56,7 @@ export const multipleMonthsDocs = `
 
 export const captionLayoutsDocs = `
 <script lang="ts">
-  import { Calendar } from "@kareyes/aether";
+  import { Calendar } from "@kareyes/aether-ui";
 </script>
 
 <!-- Default label (prev/next arrows only) -->
@@ -73,7 +73,7 @@ export const captionLayoutsDocs = `
 
 export const buttonVariantsDocs = `
 <script lang="ts">
-  import { Calendar } from "@kareyes/aether";
+  import { Calendar } from "@kareyes/aether-ui";
 </script>
 
 <!-- Ghost (default) -->
@@ -87,7 +87,7 @@ export const buttonVariantsDocs = `
 
 export const statesDocs = `
 <script lang="ts">
-  import { Calendar } from "@kareyes/aether";
+  import { Calendar } from "@kareyes/aether-ui";
   import { today, getLocalTimeZone } from "@internationalized/date";
 </script>
 
@@ -99,7 +99,7 @@ export const statesDocs = `
 
 export const sizeVariantsDocs = `
 <script lang="ts">
-  import { Calendar } from "@kareyes/aether";
+  import { Calendar } from "@kareyes/aether-ui";
 </script>
 
 <Calendar type="single" size="sm" />
@@ -109,7 +109,7 @@ export const sizeVariantsDocs = `
 
 export const eventMarkersDocs = `
 <script lang="ts">
-  import { Calendar, type CalendarPrimitives } from "@kareyes/aether";
+  import { Calendar, type CalendarPrimitives } from "@kareyes/aether-ui";
   import { today, getLocalTimeZone } from "@internationalized/date";
 
   type CalendarEvent = CalendarPrimitives.CalendarEvent;
@@ -134,7 +134,7 @@ export const eventMarkersDocs = `
 
 export const combinedFeaturesDocs = `
 <script lang="ts">
-  import { Calendar, type CalendarPrimitives } from "@kareyes/aether";
+  import { Calendar, type CalendarPrimitives } from "@kareyes/aether-ui";
   import { today, getLocalTimeZone } from "@internationalized/date";
 
   type CalendarEvent = CalendarPrimitives.CalendarEvent;
@@ -158,7 +158,7 @@ export const combinedFeaturesDocs = `
 
 export const fullSizeDocs = `
 <script lang="ts">
-  import { Calendar, type CalendarPrimitives } from "@kareyes/aether";
+  import { Calendar, type CalendarPrimitives } from "@kareyes/aether-ui";
   import { today, getLocalTimeZone } from "@internationalized/date";
 
   type CalendarEvent = CalendarPrimitives.CalendarEvent;

@@ -1,6 +1,6 @@
 export const basicInputDocs = `
 <script lang="ts">
-	import { Input, Label } from "@kareyes/aether";
+	import { Input, Label } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -24,8 +24,8 @@ export const basicInputDocs = `
 
 export const iconAddonsDocs = `
 <script lang="ts">
-	import { Input, Label, InputGroupPrimitives } from "@kareyes/aether";
-	import { Search, Mail, DollarSign, Lock, Eye, EyeOff } from "@kareyes/aether/icons";
+	import { Input, Label, InputGroupPrimitives } from "@kareyes/aether-ui";
+	import { Search, Mail, DollarSign, Lock, Eye, EyeOff } from "@kareyes/aether-ui/icons";
 
 	const { InputGroupButton } = InputGroupPrimitives;
 
@@ -66,8 +66,8 @@ export const iconAddonsDocs = `
 
 export const textAddonsDocs = `
 <script lang="ts">
-	import { Input, Label } from "@kareyes/aether";
-	import { User } from "@kareyes/aether/icons";
+	import { Input, Label } from "@kareyes/aether-ui";
+	import { User } from "@kareyes/aether-ui/icons";
 
 	let usernameValue = $state("");
 </script>
@@ -90,8 +90,8 @@ export const textAddonsDocs = `
 
 export const buttonAddonsDocs = `
 <script lang="ts">
-	import { Input, Label, InputGroupPrimitives } from "@kareyes/aether";
-	import { Search, Copy, Check, Send } from "@kareyes/aether/icons";
+	import { Input, Label, InputGroupPrimitives } from "@kareyes/aether-ui";
+	import { Search, Copy, Check, Send } from "@kareyes/aether-ui/icons";
 
 	const { InputGroupButton } = InputGroupPrimitives;
 
@@ -148,8 +148,8 @@ export const buttonAddonsDocs = `
 
 export const inputMasksDocs = `
 <script lang="ts">
-	import { Input, Label } from "@kareyes/aether";
-	import { Phone, CreditCard } from "@kareyes/aether/icons";
+	import { Input, Label } from "@kareyes/aether-ui";
+	import { Phone, CreditCard } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -172,8 +172,8 @@ export const inputMasksDocs = `
 
 export const combinedFeaturesDocs = `
 <script lang="ts">
-	import { Input, Label, InputGroupPrimitives } from "@kareyes/aether";
-	import { Phone, Lock, Copy } from "@kareyes/aether/icons";
+	import { Input, Label, InputGroupPrimitives } from "@kareyes/aether-ui";
+	import { Phone, Lock, Copy } from "@kareyes/aether-ui/icons";
 
 	const { InputGroupButton } = InputGroupPrimitives;
 </script>
@@ -198,8 +198,8 @@ export const combinedFeaturesDocs = `
 
 export const inputStatesDocs = `
 <script lang="ts">
-	import { Input, Label } from "@kareyes/aether";
-	import { Mail, Lock, Eye } from "@kareyes/aether/icons";
+	import { Input, Label } from "@kareyes/aether-ui";
+	import { Mail, Lock, Eye } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -225,8 +225,8 @@ export const inputStatesDocs = `
 
 export const customAddonsDocs = `
 <script lang="ts">
-	import { Input, InputGroupPrimitives } from "@kareyes/aether";
-	import { Send } from "@kareyes/aether/icons";
+	import { Input, InputGroupPrimitives } from "@kareyes/aether-ui";
+	import { Send } from "@kareyes/aether-ui/icons";
 
 	const { InputGroupButton } = InputGroupPrimitives;
 </script>
@@ -255,8 +255,8 @@ export const customAddonsDocs = `
 
 export const withFieldDocs = `
 <script lang="ts">
-	import { Input, Field, Button, InputGroupPrimitives } from "@kareyes/aether";
-	import { Mail, User, Lock, Eye, EyeOff, Phone, Copy } from "@kareyes/aether/icons";
+	import { Input, Field, Button, InputGroupPrimitives } from "@kareyes/aether-ui";
+	import { Mail, User, Lock, Eye, EyeOff, Phone, Copy } from "@kareyes/aether-ui/icons";
 
 	const { InputGroupButton } = InputGroupPrimitives;
 
@@ -309,8 +309,8 @@ export const withFieldDocs = `
 
 export const completeFormDocs = `
 <script lang="ts">
-	import { Input, Field, FieldPrimitives, Button, InputGroupPrimitives } from "@kareyes/aether";
-	import { Mail, User, Lock, Eye, EyeOff, Phone, CreditCard } from "@kareyes/aether/icons";
+	import { Input, Field, FieldPrimitives, Button, InputGroupPrimitives } from "@kareyes/aether-ui";
+	import { Mail, User, Lock, Eye, EyeOff, Phone, CreditCard } from "@kareyes/aether-ui/icons";
 
 	const { InputGroupButton } = InputGroupPrimitives;
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DarkModePrimitives } from '@kareyes/aether';
+	import { DarkModePrimitives } from '@kareyes/aether-ui';
 	import "../../app.css";
 
 	const { ModeWatcher } = DarkModePrimitives;

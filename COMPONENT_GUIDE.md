@@ -26,14 +26,14 @@ Each section in the demo gets one named export that is a template-literal string
 
 export const basicUsageDocs = `
 <script lang="ts">
-  import { MyComponent } from "@kareyes/aether";
+  import { MyComponent } from "@kareyes/aether-ui";
 </script>
 
 <MyComponent label="Hello" />`;
 
 export const withVariantsDocs = `
 <script lang="ts">
-  import { MyComponent } from "@kareyes/aether";
+  import { MyComponent } from "@kareyes/aether-ui";
 </script>
 
 <MyComponent variant="outline" label="Outlined" />
@@ -60,8 +60,8 @@ This is the live interactive demo. The structure is always:
   import { basicUsageDocs, withVariantsDocs } from "$lib/code-blocks/my-component";
 
   // 2. Import aether components and icons
-  import { MyComponent, Card, CodeBlock } from "@kareyes/aether";
-  import { SomeIcon } from "@kareyes/aether/icons";
+  import { MyComponent, Card, CodeBlock } from "@kareyes/aether-ui";
+  import { SomeIcon } from "@kareyes/aether-ui/icons";
 
   // 3. Import PreviewContainer
   import PreviewContainer from "../components/preview-container.svelte";
@@ -123,7 +123,7 @@ Markdown API reference shown in the "Documentation" tab. If this file does not e
 
 \```svelte
 <script lang="ts">
-  import { MyComponent } from "@kareyes/aether";
+  import { MyComponent } from "@kareyes/aether-ui";
 </script>
 
 <MyComponent label="Hello" />

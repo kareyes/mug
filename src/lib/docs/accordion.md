@@ -7,7 +7,7 @@ A vertically stacked set of interactive headings that reveal or hide sections of
 
 ```svelte
 <script lang="ts">
-  import * as Accordion from "@kareyes/aether";
+  import * as Accordion from "@kareyes/aether-ui";
 </script>
 
 <Accordion.Root type="single">
@@ -30,7 +30,7 @@ A vertically stacked set of interactive headings that reveal or hide sections of
 
 ```svelte
 <script lang="ts">
-  import { AccordionPrimitives } from "@kareyes/aether";
+  import { AccordionPrimitives } from "@kareyes/aether-ui";
 </script>
 
 <AccordionPrimitives.Root type="single">

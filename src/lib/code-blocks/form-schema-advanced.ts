@@ -1,8 +1,8 @@
 export const customFooterDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
-	import { Button } from "@kareyes/aether";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
+	import { Button } from "@kareyes/aether-ui";
 
 	const DraftSchema = pipe(
 		Schema.Struct({
@@ -62,7 +62,7 @@ export const jobApplicationDocs = `
 	import {
 		SchemaForm, FormController, withField, withFormLayout,
 		RequiredCheckbox, requiredCheckbox
-	} from "@kareyes/aether/forms";
+	} from "@kareyes/aether-ui/forms";
 
 	// A 4-step multi-step form.
 	// Each field is tagged with step: N and section: "id".
@@ -158,8 +158,8 @@ export const jobApplicationDocs = `
 export const appSettingsDocs = `
 <script lang="ts">
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
-	import { Button } from "@kareyes/aether";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
+	import { Button } from "@kareyes/aether-ui";
 
 	const AppSettingsSchema = pipe(
 		Schema.Struct({
@@ -247,7 +247,7 @@ export const checkoutFlowDocs = `
 	import {
 		SchemaForm, FormController, withField, withFormLayout,
 		RequiredCheckbox
-	} from "@kareyes/aether/forms";
+	} from "@kareyes/aether-ui/forms";
 
 	// A 3-step checkout with contact, shipping, and payment sections.
 	const CheckoutSchema = pipe(

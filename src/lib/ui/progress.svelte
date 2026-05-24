@@ -12,7 +12,7 @@
 		useCasesDocs,
 		compositionalDocs,
 	} from "$lib/code-blocks/progress";
-	import { Progress, ProgressPrimitives, Card, CodeBlock } from "@kareyes/aether";
+	import { Progress, ProgressPrimitives, Card, CodeBlock } from "@kareyes/aether-ui";
 	import PreviewContainer from "../components/preview-container.svelte";
 
 	const { ProgressRoot: Root } = ProgressPrimitives;

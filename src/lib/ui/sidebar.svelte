@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card, CodeBlock } from "@kareyes/aether";
+	import { Card, CodeBlock } from "@kareyes/aether-ui";
 	import {
 		basicExampleDocs,
 		headerFooterDocs,

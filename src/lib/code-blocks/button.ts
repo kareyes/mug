@@ -1,6 +1,6 @@
 export const variantsDocs = `
 <script lang="ts">
-	import { Button } from "@kareyes/aether";
+	import { Button } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex flex-wrap gap-4">
@@ -16,7 +16,7 @@ export const variantsDocs = `
 
 export const sizesDocs = `
 <script lang="ts">
-	import { Button } from "@kareyes/aether";
+	import { Button } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex flex-wrap items-center gap-4">
@@ -27,7 +27,7 @@ export const sizesDocs = `
 
 export const disabledDocs = `
 <script lang="ts">
-	import { Button } from "@kareyes/aether";
+	import { Button } from "@kareyes/aether-ui";
 </script>
 
 <div class="flex flex-wrap gap-4">
@@ -38,7 +38,7 @@ export const disabledDocs = `
 
 export const loadingStateDocs = `
 <script lang="ts">
-	import { Button } from "@kareyes/aether";
+	import { Button } from "@kareyes/aether-ui";
 
 	let isLoading = $state(false);
 
@@ -59,8 +59,8 @@ export const loadingStateDocs = `
 
 export const withIconsDocs = `
 <script lang="ts">
-	import { Button } from "@kareyes/aether";
-	import { PlusIcon, SaveIcon, DownloadIcon } from "@kareyes/aether/icons";
+	import { Button } from "@kareyes/aether-ui";
+	import { PlusIcon, SaveIcon, DownloadIcon } from "@kareyes/aether-ui/icons";
 </script>
 
 <div class="flex flex-wrap gap-4">
@@ -71,7 +71,7 @@ export const withIconsDocs = `
 
 export const fullWidthDocs = `
 <script lang="ts">
-	import { Button } from "@kareyes/aether";
+	import { Button } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-3">
@@ -81,7 +81,7 @@ export const fullWidthDocs = `
 
 export const buttonGroupsDocs = `
 <script lang="ts">
-	import { Button, Separator } from "@kareyes/aether";
+	import { Button, Separator } from "@kareyes/aether-ui";
 </script>
 
 <div class="space-y-6">
@@ -111,7 +111,7 @@ export const buttonGroupsDocs = `
 
 export const useCasesDocs = `
 <script lang="ts">
-	import { Button } from "@kareyes/aether";
+	import { Button } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid gap-6 md:grid-cols-2">

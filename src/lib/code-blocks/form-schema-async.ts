@@ -2,7 +2,7 @@ export const basicAsyncDocs = `
 <script lang="ts">
 	import { onMount } from "svelte";
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	type Option = { value: string; label: string };
 
@@ -87,7 +87,7 @@ export const concurrentLoadDocs = `
 <script lang="ts">
 	import { onMount } from "svelte";
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	type Option = { value: string; label: string };
 
@@ -167,7 +167,7 @@ export const cascadingLoadDocs = `
 <script lang="ts">
 	import { onMount } from "svelte";
 	import { Schema, pipe } from "effect";
-	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether/forms";
+	import { SchemaForm, FormController, withField, withFormLayout } from "@kareyes/aether-ui/forms";
 
 	type Option = { value: string; label: string };
 

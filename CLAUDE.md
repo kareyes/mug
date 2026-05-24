@@ -17,7 +17,7 @@ No test suite is configured.
 
 ## Architecture
 
-This is a **SvelteKit documentation/demo site** for the `@kareyes/aether` UI component library. It is statically prerendered (`export const prerender = true` in `+layout.ts`).
+This is a **SvelteKit documentation/demo site** for the `@kareyes/aether-ui` UI component library. It is statically prerendered (`export const prerender = true` in `+layout.ts`).
 
 ### Routing
 
@@ -50,16 +50,16 @@ Both slug routes are fully prerendered; the slugs that exist are registered in e
 ### Styling
 
 - **Tailwind CSS v4** via `@tailwindcss/vite` plugin. No `tailwind.config.js`.
-- `src/app.css` imports `tailwindcss`, then `@kareyes/aether/styles`, then adds a `@source` directive so Tailwind scans the aether dist files through the pnpm symlink: `@source "../node_modules/@kareyes/aether/dist/**/*.{svelte,js}"`.
+- `src/app.css` imports `tailwindcss`, then `@kareyes/aether-ui/styles`, then adds a `@source` directive so Tailwind scans the aether dist files through the pnpm symlink: `@source "../node_modules/@kareyes/aether-ui/dist/**/*.{svelte,js}"`.
 - Dark mode is managed by `DarkModePrimitives.ModeWatcher` from aether.
 
-### `@kareyes/aether` component library
+### `@kareyes/aether-ui` component library
 
 All UI primitives come from this private GitHub Packages registry package. Key imports:
-- Components: `import { Button, Card, CodeBlock, Field, ... } from "@kareyes/aether"`
+- Components: `import { Button, Card, CodeBlock, Field, ... } from "@kareyes/aether-ui"`
 - Compound primitives (e.g. `ButtonGroupPrimitives`, `TabsPrimitives`, `SidebarPrimitives`, `FieldPrimitives`): destructure the sub-components after importing the primitive object.
-- Icons: `import { Bold, Italic, ... } from "@kareyes/aether/icons"` (re-exports all Lucide icons)
-- Utilities: `import { cn } from "@kareyes/aether/utils"`
+- Icons: `import { Bold, Italic, ... } from "@kareyes/aether-ui/icons"` (re-exports all Lucide icons)
+- Utilities: `import { cn } from "@kareyes/aether-ui/utils"`
 
 The `Field` component accepts `label`, `description`, `error`, `required`, and `disabled` props to wrap form controls with consistent labeling and error display.
 

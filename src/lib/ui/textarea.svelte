@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Textarea, Button, Label, Card, Field, CodeBlock } from "@kareyes/aether";
+	import { Textarea, Button, Label, Card, Field, CodeBlock } from "@kareyes/aether-ui";
 	import {
 		variantsDocs,
 		sizesDocs,

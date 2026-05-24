@@ -10,7 +10,7 @@
 		completeHandlerDocs,
 		variantSizeComboDocs,
 	} from "$lib/code-blocks/input-otp";
-	import { InputOTP, Field, Card, CodeBlock } from "@kareyes/aether";
+	import { InputOTP, Field, Card, CodeBlock } from "@kareyes/aether-ui";
 
 	// Basic OTP value
 	let basicValue = $state("");

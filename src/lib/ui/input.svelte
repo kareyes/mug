@@ -9,7 +9,7 @@
         InputGroupPrimitives,
         Label,
         CodeBlock
-    } from "@kareyes/aether";
+    } from "@kareyes/aether-ui";
     import {
         Search,
         Mail,
@@ -23,7 +23,7 @@
         User,
         Phone,
         CreditCard,
-    } from "@kareyes/aether/icons";
+    } from "@kareyes/aether-ui/icons";
 
     const { InputGroupButton } = InputGroupPrimitives;
 

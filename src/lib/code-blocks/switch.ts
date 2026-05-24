@@ -1,6 +1,6 @@
 export const basicUsageDocs = `
 <script lang="ts">
-	import { Switch, Label } from "@kareyes/aether";
+	import { Switch, Label } from "@kareyes/aether-ui";
 
 	let basicSwitch = $state(false);
 </script>
@@ -38,7 +38,7 @@ export const basicUsageDocs = `
 
 export const variantsDocs = `
 <script lang="ts">
-	import { Switch, SwitchPrimitives } from "@kareyes/aether";
+	import { Switch, SwitchPrimitives } from "@kareyes/aether-ui";
 
 	const variants: SwitchPrimitives.SwitchVariant[] = ['default', 'success', 'warning', 'danger', 'ghost'];
 	let states = $state({
@@ -69,7 +69,7 @@ export const variantsDocs = `
 
 export const sizesDocs = `
 <script lang="ts">
-	import { Switch, SwitchPrimitives } from "@kareyes/aether";
+	import { Switch, SwitchPrimitives } from "@kareyes/aether-ui";
 
 	const sizes: SwitchPrimitives.SwitchSize[] = ['sm', 'default', 'lg'];
 	let states = $state({ sm: false, default: false, lg: false });
@@ -96,7 +96,7 @@ export const sizesDocs = `
 
 export const errorStatesDocs = `
 <script lang="ts">
-	import { Switch, Label } from "@kareyes/aether";
+	import { Switch, Label } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -127,7 +127,7 @@ export const errorStatesDocs = `
 
 export const combinationsDocs = `
 <script lang="ts">
-	import { Switch } from "@kareyes/aether";
+	import { Switch } from "@kareyes/aether-ui";
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -149,7 +149,7 @@ export const combinationsDocs = `
 
 export const formIntegrationDocs = `
 <script lang="ts">
-	import { Switch, Label } from "@kareyes/aether";
+	import { Switch, Label } from "@kareyes/aether-ui";
 
 	let formSwitch = $state(false);
 </script>
@@ -208,7 +208,7 @@ export const formIntegrationDocs = `
 
 export const withFieldDocs = `
 <script lang="ts">
-	import { Switch, Field, FieldPrimitives } from "@kareyes/aether";
+	import { Switch, Field, FieldPrimitives } from "@kareyes/aether-ui";
 
 	let basicSwitch = $state(false);
 	let formSwitch = $state(false);
@@ -273,7 +273,7 @@ export const withFieldDocs = `
 
 export const currentStateDocs = `
 <script lang="ts">
-	import { Switch } from "@kareyes/aether";
+	import { Switch } from "@kareyes/aether-ui";
 
 	let states = $state({
 		basicSwitch: false,

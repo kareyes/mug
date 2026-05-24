@@ -16,7 +16,7 @@
 		Badge,
 		Card,
 		CodeBlock,
-	} from "@kareyes/aether";
+	} from "@kareyes/aether-ui";
 	import {
 		Inbox,
 		Search,
@@ -28,7 +28,7 @@
 		CloudUpload,
 		Lock,
 		ShoppingCart,
-	} from "@kareyes/aether/icons";
+	} from "@kareyes/aether-ui/icons";
 	import PreviewContainer from "../components/preview-container.svelte";
 </script>
 

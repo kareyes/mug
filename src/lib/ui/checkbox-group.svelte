@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { CheckboxGroup, CheckboxPrimitives, Field, Card, CodeBlock } from "@kareyes/aether";
+	import { CheckboxGroup, CheckboxPrimitives, Field, Card, CodeBlock } from "@kareyes/aether-ui";
 
     type CheckboxGroupOption = CheckboxPrimitives.CheckboxGroupOption;
 

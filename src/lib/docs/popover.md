@@ -14,7 +14,7 @@
 
 ```svelte
 <script lang="ts">
-  import { Popover } from "@kareyes/aether";
+  import { Popover } from "@kareyes/aether-ui";
 </script>
 
 <Popover triggerText="Open">
@@ -78,7 +78,7 @@ Use the `trigger` snippet to replace the default button with any element.
 
 ```svelte
 <script lang="ts">
-  import { Popover } from "@kareyes/aether";
+  import { Popover } from "@kareyes/aether-ui";
   import Settings from "@lucide/svelte/icons/settings";
 </script>
 
@@ -95,7 +95,7 @@ Use the `trigger` snippet to replace the default button with any element.
 
 ```svelte
 <script lang="ts">
-  import { Popover } from "@kareyes/aether";
+  import { Popover } from "@kareyes/aether-ui";
   import EllipsisVertical from "@lucide/svelte/icons/ellipsis-vertical";
 </script>
 
@@ -125,7 +125,7 @@ Pass `open` and `onOpenChange` together to take control of the open state extern
 
 ```svelte
 <script lang="ts">
-  import { Popover } from "@kareyes/aether";
+  import { Popover } from "@kareyes/aether-ui";
 
   let open = $state(false);
 </script>
@@ -242,8 +242,8 @@ Control the trigger button style with `triggerVariant`.
 
 ```svelte
 <script lang="ts">
-  import { Popover } from "@kareyes/aether";
-  import { Input, Label, Button } from "@kareyes/aether";
+  import { Popover } from "@kareyes/aether-ui";
+  import { Input, Label, Button } from "@kareyes/aether-ui";
 
   let width = $state("100%");
   let maxWidth = $state("300px");
@@ -283,8 +283,8 @@ Control the trigger button style with `triggerVariant`.
 
 ```svelte
 <script lang="ts">
-  import { Popover } from "@kareyes/aether";
-  import { Avatar, Button } from "@kareyes/aether";
+  import { Popover } from "@kareyes/aether-ui";
+  import { Avatar, Button } from "@kareyes/aether-ui";
 </script>
 
 <Popover triggerVariant="default" contentVariant="elevated" contentSize="sm" align="end">
@@ -344,9 +344,9 @@ Use the primitives directly when you need structural control unavailable in the 
 
 ```svelte
 <script lang="ts">
-  import { PopoverPrimitives } from "@kareyes/aether";
+  import { PopoverPrimitives } from "@kareyes/aether-ui";
   const { Root, Trigger, Content, Close, Arrow } = PopoverPrimitives;
-  import { Button } from "@kareyes/aether";
+  import { Button } from "@kareyes/aether-ui";
 </script>
 
 <!-- With arrow indicator -->

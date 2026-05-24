@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Badge, Slider, Field, SliderPrimitives, Card, CodeBlock } from "@kareyes/aether";
+	import { Badge, Slider, Field, SliderPrimitives, Card, CodeBlock } from "@kareyes/aether-ui";
 	import {
 		basicUsageDocs,
 		variantsDocs,

@@ -1,5 +1,5 @@
 import { createRawSnippet } from "svelte";
-import { DataTablePrimitives } from "@kareyes/aether";
+import { DataTablePrimitives } from "@kareyes/aether-ui";
 
 const {
 	DataTableCheckbox,

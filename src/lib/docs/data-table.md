@@ -20,7 +20,7 @@ A powerful, flexible data table component built with TanStack Table and Svelte 5
 
 ```svelte
 <script lang="ts">
-  import { DataTable, type ColumnDef } from "@kareyes/aether";
+  import { DataTable, type ColumnDef } from "@kareyes/aether-ui";
   
   type User = {
     id: string;
@@ -161,7 +161,7 @@ interface DataTableColumnMeta {
 ### Example: Columns with Mobile Metadata
 
 ```ts
-import type { ColumnDef, DataTableColumnMeta } from "@kareyes/aether";
+import type { ColumnDef, DataTableColumnMeta } from "@kareyes/aether-ui";
 
 const columns: ColumnDef<Payment>[] = [
   {
@@ -280,7 +280,7 @@ const columns: ColumnDef<User>[] = [
 ### Sortable Column
 
 ```ts
-import { DataTableColumnHeader, renderComponent } from "@kareyes/aether";
+import { DataTableColumnHeader, renderComponent } from "@kareyes/aether-ui";
 
 const columns: ColumnDef<User>[] = [
   {
@@ -302,7 +302,7 @@ import {
   renderComponent,
   type HeaderContext,
   type CellContext
-} from "@kareyes/aether";
+} from "@kareyes/aether-ui";
 
 const columns: ColumnDef<User>[] = [
   {
@@ -331,7 +331,7 @@ const columns: ColumnDef<User>[] = [
 
 ```ts
 import { createRawSnippet } from "svelte";
-import { renderSnippet } from "@kareyes/aether";
+import { renderSnippet } from "@kareyes/aether-ui";
 
 const columns: ColumnDef<User>[] = [
   {
@@ -353,7 +353,7 @@ const columns: ColumnDef<User>[] = [
 ### Actions Column
 
 ```ts
-import { DataTableActions, renderComponent } from "@kareyes/aether";
+import { DataTableActions, renderComponent } from "@kareyes/aether-ui";
 
 const columns: ColumnDef<User>[] = [
   {
@@ -388,7 +388,7 @@ Enable row expansion to show additional details.
 
 ```svelte
 <script lang="ts">
-  import { DataTable, type ColumnDef } from "@kareyes/aether";
+  import { DataTable, type ColumnDef } from "@kareyes/aether-ui";
   
   type Payment = {
     id: string;
@@ -565,13 +565,13 @@ const columns: ColumnDef<User>[] = [
 
 ```svelte
 <script lang="ts">
-  import { DataTable, type ColumnDef } from "@kareyes/aether";
+  import { DataTable, type ColumnDef } from "@kareyes/aether-ui";
   import { 
     DataTableCheckbox, 
     DataTableColumnHeader,
     DataTableActions,
     renderComponent 
-  } from "@kareyes/aether";
+  } from "@kareyes/aether-ui";
   
   type User = {
     id: string;
@@ -751,7 +751,7 @@ Container component that renders all rows as cards in mobile view.
 Renders a Svelte component within a table cell.
 
 ```ts
-import { renderComponent } from "@kareyes/aether";
+import { renderComponent } from "@kareyes/aether-ui";
 
 renderComponent(MyComponent, { prop1: "value" })
 ```
@@ -762,7 +762,7 @@ Renders a Svelte snippet within a table cell.
 
 ```ts
 import { createRawSnippet } from "svelte";
-import { renderSnippet } from "@kareyes/aether";
+import { renderSnippet } from "@kareyes/aether-ui";
 
 const snippet = createRawSnippet(() => ({
   render: () => `<div>Content</div>`
@@ -776,7 +776,7 @@ renderSnippet(snippet, { data: "value" })
 Extracts the display label for a column in mobile card view.
 
 ```ts
-import { getColumnMobileLabel } from "@kareyes/aether";
+import { getColumnMobileLabel } from "@kareyes/aether-ui";
 
 // Returns: meta.mobileLabel > string header > formatted column id
 const label = getColumnMobileLabel(column);
@@ -787,7 +787,7 @@ const label = getColumnMobileLabel(column);
 Filters and sorts columns for mobile card view based on meta configuration.
 
 ```ts
-import { getMobileVisibleColumns } from "@kareyes/aether";
+import { getMobileVisibleColumns } from "@kareyes/aether-ui";
 
 // Returns columns sorted by priority, excluding those with hiddenOnMobile: true
 const mobileColumns = getMobileVisibleColumns(allColumns);
@@ -798,7 +798,7 @@ const mobileColumns = getMobileVisibleColumns(allColumns);
 Checks if a column is a special column (select or actions) that should be rendered separately in the card header.
 
 ```ts
-import { isSpecialColumn } from "@kareyes/aether";
+import { isSpecialColumn } from "@kareyes/aether-ui";
 
 if (isSpecialColumn(column)) {
   // Render in card header instead of body
@@ -810,7 +810,7 @@ if (isSpecialColumn(column)) {
 The DataTable component is fully typed with TypeScript generics:
 
 ```ts
-import type { ColumnDef } from "@kareyes/aether";
+import type { ColumnDef } from "@kareyes/aether-ui";
 
 type MyData = {
   id: string;
